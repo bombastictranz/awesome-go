@@ -1,0 +1,79 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6314],{47043:function(e,t,i){"use strict";i.d(t,{q:function(){return SkeletonBlock}});var r=i(28165),a=i(39479),o=i(77293),s=i(99029);let n=(0,r.F4)({"0%":{transform:"translateX(-100%)"},"100%":{transform:"translateX(100%)"}}),l=(0,a.B)("SkeletonBlock",{root:[{backgroundColor:s.w.neutral200,overflow:"hidden",position:"relative","&::before":{animation:`${n} 1s ease-in-out infinite`,content:'""',background:"linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0))",position:"absolute",top:"0",right:"0",bottom:"0",left:"0"}}]}),SkeletonBlock=({aspectRatio:e,borderRadius:t=5,height:i,width:r="100%"})=>{let a={borderRadius:t,width:r,paddingTop:e?`calc(${r} / ${e})`:i};return(0,o.U)("div",{css:l.root,"data-testid":"SkeletonBlock",style:a})}},29476:function(e,t,i){"use strict";i.d(t,{u:function(){return Tooltip},S:function(){return h}});var r=i(28165),a=i(2784);let o={height:0,width:0,x:0,y:0,bottom:0,left:0,right:0,top:0,toJSON:()=>{}},useDimensions=()=>{let e=(0,a.useRef)(null),[t,i]=(0,a.useState)(o);return(0,a.useEffect)(()=>{let t=e&&e.current?e.current.getBoundingClientRect():o;i(t)},[]),[e,t]};var s=i(99029),n=i(10391),l=i(98628),u=i(3e3),c=i(39479),p=i(77293);let d=(0,r.F4)({"0%":{opacity:0},"100%":{opacity:1}}),h={northwest:r.iv`
+    bottom: calc(100% + ${"5px"});
+    left: 0;
+  `,north:r.iv`
+    bottom: calc(100% + ${"5px"});
+    left: 50%;
+    transform: translateX(-50%);
+  `,northeast:r.iv`
+    bottom: calc(100% + ${"5px"});
+    right: 0;
+  `,east:r.iv`
+    left: calc(100% + ${"5px"});
+    top: 50%;
+    transform: translateY(-50%);
+  `,southeast:r.iv`
+    top: calc(100% + ${"5px"});
+    right: 0;
+  `,south:r.iv`
+    top: calc(100% + ${"5px"});
+    left: 50%;
+    transform: translateX(-50%);
+  `,southwest:r.iv`
+    top: calc(100% + ${"5px"});
+    left: 0;
+  `,west:r.iv`
+    right: calc(100% + ${"5px"});
+    top: 50%;
+    transform: translateY(-50%);
+  `},$=(0,c.B)("Tooltip",{root:(e,t,i,a)=>[r.iv`
+      display: block;
+      color: ${s.w.neutral100};
+      text-align: center;
+      border-radius: 100px;
+      position: relative;
+      z-index: 2;
+      box-shadow: ${n.f.elevation30};
+      background-color: ${s.w.neutral800};
+      width: max-content;
+      max-width: 300px;
+      animation: ${l.f.transitionDuration}
+        ${l.f.transitionTimingFunction} ${d};
+      ${u.ZT.paragraph3Semibold};
+      padding: 2px 11px;
+      */
+
+      // Increase mouse area so tooltip doesn't disappear when
+      // mousing over a gap between its toggle and the tooltip itself.
+      &::before {
+        content: '';
+        position: absolute;
+        top: -${"5px"};
+        right: -${"5px"};
+        bottom: -${"5px"};
+        left: -${"5px"};
+        z-index: -1;
+      }
+    `,a&&r.iv`
+        label: -${a};
+        position: absolute;
+        ${h[a]};
+      `,i&&r.iv`
+        label: -multiline;
+        border-radius: 10px;
+        padding: 16px 14px;
+        text-align: left;
+      `,!e&&r.iv`
+        label: -single-line;
+        height: ${28}px;
+        padding: 2px 11px;
+      `,!t&&r.iv`
+        label: -non-interactive;
+        pointer-events: none;
+      `],content:e=>[r.iv`
+      display: block;
+    `,!e&&r.iv`
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      `]}),Tooltip=({children:e,allowMultiline:t=!1,ariaHidden:i,id:r,isInteractive:a,position:o="south"})=>{let[s,{height:n}]=useDimensions();return(0,p.U)("span",{"aria-hidden":i,css:$.root(t,a,n>28,o),"data-testid":`tooltip-${o}`,id:r,ref:s,role:"tooltip"},(0,p.U)("span",{css:$.content(t)},e))}},69480:function(e,t,i){"use strict";i.d(t,{U:function(){return useIntersect}});var r=i(2784);let useIntersect=({heightOverride:e,once:t=!1,root:i,rootMargin:a="0px",threshold:o=1}={})=>{let[s,n]=(0,r.useState)(null),[l,u]=(0,r.useState)(null),[c,p]=(0,r.useState)(null),d=(0,r.useRef)(null);return(0,r.useEffect)(()=>{let disconnect=()=>{d.current&&d.current.disconnect()};disconnect();let getMetadata=({intersectionRatio:t,intersectionRect:i,rootBounds:r})=>{let a=!!i&&!!r&&t<o,s=null!=e?e:i.height,n=i.top+s,l=i.top-s;return{isTopIntersecting:a&&(l<=r.top||i.height>r.height),isBottomIntersecting:a&&n>=r.bottom,isLeftIntersecting:a&&i.left<=r.left,isRightIntersecting:a&&i.right>=r.right}},r={root:i,rootMargin:a,threshold:Array.isArray(o)?o:[o]};return window.IntersectionObserver&&(d.current=new window.IntersectionObserver(([e])=>{n(e),u(getMetadata(e)),t&&disconnect()},r)),c&&d.current&&d.current.observe(c),disconnect},[t,c,i,a,o,e]),[p,Object.assign({entry:s},l)]}},61814:function(e,t,i){"use strict";i.d(t,{E:function(){return uniqueId}});let r={},uniqueId=e=>(r[e]=(r[e]||0)+1,`${e}${r[e]}`)},19928:function(e){e.exports=function(){var e=[],t=[],i={},r={},a={};function sanitizeRule(e){return"string"==typeof e?RegExp("^"+e+"$","i"):e}function restoreCase(e,t){return e===t?t:e===e.toLowerCase()?t.toLowerCase():e===e.toUpperCase()?t.toUpperCase():e[0]===e[0].toUpperCase()?t.charAt(0).toUpperCase()+t.substr(1).toLowerCase():t.toLowerCase()}function sanitizeWord(e,t,r){if(!e.length||i.hasOwnProperty(e))return t;for(var a=r.length;a--;){var o=r[a];if(o[0].test(t))return function(e,t){return e.replace(t[0],function(i,r){var a,o,s=(a=t[1],o=arguments,a.replace(/\$(\d{1,2})/g,function(e,t){return o[t]||""}));return""===i?restoreCase(e[r-1],s):restoreCase(i,s)})}(t,o)}return t}function replaceWord(e,t,i){return function(r){var a=r.toLowerCase();return t.hasOwnProperty(a)?restoreCase(r,a):e.hasOwnProperty(a)?restoreCase(r,e[a]):sanitizeWord(a,r,i)}}function checkWord(e,t,i,r){return function(r){var a=r.toLowerCase();return!!t.hasOwnProperty(a)||!e.hasOwnProperty(a)&&sanitizeWord(a,a,i)===a}}function pluralize(e,t,i){var r=1===t?pluralize.singular(e):pluralize.plural(e);return(i?t+" ":"")+r}return pluralize.plural=replaceWord(a,r,e),pluralize.isPlural=checkWord(a,r,e),pluralize.singular=replaceWord(r,a,t),pluralize.isSingular=checkWord(r,a,t),pluralize.addPluralRule=function(t,i){e.push([sanitizeRule(t),i])},pluralize.addSingularRule=function(e,i){t.push([sanitizeRule(e),i])},pluralize.addUncountableRule=function(e){if("string"==typeof e){i[e.toLowerCase()]=!0;return}pluralize.addPluralRule(e,"$0"),pluralize.addSingularRule(e,"$0")},pluralize.addIrregularRule=function(e,t){t=t.toLowerCase(),a[e=e.toLowerCase()]=t,r[t]=e},[["I","we"],["me","us"],["he","they"],["she","they"],["them","them"],["myself","ourselves"],["yourself","yourselves"],["itself","themselves"],["herself","themselves"],["himself","themselves"],["themself","themselves"],["is","are"],["was","were"],["has","have"],["this","these"],["that","those"],["echo","echoes"],["dingo","dingoes"],["volcano","volcanoes"],["tornado","tornadoes"],["torpedo","torpedoes"],["genus","genera"],["viscus","viscera"],["stigma","stigmata"],["stoma","stomata"],["dogma","dogmata"],["lemma","lemmata"],["schema","schemata"],["anathema","anathemata"],["ox","oxen"],["axe","axes"],["die","dice"],["yes","yeses"],["foot","feet"],["eave","eaves"],["goose","geese"],["tooth","teeth"],["quiz","quizzes"],["human","humans"],["proof","proofs"],["carve","carves"],["valve","valves"],["looey","looies"],["thief","thieves"],["groove","grooves"],["pickaxe","pickaxes"],["passerby","passersby"]].forEach(function(e){return pluralize.addIrregularRule(e[0],e[1])}),[[/s?$/i,"s"],[/[^\u0000-\u007F]$/i,"$0"],[/([^aeiou]ese)$/i,"$1"],[/(ax|test)is$/i,"$1es"],[/(alias|[^aou]us|t[lm]as|gas|ris)$/i,"$1es"],[/(e[mn]u)s?$/i,"$1s"],[/([^l]ias|[aeiou]las|[ejzr]as|[iu]am)$/i,"$1"],[/(alumn|syllab|vir|radi|nucle|fung|cact|stimul|termin|bacill|foc|uter|loc|strat)(?:us|i)$/i,"$1i"],[/(alumn|alg|vertebr)(?:a|ae)$/i,"$1ae"],[/(seraph|cherub)(?:im)?$/i,"$1im"],[/(her|at|gr)o$/i,"$1oes"],[/(agend|addend|millenni|dat|extrem|bacteri|desiderat|strat|candelabr|errat|ov|symposi|curricul|automat|quor)(?:a|um)$/i,"$1a"],[/(apheli|hyperbat|periheli|asyndet|noumen|phenomen|criteri|organ|prolegomen|hedr|automat)(?:a|on)$/i,"$1a"],[/sis$/i,"ses"],[/(?:(kni|wi|li)fe|(ar|l|ea|eo|oa|hoo)f)$/i,"$1$2ves"],[/([^aeiouy]|qu)y$/i,"$1ies"],[/([^ch][ieo][ln])ey$/i,"$1ies"],[/(x|ch|ss|sh|zz)$/i,"$1es"],[/(matr|cod|mur|sil|vert|ind|append)(?:ix|ex)$/i,"$1ices"],[/\b((?:tit)?m|l)(?:ice|ouse)$/i,"$1ice"],[/(pe)(?:rson|ople)$/i,"$1ople"],[/(child)(?:ren)?$/i,"$1ren"],[/eaux$/i,"$0"],[/m[ae]n$/i,"men"],["thou","you"]].forEach(function(e){return pluralize.addPluralRule(e[0],e[1])}),[[/s$/i,""],[/(ss)$/i,"$1"],[/(wi|kni|(?:after|half|high|low|mid|non|night|[^\w]|^)li)ves$/i,"$1fe"],[/(ar|(?:wo|[ae])l|[eo][ao])ves$/i,"$1f"],[/ies$/i,"y"],[/\b([pl]|zomb|(?:neck|cross)?t|coll|faer|food|gen|goon|group|lass|talk|goal|cut)ies$/i,"$1ie"],[/\b(mon|smil)ies$/i,"$1ey"],[/\b((?:tit)?m|l)ice$/i,"$1ouse"],[/(seraph|cherub)im$/i,"$1"],[/(x|ch|ss|sh|zz|tto|go|cho|alias|[^aou]us|t[lm]as|gas|(?:her|at|gr)o|[aeiou]ris)(?:es)?$/i,"$1"],[/(analy|diagno|parenthe|progno|synop|the|empha|cri|ne)(?:sis|ses)$/i,"$1sis"],[/(movie|twelve|abuse|e[mn]u)s$/i,"$1"],[/(test)(?:is|es)$/i,"$1is"],[/(alumn|syllab|vir|radi|nucle|fung|cact|stimul|termin|bacill|foc|uter|loc|strat)(?:us|i)$/i,"$1us"],[/(agend|addend|millenni|dat|extrem|bacteri|desiderat|strat|candelabr|errat|ov|symposi|curricul|quor)a$/i,"$1um"],[/(apheli|hyperbat|periheli|asyndet|noumen|phenomen|criteri|organ|prolegomen|hedr|automat)a$/i,"$1on"],[/(alumn|alg|vertebr)ae$/i,"$1a"],[/(cod|mur|sil|vert|ind)ices$/i,"$1ex"],[/(matr|append)ices$/i,"$1ix"],[/(pe)(rson|ople)$/i,"$1rson"],[/(child)ren$/i,"$1"],[/(eau)x?$/i,"$1"],[/men$/i,"man"]].forEach(function(e){return pluralize.addSingularRule(e[0],e[1])}),["adulthood","advice","agenda","aid","aircraft","alcohol","ammo","analytics","anime","athletics","audio","bison","blood","bream","buffalo","butter","carp","cash","chassis","chess","clothing","cod","commerce","cooperation","corps","debris","diabetes","digestion","elk","energy","equipment","excretion","expertise","firmware","flounder","fun","gallows","garbage","graffiti","hardware","headquarters","health","herpes","highjinks","homework","housework","information","jeans","justice","kudos","labour","literature","machinery","mackerel","mail","media","mews","moose","music","mud","manga","news","only","personnel","pike","plankton","pliers","police","pollution","premises","rain","research","rice","salmon","scissors","series","sewage","shambles","shrimp","software","species","staff","swine","tennis","traffic","transportation","trout","tuna","wealth","welfare","whiting","wildebeest","wildlife","you",/pok[eé]mon$/i,/[^aeiou]ese$/i,/deer$/i,/fish$/i,/measles$/i,/o[iu]s$/i,/pox$/i,/sheep$/i].forEach(pluralize.addUncountableRule),pluralize}()}}]);
