@@ -1,0 +1,492 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[896],{18811:function(e,t,r){(window.__NEXT_P=window.__NEXT_P||[]).push(["/interfaces",function(){return r(45986)}])},63731:function(e,t,r){"use strict";r.d(t,{A:function(){return FloatingMenu}});var n=r(97458),i=r(39566),a=r(12205),l=r(85625),o=r(68889);function Menu_Menu(e){let t=e.menuItems.map((e,t)=>(0,n.jsx)(l.s,{onClick:e.onClick,children:e.children},t));return(0,n.jsx)(o.v,{ariaLabel:e.ariaLabel,children:t})}a.zo.div`
+  padding: 5px;
+`;let s=a.zo.div`
+  padding: 5px;
+`;function FloatingMenu(e){let{ariaLabel:t,menuItems:r,...a}=e;return(0,n.jsx)(i.f,{...a,children:(0,n.jsx)(s,{children:(0,n.jsx)(Menu_Menu,{ariaLabel:t,menuItems:r})})})}},30130:function(e,t,r){"use strict";r.d(t,{$:function(){return Spinner}});var n=r(97458),i=r(3224),a=r.n(i),l=r(67291),o=r(12205);let s=o.zo.div`
+  height: ${e=>{let{$height:t}=e;return t}};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;function Spinner(e){let{className:t,height:r=0,...i}=e,o=a()(r)?`${r}px`:r;return(0,n.jsx)(s,{className:t,$height:o,children:(0,n.jsx)(l.$,{...i})})}},54773:function(e,t,r){"use strict";r.d(t,{R:function(){return CurrentProjectProvider},d:function(){return useCurrentProject}});var n=r(97458),i=r(7534),a=r.n(i),l=r(52983);let o=l.createContext(null);function useCurrentProject(){let e=l.useContext(o);if(a()(e))throw Error("useCurrentProject must be used within a CurrentProjectContext.Provider");return e}function CurrentProjectProvider(e){let{children:t,project:r}=e;return(0,n.jsx)(o.Provider,{value:r,children:t})}},13537:function(e,t,r){"use strict";r.d(t,{P:function(){return TablesProvider},z:function(){return useTables}});var n=r(97458),i=r(74382),a=r(52983),l=r(42014);let o=(0,a.createContext)({read(){throw new Promise(()=>{})}});function TablesProvider(e){let{children:t,initialData:r}=e,s=function(e){let{refetch:t}=i.S.tableTables.list.useQuery(void 0,{enabled:!1,keepPreviousData:!0,initialData:e});return(0,a.useMemo)(()=>(0,l.k)(new Promise(r=>{void 0!==e?r(e):t().then(e=>e.isSuccess?e.data.data:[]).then(r)})),[e,t])}(r);return(0,n.jsx)(o.Provider,{value:s,children:t})}function useTables(){let e=(0,a.useContext)(o);return e.read()}},61703:function(e,t,r){"use strict";r.d(t,{LF:function(){return isAdvancedPlan},Sm:function(){return isPremiumPlan},Vz:function(){return isFreePlan},du:function(){return useAccountPlan}});var n=r(52983);let isAdvancedPlan=e=>!!e&&"advanced"===e.planName,isPremiumPlan=e=>!!e&&"premium"===e.planName,isFreePlan=e=>!!e&&"free"===e.planName&&!e.isStaff;function useAccountPlan(e){let t=(0,n.useCallback)(()=>isAdvancedPlan(e),[e]),r=(0,n.useCallback)(()=>isPremiumPlan(e),[e]),i=(0,n.useCallback)(()=>isFreePlan(e),[e]),a=(0,n.useMemo)(()=>isAdvancedPlan(e)?"advanced":isPremiumPlan(e)?"premium":(isFreePlan(e),"free"),[e]);return{planName:a,isAdvanced:t,isPremium:r,isFree:i}}},45986:function(e,t,r){"use strict";r.r(t),r.d(t,{default:function(){return ProjectsPageWithProvider}});var n=r(97458),i=r(95472),a=r(59562),l=r(52983),o=r(73596),s=r(91579),c=r(462),d=r(241),p=r(12205),u=r(21072),x=r(738),h=r(35831),m=r(21748),g=r(81563),j=r(74382),f=r(14427),v=r(91466),b=r(67291);function LoadingContent(){return(0,n.jsx)(u.hz,{children:(0,n.jsxs)(u.nS,{align:"center",children:[(0,n.jsx)("div",{children:(0,n.jsx)(s.x,{type:"paragraph1Bold",children:"Building your Interface..."})}),(0,n.jsx)(c.L,{height:15}),(0,n.jsx)("div",{children:(0,n.jsx)(s.x,{type:"paragraph3",children:"Hold tight! Your shiny new Interface will be ready soon."})}),(0,n.jsx)(c.L,{height:30}),(0,n.jsx)(ee,{children:(0,n.jsx)(b.$,{})})]})})}var y=r(52399),w=r(30130),C=r(43629),S=r(13537),P=r(33498),k=r(97469),A=r(29927),_=r(22010),z=r.n(_);let I=p.zo.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+`,T=p.zo.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+`,L=p.zo.button`
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid ${A.w.neutral400};
+
+  &:hover {
+    border-color: ${A.w.blueJeans};
+  }
+`,$=p.zo.div`
+  flex-grow: 1;
+`;function CategorySelection(e){return(0,n.jsx)(I,{children:(0,n.jsx)(T,{children:e.categories.map(t=>(0,n.jsxs)(L,{onClick:()=>e.onSelect(t),children:[(0,n.jsx)(z(),{height:150,src:t.previewImage,alt:""}),(0,n.jsx)(s.x,{type:"paragraph1ShortSemibold",children:t.name}),(0,n.jsx)($,{children:(0,n.jsx)(s.x,{type:"paragraph3",children:t.description})})]},t.slug))})})}var U=r(53756);function projectTemplateToTemplateSelectorProps(e){let t=e.meta?.icon??U.q,r=t.url.includes("ucarecdn.com")?`${t.url}-/preview/70`:t.url;return{id:e.key,title:e.name,description:e.description,previewImage:e.previewImage?.url,icon:r,tablesCount:(e.tables??[]).length}}var E=r(65535);let M=p.zo.div`
+  height: 190px;
+  overflow: hidden;
+`,N=p.zo.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+`,F=p.zo.div`
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+  border-top: 1px solid ${A.w.neutral400};
+  position: relative;
+`,B=p.zo.div`
+  padding-top: 3px;
+`,D=p.zo.img`
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+`,Z=p.zo.div`
+  color: ${A.w.neutral800};
+`,O=p.zo.div``,R=p.zo.button`
+  all: unset;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid ${A.w.neutral400};
+
+  ${e=>{let{onClick:t}=e;return t?p.iv`
+          cursor: pointer;
+
+          transition: border-color 150ms;
+          ${F} {
+            transition: background-color 150ms;
+          }
+          ${O}, ${O} * {
+            transition: color 150ms;
+          }
+
+          &:hover {
+            border-color: ${A.w.blueJeans};
+
+            ${F} {
+              background-color: ${A.w.blue10};
+            }
+
+            ${O} {
+              color: ${A.w.blueJeans};
+            }
+          }
+        `:p.iv`
+          cursor: not-allowed;
+        `}}
+`,G=p.zo.div`
+  position: absolute;
+  bottom: calc(100% + 1px);
+  width: 100%;
+
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 12px;
+  line-height: 16px;
+
+  padding: 10px;
+
+  background-color: ${A.w.warning10};
+  color: ${A.w.neutral800};
+  border-top: 1px solid ${A.w.neutral400};
+
+  & > a {
+    color: ${A.w.neutral800};
+    font-weight: 600;
+  }
+`;function TemplateItem(e){let t=1===e.tablesCount?"Table":"Tables";return(0,n.jsxs)(R,{onClick:e.onClick,disabled:!e.onClick,children:[(0,n.jsx)(M,{children:e.previewImage?(0,n.jsx)(N,{src:e.previewImage,alt:""}):null}),(0,n.jsxs)(F,{children:[e.exceedsTablesLimit?(0,n.jsx)(G,{children:e.isPaidAccount?(0,n.jsxs)(n.Fragment,{children:["Requires ",e.tablesCount," additional ",t," which exceeds your limit."]}):(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(E.r,{href:e.zapierUpgradeUrl,target:"_blank",color:"inherit",onClick:()=>e.onUpgrade?.(e.id),children:"Upgrade your Tables limits"})," ","to use this template."]})}):null,e.icon?(0,n.jsx)(B,{children:(0,n.jsx)(D,{src:e.icon,alt:""})}):null,(0,n.jsxs)(Z,{children:[(0,n.jsx)(O,{children:(0,n.jsx)(s.x,{tag:"div",type:"paragraph3Semibold",color:"currentColor",children:e.title})}),e.description?(0,n.jsxs)(l.Fragment,{children:[(0,n.jsx)(c.L,{height:5}),(0,n.jsx)(s.x,{tag:"div",type:"smallPrint1",color:"currentColor",children:e.description})]}):null]})]})]})}let J=p.zo.div`
+  max-height: 500px;
+`,q=p.zo.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+`;function TemplateSelector(e){let t=e.templates.map(projectTemplateToTemplateSelectorProps);return(0,n.jsx)(J,{children:(0,n.jsxs)(q,{children:[t.map(t=>(0,n.jsx)(Template,{template:t,onUpgrade:e.onUpgrade,onSelect:e.onSelect,isPaidAccount:e.isPaidAccount,zapierUpgradeUrl:e.zapierUpgradeUrl,tablesCount:e.tablesCount,tablesLimit:e.tablesLimit},t.id)),(0,n.jsx)(c.L,{height:10})]})})}function Template(e){let t=e.template.tablesCount>0,r=e.tablesCount+e.template.tablesCount>e.tablesLimit,i=t&&r;return(0,n.jsx)(TemplateItem,{...e.template,onClick:i?void 0:()=>e.onSelect(e.template.id),onUpgrade:e.onUpgrade,exceedsTablesLimit:i,isPaidAccount:e.isPaidAccount,zapierUpgradeUrl:e.zapierUpgradeUrl},e.template.id)}var H=r(80036);let Q=p.zo.div`
+  display: flex;
+  gap: 20px;
+`;function FooterActions(e){return e.selectedCategory?(0,n.jsxs)(Q,{children:[(0,n.jsx)(H.z,{color:"secondary",size:"small",onClick:()=>e.setSelectedCategory(void 0),children:"Back"}),(0,n.jsx)(H.z,{color:"secondary",size:"small",onClick:e.handleBlankClick,iconBefore:"formAdd",children:"Start from Scratch"})]}):(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(H.z,{color:"secondary",size:"small",onClick:e.handleBlankClick,iconBefore:"formAdd",children:"Start from Scratch"}),(0,n.jsx)(E.r,{href:`${e.baseUrl}/templates`,target:"_blank",children:"Visit the Template Library to see more examples"})]})}var W=r(59659),V=r.n(W);let K=[{name:"Form",slug:"forms",description:"Forms can be used to capture information from your leads or customers. You can embed forms on your website or publish them directly.",previewImage:{src:"https://interfaces.zapier.com/_next/static/media/forms.22f7a112.png",height:830,width:1482,blurDataURL:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAIAAAA8r+mnAAAASklEQVR42kXKQQ6AIAxEUe5/U6KJii2FDm0lGONqMnk/UdWblQXHxWepLGNeqkgLwKIYZu7SfsAEaYiwCG/9g3cKad563rUQVqoPGpxcnqvgIKQAAAAASUVORK5CYII=",blurWidth:8,blurHeight:4}},{name:"Customer Portal",slug:"customer-portal",description:"Create web portals for your team or customers. Portals can either be public or require users to login. Embed tables, kanban boards, and more!",previewImage:{src:"https://interfaces.zapier.com/_next/static/media/customer-portal.25764395.png",height:1062,width:1738,blurDataURL:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAMAAABPT11nAAAAOVBMVEX3+Pz29/v19/z19/v09vv09frz9fv09Pnz9Pny9Pvy9Prx9Pvy8/nx8/vy8/jx8/rw8vfv8fbt7vT6GyYpAAAALUlEQVR42mNgYucREGJhYmLg5xbk4GPj52fg5GRlYGTm5WTg5YQABi5efjAAACDqAZOwOl2vAAAAAElFTkSuQmCC",blurWidth:8,blurHeight:5}}],Y={forms:["get-in-touch","free-offer","invoice-form","employee-availability-form-tracker"],"customer-portal":["marketplace","product-feedback","request-portal","simple-crm"]},X=(0,C.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL,ee=p.zo.div`
+  margin: 0 auto;
+  width: fit-content;
+`,et=(0,C.v)().DEFAULT_TABLES_LIMIT;function ModalCreateProject(e){let{client:t}=(0,l.useContext)(k.G),r=t?.getTreatment("tables_enable_add-on",{email:e.user.email})==="on",i=t?.getTreatment("interfaces_enable-top-level-templates",{email:e.user.email,isStaff:e.user.isStaff})==="on"||e.user.isStaff,a=r?`${X}/app/settings/billing?upgradeProduct=tables-premium?utm_campaign=zpr-gbl-exp-evr-add_on_purchase_interfaces_product-prd&utm_medium=product&utm_source=zapier`:`${X}/app/pricing?utm_source=zapier&utm_medium=product&utm_campaign=zpd-gbl-upg-live-tables_limit_cta_from_interface_template`,[o,d]=(0,l.useState)(),[p,b]=(0,l.useState)(!1),A=(0,l.useRef)(e.templateKey),_=(0,h.useRouter)(),{emitBuilderInteractionEvent:z}=(0,f.E)(),{track:I}=(0,g.ou)(),T=j.S.useContext(),{data:{templates:L=[]}={}}=j.S.templates.list.useQuery(),{data:$,isLoading:U}=j.S.tableTables.list.useQuery(void 0,{suspense:!1}),E=$?.data.length??0,{data:M,isLoading:N}=j.S.tableTables.limits.useQuery(void 0,{suspense:!1}),F=M?.data.max_table_count??et,B=e.user.accounts?.find(t=>t.id===e.accountId)?.is_paid??!1,D=j.S.projects.create.useMutation({onSuccess(t){T.projects.list.setData({accountId:e.accountId},e=>e?{...e,projects:[...e,t.project]}:e)},onError(e){let t="Project creation failed.",r=e?.data?.errors?.includes("Created table count did not match template input"),n=e?.data?.code==="interfaces:limits:projects";r?t="Upgrade your Tables limits to use this template.":n&&(t="You have reached the limit of projects for your plan. Please upgrade your plan to create more.",setTimeout(()=>{window.location.assign(`${(0,C.v)().NEXT_PUBLIC_INTERFACES_BASE_URL}/pricing`)},5e3)),v.Am.error(t)}}),Z=(0,l.useCallback)(async e=>{b(!0);try{let{project:t}=await D.mutateAsync({templateKey:e}),r=t.pages;if(I(g.P5.CREATED_PROJECT,{reactComponent:"ModalCreateProject",template:e,experimentName:"interfaces_enable-top-level-templates",experimentLane:i?"treatment":"control"}),z({interaction_raw_text:e,interaction_goal:"create new project",interfaces_project_id:t?.id,event_action:"click",option_selected:i?"treatment-top_level_template":"control-nested_template"}),("form"===e||"lead-capture"===e)&&z({interaction_goal:"add form component",interfaces_project_id:t?.id,event_action:"click"}),t){let e=Object.keys(r);(0,P.W)(t.id,e);let n=(0,m._D)({projectId:t.id});_.push(n)}}catch(e){console.error(e),b(!1);return}},[z,I,D,_,i]);(0,l.useEffect)(()=>{A.current&&(Z(A.current),A.current=null)},[Z]);let O=(0,l.useCallback)(()=>{I("Clicked Start from Scratch",{reactComponent:"ModalContentHeader",experimentName:"interfaces_enable-top-level-templates",experimentLane:i?"treatment":"control"}),z({interaction_raw_text:"Clicked start from scratch button",interaction_goal:"click start from scratch",event_action:"click",option_selected:i?"treatment-top_level_start_from_scratch":"control-nested_start_from_scratch"}),Z("blank")},[Z,z,I,i]),R=(0,l.useMemo)(()=>o?L.filter(e=>Y[o]?.includes(e.key)):[],[L,o]);return(0,n.jsx)(x.u,{onClosed:e.onClosed,canClose:!p,children:p?(0,n.jsx)(LoadingContent,{}):(0,n.jsxs)(y.T,{width:"800px",height:i?"1000px":void 0,children:[(0,n.jsx)(u.dE,{children:(0,n.jsx)(en,{children:(0,n.jsx)(s.x,{type:"pageHeader7",children:o?`Choose a ${V()(o).toLowerCase()} template to start with`:"What do you want to build today?"})})}),(0,n.jsx)(u.nS,{scrollable:!0,children:U||N?(0,n.jsx)(ee,{children:(0,n.jsx)(er,{children:(0,n.jsx)(w.$,{})})}):(0,n.jsxs)(S.P,{accountId:e.accountId,children:[i?(0,n.jsx)(TemplateSelector,{templates:L.filter(e=>["contact-us-form","client-portal","sales-crm","expenses-form-hub"].includes(e.key)),onSelect:e=>Z(e),onUpgrade:e=>{z({interaction_raw_text:`Upgrade Tables limits to create a ${e} project`,interaction_goal:"Upgrade Tables limits",event_action:"click"})},isPaidAccount:B,tablesCount:E,tablesLimit:F,zapierUpgradeUrl:a}):null,!o&&!i&&(0,n.jsx)(CategorySelection,{categories:K,onSelect:e=>{I("Clicked Template Category",{reactComponent:"ModalCreateProject",category:e,experimentName:"interfaces_enable-top-level-templates",experimentLane:"control"}),z({interaction_raw_text:`Clicked ${e.name} category`,interaction_goal:"Click onboarding template category",event_action:"click"}),d(e.slug)}}),o&&!i?(0,n.jsx)(TemplateSelector,{templates:R,onSelect:e=>Z(e),onUpgrade:e=>{z({interaction_raw_text:`Upgrade Tables limits to create a ${e} project`,interaction_goal:"Upgrade Tables limits",event_action:"click"})},isPaidAccount:B,tablesCount:E,tablesLimit:F,zapierUpgradeUrl:a}):null]})}),(0,n.jsx)(c.L,{height:20}),(0,n.jsx)(u.bT,{children:(0,n.jsxs)(ei,{children:[(0,n.jsx)(FooterActions,{selectedCategory:o,setSelectedCategory:d,handleBlankClick:O,baseUrl:X}),(0,n.jsx)(c.L,{height:20})]})})]})})}let er=p.zo.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 560px;
+`,en=p.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px -20px 30px 0;
+`,ei=p.zo.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+`;var ea=r(69666),el=r(32165),components_TemplateHandler=()=>{let e=(0,h.useRouter)();return(0,l.useEffect)(()=>{let t=localStorage.getItem("createFromTemplateKey");t&&(localStorage.removeItem("createFromTemplateKey"),e.push(`/templates?create=${t}`))},[e]),null},eo=r(70342),es=r(79439);let ec=ea.default.div.withConfig({componentId:"sc-8a1fdf81-0"})`
+  height: 220px;
+  position: relative;
+  width: 100%;
+`,ed=ea.default.div.withConfig({componentId:"sc-8a1fdf81-1"})`
+  border-radius: 15px;
+  border: 1px solid ${A.w.neutral400};
+  background: ${A.w.neutral100};
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+`,ep=ea.default.div.withConfig({componentId:"sc-8a1fdf81-2"})`
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 0 0;
+  max-width: 330px;
+  width: 100%;
+  margin: 0 auto;
+`,eu=ea.default.div.withConfig({componentId:"sc-8a1fdf81-3"})`
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`,ex=ea.default.div.withConfig({componentId:"sc-8a1fdf81-4"})`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`,eh=ea.default.div.withConfig({componentId:"sc-8a1fdf81-5"})`
+  margin-bottom: 8px;
+  flex: 1;
+`,em=ea.default.div.withConfig({componentId:"sc-8a1fdf81-6"})`
+  margin-bottom: 8px;
+`,TemplateCard=e=>{let{createTemplate:t,template:r}=e;return(0,n.jsxs)(ed,{children:[(0,n.jsx)(ec,{children:r?.previewImage?(0,n.jsx)(z(),{alt:r.previewImage.name,fill:!0,src:r.previewImage.url,style:{objectFit:"cover",objectPosition:"center center"}}):(0,n.jsx)(eo.q,{height:220})}),(0,n.jsxs)(eu,{children:[(0,n.jsx)(em,{children:(0,n.jsx)(s.x,{type:"pageHeader9",children:r?.name||(0,n.jsx)(es.N,{lines:1})})}),(0,n.jsx)(eh,{children:(0,n.jsx)(s.x,{type:"paragraph3",children:r?.description||(0,n.jsx)(es.N,{lines:4})})}),(0,n.jsx)(ep,{children:(0,n.jsx)(H.z,{color:"secondary",disabled:!r,isFullWidth:!0,onClick:t,size:"small",children:(0,n.jsx)(ex,{children:r?(0,n.jsxs)(n.Fragment,{children:["Start here ",(0,n.jsx)(el.J,{name:"arrowBigRight",size:22})]}):(0,n.jsx)(es.N,{lines:1})})})})]})]})},eg=ea.default.ul.withConfig({componentId:"sc-e799ee7c-0"})`
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+`,TemplateGrid=e=>{let{handleCreate:t}=e,{data:{templates:r=[]}={},isLoading:i}=j.S.templates.list.useQuery();return(0,n.jsx)(eg,{children:i?Array.from({length:6}).map((e,t)=>(0,n.jsx)("li",{children:(0,n.jsx)(TemplateCard,{template:void 0})},`template-${t}`)):r.map(e=>(0,n.jsx)("li",{children:(0,n.jsx)(TemplateCard,{createTemplate:()=>t(e.key),template:e})},`template-${e.key}`))})},ej=ea.default.div.withConfig({componentId:"sc-844d391b-0"})`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 50px;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`,ef=ea.default.div.withConfig({componentId:"sc-844d391b-1"})`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 50px;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+`,ev=ea.default.div.withConfig({componentId:"sc-844d391b-2"})`
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+`,eb=ea.default.div.withConfig({componentId:"sc-844d391b-3"})`
+  display: flex;
+  gap: 10px;
+  margin: 30px auto 50px;
+  align-items: center;
+  justify-content: center;
+`,ey=ea.default.div.withConfig({componentId:"sc-844d391b-4"})`
+  text-align: center;
+  margin: 20px auto;
+`,ew=ea.default.div.withConfig({componentId:"sc-844d391b-5"})`
+  max-width: 600px;
+  margin: 20px auto 40px;
+  background: ${A.w.neutral300};
+  height: 3px;
+  border-radius: 100px;
+  width: 100%;
+`,eC=ea.default.div.withConfig({componentId:"sc-844d391b-6"})`
+  padding: 20px;
+`;function ZeroState(e){let{onClick:t,setShowCreateModal:r}=e,{track:i}=(0,g.ou)();return(0,l.useEffect)(()=>{i("Viewed Zero State",{reactComponent:"ZeroState",reactComponentVersion:"Late November 2023"})},[i]),(0,n.jsxs)("div",{children:[(0,n.jsxs)(ej,{children:[(0,n.jsx)(el.J,{color:"brand",name:"navInterfacesV2",size:80}),(0,n.jsx)(s.x,{type:"pageHeader3",children:"Interfaces"})]}),(0,n.jsxs)(ef,{children:[(0,n.jsx)(el.J,{color:"brand",name:"navInterfacesV2",size:50}),(0,n.jsx)(s.x,{type:"pageHeader5",children:"Interfaces"})]}),(0,n.jsx)(ev,{children:(0,n.jsx)(s.x,{type:"paragraph1",children:"Welcome to Zapier Interfaces! This new tool works hand-in-hand with automation to help you create custom forms, webpages, and basic apps to power your business-critical workflows."})}),(0,n.jsx)(eb,{children:(0,n.jsx)(H.z,{color:"primary",id:"create-table",onClick:()=>{i("Opened Create Modal",{reactComponent:"ZeroState",reactComponentVersion:"Late November 2023"}),t()},children:"Create your first Interface"})}),(0,n.jsx)(ew,{}),(0,n.jsx)(ey,{children:(0,n.jsx)(s.x,{type:"pageHeader7",children:"Explore Templates"})}),(0,n.jsx)(eC,{children:(0,n.jsx)(TemplateGrid,{handleCreate:e=>{i("Clicked Use Case",{reactComponent:"ZeroState",template:e,reactComponentVersion:"Late November 2023"}),r(e)}})}),(0,n.jsx)(components_TemplateHandler,{})]})}var eS=r(3550),eP=r(13836),ek=r(30431),eA=r(63601),e_=r(8878),ez=r(57203),eI=r(30733),eT=r(19624),eL=r(91821);let e$=p.zo.div`
+  display: flex;
+  gap: 10px;
+`;function ModalDeleteProjectsBody(e){let t=(0,eT.NL)(),r=j.S.useContext(),{data:i}=j.S.zaps.search.useQuery({projectIds:e.projectIds}),a=j.S.projects.delete.useMutation({onSuccess(e){r.projects.count.invalidate(),(0,eL.m)(t,e.projectIds)}}),{control:l,handleSubmit:o,watch:d,formState:{isSubmitting:p}}=(0,ez.cI)({defaultValues:{relatedZapsAction:"disable-zap"}}),x="delete-zap"===d("relatedZapsAction"),onSubmit=async t=>{await a.mutateAsync({projectIds:e.projectIds,relatedZapsDeleteOption:t.relatedZapsAction}),e.onClosed()};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(u.dE,{children:(0,n.jsx)(s.x,{type:"subHeader3Bold",children:"Delete Interface"})}),(0,n.jsx)(u.nS,{scrollable:!0,children:(0,n.jsxs)("form",{children:[(0,n.jsxs)(s.x,{tag:"p",type:"paragraph3",color:"neutral700",children:["Are you sure you want to delete your"," ",(0,n.jsx)("b",{children:e.projectIds.length})," Interface(s)? This action cannot be undone."]}),i&&i?.length>0?(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(c.L,{height:15}),(0,n.jsx)(ez.Qr,{name:"relatedZapsAction",control:l,rules:{required:!0},render:e=>{let{field:t}=e;return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(eI.h,{prompt:"What should happen to the Zaps connected to these Interfaces?",value:t.value,onChange:e=>t.onChange(e)}),(0,n.jsx)(c.L,{height:20}),"delete-zap"===t.value&&(0,n.jsxs)(ek.b,{type:"error",children:[i.length," zap",i.length>1&&"s"," will be deleted"]})]})}})]}):null]})}),(0,n.jsx)(u.bT,{children:(0,n.jsxs)(e$,{children:[(0,n.jsxs)(e_.z,{type:"submit",color:"danger",isLoading:p,onClick:()=>o(onSubmit)(),children:["Delete Interface",e.projectIds.length>1&&"s"," ",x?"& Zaps":null]}),(0,n.jsx)(e_.z,{type:"button",color:"secondary",onClick:e.onClosed,children:"Cancel"})]})})]})}function ModalBulkDeleteProjects(e){return(0,n.jsx)(eA.u,{onClosed:e.onClosed,children:(0,n.jsx)(u.hz,{maxWidth:"60ch",children:(0,n.jsx)(l.Suspense,{fallback:(0,n.jsx)(w.$,{height:200}),children:(0,n.jsx)(ModalDeleteProjectsBody,{...e})})})})}var eU=r(68889),eE=r(85625),eM=r(35995);function ProjectCount(e){return(0,n.jsx)(n.Fragment,{children:e.isSelected?(0,n.jsx)(eM.S,{children:e.count}):(0,n.jsx)(s.x,{type:"smallPrint1Bold",color:"neutral800",children:e.count})})}let eN=ea.default.div.withConfig({componentId:"sc-ec330f41-0"})`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+`;var components_InterfacesLogo=()=>(0,n.jsx)(eN,{children:(0,n.jsx)(s.x,{type:"pageHeader5",children:"Interfaces"})}),eF=r(61483);function SearchInput(e){let{handleChange:t,placeholder:r,value:i}=e,[a,o]=(0,l.useState)(i);return(0,l.useEffect)(()=>{let e=setTimeout(()=>{t(a)},300);return()=>{clearTimeout(e)}},[t,a]),(0,n.jsx)(eF.o,{placeholder:r,value:a,onChange:e=>o(e.target.value),renderIconBefore:()=>(0,n.jsx)(el.J,{name:"magnifyingGlass"})})}let eB=p.zo.div`
+  flex: 1 1 0%;
+  min-width: 220px;
+`,eD=p.zo.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`,eZ=p.zo.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;function Sidebar(e){let{projectsCount:t,query:r,setQuery:i,sharing:a,setSharing:l}=e;return(0,n.jsx)(eB,{children:(0,n.jsxs)(eD,{children:[(0,n.jsx)(components_InterfacesLogo,{}),(0,n.jsx)(c.L,{height:20}),(0,n.jsx)(SearchInput,{placeholder:"Search for an Interface",handleChange:i,value:r}),(0,n.jsx)(c.L,{height:20}),(0,n.jsx)(eU.v,{ariaLabel:"List of items",children:t?(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(eE.s,{onClick:()=>l("my"),isSelected:"my"===a,children:(0,n.jsxs)(eZ,{children:[(0,n.jsx)("span",{children:"My Interfaces"}),(0,n.jsx)(ProjectCount,{count:t?.all-t?.shared,isSelected:"my"===a})]})}),(0,n.jsx)(eE.s,{onClick:()=>l("shared"),isSelected:"shared"===a,children:(0,n.jsxs)(eZ,{children:[(0,n.jsx)("span",{children:"Shared with me"}),(0,n.jsx)(ProjectCount,{count:t?.shared,isSelected:"shared"===a})]})}),(0,n.jsx)(eE.s,{onClick:()=>l("all"),isSelected:"all"===a,children:(0,n.jsxs)(eZ,{children:[(0,n.jsx)("span",{children:"All Interfaces"}),(0,n.jsx)(ProjectCount,{count:t?.all,isSelected:"all"===a})]})})]}):null})]})})}var eO=r(40113),eR=r(870),eG=r(79301),eJ=r(80438),eq=r(64331),eH=r(81237),eQ=r(33568),eW=r(54773),eV=r(58833),eK=r(33784),eY=r(68154),eX=r(84295),e0=r(46565),e1=r(37691),e3=r(56961),e2=r(28661),e8=r(39566);r(46843),p.zo.a`
+  height: 172px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: stretch;
+
+  background: ${A.w.neutral100};
+  border: 1px solid ${A.w.neutral400};
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  color: ${A.w.neutral800};
+  text-decoration: none;
+
+  transition: all 0.14159s;
+
+  &:hover {
+    border: 1px solid ${A.w.blueJeans};
+    box-shadow: ${e3.f.elevation5};
+    color: ${A.w.blueJeans};
+  }
+`,p.zo.div`
+  width: 100px;
+  border-right: 1px solid ${A.w.neutral400};
+`,p.zo.div`
+  padding: 20px 30px 30px 30px;
+`,p.zo.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+`,p.zo.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  column-gap: 30px;
+`,p.zo.div`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  row-gap: 10px;
+`,p.zo.div``,p.zo.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+`;let e5=p.zo.div`
+  border: 1px solid ${A.w.neutral400};
+  border-radius: 5px;
+`;(0,p.zo)(e5)`
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`,(0,p.zo)(e5)`
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+`,p.zo.div`
+  padding: 0 12px 0 10px;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 8px;
+`,p.zo.div`
+  padding: 0 8px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ${A.w.neutral200};
+  border-left: 1px solid ${A.w.neutral400};
+`;let e6=p.zo.div`
+  display: flex;
+  width: 80px;
+  height: 44px;
+  gap: 1px;
+  align-items: center;
+  flex-shrink: 0;
+`,e4=p.zo.div`
+  position: relative;
+`;function CreatorAvatar(e){let t=[e.creator.firstName,e.creator.lastName].join(" ");return(0,n.jsx)(e2.q,{name:t,url:e.creator.avatarUrl,size:25})}let getBulkSelectIcon=(e,t)=>e===t&&t>0?"formCheckSquare":0!==e?"formDashSquare":"formBlank";function ActionsMenu(e){let[t,r]=(0,l.useState)(!1);return(0,n.jsxs)(e6,{children:[(0,n.jsx)(e0.h,{icon:getBulkSelectIcon(e.selectedCount,e.maxSelectionCount),onClick:()=>{e.selectedCount>0?e.onClearSelection():e.onSelectAll()},size:"small"}),(0,n.jsxs)(e4,{children:[(0,n.jsx)(e0.h,{icon:"arrowSmallDown",size:"small",onClick:()=>r(!t)}),t?(0,n.jsx)(e8.f,{align:"left",onClickOutside:e=>{e.stopPropagation(),r(!1)},children:(0,n.jsxs)("div",{style:{padding:10,width:200},children:[e.selectedCount>0&&(0,n.jsxs)("div",{style:{padding:10},children:[(0,n.jsxs)(s.x,{type:"paragraph3Semibold",color:"neutral800",children:[e.selectedCount," selected"]}),(0,n.jsx)(c.L,{height:10}),(0,n.jsx)("hr",{})]}),(0,n.jsxs)(eU.v,{ariaLabel:"List of items",children:[e.selectedCount!==e.maxSelectionCount&&(0,n.jsx)(eE.s,{onClick:()=>{e.onSelectAll(),r(!1)},children:"Select all"}),e.selectedCount>0&&(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(eE.s,{onClick:()=>{e.onClearSelection(),r(!1)},children:"Clear selection"}),(0,n.jsx)(eE.s,{onClick:()=>{e.onDeleteSelected(),r(!1)},children:"Delete Selected"})]})]})]})}):null]})]})}var e9=r(88667);let e7=p.zo.div`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 5px;
+  align-items: center;
+`,te=p.zo.a`
+  all: unset;
+  display: block;
+  display: block;
+  height: 28px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  & span${e9.G} {
+    max-width: 100%;
+    overflow: hidden;
+
+    p${e9.G} {
+      max-width: 30ch;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media screen and (max-width: 1450px) {
+    max-width: 200px;
+  }
+
+  @media screen and (max-width: 1350px) {
+    max-width: 120px;
+  }
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+`;function ProjectPathLabel(e){let{projectUrl:t}=e;return(0,n.jsxs)(e7,{children:[(0,n.jsx)(el.J,{name:"actionLink",size:20,isBlock:!0}),(0,n.jsx)(te,{children:(0,n.jsx)(E.r,{href:t,target:"_blank",style:{all:"unset"},children:(0,n.jsx)(s.x,{tag:"span",type:"smallPrint1Medium",textAlign:"left",children:t.replace(/^https?:\/\//,"")})})})]})}var tt=r(63731);let tr=p.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+`;function ZSLMenuItem(e){let{handleZsl:t}=e;return(0,n.jsxs)(tr,{onClick:t,children:[(0,n.jsx)(el.J,{name:"arrowCode",size:20}),(0,n.jsx)(s.x,{type:"paragraph1Semibold",color:"inherit",hasTransition:!1,children:"Get ZSL"})]})}let tn=p.zo.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+`,ti=p.zo.code`
+  overflow: scroll;
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--zds-colors-night);
+  color: #fff;
+  width: 100%;
+  height: 500px;
+  display: block;
+`,ta=p.zo.div`
+  padding: 20px;
+  text-align: center;
+`,PrettyPrintJson=e=>{let{data:t}=e;return(0,n.jsx)(ti,{children:(0,n.jsx)("pre",{children:JSON.stringify(t,null,2)})})};var Projects_ZSLModal=e=>{let{closeModal:t,zsl:r}=e;return(0,n.jsx)(eA.u,{onClosed:()=>!0,children:(0,n.jsx)(u.hz,{maxWidth:"1000px",children:(0,n.jsxs)(u.nS,{children:[(0,n.jsxs)(tn,{children:[(0,n.jsx)(s.x,{type:"pageHeader5",children:"Template in ZSL"}),r?(0,n.jsx)(H.z,{color:"secondary",onClick:e=>{e.preventDefault(),navigator.clipboard.writeText(JSON.stringify(r)).then(()=>{t()}).catch(e=>{console.error("Error copying text: ",e)})},children:"Copy Template"}):null]}),r?(0,n.jsx)(PrettyPrintJson,{data:r}):(0,n.jsx)(ta,{children:"Generating ZSL..."})]})})})},tl=r(71125),to=r(51188);let ts=p.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+`;function ProjectOverviewMenuItem(e){let{projectOverviewUrl:t}=e;return(0,n.jsxs)(ts,{onClick:()=>window.location.href=t,children:[(0,n.jsx)(el.J,{name:"actionEdit",size:20}),(0,n.jsx)(s.x,{type:"paragraph1Semibold",color:"inherit",hasTransition:!1,children:"Overview"})]})}let tc=p.zo.div`
+  margin-left: auto;
+  position: relative;
+  z-index: 100;
+`,td=p.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: ${A.w.error};
+  width: 150px;
+`,tp=p.zo.div`
+  display: flex;
+  align-items: center;
+  maxwidth: 400px;
+  cursor: pointer;
+`,tu=(0,p.zo)(tp)`
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 95%;
+`;function ListItem(e){let[t,r]=(0,l.useState)(!1),[i,a]=(0,l.useState)(!1),c=(0,l.useRef)(null),[d,p]=(0,l.useState)(""),[u,x]=(0,l.useState)(!1),h=j.S.projects.generateTemplate.useMutation(),[g,f]=(0,l.useState)(!1),{user:v}=(0,o.aF)(),{projectListItem:{project:b,pageCount:y,thumbnailPage:w}}=e,C=b.name||"Untitled project",handleZsl=async e=>{e.preventDefault(),x(!0);let t=await h.mutateAsync({projectId:b.id});p(t.data.template)},S=1===y&&w?.id?(0,m.d7)({pageId:w.id}):(0,m._D)({projectId:b.id}),{data:P}=j.S.projects.checkCustomDomain.useQuery({projectId:b.id},{enabled:!!b.customDomain}),k=(0,m.Sx)({projectSlug:b.slug,customDomain:b.customDomain,customDomainConfigured:P?.configured}),copyToClipboard=async e=>{await navigator.clipboard.writeText(e),a(!0)};(0,l.useEffect)(()=>{let handleClickOutside=e=>{c.current&&!c.current.contains(e.target)&&a(!1)};return document.addEventListener("mousedown",handleClickOutside),()=>{document.removeEventListener("mousedown",handleClickOutside)}},[]);let A=[{children:(0,n.jsxs)(td,{children:[(0,n.jsx)(el.J,{name:"actionTrash",size:20}),(0,n.jsx)(s.x,{type:"paragraph1Semibold",color:"inherit",hasTransition:!1,children:"Delete"})]}),onClick:e=>{e?.preventDefault(),r(!0)}},{children:(0,n.jsx)(ProjectOverviewMenuItem,{projectOverviewUrl:(0,m.gd)({projectId:b.id})}),onClick:e=>{e?.preventDefault()}}];return v?.isStaff&&A.unshift({children:(0,n.jsx)(ZSLMenuItem,{handleZsl:handleZsl})}),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsxs)(eG.S,{children:[(0,n.jsx)(eV.g,{children:(0,n.jsx)(eK.l,{children:(0,n.jsx)(eY.X,{checked:e.selected,name:"checkbox",onChange:()=>e.handleSelect(b.id)})})}),(0,n.jsx)(eV.g,{children:(0,n.jsx)(E.r,{href:S,style:{all:"unset"},children:(0,n.jsx)(tp,{children:(0,n.jsx)(tu,{children:(0,n.jsx)(s.x,{type:"smallPrint1Semibold",color:"inherit",hasTransition:!1,children:C})})})})}),(0,n.jsx)(eV.g,{children:(0,n.jsx)(l.Suspense,{fallback:(0,n.jsx)("div",{}),children:(0,n.jsx)(ProjectPathLabel,{projectUrl:k})})}),(0,n.jsx)(eV.g,{children:(0,n.jsx)("div",{ref:c,children:(0,n.jsx)(eX.p,{content:i?"Copied!":"Copy link",position:"north",children:e=>{let{childProps:t}=e;return(0,n.jsx)(e0.h,{...t,icon:i?"actionCopyFill":"actionCopy",onClick:()=>copyToClipboard(k),size:"xsmall"})}})})}),(0,n.jsx)(eV.g,{children:(0,n.jsx)(E.r,{href:S,style:{all:"unset"},children:(0,n.jsx)(s.x,{type:"smallPrint1Medium",color:"neutral800",children:(0,tl.Z)(new Date(b.updatedAt??b.createdAt),{addSuffix:!0})})})}),(0,n.jsx)(eV.g,{children:(0,n.jsx)(E.r,{href:S,style:{all:"unset"},children:(0,n.jsxs)("div",{style:{display:"flex",alignItems:"center",gap:10,minWidth:200},children:[function(e){switch(e){case to.ProjectAuthType.None:return(0,n.jsx)(el.J,{name:"miscWorld",color:"neutral600"});case to.ProjectAuthType.Password:return(0,n.jsx)(el.J,{name:"actionLock",color:"neutral600"});case to.ProjectAuthType.Consumer:return(0,n.jsx)(el.J,{name:"personGroup",color:"neutral600"});default:return e}}(b.authType),(0,n.jsx)(s.x,{type:"smallPrint1Medium",color:"neutral800",children:function(e){switch(e){case to.ProjectAuthType.None:return"Anyone can access";case to.ProjectAuthType.Password:return"Password protected";case to.ProjectAuthType.Consumer:return"Managed users can access";default:return e}}(b.authType)})]})})}),(0,n.jsx)(eV.g,{children:(0,n.jsx)(E.r,{href:S,style:{all:"unset"},children:(0,n.jsx)(CreatorAvatar,{creator:b.creator})})}),(0,n.jsx)(eV.g,{children:(0,n.jsx)(E.r,{href:S,style:{all:"unset"},children:(0,n.jsxs)(tc,{children:[(0,n.jsx)(e0.h,{icon:"navMoreHoriz",color:"icon-secondary",onClick:e=>{e.preventDefault(),e.stopPropagation(),f(!0)}}),g?(0,n.jsx)(tt.A,{ariaLabel:"Project menu",menuItems:A,onClickOutside:()=>f(!1),position:"south",align:"right"}):null]})})})]}),t?(0,n.jsx)(e1.K,{projectId:b.id,onClosed:()=>r(!1)}):null,u?(0,n.jsx)(Projects_ZSLModal,{zsl:d,closeModal:()=>x(!1)}):null]})}var tx=r(61703),components_Wootric=e=>{let{projectCount:t=0}=e,{user:r}=(0,o.aF)(),{planName:i}=(0,tx.du)(r),a=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent),[s,c]=(0,l.useState)(!1),d=Intl.DateTimeFormat().resolvedOptions().timeZone,p=Intl.DateTimeFormat().resolvedOptions().locale;return((0,l.useEffect)(()=>{if(!s&&!a){let getAccount=async()=>{let e=await fetch(`${(0,C.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL}/api/v4/accounts/${r?.currentAccount}/entitlements/`,{mode:"cors",credentials:"include"}).then(e=>e.json());return e};getAccount().then(e=>{if(document&&null===document.getElementById("wootric-settings")){let n=document.createElement("script");n.type="text/javascript",n.id="wootric-settings",n.async=!0,n.innerHTML=`
+      window.wootricSettings = {
+        account_token: "NPS-edfb676e",
+        aria: true,
+        created_at: ${Math.floor(new Date(r?.createdAt||e?.signup).getTime()/1e3)},
+        email: "${r?.email}",
+        modal_footprint: "compact",
+        properties: {
+          date_user_created: "${e?.signup?Math.floor(new Date(e?.signup).getTime()/1e3):null}",
+          account_id: "${r?.currentAccount}",
+          customuser_id: "${r?.zapierId}",
+          email: "${r?.email}",
+          language: "${p}",
+          plan_tier: "${e?.plan_status?.plan_type}${e?.limits?.action_limit?` (${e?.limits?.action_limit?.toLocaleString()} Tasks)`:""}",
+          interfaces_plan_tier: "${V()(i)}",
+          timezone: "${d}",
+          interfaces_amount: ${t}
+        },
+      };
+    `,document.body.appendChild(n)}if(document&&null===document.getElementById("wootric-beacon")){let e=document.createElement("script");e.type="text/javascript",e.id="wootric-beacon",e.async=!0,e.src="https://cdn.wootric.com/wootric-sdk.js",e.onload=function(){window.wootric("run")},document.body.appendChild(e)}c(!0)})}},[i,a,p,t,d,r?.createdAt,r?.currentAccount,r?.email,r?.zapierId,s]),a)?null:(0,n.jsx)("div",{})};let th=p.zo.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+`,tm=l.memo(function(e){let{canCreateProjects:t,selectedProjects:r,projects:i,onSelectAll:a,onClearSelection:l,onDeleteSelected:o,handleClickCreate:s}=e;return(0,n.jsxs)(eO.z,{children:[(0,n.jsx)(eO.l,{children:(0,n.jsx)(ActionsMenu,{selectedCount:r.length,maxSelectionCount:i?.length??0,onSelectAll:a,onClearSelection:l,onDeleteSelected:o})}),(0,n.jsxs)(th,{"data-testid":"project-list-header-actions",children:[(0,n.jsx)(e_.z,{href:(0,m.R1)(),target:"_blank",iconBefore:"navHelp",color:"secondary",size:"small",children:"Help"}),t?(0,n.jsx)(e_.z,{iconBefore:"formAdd",onClick:s,size:"small",children:"Create"}):(0,n.jsx)(e_.z,{size:"small",iconBefore:"actionLock",href:(0,m.cH)(window.location.href),children:"Upgrade to create more projects"})]})]})}),tg=l.memo(function(e){let{onSortBy:t}=e;return(0,n.jsx)(eR.s,{children:(0,n.jsxs)(eG.S,{children:[(0,n.jsx)(eJ.c,{children:""}),(0,n.jsx)(eJ.c,{children:(0,n.jsx)(eq.M,{onClick:()=>t("name"),children:"Title"})}),(0,n.jsx)(eJ.c,{children:(0,n.jsx)(eq.M,{onClick:()=>t("name"),children:"Published page"})}),(0,n.jsx)(eJ.c,{children:""}),(0,n.jsx)(eJ.c,{children:(0,n.jsx)(eq.M,{onClick:()=>t("updatedAt"),children:"Last Opened"})}),(0,n.jsx)(eJ.c,{children:(0,n.jsx)(eH.v,{children:"Access"})}),(0,n.jsx)(eJ.c,{children:(0,n.jsx)(eH.v,{children:"Owner"})}),(0,n.jsx)(eJ.c,{children:""})]})})});function ProjectsTableBody(e){let{projects:t,selectedProjects:r,handleSelect:i}=e;return t?(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(eQ.R,{children:t.map(e=>(0,n.jsx)(eW.R,{project:e.project,children:(0,n.jsx)(ListItem,{projectListItem:e,selected:r.includes(e.project.id),handleSelect:i})},e.project.id))}),(0,n.jsx)(components_TemplateHandler,{}),"production"===(0,C.v)().NEXT_PUBLIC_APP_ENV&&(0,n.jsx)(components_Wootric,{projectCount:t?.length})]}):null}let tj=p.zo.div`
+  padding-top: 22px;
+  max-width: 100%;
+`,tf=p.zo.div`
+  text-align: center;
+`;function ProjectsListFooter(e){let{isLoading:t,hasNextPage:r,fetchNextPage:i}=e;return(0,n.jsxs)(tj,{children:[r?(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(c.L,{height:30}),(0,n.jsx)(tf,{children:(0,n.jsx)(e_.z,{onClick:()=>i(),isLoading:t,children:"Load more"})})]}):null,(0,n.jsx)(c.L,{height:20}),(0,n.jsxs)(s.x,{tag:"p",type:"paragraph3",textAlign:"center",margin:"10px",children:["Have a suggestion?"," ",(0,n.jsx)(E.r,{href:"https://eap.zapier.app/interfaces",target:"_blank",children:"Submit your idea"})]})]})}let tv=p.zo.tbody`
+  & tr {
+    &:hover {
+      background: #000;
+    }
+  }
+`;function ProjectsListTableLoading(){return(0,n.jsxs)(tv,{children:[(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsx)(eo.q,{height:120})})}),(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsx)(eo.q,{height:120})})}),(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsx)(eo.q,{height:120})})}),(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsx)(eo.q,{height:120})})}),(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsx)(eo.q,{height:120})})}),(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsx)(eo.q,{height:120})})})]})}var tb=r(61374);function UpgradeAlert(e){let{canCreateProjects:t,isUpgraded:r}=e,[i]=(0,tb.gj)(["chatbots_enable_standalone"]);return(0,n.jsx)(n.Fragment,{children:(()=>{if(t&&r)return null;let e=`Upgrade to unlock ${t?"":"more projects, "} custom branding & domains${i?"":", advanced chatbot"},
+    restricted access, and more`;return(0,n.jsxs)(ek.b,{layout:"box",children:[t?"":"You've reached the limit for projects created on your current plan. ",e,". ",(0,n.jsx)(E.r,{href:"/pricing",children:"Learn more."})]})})()})}let ty=p.zo.div`
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px;
+  min-height: calc(100vh - 176px);
+  @media screen and (max-width: 960px) {
+    padding: 40px 24px;
+  }
+`,tw=p.zo.div`
+  min-height: calc(100vh - 176px);
+  display: flex;
+  gap: 20px 40px;
+  padding: 10px 40px 50px;
+  max-width: 2300px;
+  margin: auto;
+`,tC=p.zo.div`
+  padding: 32px;
+  text-align: center;
+`,tS=p.zo.div`
+  flex: 3 0 0%;
+  min-width: 400px;
+`,tP=p.zo.div`
+  ${e=>{let{$isLoading:t}=e;return t&&"pointer-events: none; opacity: 0.5; }"}};
+  & table${e9.G} {
+    tbody${e9.G} {
+      tr {
+        td {
+          padding: 8px 10px;
+        }
+      }
+    }
+  }
+`;function Projects(){let{client:e}=(0,l.useContext)(k.G),[t,r]=(0,l.useState)(""),[i,a]=(0,l.useState)({key:"updatedAt",order:"desc"}),p=new URLSearchParams(window.location.search),[u,x]=(0,l.useState)("all"),[h,v]=(0,l.useState)("create"===p.get("modalOpen")),[b,y]=(0,l.useState)([]),{emitUserInteractionEvent:C}=(0,f.E)(),{track:P}=(0,g.ou)();(0,l.useEffect)(()=>{y([])},[u]);let[A,_]=function(e,t){let[r,i]=(0,l.useState)(!1),a=(0,l.useCallback)(()=>{i(!0)},[i]),o=(0,l.useCallback)(()=>r&&e.length>0?(0,n.jsx)(ModalBulkDeleteProjects,{projectIds:e,onClosed:()=>{i(!1),t?.()}}):null,[r,e,t]);return[a,o]}(b,()=>y([])),{user:z}=(0,o.aF)(),I=(0,l.useCallback)(()=>!!z&&!!e&&"on"===e.getTreatment("interfaces_enable-top-level-templates",{email:z.email,isStaff:z.isStaff}),[z,e]);if(!z)throw Error("User not returned by queries.");let T=z.currentAccount;if(!T)throw Error("Unable to get currently selected Zapier account");let L=j.S.projects.listListingPage.useInfiniteQuery({accountId:T,limit:6,query:t,sortBy:i,sharing:u},{getNextPageParam:e=>e.nextCursor,keepPreviousData:!0}),{isFree:$}=(0,tx.du)(z),{data:U}=j.S.projects.count.useQuery();if(L.error)throw Error(L.error.message);let E=(0,l.useMemo)(()=>L.data?.pages.flatMap(e=>e.projects),[L.data?.pages]),M=(0,l.useMemo)(()=>E?.map(e=>e.project.id),[E]),N=(0,l.useMemo)(()=>!!z.isStaff||(E?.length??0)<(z.accountProjectLimit??0),[E?.length,z.accountProjectLimit,z.isStaff]),F=(0,l.useMemo)(()=>!$(),[$]),B=L.isLoading,D=(0,l.useCallback)(e=>{e===i.key?a(e=>({...e,order:"asc"===e.order?"desc":"asc"})):a({key:e,order:"desc"})},[i.key]),Z=(0,l.useCallback)(e=>{b.includes(e)?y(t=>t.filter(t=>t!==e)):y(t=>[...t,e])},[b]),handleClickCreate=()=>{P(g.P5.CLICKED_CREATE_PROJECT,{reactComponent:"Projects"}),C({interaction_raw_text:"Create",event_action:"click",option_selected:"clicked create new project",experiment_name:"interfaces_enable-top-level-templates",experiment_flag:I()}),v(!0)};return L.isInitialLoading?(0,n.jsx)(ty,{children:(0,n.jsx)(w.$,{})}):(0,n.jsxs)(n.Fragment,{children:[E&&0===E.length&&""===t&&"all"===u?(0,n.jsx)(S.P,{accountId:T,children:(0,n.jsx)(ty,{children:(0,n.jsx)(ZeroState,{setShowCreateModal:v,onClick:handleClickCreate})})}):(0,n.jsxs)(tw,{children:[(0,n.jsx)(Sidebar,{projectsCount:U,query:t,setQuery:r,sharing:u,setSharing:x}),(0,n.jsxs)(tS,{children:[(0,n.jsx)(UpgradeAlert,{canCreateProjects:N,isUpgraded:F}),(0,n.jsx)(c.L,{height:20}),(0,n.jsx)(tm,{canCreateProjects:N,selectedProjects:b,projects:E??[],onSelectAll:()=>y(M??[]),onClearSelection:()=>y([]),onDeleteSelected:A,handleClickCreate:handleClickCreate}),(0,n.jsx)(c.L,{height:10}),(0,n.jsxs)(tP,{$isLoading:L.isLoading,children:[(0,n.jsxs)(d.i,{kind:"standard",children:[(0,n.jsx)(tg,{onSortBy:D}),B&&!M?(0,n.jsx)(ProjectsListTableLoading,{}):t&&!E?.length?(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsxs)(tC,{children:[(0,n.jsx)(s.x,{type:"sectionHeader3",children:"No search results"}),(0,n.jsx)(c.L,{height:10}),(0,n.jsx)(s.x,{type:"paragraph1",children:"Try a different search"})]})})}):E?.length?(0,n.jsx)(ProjectsTableBody,{projects:E,selectedProjects:b,handleSelect:Z}):(0,n.jsx)("tr",{children:(0,n.jsx)("td",{colSpan:6,children:(0,n.jsx)(tC,{children:(0,n.jsx)(s.x,{type:"paragraph3Bold",children:"No results"})})})})]}),(0,n.jsx)(ProjectsListFooter,{hasNextPage:!!L.hasNextPage,isLoading:L.isFetchingNextPage,fetchNextPage:()=>L.fetchNextPage()})]})]})]}),h?(0,n.jsx)(ModalCreateProject,{accountId:T,onClosed:()=>v(!1),templateKey:"string"==typeof h?h:null,user:z}):null,_(),(0,n.jsx)(eS.WP,{currentUrl:(0,m.bX)(),urlPathPrefix:(0,m.G$)(),apiHostname:(0,m.G$)(),children:(0,n.jsx)(eP.Y,{showSimplifiedFooter:!0})})," "]})}var tk=r(64363),tA=r.n(tk),t_=r(33056),tz=r(38134),tI=r(19789),tT=r(2869),tL=r(59258),t$=r(28253);let tU=(0,i.Z)(function(){let{user:e}=(0,o.aF)(),t={customUserId:e?.zapierId??0,isLoggedIn:!0,email:e?.email??"",currentAccountId:e?.currentAccount,hasSeenNotifications:{}},r={core:{authorizationKey:"nikfdj0eoed4shqudtbddr0uobh7ujd4clov",key:(e?.zapierId??"").toString()}},i=tT.yv?"https://interfaces.zapier.com":"https://interfaces.zapier-staging.com";return(0,n.jsxs)(a.Z,{children:[(0,n.jsx)(tA(),{children:(0,n.jsx)("title",{children:"Interfaces"})}),(0,n.jsx)(tL.q,{config:r,children:(0,n.jsxs)(tI.p,{accountsListData:e?.accounts?.map(e=>({...e,normalizedImageUrl:e.logo_url,normalizedName:e.name})),apiHostname:(0,m.G$)(),currentUrl:i,mode:"in-app",renderAlertBanner:()=>null,renderFooter:()=>null,sessionData:t,trackEvent:()=>null,urlPathPrefix:(0,m.G$)(),children:[(0,n.jsx)(t$.b,{children:(0,n.jsx)(Projects,{})}),(0,n.jsx)(t_.G,{})]})})]})});function ProjectsPageWithProvider(e){return(0,n.jsx)(tz.Z,{user:e.user,children:(0,n.jsx)(tU,{...e})})}},53756:function(e,t,r){"use strict";r.d(t,{q:function(){return i}});var n=r(86306);let i=n.RS.parse({url:"https://zapier-images.imgix.net/storage/photos/c7ed9691c53b602419408c5eba12dd58.png",name:"interfaces-default-project-favicon.png"})},33498:function(e,t,r){"use strict";r.d(t,{W:function(){return storePageIds},Z:function(){return getPageIds}});let n="builderTabs",getTabStorage=()=>{let e=sessionStorage.getItem(n);return e?JSON.parse(e):{}},getPageIds=e=>{let t=getTabStorage();return t[e]||[]},storePageIds=(e,t)=>{let r=getTabStorage(),i={...r,[e]:t},a=JSON.stringify(i);sessionStorage.setItem(n,a)}},88667:function(e,t,r){"use strict";r.d(t,{G:function(){return n}});let n="[class][class][class][class][class][class]"}},function(e){e.O(0,[9781,3099,508,8238,8295,811,5193,6830,2862,2354,8499,3711,9789,2010,6843,681,177,1537,5706,8632,9774,2888,179],function(){return e(e.s=18811)}),_N_E=e.O()}]);
+//# sourceMappingURL=interfaces-3584f2b11e554716.js.map
