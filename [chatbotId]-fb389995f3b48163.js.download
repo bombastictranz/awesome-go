@@ -1,0 +1,1719 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[953],{80403:function(e,t,n){(window.__NEXT_P=window.__NEXT_P||[]).push(["/app/chatbots/[chatbotId]",function(){return n(41028)}])},6497:function(e,t,n){"use strict";n.d(t,{NI:function(){return a}});var r=n(73584),o=n(29927),i=n(77030);let a=i.zo.div`
+  padding: 0 20px 20px;
+`;i.zo.div`
+  padding: 0 20px;
+  font-family: ${r.ZT.base.fontFamily};
+  font-size: 12px;
+  line-height: 1.5;
+  color: ${o.w.neutral600};
+`},12040:function(e,t,n){"use strict";n.d(t,{Z:function(){return h}});var r=n(97458),o=n(6411),i=n(29927),a=n(61483),s=n(32165),l=n(63436),c=n(77030),d=n(52983),u=n(99632);let p=c.zo.div`
+  & .uploadcare--widget__button {
+    background: ${i.w.blueJeans};
+    font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+    border-radius: 4px;
+
+    :hover {
+      background: ${i.w.night};
+      cursor: pointer;
+    }
+  }
+
+  & .uploadcare--widget_status_error .uploadcare--widget__text {
+    display: none;
+  }
+`;function h(e){let{RenderWrapper:t=p,...n}=e,[i,c]=(0,d.useState)(void 0),h=(0,d.useCallback)(async()=>{let e=await l.Z.post("/api/chatbots/uploadcare-signature");c(e.data)},[]);(0,d.useEffect)(()=>{h()},[h]);let x=(0,d.useCallback)(e=>{e&&(n.onFileSelect?.(),e.done(e=>{n.onSuccess(e)}),e.fail(()=>{n.onFail&&n.onFail()}))},[n]);return(0,r.jsx)(t,{children:n.value?(0,r.jsx)(a.o,{value:n.value,isReadonly:!0,readOnlyText:"",renderIconBefore:n.renderPreviewImage,renderIconAfter:e=>{let{iconSize:t}=e;return n.iconAfter??(0,r.jsx)("span",{onClick:()=>n.resetValue(),children:(0,r.jsx)(s.J,{name:"formXCircle",size:t})})}}):(0,r.jsx)(o.W,{publicKey:(0,u.v)().NEXT_PUBLIC_UPLOADCARE_PUBLIC_KEY,secureSignature:i?.signature,secureExpire:i?.expire,onFileSelect:x,tabs:"file",localeTranslations:{buttons:{choose:{files:{one:"Browse files"}}},...n.errors??{}},...n.uploaderOptions})})}},65434:function(e,t,n){"use strict";n.d(t,{FM:function(){return l},FU:function(){return a}});var r=n(97458),o=n(52983);let i=o.createContext({});function a(){return o.useContext(i)}async function s(e){throw Error("Not implemented")}let l=o.memo(e=>{let[t,n]=o.useState({}),a=o.useCallback(async(e,r)=>{let o=`${e}-${JSON.stringify(r)}`;if(t[o])return t[o];let i=await s({id:e,input:r});return n({...t,[o]:i}),i},[t,n]);return(0,r.jsx)(i.Provider,{value:{getDatasource:a},children:e.children})});l.displayName="DatasourcesContextProvider"},41028:function(e,t,n){"use strict";n.r(t),n.d(t,{__N_SSP:function(){return si},default:function(){return sa}});var r=n(97458),o=n(74976),i=n(80036),a=n(29927),s=n(462),l=n(84295),c=n(32165),d=n(2948),u=n(77030),p=n(24187),h=n(49852);function x(e){return(0,r.jsx)(h.O,{...e,as:j})}x.Group=function(e){return(0,r.jsx)(h.O.Group,{...e,as:g})},x.List=function(e){let{shouldRenderTrack:t=!1,...n}=e;return(0,r.jsx)(h.O.List,{...n,as:b,$shouldRenderTrack:t})},x.Panels=function(e){return(0,r.jsx)(h.O.Panels,{...e,as:m})},x.Panel=function(e){return(0,r.jsx)(h.O.Panel,{...e,as:f})};let g=u.zo.div`
+  margin: ${e=>{let{$margin:t="-25px -10px -10px"}=e;return t}};
+`,m=u.zo.div`
+  margin-top: 25px;
+`,f=u.zo.div`
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 18px ${a.w.neutral100}, 0 0 0 20px ${a.w.blueJeans};
+  }
+`,b=u.zo.div`
+  display: flex;
+  align-items: center;
+
+  ${e=>{let{$shouldRenderTrack:t}=e;return t&&`
+    width: 100%;
+    border-bottom: 1px solid ${a.w.neutral300};
+  `}}
+`,j=u.zo.button`
+  background-color: ${a.w.neutral100};
+  position: relative;
+  cursor: ${e=>{let{disabled:t}=e;return t?"default":"pointer"}};
+  font-weight: 600;
+  height: 60px;
+  padding: 0 20px;
+  overflow: visible;
+  border-radius: 3px;
+  transition: all 150ms ease-out;
+
+  ${e=>{let{disabled:t}=e;return t?u.iv`
+          color: ${a.w.neutral500};
+        `:u.iv`
+          &:hover {
+            background-color: ${a.w.neutral200};
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: inset 0 0 0 2px ${a.w.blueJeans};
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            background-color: transparent;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 3px;
+            transition: color 150ms ease-out;
+          }
+
+          &[data-headlessui-state="selected"] {
+            color: ${a.w.blueJeans};
+
+            &:after {
+              background-color: ${a.w.blueJeans};
+            }
+          }
+        `}}
+
+  & > span[class*="-Badge"]${p.G} {
+    &:empty {
+      display: none;
+    }
+  }
+`;var w=n(51722);function y(e){let{zaps:t,isSkeleton:n,enableConversations:o}=e;return(0,r.jsx)(v,{children:n?(0,r.jsxs)(x.List,{children:[(0,r.jsx)(x,{disabled:!0,children:(0,r.jsx)(w.Z,{width:46})}),(0,r.jsx)(x,{disabled:!0,children:(0,r.jsx)(w.Z,{width:36})}),(0,r.jsx)(x,{disabled:!0,children:(0,r.jsx)(w.Z,{width:59})}),(0,r.jsx)(x,{disabled:!0,children:(0,r.jsx)(w.Z,{width:39})}),o&&(0,r.jsx)(x,{disabled:!0,children:(0,r.jsx)(w.Z,{width:112})})]}):(0,r.jsxs)(x.List,{children:[(0,r.jsx)(x,{children:"Setup"}),(0,r.jsx)(x,{children:"Instructions"}),(0,r.jsxs)(x,{children:["Actions"," ",(0,r.jsx)(d.C,{color:"info",children:t?.length?t.length.toString():""})]}),(0,r.jsx)(x,{children:"Style"}),o&&(0,r.jsx)(x,{children:"Conversations"})]})})}let v=u.zo.div`
+  grid-area: tabs;
+  background-color: ${a.w.neutral100};
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;var z=n(52983),S=n(25239),C=n(25124),k=n(73584);let $=u.zo.div`
+  padding-top: ${e=>{let{$hasHeader:t}=e;return t?"0":"20px"}};
+
+  ${e=>{let{$topBorder:t}=e;return t?u.iv`
+          border-top: 1px solid ${a.w.neutral300};
+        `:u.iv`
+          &:not(:first-child) {
+            border-top: 1px solid ${a.w.neutral300};
+          }
+        `}}
+`,_=u.zo.div`
+  padding: 15px 20px;
+
+  ${e=>{let{$collapsed:t}=e;return t&&`background-color: ${a.w.neutral200};`}}
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+
+  ${e=>{let{onClick:t}=e;return t&&"cursor: pointer;"}}
+`,I=u.zo.div`
+  font-family: ${k.ZT.base.fontFamily};
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: ${a.w.neutral600};
+  text-transform: uppercase;
+  letter-spacing: 1px;
+`,T=u.zo.div``;function L(e){let[t,n]=(0,z.useState)(!e.startCollapsed),o=!e.collapsable||t,i=!!e.title||!!e.collapsable;return(0,r.jsxs)($,{$hasHeader:i,$topBorder:!!e.topBorder,children:[i&&(0,r.jsxs)(_,{$collapsed:!o,onClick:e.collapsable?()=>n(!t):void 0,children:[e.title&&(0,r.jsx)(I,{children:e.title}),e.collapsable&&(0,r.jsx)(c.J,{name:o?"arrowSmallUp":"arrowSmallDown",color:"neutral600",size:24})]}),o&&(0,r.jsx)(T,{children:e.children})]})}var A=n(6497),E=n(46507),P=n(61483),D=n(58107),F=n(65535),M=n(22245),N=n(78372),O=n(20090);let R=(0,z.forwardRef)(function(e,t){let{value:n,min:o=0,max:i=100,step:a=1,onChange:s,...l}=e,[c,d]=(0,z.useState)(n),u=(0,z.useCallback)(e=>{let t=Number(e.target.value);d(t),s(t)},[s]),p=(0,z.useMemo)(()=>(+c-+o)/(+i-+o)*100,[i,o,c]);return(0,z.useEffect)(()=>{d(n)},[n]),(0,r.jsx)(Z,{...l,type:"range",min:o,max:i,step:a,value:c,onChange:u,ref:t,$progress:p})}),Z=u.zo.input`
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background: linear-gradient(
+      to right,
+      ${a.w.blueJeans} 0%,
+      ${a.w.blueJeans} ${e=>{let{$progress:t}=e;return t}}%,
+      transparent ${e=>{let{$progress:t}=e;return t}}%,
+      transparent 100%
+    );
+    transition: background 0.1s ease-out;
+  }
+
+  &[type="range"] {
+    height: 20px;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 100%;
+  }
+  &[type="range"]:focus {
+    outline: none;
+  }
+  &[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: none;
+    background: ${a.w.neutral300};
+    border-radius: 6px;
+    border: none;
+  }
+  &[type="range"]::-webkit-slider-thumb {
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: ${a.w.blueJeans};
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+  }
+  &[type="range"]:focus::-webkit-slider-runnable-track {
+    background: ${a.w.neutral300};
+  }
+  &[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: none;
+    background: ${a.w.neutral300};
+    border-radius: 6px;
+    border: none;
+  }
+  &[type="range"]::-moz-range-thumb {
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: ${a.w.blueJeans};
+    cursor: pointer;
+  }
+  &[type="range"]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &[type="range"]::-ms-fill-lower {
+    background: ${a.w.neutral300};
+    border: none;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+  &[type="range"]::-ms-fill-upper {
+    background: ${a.w.neutral300};
+    border: none;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+  &[type="range"]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: ${a.w.blueJeans};
+    cursor: pointer;
+  }
+  &[type="range"]:focus::-ms-fill-lower {
+    background: ${a.w.neutral300};
+  }
+  &[type="range"]:focus::-ms-fill-upper {
+    background: ${a.w.neutral300};
+  }
+`,B=(0,z.forwardRef)(function(e,t){let{label:n,resetToDefaultText:o="Reset to default",leftHelpText:i,rightHelpText:a,id:s,defaultValue:l,value:c,min:d=0,max:u=100,step:p=1,onChange:h,renderValue:x=e=>e}=e,[g,m]=(0,z.useState)(c),f=(0,z.useCallback)(e=>{m(e),h(e)},[h]),b=(0,z.useCallback)(()=>{m(l),h(l)},[l,h]);return(0,z.useEffect)(()=>{m(c)},[c]),(0,r.jsxs)(U,{children:[(0,r.jsxs)(H,{children:[(0,r.jsx)(G,{htmlFor:s,children:n}),(0,r.jsx)(q,{type:"button",onClick:b,children:o})]}),(0,r.jsx)(R,{id:s,name:s,min:d,max:u,step:p,value:g,onChange:f,ref:t}),(0,r.jsxs)(J,{children:[(0,r.jsx)(V,{children:i}),(0,r.jsx)(W,{children:x(g)}),(0,r.jsx)(V,{children:a})]})]})}),U=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+`,H=u.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  line-height: 20px;
+`,J=u.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 2px;
+
+  font-size: 14px;
+  line-height: 20px;
+`,G=u.zo.label`
+  color: ${a.w.neutral800};
+
+  font-weight: 600;
+`,V=u.zo.span`
+  color: ${a.w.neutral800};
+
+  font-weight: 400;
+`,W=u.zo.span`
+  color: ${a.w.blueJeans};
+
+  font-weight: 600;
+  text-align: center;
+`,q=u.zo.button`
+  color: ${a.w.neutral700};
+  background: ${a.w.neutral100};
+  box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.neutral100};
+  border-radius: 2px;
+  transition: color 0.2s ease-out, background 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+
+  font-weight: 400;
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${a.w.blueJeans};
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.blueJeans};
+
+    &:hover {
+      box-shadow: 0 0 0 2px ${a.w.neutral200}, 0 0 0 4px ${a.w.blueJeans};
+    }
+  }
+`;var Q=n(41824),Y=n(76488),K=n.n(Y);let X=u.zo.span`
+  all: unset;
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: ${a.w.neutral800};
+
+  & > a {
+    color: inherit;
+  }
+`;function ee(){let e=(0,Q.G)();return(0,r.jsxs)(X,{children:[(0,r.jsx)(K(),{href:e,children:(0,r.jsx)(F.r,{children:"Upgrade"})})," ","to use other models available to you in OpenAI."]})}function et(e){let{isError:t,label:n,helpText:o,children:i}=e;return(0,r.jsxs)(en,{children:[(0,r.jsxs)(er,{$isError:t,htmlFor:"",children:[t&&(0,r.jsx)(c.J,{name:"formXCircle",size:18,color:"error400"}),n]}),i,(0,r.jsx)(eo,{$isError:t,children:o})]})}let en=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+`,er=u.zo.label`
+  color: ${e=>{let{$isError:t}=e;return t?a.w.error400:a.w.neutral800}};
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`,eo=u.zo.span`
+  color: ${e=>{let{$isError:t}=e;return t?a.w.error400:a.w.neutral800}};
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+`;var ei=n(52074),ea=n(18841),es=n(1850),el=n(30775);let ec=e=>{if(/^((?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+)(?:[A-Z0-9-]{1,62}[A-Z0-9])$/i.test(e))return!0;let t=e.match(/\[([A-F0-9:.]+)\]$/i);if(t){let e=t[0],n=es.z.string().ip().safeParse(e);return n.success}return!1},ed=es.z.object({id:es.z.number(),name:es.z.string(),entitlements:es.z.object({limits:es.z.object({add_ons:es.z.array(es.z.string()),chatbotLimitOverride:es.z.number().positive().nullish()})})});es.z.object({id:es.z.string().cuid(),accountId:es.z.number(),plan:es.z.union([es.z.literal("premium"),es.z.literal("advanced")]).nullish(),chatbotLimit:es.z.number().positive().nullish()}),es.z.object({id:es.z.string().cuid(),firstName:es.z.string(),lastName:es.z.string(),email:es.z.string().refine(e=>{if(!e||!e.includes("@"))return!1;let t=e.split("@"),n=t[0],r=t[1];if(!/(^[-!#$%&'*+/=?^_`{}|~0-9A-Z]+(\.[-!#$%&'*+/=?^_`{}|~0-9A-Z]+)*$|^\"([\001-\010\013\014\016-\037!#-\[\]-\177]|\\[\001-\011\013\014\016-\177])*\"$)/i.test(n))return!1;if(!ec(r)){let e=(0,el.H9)(r);if(!ec(e))return!1}return!0}),avatarUrl:es.z.string().url().nullable()}),es.z.object({id:es.z.string().cuid(),name:es.z.string(),zapierId:es.z.number(),firstName:es.z.string(),lastName:es.z.string(),email:es.z.string(),currentAccount:ed,avatarUrl:es.z.string().url().nullable(),isStaff:es.z.boolean(),accountIds:es.z.array(es.z.number().int().positive()),accounts:es.z.array(es.z.object({id:es.z.number().int().positive(),logo_url:es.z.string().url().optional().default(""),name:es.z.string().optional().default("")})).optional()}),es.z.object({id:es.z.number().transform(e=>e.toString()),url:es.z.string().url(),title:es.z.string().nullable(),label:es.z.string()});let eu={CHATBOTS:"chatbots",INTERFACES:"interfaces",TABLES:"zapier-tables",OPENAI:ea.yv?"openai":"openai-gpt-dalle-ca120564"},ep=es.z.object({id:es.z.number().int(),first_name:es.z.string(),last_name:es.z.string(),email:es.z.string(),email_confirmed:es.z.boolean(),current_account_id:es.z.number().int().nullable(),photo_url:es.z.string().nullable(),is_logged_in:es.z.literal(!0),is_staff:es.z.boolean(),name:es.z.string().optional(),roles:es.z.array(es.z.object({account_id:es.z.number(),role:es.z.string()}))}).passthrough();es.z.union([ep,es.z.object({is_logged_in:es.z.literal(!1)}).passthrough()]);var eh=n(99632),ex=n(57203),eg=n(70475),em=n(77179),ef=n.n(em),eb=n(88469),ej=n.n(eb),ew=n(71607),ey=n.n(ew);let ev=(0,z.createContext)({}),ez=(0,z.createContext)(ey());var eS=n(13546),eC=n.n(eS),ek=n(76705),e$=n.n(ek),e_=n(62096),eI=n.n(e_),eT=n(49335),eL=n.n(eT),eA=n(71800),eE=n.n(eA),eP=n(26226),eD=n.n(eP),eF=n(31682),eM=n.n(eF),eN=n(59659),eO=n.n(eN),eR=n(23483);function eZ(e){let{user:t}=(0,ei.aF)(),n=t?.currentAccount.entitlements.limits.add_ons;return(0,eR.y9)(t,n,e)}var eB=n(66208),eU=n(20297),eH=n(32421),eJ=n(35887);function eG(e){let t=e.options.every(e=>void 0!==e.description);return(0,r.jsxs)(eJ.E,{as:t?eV:eW,disabled:e.isDisabled,by:(e,t)=>JSON.stringify(e)===JSON.stringify(t),$gridStyleOverride:e.gridStyle,value:e.value,onChange:e.onChange,children:[(0,r.jsx)(eJ.E.Label,{as:eH.T,children:e.label}),e.options.map((n,o)=>{let i=e.id+"-"+o;return(0,r.jsx)(eJ.E.Option,{as:Option,htmlFor:i,value:n.value,type:"button",flexGrow:t?1:0,$isDisabled:e.isDisabled,children:t=>{let{active:o,checked:i,disabled:a}=t;return void 0!==n.description?(0,r.jsxs)(eq,{$active:o,$checked:i,$isDisabled:a,$buttonStyleOverride:e.buttonStyle,$labelStyleOverride:e.labelStyle,children:["string"==typeof n.icon?(0,r.jsx)(c.J,{name:n.icon,size:28}):(0,r.jsx)(r.Fragment,{children:n.icon}),(0,r.jsx)("span",{children:n.title}),(0,r.jsx)("span",{children:n.description})]}):(0,r.jsxs)(eQ,{$active:o,$checked:i,$isDisabled:a,children:["string"==typeof n.icon?(0,r.jsx)(c.J,{name:n.icon,size:28}):(0,r.jsx)(r.Fragment,{children:n.icon}),(0,r.jsx)("span",{children:n.title})]})}},i)})]})}let eV=u.zo.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  ${e=>{let{$gridStyleOverride:t}=e;return t??""}}
+`,eW=u.zo.div`
+  height: 85px;
+  display: flex;
+  align-items: stretch;
+  gap: 17px;
+`,eq=u.zo.span`
+  display: grid;
+  height: 100%;
+  grid-template-columns: 28px 1fr;
+  grid-template-rows: 28px min-content auto;
+  grid-template-areas: "icon label" "description description";
+
+  padding: 20px;
+  gap: 15px;
+
+  background-color: ${e=>{let{$checked:t}=e;return t?a.w.blue100:a.w.neutral200}};
+  color: ${e=>{let{$checked:t}=e;return t?a.w.blueJeans:a.w.neutral800}};
+  border: 2px solid
+    ${e=>{let{$checked:t}=e;return t?a.w.blueJeans:a.w.neutral600}};
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.neutral100};
+
+  transition: box-shadow 0.1519s ease-out, color 0.1519s ease-out,
+    border-color 0.1519s ease-out, background-color 0.1519s ease-out;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  & > span {
+    &:nth-last-child(3) {
+      grid-area: icon;
+    }
+    &:nth-last-child(2) {
+      grid-area: label;
+      ${e=>{let{$labelStyleOverride:t}=e;return t??""}}
+    }
+    &:nth-last-child(1) {
+      grid-area: description;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      ${e=>{let{$checked:t}=e;return t&&`color: ${a.w.neutral800};`}}
+    }
+  }
+
+  ${e=>{let{$checked:t,$isDisabled:n}=e;return!t&&n?`color: ${a.w.neutral500};
+         cursor: not-allowed;
+         fill: ${a.w.neutral400};`:""}}
+
+  ${e=>{let{$buttonStyleOverride:t}=e;return t??""}}
+`,eQ=u.zo.span`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 9px;
+  width: 110px;
+
+  background-color: ${e=>{let{$checked:t}=e;return t?a.w.blue100:a.w.neutral200}};
+  color: ${e=>{let{$checked:t}=e;return t?a.w.blueJeans:a.w.neutral800}};
+  border: 2px solid
+    ${e=>{let{$checked:t}=e;return t?a.w.blueJeans:a.w.neutral600}};
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.neutral100};
+
+  transition: box-shadow 0.1519s ease-out, color 0.1519s ease-out,
+    border-color 0.1519s ease-out, background-color 0.1519s ease-out;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+
+  & > span:last-of-type {
+    ${e=>{let{$checked:t}=e;return t&&`color: ${a.w.neutral800};`}}
+  }
+
+  ${e=>{let{$checked:t,$isDisabled:n}=e;return n&&u.iv`
+      cursor: not-allowed;
+      opacity: ${t?1:.5};
+    `}}
+`,Option=u.zo.button`
+  flex-grow: ${e=>{let{flexGrow:t}=e;return t}};
+  text-align: left;
+  border-radius: 3px;
+
+  ${e=>{let{$isDisabled:t}=e;return t?"":`cursor: pointer;
+         &:hover > ${eq}, &:focus > ${eq} {
+           box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.blueJeans};
+         }`}}
+`;var eY=n(45884);let eK=u.zo.div`
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    height: 15px;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 253, 249, 0) 0%,
+      rgba(255, 253, 249, 1) 80%,
+      rgba(255, 253, 249, 1) 100%
+    );
+  }
+`,eX=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+  background: ${a.w.neutral100};
+`;function e0(e){let{children:t}=e;return(0,r.jsx)(eK,{children:(0,r.jsx)(eX,{children:t})})}var Text=n(91579);function e1(e){let{useHasAccessHook:t}=e,n=t("whitelabel"),{control:o,watch:i,setValue:a,formState:{errors:s}}=(0,ex.Gc)(),l=i("hideZapierButton"),d=i("pageUrl"),u=(0,z.useMemo)(()=>{let{host:e,pathname:t}=new URL(d??""),n=e.split(".").slice(1).join(".");return`.${n}${t}`},[d]);return(0,r.jsxs)(e2,{children:[(0,r.jsxs)(e5,{children:[(0,r.jsx)(c.J,{name:"arrowSmallRight",color:"neutral600",size:24}),(0,r.jsx)(Text.x,{type:"paragraph1Bold",children:"Advanced options"})]}),(0,r.jsxs)(e3,{children:[(0,r.jsx)(ex.Qr,{control:o,name:"pageName",render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{inputId:"pageName",error:s.pageName?.message,label:"Browser title",renderInput:e=>(0,r.jsx)(P.o,{...e,...t})})}}),(0,r.jsx)(ex.Qr,{control:o,name:"projectSlug",render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{inputId:"projectSlug",error:s.projectSlug?.message,label:"Subdomain",renderInput:e=>(0,r.jsx)(P.o,{...e,...t,appendContent:u,layout:"block",value:t.value,onChange:e=>t.onChange(e.target.value.replace(/[^a-z0-9-]/gi,""))})})}}),(0,r.jsx)(E.g,{inputId:"hideZapierButton",label:"Display the “Built on Zapier” label",renderInput:e=>(0,r.jsx)(M.Z,{...e,disabled:!n||e.isDisabled,checked:!l,onChange:()=>{a("hideZapierButton",!l,{shouldDirty:!0,shouldTouch:!0})}}),renderHelpText:()=>n?null:(0,r.jsx)(e6,{})})]})]})}let e2=u.zo.details`
+  border-radius: 10px;
+  background-color: ${a.w.neutral200};
+  cursor: pointer;
+  width: 100%;
+`,e5=u.zo.summary`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  height: 64px;
+
+  list-style: none;
+  box-shadow: inset 0 0 0 2px ${a.w.neutral200};
+  transition: box-shadow 0.14159s ease;
+
+  &:focus-within {
+    outline: none;
+    box-shadow: inset 0 0 0 2px ${a.w.blueJeans};
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  ${e2}[open] > & > span:first-of-type {
+    transform: rotate(90deg) !important;
+    transition: transform 0.14159s ease !important;
+  }
+`,e3=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 6px 20px 20px;
+`,e4=u.zo.span`
+  font-size: 14px;
+  line-height: 20px;
+  color: ${a.w.neutral800};
+
+  & > a {
+    color: inherit;
+  }
+`;function e6(){let e=(0,Q.G)();return(0,r.jsxs)(e4,{children:[(0,r.jsx)(K(),{href:e,children:(0,r.jsx)(F.r,{children:"Upgrade"})})," ","to hide the label."]})}var e9=n(95441);let e7=es.z.object({pageBackground:es.z.string(),primary:es.z.string(),lightPrimary:es.z.string(),danger:es.z.string(),lightDanger:es.z.string(),formError:es.z.string(),text:es.z.string(),secondaryText:es.z.string(),white:es.z.string(),black:es.z.string(),gray:es.z.string(),darkGray:es.z.string(),mediumGray:es.z.string(),lightGray:es.z.string(),superLightGray:es.z.string(),placeholder:es.z.string()}),e8=es.z.object({projectId:es.z.string().cuid(),projectName:es.z.string(),projectSlug:(0,e9._)("projectSlug"),pageName:(0,e9._)("pageName"),pageSlug:es.z.string(),pageUrl:es.z.string().url().transform(e=>e.replace(/\/chat$/,"")),appearance:e7,embedHosts:es.z.array(es.z.string()),hideZapierButton:es.z.boolean(),blockId:es.z.string().cuid()});es.z.object({result:es.z.object({data:e8})}),es.z.object({result:es.z.object({data:es.z.object({id:es.z.string().cuid()})})}),e8.omit({appearance:!0}).extend({appearance:e8.shape.appearance.partial()}).partial().required({projectId:!0});let te={id:"",label:"None"},tt=e=>[te,...e],tn=[{icon:"actionEdit",title:"Static",description:"Show the same message at the start of every conversation.",value:"static"},{icon:"miscAI",title:"Generated",description:"Use AI to generate a unique greeting for every conversation.",value:"generated"}],tr=[{label:"Lead Generation",value:"lead_generation"}],to=u.zo.fieldset`
+  border: none;
+  padding: 0;
+  margin: 0;
+`;function ti(e){let{chatbot:t,onSave:n,onSaveInterfacesProject:i,interfacesProject:a,onContentUpdated:l}=e,c=function(e){let t=(0,z.useContext)(ev);return e?t[e]:void 0}(t.id),d=(0,z.useContext)(ez);(0,z.useEffect)(()=>{!c&&t.id&&d(t.id,t.config)},[t,c,d]);let{chatbotsEnableDataCollection:u}=(0,eY.gj)(),{user:p}=(0,ei.aF)(),h=(0,ex.cI)({defaultValues:t.config,resolver:(0,eU.F)(S.Tc.shape.config),mode:"onTouched",criteriaMode:"all"});(0,z.useEffect)(()=>{h.reset(t.config)},[h,t]);let x=(0,ex.cI)({defaultValues:a,resolver:(0,eU.F)(e8),mode:"onTouched",criteriaMode:"all"});(0,z.useEffect)(()=>{a&&x.reset(a)},[x,a]),(0,z.useEffect)(()=>{l({isDirty:h.formState.isDirty})},[h.formState.isDirty,l]),(0,z.useEffect)(()=>{h.formState.isSubmitSuccessful&&(h.reset(t.config),t.id&&d(t.id,t.config),C.ZP.success("Changes successfully saved."))},[t.config,t.id,h,d]),(0,z.useEffect)(()=>{let{unsubscribe:e}=h.watch((e,n)=>{let{name:r}=n;if(t.id&&void 0!==r){let n=c??{};eD()(n,r,eC()(e,r)),d(t.id,n)}});return()=>{e()}},[t.id,h,c,d]);let[g,m,f,b,j,w]=h.watch(["defaultMessageMode","displayDisclosure","authenticationId","collectUserData","collectUserDataFields","collectUserDataTableId"]),y=eZ("bringYourOwnKey"),v=eZ("collectFeedback"),{data:k}=o.S.users.listAuthentications.useQuery({chatbotId:t.id,appSlug:eu.OPENAI},{enabled:y,suspense:!1}),$=(0,z.useMemo)(()=>tt(k??[]),[k]),{mutateAsync:_,isLoading:I}=o.S.users.testAuthentication.useMutation(),{mutateAsync:T}=o.S.openai.moderate.useMutation(),{data:N}=o.S.openai.getChatModels.useQuery({chatbotId:t.id,authenticationId:f},{enabled:void 0!==t.id,suspense:!1,keepPreviousData:!0}),R=!!("static"===g?h.formState.errors.defaultMessage?.message!==void 0:h.formState.errors.defaultPrompt?.message!==void 0),Z=(0,z.useCallback)(async e=>{if(t.id){let n=eL()(eE()(e,e$()),ta),r=eI()(n),o=await T({chatbotId:t.id,authenticationId:e.authenticationId,value:eM()(n)}),i=!1;if(o.forEach((e,t)=>{e.flagged&&(h.setError(r[t],{type:"manual",message:ts}),i=!0)}),i)return}return n(ej()(t.config,e))},[t.config,t.id,h,T,n]),U=(0,Q.G)();return(0,r.jsx)(r.Fragment,{children:(0,r.jsxs)("div",{children:[(0,r.jsx)("form",{onSubmit:h.handleSubmit(Z),children:(0,r.jsxs)(to,{disabled:h.formState.isSubmitting,children:[(0,r.jsxs)(L,{children:[(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"chatbotName",control:h.control,render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{error:h.formState.errors.chatbotName?.message,label:"Name",renderInput:e=>(0,r.jsx)(P.o,{...e,...t})})}})}),(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"defaultMessageMode",control:h.control,render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{label:"Greeting type",renderInput:e=>(0,r.jsx)(eG,{...e,...t,label:"Greeting type options",options:tn})})}})}),(0,r.jsxs)(A.NI,{children:["static"===g&&(0,r.jsx)(ex.Qr,{name:"defaultMessage",control:h.control,render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{label:"Greeting text",renderInput:e=>(0,r.jsx)(P.o,{...e,...t,isErrored:h.formState.errors.defaultMessage?.message!==void 0,isMultiline:!0,resize:"vertical",rows:3})})}}),"generated"===g&&(0,r.jsx)(ex.Qr,{name:"defaultPrompt",control:h.control,render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{label:"Greeting prompt",renderInput:e=>(0,r.jsx)(P.o,{...e,...t,isErrored:h.formState.errors.defaultPrompt?.message!==void 0,isMultiline:!0,resize:"vertical",rows:3})})}})]}),(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"placeholder",control:h.control,render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{error:h.formState.errors.placeholder?.message,label:"User input placeholder",renderInput:e=>(0,r.jsx)(P.o,{...e,...t})})}})})]}),(0,r.jsxs)(L,{children:[(0,r.jsx)(s.L,{height:6}),y&&$.length>1&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"authenticationId",control:h.control,render:e=>{let{field:{ref:n,...o}}=e;return(0,r.jsx)(E.g,{isDisabled:I,label:O.YR,renderHelpText:()=>I?(0,r.jsx)(r.Fragment,{children:"Checking authentication.."}):(0,r.jsx)(tc,{}),error:h.formState.errors.authenticationId?.message,renderInput:e=>(0,r.jsx)(D.L,{...e,...o,getLabelForItem:e=>e.label,menuAriaLabel:O.HD,items:$,selectedItem:$.find(e=>e.id===o.value),onChange:async e=>{if(e?.id){let{success:n}=await _({chatbotId:t.id,authenticationId:e.id,app:eu.OPENAI});n?(h.clearErrors("authenticationId"),o.onChange(e.id)):h.setError("authenticationId",{message:O.mG})}else o.onChange(""),h.clearErrors("authenticationId");h.setValue("model","gpt-3.5-turbo")}})})}})}),(0,r.jsx)(s.L,{height:6})]}),(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"model",control:h.control,render:e=>{let{field:{ref:t,...n}}=e;return(0,r.jsx)(E.g,{isDisabled:N&&I,label:O.Nx,renderHelpText:()=>y?$.length>1?O.n5:(0,r.jsx)(td,{}):(0,r.jsx)(ee,{}),renderInput:e=>(0,r.jsx)(D.L,{...e,...n,getLabelForItem:e=>e.label,menuAriaLabel:O.We,items:N?.map(e=>S.p6.includes(e.value)?{...e,disabled:!0}:e)??[],selectedItem:(N??[]).find(e=>e.value===n.value),onChange:e=>{n.onChange(e?.value)}}),helpTextLineClamp:2})}})}),(0,r.jsx)(s.L,{height:6}),(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"temperature",control:h.control,render:e=>{let{field:t}=e;return(0,r.jsx)(B,{...t,label:O.El,leftHelpText:O.yF,rightHelpText:O.RQ,resetToDefaultText:O.g$,id:"temperature",defaultValue:.7,min:0,max:1,step:.1,onChange:e=>t.onChange(Math.max(0,Math.min(1,e))),renderValue:e=>e.toFixed(1)})}})}),(0,r.jsx)(s.L,{height:6})]}),u&&(0,r.jsxs)(L,{children:[(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"collectUserData",control:h.control,render:e=>{let{field:{value:t,ref:n,...o}}=e;return(0,r.jsx)(E.g,{label:"Chatbot Will Collect User Data",renderHelpText:()=>v?null:(0,r.jsxs)(r.Fragment,{children:["Requires a paid plan."," ",(0,r.jsx)(K(),{href:U,children:(0,r.jsx)(F.r,{children:"Upgrade"})})]}),renderInput:e=>(0,r.jsx)(M.Z,{...e,...o,disabled:!v,checked:t})})}})}),b&&(0,r.jsx)(A.NI,{children:(0,r.jsxs)(et,{isError:R,label:O.ZG,helpText:(0,r.jsxs)(r.Fragment,{children:["Chatbot will prompt the user for information at the start of the conversation, and store results in a "," ",(0,r.jsx)(tu,{tableId:w})]}),children:[(0,r.jsx)(ex.Qr,{name:"collectUserDataTemplate",control:h.control,render:e=>{let{field:{ref:t,...n}}=e;return(0,r.jsx)(D.L,{...n,items:tr,getLabelForItem:e=>e.label,selectedItem:tr.find(e=>e.value===n.value),onChange:e=>{n.onChange(e.value)}})}}),(0,r.jsx)(ex.Qr,{name:"collectUserDataFields",control:h.control,render:e=>{let{field:{ref:t,...n}}=e;return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(tl,{fieldName:"name",collectUserDataFields:j,onChange:n.onChange}),(0,r.jsx)(tl,{fieldName:"email",collectUserDataFields:j,onChange:n.onChange}),(0,r.jsx)(tl,{fieldName:"company",collectUserDataFields:j,onChange:n.onChange})]})}})]})})]}),(0,r.jsxs)(L,{children:[(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"displayDisclosure",control:h.control,render:e=>{let{field:{value:t,ref:n,...o}}=e;return(0,r.jsx)(E.g,{isDisabled:p?.isStaff,label:"Display disclosure message in Greeting",renderInput:e=>(0,r.jsx)(M.Z,{...e,...o,disabled:e.isDisabled,checked:t})})}})}),m&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"disclosureText",control:h.control,render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{label:O.Jk,isDisabled:p?.isStaff,renderInput:e=>(0,r.jsx)(P.o,{...e,...t,isMultiline:!0,rows:3}),renderHelpText:()=>p?.isStaff?"Required for Zapier employees.":O.HR})}})}),(0,r.jsx)(s.L,{height:6})]})]})]})}),(0,r.jsx)("form",{onSubmit:x.handleSubmit(i),children:(0,r.jsx)(to,{disabled:x.formState.isSubmitting,children:(0,r.jsx)(L,{children:(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.RV,{...x,children:(0,r.jsx)(e1,{useHasAccessHook:eZ})})})})})}),(0,r.jsx)(e0,{children:(0,r.jsx)(eg.z,{disabled:!h.formState.isDirty&&!x.formState.isDirty,isLoading:h.formState.isSubmitting||x.formState.isSubmitting,type:"button",onClick:()=>{h.formState.isDirty&&h.handleSubmit(Z)(),x.formState.isDirty&&x.handleSubmit(i)()},children:"Save changes"})})]})})}let ta=["directive","defaultPrompt","defaultMessage","placeholder","chatbotName"],ts="Sorry, but this violates our content moderation policy. Please revise your input to save your changes.",tl=e=>{let{fieldName:t,collectUserDataFields:n,onChange:o}=e;return(0,r.jsx)(N.f,{tabIndex:0,checked:n?.some(e=>e.name===t)??!1,name:`collectUserDataFields.${t}`,onChange:()=>{o(n.some(e=>e.name===t)?n.filter(e=>e.name!==t):[...n,{name:t,fieldKey:null}])},value:t,children:eO()(t)})};function tc(){let e=`${(0,eh.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL}/app/connections/${eu.OPENAI}`;return(0,r.jsx)(F.r,{href:e,target:"_blank",children:"Manage authentications"})}function td(){let e=`${(0,eh.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL}/app/connections/${eu.OPENAI}`;return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(F.r,{href:e,target:"_blank",children:"Connect your OpenAI account"})," ","if you’re interested in using other models available to you."]})}function tu(e){let{tableId:t}=e;return(0,r.jsx)(r.Fragment,{children:t?(0,r.jsx)(F.r,{href:(0,eB.pt)({tableId:t}),target:"_blank",children:"Zapier Table"}):"new Zapier Table (linked here once Chatbot is saved)."})}var tp=n(12040),th=n(65485);function tx(){let e=(0,Q.G)();return(0,r.jsxs)(th.P,{style:{marginTop:10},children:[(0,r.jsx)(th.P.Icon,{name:"navChatbots"}),(0,r.jsx)(s.L,{height:20}),(0,r.jsx)(th.P.Title,{children:O.bU}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(th.P.Content,{children:O.kP}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(th.P.Content,{type:"smallPrint1",children:O.yV}),(0,r.jsx)(s.L,{height:22}),(0,r.jsx)(th.P.Button,{href:e,children:"View plans"}),(0,r.jsx)(s.L,{height:6})]})}var tg=n(26923),tm=n(55918),tf=n.n(tm);function tb(e){let t=(0,z.useRef)();return(0,z.useEffect)(()=>{t.current=e},[e]),t.current}var tj=n(98135),tw=n.n(tj),ty=n(37569);let tv=es.z.object({type:es.z.literal("heartbeat"),count:es.z.number().int(),total:es.z.number().int()}),tz=es.z.object({count:es.z.number().int(),total:es.z.number().int()}),tS=es.z.object({type:es.z.literal("success"),chunks:es.z.array(es.z.object({id:es.z.string(),metadata:es.z.object({accountId:es.z.string(),blockId:es.z.string(),name:es.z.string(),reference:es.z.string(),text:es.z.string()})}))}),tC=es.z.object({type:es.z.literal("error"),error:es.z.unknown(),name:es.z.string().optional()}),tk=es.z.discriminatedUnion("type",[tv,tS,tC]);var t$=n(56961);let t_=["pdf","doc","docx","txt","csv","json"],tI={inputAcceptTypes:t_.map(e=>`.${e}`).join(","),validators:[function(e){if(null===e.name)return;let t=e.name.split(".").pop();if(t&&!t_.includes(t))throw Error("fileType")},function(e){if(null!==e.size&&e.size>1e6)throw Error("size")}]};function tT(e){let{dataSource:t,disabled:n,onSync:o}=e,[a,s]=(0,z.useState)(!1),[l,c]=(0,z.useState)(),d=!!(a||l||n),u=(0,z.useRef)(!1);return(0,z.useEffect)(()=>{l?.name&&l?.cdnUrl&&!u.current&&(u.current=!0,o({...t,reference:l.cdnUrl,name:l.name,description:""}))},[t,l,o]),(0,r.jsxs)(tL,{$isDisabled:d,children:[(0,r.jsx)(tp.Z,{onFileSelect:()=>{s(!0)},onFail:()=>{c(void 0),s(!1)},onSuccess:c,resetValue:()=>{},uploaderOptions:{...tI,localeTranslations:{buttons:{choose:{files:{one:"Reupload"}}}}},RenderWrapper:tA}),d?(0,r.jsx)(i.z,{type:"button",disabled:!0,color:"secondary",size:"xsmall",children:"Reupload"}):null]})}let tL=u.zo.div`
+  position: relative;
+
+  ${e=>{let{$isDisabled:t}=e;return t&&`
+    & > div:first-of-type {
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  `}}
+`,tA=u.zo.div`
+  & .uploadcare--widget__button {
+    font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid ${a.w.blueJeans};
+    border-radius: 3px;
+    text-decoration: none;
+    color: ${a.w.blueJeans};
+    background-color: ${a.w.transparent};
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 0 15px;
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
+    transition: all 0.14159s;
+
+    &:hover {
+      background-color: ${a.w.blue100};
+      box-shadow: ${t$.f.elevation6};
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: ${a.w.blue100};
+      border-color: ${a.w.blue100};
+      box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.blueJeans};
+
+      &:hover {
+        box-shadow: 0 0 0 2px ${a.w.neutral100},
+          0 0 0 4px ${a.w.blueJeans}, ${t$.f.elevation6};
+      }
+    }
+
+    &:active {
+      background-color: ${a.w.blue100};
+      border-color: ${a.w.blue100};
+      box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.blueJeans};
+
+      &:hover {
+        box-shadow: 0 0 0 2px ${a.w.neutral100},
+          0 0 0 4px ${a.w.blueJeans}, ${t$.f.elevation6};
+      }
+    }
+  }
+
+  & .uploadcare--widget_status_error .uploadcare--widget__text {
+    display: none;
+  }
+`;var tE=n(46565),tP=n(96301);function tD(e){let{chatbot:t,dataSource:n,isDisabled:o,onDelete:a,onSync:d,RenderKnowledgeSourceFileSyncButton:u}=e,p="table"===n.dataType;return(0,r.jsxs)(tF,{children:[(0,r.jsx)(tM,{children:(0,r.jsx)(c.J,{name:p?"navTables":"fileFilled",size:20,color:"table"===n.dataType?"zapier":"error500"})}),(0,r.jsxs)(tO,{children:[(0,r.jsxs)(tR,{children:[(0,r.jsx)(Text.x,{tag:"h3",type:"paragraph3Semibold",children:p?(0,r.jsx)(tN,{as:"a",href:`https://tables.zapier.com/app/tables/t/${n.reference}`,target:"_blank",rel:"noopener noreferrer",lines:1,underline:!0,children:n.name}):(0,r.jsx)(tN,{lines:1,children:n.name})}),(0,r.jsxs)(tZ,{children:[p?(0,r.jsx)(i.z,{type:"button",color:"secondary",size:"xsmall",disabled:o,onClick:()=>d(n),children:"Sync"}):(0,r.jsx)(u,{dataSource:n,disabled:o,onSync:d}),(0,r.jsx)(tE.h,{type:"button",color:"icon-secondary",size:"xsmall",icon:"actionTrash",ariaLabel:`Delete ${n.name}`,disabled:o,onClick:()=>a(n)})]})]}),(0,r.jsx)(s.L,{height:8}),(0,r.jsxs)(tB,{children:[(0,r.jsx)(c.J,{name:"actionCalendar",size:16}),(0,r.jsxs)(Text.x,{type:"smallPrint1Medium",color:"currentColor",children:[p?"Last synced":"Uploaded"," ",(0,tP.Z)(new Date(t.updatedAt),"MMM d yyyy")]}),"table"===n.dataType?(0,r.jsx)(l.p,{allowMultilineTooltip:!0,content:"Changes to your Zapier Table are not automatically synced to your knowledge source.",children:e=>{let{childProps:t}=e;return(0,r.jsx)(c.J,{...t,color:"currentColor",name:"alertInfo",size:18})}}):null]}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(Text.x,{tag:"p",type:"smallPrint1",children:(0,r.jsx)(tN,{lines:3,children:n.description||"No description available."})})]})]},n.id)}let tF=u.zo.li`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  border-radius: 3px;
+  border: 1px solid ${a.w.neutral600};
+  padding: 15px;
+  gap: 15px;
+`,tM=u.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px ${a.w.neutral400};
+
+  & > p:last-of-type${p.G} {
+    padding-right: 10px;
+  }
+`,tN=u.zo.span`
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: ${e=>{let{lines:t}=e;return t}};
+  -webkit-box-orient: vertical;
+
+  ${e=>{let{underline:t}=e;return t&&"text-decoration: underline;"}}
+`,tO=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  overflow: visible;
+`,tR=u.zo.div`
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+`,tZ=u.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`,tB=u.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: ${a.w.neutral700};
+  height: 20px;
+
+  & > div:last-of-type${p.G} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 20px;
+  }
+`,tU=[{label:"Show a custom message",value:"custom"},{label:"Generate an AI response without knowledge sources",value:"chatgpt"}];function tH(e){let{chatbot:t,dataSources:n,dataSourcesLimit:o,isDeleting:a,isSyncing:l,knowledgeSourceStatus:c,onAdd:d,onDelete:u,onSave:p,onSync:h,plan:x,tier:g,upgradeRedirect:m}=e,{control:f,handleSubmit:b,watch:j}=(0,ex.Gc)(),{chatbotsEnableTablesKnowledgeSources:w}=(0,eY.gj)(),y=(0,z.useMemo)(()=>n.filter(e=>w||"table"!==e.dataType),[n,w]),v=j("dataSourcesNoResultsMode"),S=tb(v),C=j("dataSourcesNoResultsMessage"),k=tb(C);(0,z.useEffect)(()=>{if(S!==v&&void 0!==S||k!==C&&void 0!==k){let e=setTimeout(()=>{b(p)()},500);return()=>clearTimeout(e)}},[v,C,S,k,b,p]);let $=(0,z.useMemo)(()=>tz.safeParse(c).success,[c]);return(0,r.jsxs)(tJ,{children:[(0,r.jsxs)(Text.x,{tag:"h2",type:"smallPrint1Semibold",children:["Knowledge sources (",y.length,"/",o,")"]}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(Text.x,{tag:"p",type:"smallPrint1",children:"Provide your chatbot with knowledge it can index when answering questions."}),(0,r.jsx)(s.L,{height:15}),(0,r.jsx)(tG,{children:y.map(e=>(0,r.jsx)(tD,{chatbot:t,dataSource:e,isDisabled:a||$||l,onDelete:u,onSync:h,RenderKnowledgeSourceFileSyncButton:tT},e.id))}),(0,r.jsx)(s.L,{height:15}),y.length<o?(0,r.jsx)(i.z,{type:"button",disabled:a||tz.safeParse(c).success,iconBefore:"formAdd",size:"xsmall",color:"secondary",onClick:d,children:"Add source"}):(0,r.jsxs)(Text.x,{tag:"p",type:"smallPrint1",color:"neutral700",children:["Your current plan gives you access to ",o," knowledge"," ",tf()("source",o),".","advanced"===x?(0,r.jsxs)(r.Fragment,{children:[" ",(0,r.jsx)(K(),{href:"https://ai-chatbot-help.zapier.app/contact-us",children:(0,r.jsx)(F.r,{color:"inherit",children:"Let us know"})})," ","if you are looking for more."]}):(0,r.jsxs)(r.Fragment,{children:[" ",(0,r.jsx)(K(),{href:m,children:(0,r.jsx)(F.r,{color:"inherit",children:"Upgrade"})})," ","to our Advanced plan to add up to ",g.advanced," sources."]})]}),y.length>0&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(s.L,{height:40}),(0,r.jsxs)("form",{onSubmit:b(p),children:[(0,r.jsx)(ex.Qr,{control:f,name:"dataSourcesNoResultsMode",render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{label:"When results are not found from the knowledge sources",isDisabled:a,renderHelpText:()=>"Defines the experience when results are not found from the knowledge sources.",renderInput:e=>(0,r.jsx)(D.L,{...e,...t,items:tU,menuAriaLabel:"List of behaviors when no results are found from the knowledge sources",getLabelForItem:e=>e.label,onChange:e=>t.onChange(e.value),selectedItem:tU.find(e=>e.value===t.value)})})}}),"custom"===v&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(s.L,{height:30}),(0,r.jsx)(ex.Qr,{control:f,name:"dataSourcesNoResultsMessage",render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{label:"Custom message",isDisabled:a,renderInput:e=>(0,r.jsx)(P.o,{...e,...t})})}})]})]})]})]})}let tJ=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  color: ${a.w.neutral800};
+  background-color: ${a.w.neutral100};
+`,tG=u.zo.ul`
+  align-self: stretch;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+`;var tV=n(12472),tW=n(21072),tq=n(46459);let tQ=(0,z.createContext)(null),tY=e=>{let{children:t,generateDescription:n,isGenerating:o,isGeneratingComplete:i,...a}=e,{getValues:s}=(0,ex.Gc)(),l=(0,z.useCallback)(e=>{if(e.name&&e.cdnUrl){let t=s();n({chatbotId:a.chatbotId,dataSource:{...t,id:t.id||tw()(),reference:e.cdnUrl,name:e.name}})}},[n,s,a.chatbotId]),c=(0,z.useMemo)(()=>({...a,generateDescriptionForFile:l,isGenerating:o,isGeneratingComplete:i,onDelete(){a.onDelete(s())},source:s()}),[a,l,s,o,i]);return(0,r.jsx)(tQ.Provider,{value:c,children:t})},tK=()=>{let e=(0,z.useContext)(tQ);if(null===e)throw Error("useKnowledgeSource must be used within a KnowledgeSourceProvider");return e};function tX(e){let{field:{ref:t,...n}}=e,{source:o}=tK();return(0,r.jsx)(E.g,{label:"Type",isDisabled:!!o.id,renderInput:e=>(0,r.jsxs)(tq.r,{columns:"repeat(4, 1fr)",gap:16,children:[(0,r.jsxs)(t1,{htmlFor:`${e.id}-file`,children:[(0,r.jsx)("input",{type:"radio",...n,...e,id:`${e.id}-file`,checked:"file"===n.value,disabled:!!o.id,value:"file"}),(0,r.jsxs)(t0,{children:[(0,r.jsx)(c.J,{name:"fileFilled",size:26,color:"currentColor"}),(0,r.jsx)(Text.x,{type:"smallPrint1Semibold",color:"currentColor",children:"File"})]})]}),(0,r.jsxs)(t1,{htmlFor:`${e.id}-table`,children:[(0,r.jsx)("input",{type:"radio",...n,...e,id:`${e.id}-table`,checked:"table"===n.value,disabled:!!o.id,value:"table"}),(0,r.jsxs)(t0,{children:[(0,r.jsx)(c.J,{name:"navTables",size:26,color:"currentColor"}),(0,r.jsx)(Text.x,{type:"smallPrint1Semibold",color:"currentColor",children:"Table"})]})]})]}),renderHelpText:()=>(n.value,null),helpTextLineClamp:2})}let t0=u.zo.span`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+`,t1=u.zo.label`
+  position: relative;
+  width: 100%;
+  height: 85px;
+
+  & > ${t0} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  & > input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+
+    & + ${t0} {
+      background-color: ${a.w.neutral200};
+      border: 1px solid ${a.w.neutral600};
+      border-radius: 3px;
+    }
+
+    &:focus-visible + ${t0} {
+      border-color: ${a.w.blueJeans};
+    }
+
+    &:disabled + ${t0} {
+      border-color: ${a.w.neutral400};
+      color: ${a.w.neutral500};
+      cursor: not-allowed;
+    }
+
+    &:checked + ${t0} {
+      background-color: ${a.w.blue100};
+      border-color: ${a.w.blueJeans};
+      color: ${a.w.blueJeans};
+    }
+  }
+`;u.zo.span`
+  &${p.G} {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 15px;
+    margin-left: 15px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      height: 100%;
+      width: 2px;
+      background-color: ${a.w.blueJeans};
+    }
+
+    & a {
+      color: ${a.w.blueJeans} !important;
+      text-decoration: underline !important;
+    }
+  }
+`;var t2=n(40091);function t5(e){let{source:t,tables:n}=tK(),{setValue:o,watch:i,formState:{errors:a}}=(0,ex.Gc)(),s=i("reference"),l=(0,z.useMemo)(()=>n.find(e=>e.id===s),[n,s]);return(0,r.jsx)(E.g,{label:"Table",isDisabled:!!t.id||0===n.length,error:a.reference?.message,renderInput:e=>(0,r.jsx)(t2.Z,{items:n,getLabelForItem:e=>e.name,selectedItem:l,onChange:e=>{e?(o("reference",e.id),o("name",e.name),o("description",e.description??"")):(o("reference",""),o("name",""),o("description",""))},...e,placeholder:"Select a Table",openOnFocus:!0,renderIcon:e=>e?(0,r.jsx)(c.J,{color:"brand",name:"navTable",size:24}):null,menuAriaLabel:"List of tables"},l?l.id:void 0),renderHelpText:()=>(0,r.jsxs)(t3,{children:["Index the ",(0,r.jsx)("strong",{children:"first 1,000 rows"})," from one of your"," ",(0,r.jsx)("a",{href:"https://tables.zapier.com/app/tables",target:"_blank",rel:"noopener noreferrer",children:"Zapier Tables"}),"."]})})}let t3=u.zo.span`
+  &${p.G} a {
+    color: ${a.w.blueJeans} !important;
+    text-decoration: underline !important;
+  }
+`;var t4=n(67291),t6=n(44067);let t9=["pdf","doc","docx","txt","csv","json"],t7={inputAcceptTypes:t9.map(e=>`.${e}`).join(","),validators:[function(e){if(null===e.name)return;let t=e.name.split(".").pop();if(t&&!t9.includes(t))throw Error("fileType")},function(e){if(null!==e.size&&e.size>1e6)throw Error("size")}]};function t8(e){let{generateDescriptionForFile:t,isGenerating:n,isGeneratingComplete:o,RenderFileUpload:i,source:a}=tK(),{clearErrors:s,setError:l,setValue:d,watch:u,formState:{errors:p}}=(0,ex.Gc)(),h=u("name"),x=u("reference"),g=(0,z.useMemo)(()=>({...t7,onDialogOpen(){s("reference")},onChange:t}),[s,t]);return(0,r.jsx)(E.g,{label:"File",error:p.reference?.message,isDisabled:!!a.id,renderInput:e=>x&&a.id?(0,r.jsx)(P.o,{...e,value:a.name,renderIconBefore:e=>{let{iconSize:t}=e;return(0,r.jsx)(c.J,{size:t,name:"fileFilled",color:"neutral500"})}}):(0,r.jsx)(i,{onSuccess:e=>{e.name&&e.cdnUrl&&(d("reference",e.cdnUrl),d("name",e.name),(0,t6.dC)(e.name)||(0,t6.sO)(e.name)?d("splitStrategy","auto"):d("splitStrategy","delimiter"),d("splitValue","")),s("reference")},onFail:()=>{l("reference",{type:"custom",message:"Text-based file types up to 1MB supported."})},value:h,resetValue:()=>{d("reference",""),d("name",""),d("description","")},uploaderOptions:g,iconAfter:n?(0,r.jsx)(t4.$,{size:"small"}):o?(0,r.jsx)(c.J,{name:"formCheckCircle",color:"success500",size:24}):void 0}),renderHelpText:()=>n?(0,r.jsx)(ne,{children:(0,r.jsx)(Text.x,{tag:"span",type:"smallPrint1",children:"Your file is uploading. This could take a few minutes."})}):p.reference?.message?void 0:"Text-based file types up to 1MB supported."})}let ne=u.zo.div`
+  display: grid !important;
+  gap: 10px !important;
+  align-items: center !important;
+`;function nt(e){let{field:{ref:t,...n}}=e,{isGenerating:o,source:i}=tK(),{formState:{errors:a}}=(0,ex.Gc)();return(0,r.jsx)(E.g,{isDisabled:!!i.id||o,label:"Description",error:a.description?.message,renderInput:e=>(0,r.jsx)(P.o,{...e,...n,isMultiline:!0,rows:3,resize:"vertical"}),renderHelpText:()=>a.description?null:"Provide extra context to help your Chatbot know how to use this info."})}function nn(){let{isGenerating:e,onCancel:t,onDelete:n,source:o}=tK(),{formState:{isSubmitting:i}}=(0,ex.Gc)();return(0,r.jsxs)(nr,{children:[(0,r.jsx)(eg.z,{disabled:i||e,isLoading:i,type:"submit",children:o.id?"Save changes":"Add source"}),(0,r.jsx)(eg.z,{color:"secondary",onClick:t,type:"button",disabled:i||e,children:"Cancel"}),o.id?(0,r.jsx)(eg.z,{color:"danger",onClick:n,type:"button",disabled:i||e,children:"Delete"}):null]})}let nr=u.zo.div`
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: start;
+  gap: 10px;
+`;function no(e){let{control:t,handleSubmit:n,watch:o}=(0,ex.Gc)(),{chatbotsEnableTablesKnowledgeSources:i}=(0,eY.gj)(),a=o("dataType");return(0,r.jsx)(ni,{onSubmit:n(e.onSave),children:(0,r.jsxs)(tY,{...e,children:[i?(0,r.jsx)(ex.Qr,{control:t,name:"dataType",render:tX}):null,(0,r.jsx)(ex.Qr,{control:t,name:"reference",render:"table"===a&&i?t5:t8}),(0,r.jsx)(ex.Qr,{control:t,name:"description",render:nt}),(0,r.jsx)(nn,{})]})})}let ni=u.zo.form`
+  display: flex;
+  width: 100%;
+  max-width: 550px;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+`,na=es.z.object({description:es.z.string().min(1)}).passthrough();function ns(e){let{titleText:t,...n}=e,i=(0,ex.cI)({defaultValues:{dataType:"file",...n.values},mode:"onTouched",resolver:(0,eU.F)(na)}),{mutate:a,isLoading:s}=o.S.openai.generateDataSourceDescription.useMutation({onSuccess(e){i.setValue("description",e)}}),[l,c]=(0,z.useState)(!1),d=tb(s);return(0,z.useEffect)(()=>{if(!s&&d){c(!0);let e=setTimeout(()=>{c(!1)},3e3);return()=>{clearTimeout(e)}}},[s,d]),(0,r.jsx)(tV.u,{onClosed:n.onCancel,ariaLabel:t,children:(0,r.jsxs)(tW.hz,{maxWidth:"550px",children:[(0,r.jsx)(tW.dE,{children:(0,r.jsx)(Text.x,{margin:"-10px",tag:"h2",type:"subHeader3Bold",children:t})}),(0,r.jsx)(tW.nS,{children:(0,r.jsx)(nl,{children:(0,r.jsx)(ex.RV,{...i,children:(0,r.jsx)(no,{...n,generateDescription:a,isGenerating:s,isGeneratingComplete:l})})})})]})})}let nl=u.zo.div`
+  margin: -20px -40px -40px;
+`;function nc(e){let{chatbot:t,dataSourcesLimit:n,isDeleting:o,isSyncing:i,knowledgeSourceStatus:a,onAdd:s,onCancel:l,onDelete:c,onSave:d,onSaveChatbot:u,onSync:p,plan:h,RenderFileUpload:x=tp.Z,sources:g,tables:m,view:f}=e,b=(0,Q.G)(),j=(0,z.useMemo)(()=>{if("new"===f)return l},[l,f]);return(0,r.jsxs)(r.Fragment,{children:["loading"===f&&(0,r.jsx)(tg.$,{height:200}),"off"===f&&(0,r.jsx)(tx,{}),("list"===f||"new"===f)&&(0,r.jsx)(tH,{chatbot:t,dataSources:g,dataSourcesLimit:n,isDeleting:o,isSyncing:i,knowledgeSourceStatus:a,onAdd:s,onDelete:c,onSave:u,onSync:p,plan:h,tier:(0,eR.R2)("dataSourcesCount"),upgradeRedirect:b}),"new"===f&&!i&&(0,r.jsx)(ns,{chatbotId:t.id,isDeleting:o,onCancel:j??l,onDelete:c,onSave:d,RenderFileUpload:x,tables:m,titleText:"Add knowledge source",plan:h,upgradeRedirect:b})]})}var nd=n(738),nu=n(66073),np=n(95672);function nh(e){let{error:t,status:n}=e;return(0,r.jsx)(nu.T,{children:(0,r.jsx)(np.v,{error:t,errorTitle:"Error deleting knowledge source",errorText:"Something went wrong while deleting your knowledge source. Please try again.",isError:"error"===n,loadingTitle:"Deleting your knowledge source...",loadingText:"Hold tight! Your knowledge source will be deleted soon."})})}var nx=n(49089);function ng(e){let{source:t,close:n,deleteKnowledgeSource:o}=e;return(0,r.jsxs)(tW.hz,{maxWidth:"60ch",children:[(0,r.jsx)(tW.dE,{children:(0,r.jsx)(Text.x,{type:"subHeader3Bold",children:"Delete Knowledge Source"})}),(0,r.jsx)(tW.nS,{scrollable:!0,children:(0,r.jsx)("form",{children:(0,r.jsxs)(Text.x,{tag:"p",type:"paragraph3",color:"neutral700",children:["Are you sure you want to delete your ",(0,r.jsx)("b",{children:t.name})," knowledge source? This action cannot be undone."]})})}),(0,r.jsx)(tW.bT,{children:(0,r.jsxs)(nx.Z,{$gap:"10px",children:[(0,r.jsx)(eg.z,{type:"button",color:"danger",onClick:e=>{e.stopPropagation(),o(t)},children:"Delete"}),(0,r.jsx)(eg.z,{type:"button",color:"secondary",onClick:n,children:"Cancel"})]})})]})}function nm(e){let{error:t,status:n,...o}=e;if(!o.chatbotId||!o.source)return null;let i=null;return i=n?(0,r.jsx)(nh,{error:t,status:n}):(0,r.jsx)(ng,{...o,source:o.source}),(0,r.jsx)(nd.u,{onClosed:o.close,canClose:"deleting"!==n,ariaLabel:"Delete Knowledge Source",children:i})}function nf(e,t){switch(t.type){case"CONFIRM":return{...e,status:null,error:void 0,source:t.payload};case"CLOSE":return{...e,status:null,error:void 0,source:void 0};case"ERROR":return{...e,status:"error",error:t.payload};case"BUSY":return{...e,status:"deleting"};default:return e}}var nb=n(42555);let nj=u.zo.label`
+  color: ${a.w.neutral800};
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+`;var Animation=n(64186);let nw=u.zo.button`
+  line-height: ${e=>{let{$size:t}=e;return t+"px"}};
+  width: ${e=>{let{$size:t}=e;return t+"px"}};
+  height: ${e=>{let{$size:t}=e;return t+"px"}};
+  border-radius: 3px;
+  border: 1px solid ${a.w.neutral100};
+  color: ${a.w.neutral600};
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 200ms ${Animation.f.transitionTimingFunction};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition-property: all;
+    transition-timing-function: ${Animation.f.transitionTimingFunction};
+    transition-duration: 200ms;
+    z-index: 0;
+  }
+
+  &:hover:not([disabled]) {
+    box-shadow: ${t$.f.elevation6};
+    border-color: ${a.w.neutral600};
+    color: ${a.w.neutral700};
+  }
+
+  &:focus:not([disabled]) {
+    border-color: ${a.w.blueJeans};
+    color: ${a.w.blueJeans};
+    outline: none;
+
+    &::before {
+      border-color: ${a.w.blueJeans};
+      top: -5px;
+      right: -5px;
+      bottom: -5px;
+      left: -5px;
+    }
+  }
+`,ny=u.zo.div`
+  background: ${a.w.neutral100};
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  min-width: 60vw;
+  max-width: 720px;
+  border-radius: 5px;
+  padding: 20px;
+`,nv=(0,u.zo)(nw)`
+  align-self: flex-end;
+`,nz=u.zo.div`
+  flex-grow: 1;
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`,nS=u.zo.textarea`
+  display: block;
+
+  flex-grow: 1;
+
+  min-height: 50px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 9px 15px;
+
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}}};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: ${a.w.neutral800};
+  background-color: ${a.w.neutral100};
+
+  border: 1px solid ${a.w.neutral600};
+  outline: 1px solid transparent;
+
+  resize: none;
+
+  transition: all 200ms ${Animation.f.transitionTimingFunction};
+
+  ${e=>{let{$isErrored:t}=e;return t&&`border-color: ${a.w.error400};`}}
+
+  &:focus, &:focus-visible, &:focus-within {
+    border-color: ${a.w.blueJeans};
+    outline: 1px solid ${a.w.blueJeans};
+  }
+`,nC=u.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`,nk=u.zo.label`
+  color: ${e=>{let{$isErrored:t}=e;return t?a.w.error400:a.w.neutral800}};
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+`;var n$=function(e){let{control:t,error:n,helpText:o,...i}=e,a=(0,z.useRef)(null);return(0,z.useEffect)(()=>{a.current&&(a.current.setSelectionRange(a.current.value.length,a.current.value.length),a.current.focus())},[]),(0,r.jsx)(tV.u,{...i,ariaLabel:"Edit your chatbot directive",children:(0,r.jsxs)(ny,{children:[(0,r.jsxs)(nv,{$size:24,type:"button",onClick:i.onClosed,children:[(0,r.jsx)("svg",{width:"24",height:"25",viewBox:"0 0 24 25",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:(0,r.jsx)("path",{d:"M14 3.5L12 5.5V12.5H5L3 14.5H8.58579L3.29289 19.7929L4.70711 21.2071L10 15.9142V21.5L12 19.5V12.5H19L21 10.5H15.4142L20.7071 5.20711L19.2929 3.79289L14 9.08579V3.5Z",fill:"currentColor"})}),(0,r.jsx)(eH.T,{children:"Hide directive in a larger modal window"})]}),(0,r.jsx)(ex.Qr,{control:t,name:"directive",render:e=>{let{field:t}=e;return(0,r.jsxs)(nz,{children:[(0,r.jsx)(nk,{$isErrored:!!n,htmlFor:"directive",children:"Write Directive"}),(0,r.jsx)(nS,{...t,$isErrored:!!n,id:"directive",name:"directive",ref:a}),(0,r.jsx)(Text.x,{tag:"p",type:"smallPrint1",color:n?"error400":"neutral600",children:n||o})]})}}),(0,r.jsx)(nC,{children:(0,r.jsx)(eg.z,{type:"button",onClick:i.onClosed,children:"Done"})})]})})};let n_=u.zo.button`
+  padding: 4px;
+  margin: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background-color: ${a.w.neutral100};
+  box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent;
+  transition: all 0.14159s;
+
+  &:hover {
+    background-color: ${a.w.neutral200};
+    box-shadow: 0 0 0 2px ${a.w.neutral200}, 0 0 0 4px transparent;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.blueJeans};
+
+    &:hover {
+      box-shadow: 0 0 0 2px ${a.w.neutral200}, 0 0 0 4px ${a.w.blueJeans};
+    }
+  }
+
+  &:active {
+    background-color: ${a.w.neutral300};
+    box-shadow: 0 0 0 2px ${a.w.neutral300}, 0 0 0 4px ${a.w.blueJeans};
+
+    &:hover {
+      box-shadow: 0 0 0 2px ${a.w.neutral300}, 0 0 0 4px ${a.w.blueJeans};
+    }
+  }
+`;function nI(e){let{onSave:t}=e,{control:n,getValues:o,reset:i,formState:{errors:a,isDirty:s,isSubmitting:l,isSubmitSuccessful:d},handleSubmit:u}=(0,ex.Gc)(),[p,h]=(0,z.useState)(!1),x=(0,z.useCallback)(()=>{h(!1)},[]);return(0,z.useEffect)(()=>{d&&i(o(),{keepDirty:!1})},[o,d,i]),(0,r.jsxs)(nT,{onSubmit:u(t),children:[(0,r.jsx)(ex.Qr,{name:"directive",control:n,render:e=>{let{field:t}=e;return(0,r.jsx)(E.g,{error:a.directive?.message,label:O.fz,renderLabel:()=>(0,r.jsxs)(nx.Z,{children:[(0,r.jsx)(nj,{children:O.fz}),(0,r.jsx)(nE,{children:(0,r.jsx)(Text.x,{tag:"p",type:"smallPrint1",children:"(required)"})})]}),renderInput:()=>(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(nA,{children:(0,r.jsxs)(nD,{onClick:()=>{h(!0)},children:[(0,r.jsx)(c.J,{size:24,name:"arrowCodeDots"}),(0,r.jsx)(eH.T,{children:"Show directive in a larger modal window"}),(0,r.jsx)(nP,{children:(0,r.jsx)(Text.x,{tag:"h2",children:"Pop out"})})]})}),(0,r.jsx)(nL,{children:(0,r.jsx)(nb.Z,{...t,maxRows:7,minRows:4})})]})})}}),(0,r.jsx)(eg.z,{disabled:!s,isLoading:l,type:"submit",children:"Save changes"}),p&&(0,r.jsx)(n$,{onClosed:x,control:n,error:a.directive?.message,helpText:O.wg})]})}let nT=u.zo.form`
+  display: flex;
+  flex-direction: column;
+
+  & [class$="__helpTextWrapper"]${p.G}:empty {
+    display: none;
+  }
+`,nL=u.zo.div`
+  textarea {
+    background-color: ${a.w.neutral100};
+    width: 540px;
+    border: 1px solid ${a.w.neutral600};
+    border-radius: 0 0 3px 3px;
+    resize: none;
+    padding: 10px;
+
+    &:focus,
+    &:focus-within {
+      outline: 1px solid ${a.w.blueJeans};
+      border: 1px solid ${a.w.blueJeans};
+      border-radius: 0 0 3px 3px;
+    }
+  }
+`,nA=u.zo.div`
+  display: flex;
+  background: ${a.w.neutral200};
+  border: 1px solid ${a.w.neutral600};
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  padding: 8px 16px;
+  width: 540px;
+`,nE=u.zo.div`
+  color: ${a.w.neutral800};
+  margin-left: 3px;
+`,nP=u.zo.div`
+  margin-left: 8px;
+`,nD=(0,u.zo)(n_)`
+  background-color: ${a.w.neutral200};
+  margin: 4px 0px;
+  svg {
+    transform: rotate(-45deg);
+  }
+  padding: 0px;
+`;function nF(e){let{chatbot:t,createKnowledgeSource:n,knowledgeSourceStatus:i,dataSourcesLimit:a,onSave:s,enabled:l,tables:c}=e,d=(0,ex.cI)({defaultValues:t.config,resolver:(0,eU.F)(S.Tc.shape.config),mode:"onTouched",criteriaMode:"all"}),[u,p]=(0,z.useState)("loading"),[h,x]=(0,z.useState)(!1),{user:g}=(0,ei.aF)(),m=(0,eR.zi)(g),f=o.S.useContext(),{status:b,onOpen:j,onSuccess:w,onError:y,render:v}=function(e,t,n){let[{status:o,error:i,source:a},s]=(0,z.useReducer)(nf,{status:null,error:void 0,source:void 0,chatbotId:e.id});return(0,z.useMemo)(()=>({error:i,status:o,onOpen(e){s({type:"CONFIRM",payload:e})},onSuccess(){s({type:"CLOSE"}),C.ZP.success("Knowledge source successfully deleted.")},onError(e){s({type:"ERROR",payload:e})},render:l=>(0,r.jsx)(nm,{chatbotId:e.id,source:a,error:i,status:o,close:()=>{s({type:"CLOSE"})},deleteKnowledgeSource:r=>{s({type:"BUSY"}),l({chatbotId:e.id,dataSourceId:r.id,isSync:!1}).then(async o=>{let{success:i}=o;if(i){let o=e.config.dataSources.filter(e=>e.id!==r.id);t.setValue("dataSources",o),await t.handleSubmit(n)()}})}})}),[e.config.dataSources,e.id,i,t,n,a,o])}(t,d,s),{mutateAsync:k}=o.S.openai.deleteDataSource.useMutation({meta:{noToast:!0},async onSuccess(e){let{success:n,isSync:r}=e;n&&!r&&(f.chatbots.get.invalidate({id:t.id}),w())},onError:y}),$=(0,z.useMemo)(()=>{let e={blockId:t.id};return g?.id&&(e.userId=g.id),e},[t.id,g]),_=(0,z.useCallback)(e=>(0,r.jsx)(tp.Z,{...e,uploaderOptions:{...e.uploaderOptions,metadata:$}}),[$]);(0,z.useEffect)(()=>{l&&0!==a?p("list"):p("off")},[a,l]);let I=(0,z.useCallback)(()=>{p("new")},[]),T=(0,z.useCallback)(()=>{p("list")},[]),L=(0,z.useCallback)(async e=>{try{p("list");let r=await n(e);if(r){let n=t.config.dataSources.concat(e);d.setValue("dataSources",n),await d.handleSubmit(s)()}}catch(e){console.error("Failed to onSave:",e),C.ZP.error("Failed to save changes.")}},[t.config.dataSources,n,d,s]),A=(0,z.useCallback)(async e=>{try{x(!0),p("list");let r=e.id,o=t.config.dataSources.findIndex(e=>e.id===r);if(-1===o)throw Error("Stale knowledge source not found.");let i={...e,id:tw()()},a=await n(i);if(!a)throw Error("Failed to create fresh knowledge source.");let{success:l}=await k({chatbotId:t.id,dataSourceId:r,isSync:!0});if(!l){try{await k({chatbotId:t.id,dataSourceId:i.id,isSync:!0})}catch(e){console.error("Failed to clean up fresh knowledge source after failed stale knowledge source deletion:",e)}throw Error("Failed to delete stale knowledge source.")}let c=[...t.config.dataSources.slice(0,o),i,...t.config.dataSources.slice(o+1)];d.setValue("dataSources",c),await d.handleSubmit(s)(),x(!1)}catch(e){console.error("Failed to sync knowledge source:",e),C.ZP.error("Failed to sync knowledge source."),x(!1)}},[t.config.dataSources,t.id,n,k,d,s]);return(0,z.useEffect)(()=>{d.formState.isSubmitSuccessful&&(d.reset(t.config),C.ZP.success("Changes successfully saved."))},[d,t.config]),(0,r.jsx)(ex.RV,{...d,children:(0,r.jsxs)(nM,{children:[(0,r.jsx)(nI,{onSave:s}),(0,r.jsx)(nc,{chatbot:t,createKnowledgeSource:n,dataSourcesLimit:a,enabled:l,isDeleting:"deleting"===b,isSyncing:h,knowledgeSourceStatus:i,onAdd:I,onCancel:T,onDelete:j,onSave:L,onSaveChatbot:s,onSync:A,plan:m,RenderFileUpload:_,sources:t.config.dataSources,tables:c,view:u}),v(k)]})})}let nM=u.zo.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding: 30px;
+  position: relative;
+`,nN=es.z.object({id:es.z.string().cuid(),userEvent:es.z.literal("response"),action:es.z.literal("button"),buttonText:(0,e9._)("actionButtonText"),onClick:es.z.union([es.z.literal("copy"),es.z.literal("zap")]),notificationText:(0,e9._)("actionNotificationText").optional().default("Action triggered!")});var nO=n(85466),nR=n.n(nO),nZ=n(73352),nB=n.n(nZ);let nU=[{value:"response",label:"Every time a user gets a response"}],nH={userEvent:"response",action:"button",buttonText:"Copy",notificationText:"Copied text"};var nJ=n(42383),nG={src:"https://chatbots.vercel.zapier.com/_next/static/media/action-zap.d28a57cc.png",height:60,width:60,blurDataURL:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAKlBMVEUtLS0sLS0sLS0tLi4wMTAnKCiWlZMcHR5eXl0qKys7PDxVVVR9fXtJSUnO8x2KAAAAA3RSTlOhoqEfLL6cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAN0lEQVR4nB3LyQ3AMAzEwHW4OmK7/3oD5TcAQQl44ZEhtrFwdZYRcTI7Bn3zDFzZk4x3gLX+G30reAE0kBafrgAAAABJRU5ErkJggg==",blurWidth:8,blurHeight:8},nV=n(37766),nW=n.n(nV);let nq=u.zo.div`
+  padding: 10px 15px 10px 10px;
+
+  overflow: hidden;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+
+  border: 1px solid ${a.w.neutral400};
+  border-radius: 5px;
+`,nQ=u.zo.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+`,nY=u.zo.a`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: ${a.w.neutral800};
+
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`,nK=u.zo.button`
+  cursor: pointer;
+  transition: color 0.14159s;
+  color: ${a.w.neutral600};
+  &:hover {
+    color: ${a.w.neutral800};
+  }
+`,nX=u.zo.span`
+  display: block;
+  justify-content: center;
+  align-items: center;
+`;function n0(e){return(0,r.jsx)(nq,{children:(0,r.jsxs)(z.Fragment,{children:[(0,r.jsx)(nW(),{src:nG,height:30,width:30,layout:"fixed",alt:""}),(0,r.jsx)(n1,{...e})]})})}function n1(e){return e.isLoading?(0,r.jsx)(nX,{children:(0,r.jsx)(tg.$,{})}):(0,r.jsxs)(z.Fragment,{children:[(0,r.jsxs)(nQ,{children:[(0,r.jsx)(nY,{href:e.isSkeleton?void 0:e.href,target:"_blank",children:(0,r.jsx)(Text.x,{type:"paragraph3Semibold",children:e.isSkeleton?(0,r.jsx)(w.Z,{width:"40ch"}):e.name})}),(0,r.jsx)(nJ.S,{color:e.isOn?"success":"info",size:"medium",children:e.isSkeleton?(0,r.jsx)(w.Z,{width:"3ch"}):e.isOn?"On":"Off"})]}),e.onClickDiscard&&(0,r.jsx)(nK,{type:"button",onClick:e.onClickDiscard,children:(0,r.jsx)(c.J,{name:"formXCircle",size:20})})]})}var n2=n(72136);let n5=u.zo.div`
+  display: flex;
+  gap: 10px;
+`;function n3(e){let[t,n]=(0,z.useState)("keep-zap"),[o,a]=(0,z.useState)(""),l=(0,z.useCallback)(async()=>{"chatbot-button"===e.action.type&&e.zapName?("delete-zap"===t&&o===e.zapName||"delete-zap"!==t&&"function"==typeof e.onDelete)&&await e.onDelete(t):e.onDelete&&e.onDelete(),e.onClosed()},[e,o,t]),c=(0,z.useMemo)(()=>"delete-zap"===t&&"chatbot-button"===e.action.type&&o!==e.zapName,[e.action,e.zapName,o,t]),d=e.zapName,u="chatbot-button"===e.action.type&&e.zapName;return(0,r.jsx)(tV.u,{onClosed:e.onClosed,children:(0,r.jsxs)(tW.hz,{maxWidth:"60ch",children:[(0,r.jsx)(tW.dE,{children:(0,r.jsx)(Text.x,{type:"subHeader3Bold",children:"Remove action"})}),(0,r.jsxs)(tW.nS,{children:[(0,r.jsx)(Text.x,{tag:"p",type:"paragraph3",color:"neutral700",children:"Are you sure you want to remove this action? This action cannot be undone."}),(0,r.jsx)(s.L,{height:20}),u&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(n2.h,{prompt:"What should happen to the Zap triggered from this action?",value:t,onChange:e=>n(e),zapsCount:1}),(0,r.jsx)(s.L,{height:20}),"delete-zap"===t&&(0,r.jsx)(E.g,{label:"Type the Zap name to confirm:",renderInput:e=>(0,r.jsx)(P.o,{...e,onChange:e=>a(e.target.value),name:"zapName",placeholder:d})})]})]}),(0,r.jsx)(s.L,{height:30}),(0,r.jsxs)(n5,{children:[(0,r.jsxs)(i.z,{color:"danger",onClick:()=>l(),disabled:c,tabIndex:-1,children:["Remove action ","delete-zap"===t&&"and delete Zap"]}),(0,r.jsx)(i.z,{color:"secondary",onClick:e.onClosed,tabIndex:-1,children:"Cancel"})]})]})})}var n4=n(69666);let n6=[{icon:"miscBoltAlt",title:"Zap button",description:"Display button that triggers a Zap.",value:{action:"button",onClick:"zap"}},{icon:"actionCopy",title:"Copy response",description:"Allow user to copy chatbot response.",value:{action:"button",onClick:"copy"}}];function n9(e){let{accountId:t,isEditing:n,onBack:o,onCancel:i,onCreateZap:a,onDeleteAction:l,onDirtyChange:c,onSaveAction:d,values:u,title:p,zapsMap:h}=e,x=(0,z.useRef)(!1),g=(0,z.useMemo)(()=>u||{...nH,id:tw()()},[u]),m=tb(g),f=(0,z.useRef)(null),{register:b,control:j,handleSubmit:w,reset:y,watch:v,formState:{errors:S,isDirty:C,isSubmitting:$},setValue:_}=(0,ex.cI)({defaultValues:{id:g.id,userEvent:g.userEvent,action:g.action,buttonText:g.buttonText,notificationText:g.notificationText,actionOnClick:{}},resolver:(0,eU.F)(nN),mode:"onTouched"}),I=v("onClick"),T=v("action"),F=(0,z.useMemo)(()=>n?h[g.id]??[]:[],[n,g.id,h]),M=!n&&"zap"===I,[N,O]=(0,z.useState)(!1),R=(0,z.useCallback)(async e=>{let t=nB()(e,"actionOnClick"),r=await d(t,n);"zap"===r.onClick&&x.current&&(await a(r),x.current=!1)},[n,a,d]),Z=(0,z.useCallback)(e=>{let{field:{name:t,onBlur:n,onChange:o,value:i}}=e;return e=>{if("string"==typeof i)return(0,r.jsx)(P.o,{...e,name:t,onBlur:n,onChange:o,value:i})}},[]);return(0,z.useEffect)(()=>{m&&!nR()(m,g)&&y(g)},[m,g,y]),(0,z.useEffect)(()=>{c(C)},[C,c]),(0,r.jsxs)("form",{onSubmit:w(R),ref:f,children:[(0,r.jsxs)(re,{children:[(0,r.jsx)(rt,{children:(0,r.jsx)(tE.h,{icon:"arrowBigLeft",size:"xsmall",color:"icon-secondary",onClick:o,type:"button"})}),(0,r.jsx)(rn,{children:(0,r.jsx)(Text.x,{type:"subHeader5Medium",color:"neutral800",children:p})})]}),(0,r.jsx)("input",{type:"hidden",...b("id")}),(0,r.jsx)("input",{type:"hidden",...b("userEvent")}),(0,r.jsx)("input",{type:"hidden",...b("action")}),(0,r.jsx)(n7,{children:(0,r.jsxs)(L,{children:[(0,r.jsx)(ex.Qr,{name:"actionOnClick",control:j,render:e=>{let{field:{onChange:t}}=e;return(0,r.jsx)(A.NI,{children:(0,r.jsx)(E.g,{label:"Action type",renderInput:e=>(0,r.jsx)(eG,{...e,isDisabled:n,onChange:function(){for(var e=arguments.length,n=Array(e),r=0;r<e;r++)n[r]=arguments[r];let{action:o,onClick:i}=n[0];_("action",o),_("onClick",i),t(...n)},gridStyle:n4.css`
+                        grid-template-columns: repeat(3, 1fr);
+                      `,buttonStyle:n4.css`
+                        grid-template-areas: "icon icon" "label label" "description description";
+                      `,labelStyle:n4.css`
+                        ${k.ZT.paragraph3Semibold}
+                      `,label:"Action type options",value:I?{action:T,onClick:I}:"onClick"in g?{action:g.action,onClick:g.onClick}:{},options:n6})})})}}),(I||"onClick"in g)&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(A.NI,{children:(0,r.jsx)(E.g,{label:"Show this action",renderInput:e=>(0,r.jsx)(D.L,{...e,items:nU,selectedItem:nU[0]}),renderHelpText:()=>"Determines when the action runs or becomes available to the user."})}),(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"buttonText",control:j,render:e=>(0,r.jsx)(E.g,{label:"Button text",error:S.buttonText?.message,inputId:e.field.name,isDisabled:x.current||$||N,renderInput:Z(e)})})}),(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:"notificationText",control:j,render:e=>(0,r.jsx)(E.g,{label:"Notification text",error:S.notificationText?.message,inputId:e.field.name,isDisabled:x.current||$||N,renderInput:Z(e),renderHelpText:()=>"Text shown after successfully triggering the action.",helpTextLineClamp:2})})}),"onClick"in g&&"zap"===g.onClick&&n&&(0,r.jsx)(A.NI,{children:(0,r.jsx)(E.g,{label:"Zaps",isDisabled:x.current||$||N,renderInput:e=>{let{isDisabled:n}=e;return(0,r.jsxs)(n8,{children:[F.map(e=>(0,r.jsx)(n0,{name:e.title,isOn:!e?.paused,href:(0,eB.Z9)({rootNodeId:e.id,accountId:t}),isLoading:n},e.id)),0===F.length&&(0,r.jsx)(eg.z,{disabled:n,color:"primary-alt",iconBefore:"miscBoltAlt",isFullWidth:!0,onClick:async()=>{x.current=!0,await a(g),x.current=!1},type:"button",isLoading:x.current,children:"Create Zap"})]})}})})]})]})}),(0,r.jsx)(L,{children:(0,r.jsxs)(A.NI,{children:[(!n||C)&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)(eg.z,{disabled:x.current||$||N,isLoading:$,color:M?"primary-alt":void 0,iconBefore:M?"miscBoltAlt":void 0,type:M?"button":"submit",onClick:M?()=>{x.current=!0,f.current&&(f.current.requestSubmit?f.current.requestSubmit():f.current.submit())}:void 0,isFullWidth:!0,children:[n&&"Save changes",!n&&"zap"===I&&"Create action and Zap",!n&&"zap"!==I&&"Create action"]}),(0,r.jsx)(s.L,{height:15}),(0,r.jsx)(eg.z,{color:"secondary",onClick:i,type:"button",disabled:x.current||$||N,isFullWidth:!0,children:n?"Cancel changes":"Cancel"}),(0,r.jsx)(s.L,{height:15})]}),n&&(0,r.jsx)(eg.z,{color:"secondary",onClick:()=>O(!0),type:"button",disabled:x.current||$||N,isLoading:N,isFullWidth:!0,children:"Remove action"})]})}),"onClick"in g&&N&&(0,r.jsx)(n3,{onClosed:()=>O(!1),onDelete:async e=>l(g,e),action:{type:"chatbot-button",config:g},zapName:F[0]?.title})]})}let n7=u.zo.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+`,n8=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+`,re=u.zo.div`
+  padding: 0 20px;
+  height: 61px;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  align-items: center;
+  background-color: ${a.w.neutral200};
+  border-bottom: 1px solid ${a.w.neutral300};
+  border-left: 1px solid ${a.w.neutral300};
+`,rt=u.zo.div``,rn=u.zo.div`
+  text-align: center;
+`;function rr(e){return(0,r.jsx)(n9,{...e,isEditing:!0})}let ro=u.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: ${e=>{let{$size:t}=e;return t}}px;
+  width: ${e=>{let{$size:t}=e;return t}}px;
+  border-radius: ${e=>{let{$borderRadius:t}=e;return t}}px;
+  border: 1px solid
+    ${e=>{let{$borderColor:t}=e;return a.w[t??"neutral400"]}};
+  ${e=>{let{$backgroundColor:t}=e;return t&&`background-color: ${a.w[t]};`}}
+`;function ri(e){return(0,r.jsx)(ro,{$size:e.size??30,$borderRadius:e.borderRadius??4,$borderColor:e.borderColor,$backgroundColor:e.backgroundColor,children:e.children})}let ra=u.zo.div`
+  position: relative;
+  padding-left: 50px;
+`,rs=u.zo.div`
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 30px;
+
+  ${ra}:not(:last-child) & {
+    height: calc(100% + 10px);
+    border-left: 2px solid ${a.w.blueJeans};
+  }
+
+  ${ra}:last-child & {
+    height: 37px;
+    border-left: 2px solid ${a.w.blueJeans};
+    border-bottom: 2px solid ${a.w.blueJeans};
+    border-radius: 0 0 0 8px;
+  }
+`,rl=u.zo.div`
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 30px;
+  border-bottom: 2px solid ${a.w.blueJeans};
+
+  ${ra}:last-child & {
+    display: none;
+  }
+`,rc=u.zo.div`
+  width: 10px;
+  height: 10px;
+  border: 2px solid ${a.w.blueJeans};
+  border-radius: 999px;
+  background-color: ${a.w.neutral100};
+`,rd=(0,u.zo)(rc)`
+  position: absolute;
+  top: -15px;
+  left: 16px;
+
+  ${ra}:not(:first-child) & {
+    display: none;
+  }
+`,ru=(0,u.zo)(rc)`
+  position: absolute;
+  top: 21px;
+  left: 46px;
+`;function rp(e){return(0,r.jsxs)(ra,{children:[e.children,(0,r.jsx)(rs,{}),(0,r.jsx)(rl,{}),(0,r.jsx)(rd,{}),(0,r.jsx)(ru,{})]})}let rh=u.zo.div`
+  border: 1px ${e=>{let{$isPlaceholder:t}=e;return t?"dashed":"solid"}}
+    ${a.w.neutral400};
+  border-radius: 6px;
+  overflow: hidden;
+
+  cursor: ${e=>{let{$isDisabled:t}=e;return t?"default":"pointer"}};
+
+  transition: all 0.14159s;
+
+  ${e=>{let{$isDisabled:t}=e;return!t&&`
+    &:hover {
+      border-color: ${a.w.blueJeans};
+      box-shadow: ${t$.f.elevation5};
+    }
+  `}}
+`,rx=u.zo.div`
+  background-color: ${a.w.neutral100};
+
+  min-height: 50px;
+  padding: 0 10px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+`,rg=u.zo.div`
+  min-height: 50px;
+  padding: 10px;
+
+  background-color: ${a.w.neutral200};
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-items: flex-start;
+
+  ${rh}:hover & {
+    background-color: ${e=>{let{$isDisabled:t,$isPlaceholder:n}=e;return t||n?"inherit":a.w.acidWash}};
+  }
+`,rm=u.zo.div`
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`,rf=u.zo.div`
+  flex: 1 1 0%;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+`,rb=u.zo.div`
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+`;function rj(e){return(0,r.jsx)(rp,{children:(0,r.jsxs)(rh,{$isDisabled:e.isDisabled,$isPlaceholder:e.isPlaceholder,onClick:e.onClick,children:[(0,r.jsxs)(rx,{children:[e.isPlaceholder?(0,r.jsx)(ri,{size:30,backgroundColor:"neutral400",borderColor:"neutral400"}):e.icon?(0,r.jsx)(rw,{children:(0,r.jsx)(c.J,{name:e.icon,size:20,color:"neutral100"})}):(0,r.jsx)(nW(),{src:e.imageSrc,height:30,width:30,layout:"fixed",alt:""}),(0,r.jsx)(s.L,{width:10}),(0,r.jsxs)(rb,{children:[(0,r.jsx)(Text.x,{type:"paragraph3Semibold",color:"neutral800",children:e.title}),e.renderTag&&e.renderTag()]})]}),(0,r.jsxs)(rg,{$isDisabled:e.isDisabled,children:[(0,r.jsx)(rm,{children:e.renderBottomIcon()}),(0,r.jsx)(s.L,{width:10}),(0,r.jsx)(rf,{children:e.renderBottomText()})]})]})})}let rw=u.zo.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: ${a.w.neutral800};
+  border-radius: 5px;
+`,ry=u.zo.div`
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid ${a.w.neutral400};
+`;function rv(e){return(0,r.jsxs)(ry,{children:[(0,r.jsx)(Text.x,{type:"paragraph3",color:"neutral700",children:"When a user "}),(0,r.jsx)(Text.x,{type:"paragraph3Semibold",color:"neutral800",children:e.action})]})}function rz(e){let{actions:t,onAddAction:n,onEditAction:o,zapsMap:i}=e;return(0,r.jsxs)(rS,{children:[(0,r.jsx)(rv,{action:"gets a response"}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(rC,{children:t.map(e=>{let t="copy"===e.onClick,{length:n}=i[e.id]||[],a=n>1?"Zaps":"Zap";return(0,r.jsx)(rj,{title:(0,r.jsxs)("span",{children:["Display button: ",(0,r.jsx)(d.C,{children:e.buttonText})]}),icon:"actionPlay",onClick:()=>o(e),renderBottomIcon:()=>(0,r.jsx)(ri,{size:30,backgroundColor:"neutral100",borderColor:"neutral400",children:(0,r.jsx)(c.J,{name:t?"actionCopy":"miscBoltAltFill",size:20,color:"neutral800"})}),renderBottomText:()=>t?(0,r.jsx)(Text.x,{type:"smallPrint1Medium",color:"neutral600",children:"Copy response"}):(0,r.jsxs)(Text.x,{type:"smallPrint1Medium",color:"neutral600",children:["Run ",n," ",a]})},e.buttonText)})}),(0,r.jsx)(s.L,{height:20}),(0,r.jsx)(eg.z,{iconBefore:"formAdd",color:"secondary",size:"xsmall",onClick:n,type:"button",children:"Add action"})]})}let rS=u.zo.div`
+  padding: 20px;
+`,rC=u.zo.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+`,rk=u.zo.div`
+  background-color: ${a.w.neutral700};
+  border-radius: 30px;
+  padding: 3px 8px;
+
+  color: ${a.w.neutral100};
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+`,r$=u.zo.div`
+  margin: 30px 0;
+`,r_=u.zo.p`
+  color: ${a.w.neutral800};
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+`,rI=u.zo.h3`
+  color: ${a.w.neutral800};
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+`,rT=u.zo.div`
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  background-color: ${a.w.neutral200};
+  border-radius: 6px;
+  padding: 30px 25px;
+  margin: 15px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;function rL(e){let{children:t}=e;return(0,r.jsx)(rT,{children:t})}function rA(e){let{onAdd:t}=e;return(0,r.jsxs)(rL,{children:[(0,r.jsxs)(rE,{children:[(0,r.jsx)(rP,{children:(0,r.jsx)(rv,{action:"gets a response"})}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(rF,{children:(0,r.jsx)(rj,{isDisabled:!0,isPlaceholder:!0,title:(0,r.jsx)(rD,{style:{width:200}}),icon:"actionPlay",renderBottomIcon:()=>(0,r.jsx)(ri,{size:30,backgroundColor:"neutral400",borderColor:"neutral400"}),renderBottomText:()=>(0,r.jsx)(Text.x,{type:"smallPrint1Medium",color:"neutral600",children:(0,r.jsx)(rD,{style:{width:150}})})})})]}),(0,r.jsx)(s.L,{height:30}),(0,r.jsx)(rL.Title,{as:"h2",children:O.md}),(0,r.jsx)(rL.Detail,{children:O.D4}),(0,r.jsx)(s.L,{height:30}),(0,r.jsx)(i.z,{type:"button",color:"primary",size:"small",onClick:t,iconBefore:"formAdd",children:"Add action"})]})}rL.Badge=function(e){let{children:t="Coming soon"}=e;return(0,r.jsx)(rk,{children:t})},rL.Content=function(e){let{children:t}=e;return(0,r.jsx)(r$,{children:t})},rL.Title=function(e){let{as:t="h3",...n}=e;return(0,r.jsx)(rI,{...n,as:t})},rL.Detail=function(e){let{children:t}=e;return(0,r.jsx)(r_,{children:t})};let rE=u.zo.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+`,rP=u.zo.div`
+  background-color: ${a.w.neutral100};
+`,rD=u.zo.div`
+  height: 24px;
+  background-color: ${a.w.neutral400};
+  border-radius: 4px;
+`,rF=u.zo.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+`;function rM(e){return(0,r.jsx)(n9,{...e,isEditing:!1})}function rN(e){let{actions:t,dirtyConfirmationText:n="Are you sure? You'll lose unsaved changes to this action.",isDirty:o,onAddAction:i,onCancelAction:a,onCreateZap:s,onDeleteAction:l,onEditAction:c,onSaveAction:d,selectedAction:u,view:p,zapsMap:h,...x}=e,g=(0,z.useCallback)(()=>{(!o||window.confirm(n))&&a(!0)},[n,o,a]);return(0,r.jsxs)(r.Fragment,{children:["list"===p&&!t.length&&(0,r.jsx)(rA,{onAdd:i}),"list"===p&&!!t.length&&(0,r.jsx)(rz,{actions:t,onAddAction:i,onEditAction:c,zapsMap:h}),"new"===p&&(0,r.jsx)(rM,{accountId:x.accountId,onBack:g,onCancel:g,onCreateZap:s,onDeleteAction:l,onDirtyChange:x.onDirtyChange,onSaveAction:d,title:"New action",zapsMap:h}),"edit"===p&&void 0!==u&&(0,r.jsx)(rr,{accountId:x.accountId,onBack:g,onCancel:g,onCreateZap:s,onDeleteAction:l,onDirtyChange:x.onDirtyChange,onSaveAction:d,values:u,title:"Action details",zapsMap:h})]})}function rO(e,t){switch(t.type){case"GOTO_LIST":return{...e,view:"list",selectedAction:void 0};case"GOTO_NEW":return{...e,view:"new",selectedAction:void 0};case"GOTO_EDIT":return{...e,view:"edit",selectedAction:t.action};default:return e}}function rR(e){let{chatbot:t,onSave:n,zaps:i}=e,{reset:a,handleSubmit:s,getValues:l,setValue:c,watch:d,formState:{isSubmitSuccessful:u}}=(0,ex.cI)({defaultValues:t.config,resolver:(0,eU.F)(S.Tc.shape.config),mode:"onTouched",criteriaMode:"all"}),{mutateAsync:p}=o.S.zaps.create.useMutation(),{mutateAsync:h}=o.S.zaps.delete.useMutation(),{mutateAsync:x}=o.S.zaps.disable.useMutation(),g=o.S.useContext(),m=d("triggers"),f=(0,z.useMemo)(()=>m.map(e=>e.config),[m]),[{selectedAction:b,view:j},w]=(0,z.useReducer)(rO,{view:"list",selectedAction:void 0}),y=(0,z.useMemo)(()=>i.reduce((e,n)=>{let r=n.relations?.actions?.find(e=>t.config.triggers.some(t=>t.config.id===e));return r?{...e,[r]:(e[r]??[]).concat(n)}:e},{}),[t.config.triggers,i]),[v,C]=(0,z.useState)(!1),k=(0,z.useCallback)(()=>{w({type:"GOTO_NEW"})},[]),$=(0,z.useCallback)(e=>{(e||!v||window.confirm("Are you sure? You’ll lose unsaved changes to this action."))&&w({type:"GOTO_LIST"})},[v]),_=(0,z.useCallback)(async e=>{let n=window.open(void 0,"_blank"),r=await p({actionId:e.id,buttonText:e.buttonText,type:"chatbot-button"});if(r.id){g.zaps.search.setData({chatbotId:t.id},e=>e?[...e,r]:[r]),g.zaps.search.invalidate();let o=(0,eB.Z9)({rootNodeId:r.id,accountId:t.accountId});n&&(n.location=o,n.focus()),w({type:"GOTO_EDIT",action:e})}},[p,g.zaps.search,t.id,t.accountId]),I=(0,z.useCallback)(async(e,t)=>{let r=m.filter(t=>t.config.id!==e.id);c("triggers",r),await s(n)();let o=y[e.id]??[];o.length&&t&&(await o.reduce((e,n)=>e.then(async()=>{"delete-zap"===t?await h({id:n.id}):"disable-zap"===t&&await x({id:n.id})}),Promise.resolve()),await g.zaps.search.refetch()),w({type:"GOTO_LIST"})},[h,x,s,n,c,m,g.zaps.search,y]),T=(0,z.useCallback)(e=>{w({type:"GOTO_EDIT",action:e})},[]),L=(0,z.useCallback)(async(e,t)=>{let r=t?e.id:tw()(),o=t?m.findIndex(e=>e.config.id===r):m.length,i=[...m.slice(0,o),{type:"chatbot-button",config:{...e,id:r}},...m.slice(o+1)];c("triggers",i),await s(n)();let a=l(),d=a.triggers.find(e=>e.config.id===r);if(!d)throw Error("Could not find saved action");return w({type:"GOTO_LIST"}),d.config},[l,s,n,c,m]);return(0,z.useEffect)(()=>{C(!1)},[j]),(0,z.useEffect)(()=>{u&&a(t.config)},[u,t.config,a]),(0,r.jsx)(rN,{accountId:t.accountId,actions:f,chatbot:t,isDirty:v,onAddAction:k,onCancelAction:$,onCreateZap:_,onDeleteAction:I,onDirtyChange:C,onEditAction:T,onSaveAction:L,selectedAction:b,view:j,zapsMap:y})}function rZ(e){let{children:t}=e;return(0,r.jsx)(rB,{children:t})}let rB=u.zo.div`
+  background-color: ${a.w.neutral100};
+  grid-area: toolbar;
+  padding: 0 20px 0 15px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: center;
+  justify-items: flex-start;
+  gap: 15px;
+
+  & > button${p.G} {
+    color: ${a.w.blueJeans};
+    font-weight: normal;
+
+    &:disabled {
+      color: ${a.w.neutral500};
+      background-color: ${a.w.neutral100};
+      border-color: ${a.w.neutral100};
+    }
+
+    &:hover:not(:disabled) {
+      color: ${a.w.blueJeans};
+      background-color: ${a.w.blue100};
+      box-shadow: none;
+    }
+
+    &:focus {
+      color: ${a.w.blueJeans};
+      background-color: ${a.w.blue100};
+      box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.blueJeans};
+    }
+  }
+`;var rU=n(54191);let rH=`# Role: You are an exceptional [Job Title: e.g., Customer Support Representative, Content Creator]. You possess in-depth knowledge and skills in [Topic/Industry/Skill: e.g., digital marketing, software development].
+
+# Objective: Your main objective is to [Goal: e.g., resolve customer queries, edit or create content]. To achieve this, adhere to these steps:
+
+[Rule/Engagement Step 1: e.g., Always begin by understanding the user's needs with a clarifying question.]
+
+[Rule/Engagement Step 2: e.g., Provide concise and accurate information.]
+
+[Further Steps: e.g., Offer additional resources or guidance if needed.]
+
+# Audience: You will engage with [Audience Description: e.g., non-technical potential clients, business owners]. These users are primarily interested in [Topic/Area of Interest: e.g., home repair, marketing services].
+
+# Context: For effective engagement, you will need to utilize the following information [Background Context: e.g., company history, contact info]. Also utilize these key resources when necessary:
+
+[Resource 1: URL and brief description]
+
+[Resource 2: URL and brief description]
+
+# Style: Your communication style should be [Style/Personality Traits: e.g., professional, yet engaging]. Always structure your responses with [Formatting Requirements: e.g., clear headings, bullet points, use of emojis when appropriate].
+
+# Other Rules: If a user asks questions beyond the scope of [Primary Topic: e.g., company product], do not address these queries directly. Instead, guide them back to the topics you can assist with by providing a list of relevant subjects or redirecting them to the appropriate resources.`,rJ={Chatbot:"Chatbot",Config:"Config",Content:"Content",Data:"Data",Actions:"Actions",Embed:"Embed","Generated from prompt:":"Generated from prompt:","Chatbot name":"Chatbot name","Build an AI-powered chatbot.":"Build an AI-powered chatbot.","Say hello and tell me what you can do.":"Say hello and tell me what you can do.","How can I help you today?":"How can I help you today?","Ask me anything":"Ask me anything",CHATBOT_BLOCK_FIELD_DIRECTIVE_VALUE:rH,"Sorry, I don’t know.":"Sorry, I don’t know.","URL must be at least 4 characters":"URL must be at least 4 characters","This field is required":"This field is required","This field must be no more than {{count}} characters":"This field must be no more than {{count}} characters","Action triggered!":"Action triggered!","User gets a response":"User gets a response","Display a button":"Display a button","Copy response":"Copy response","Run Zap":"Run Zap","No response was generated.":"No response was generated.","Unknown error occurred":"Unknown error occurred","You've reached the chat completion limit for this session.":"You've reached the chat completion limit for this session.","Something went wrong.":"Something went wrong.","Hmm, things are taking a bit too long. You can try again, or try a different question.":"Hmm, things are taking a bit too long. You can try again, or try a different question.","Chatbot is responding...":"Chatbot is responding...",Send:"Send",Close:"Close",Loading:"Loading","This response is helpful":"This response is helpful","This response is not helpful":"This response is not helpful","Rating feedback":"Rating feedback","Submit feedback":"Submit feedback","What do you like about the response?":"What do you like about the response?","What do you dislike about the response?":"What do you dislike about the response?","This is an automated chatbot response. [Learn more](https://zapier.com/legal/terms-of-service)":"This is an automated chatbot response. [Learn more](https://zapier.com/legal/terms-of-service)","Prompt input provided to the response above":"Prompt input provided to the response above","Response generated to the prompt input above":"Response generated to the prompt input above","This is a demo response":"This is a demo response","Greeting generated from prompt":"Greeting generated from prompt","Thanks for the feedback!":"Thanks for the feedback!","Jump to latest":"Jump to latest",Height:"Height","Prompt placeholder":"Prompt placeholder",Greeting:"Greeting","This will be the first message the user sees.":"This will be the first message the user sees.","The chatbot will generate the first message the user sees based on its directive and this prompt.":"The chatbot will generate the first message the user sees based on its directive and this prompt.",Directive:"Directive","Tell the bot how you’d like it to respond. You can include style, tone, accent, and more.":"Tell the bot how you’d like it to respond. You can include style, tone, accent, and more.","Disclosure message":"Disclosure message","Required for Zapier employees.":"Required for Zapier employees.","Data sources":"Data sources","This input accepts markdown links.":"This input accepts markdown links.","OpenAI authentication":"OpenAI authentication","This authentication isn’t working.":"This authentication isn’t working.","List of connected OpenAI authentications":"List of connected OpenAI authentications",Model:"Model","List of available GPT models":"List of available GPT models","Model availability depends on the selected authentication.":"Model availability depends on the selected authentication.","When results are not found from the data source":"When results are not found from the data source","Generate an AI response without data sources":"Generate an AI response without data sources","Show a custom message":"Show a custom message",Sources:"Sources","No data sources":"No data sources","Custom message":"Custom message","List of behaviors when no results are found from the data source":"List of behaviors when no results are found from the data source","This defines the experience when results are not found from the data source.":"This defines the experience when results are not found from the data source.","Source material":"Source material","Add data sources to teach your chatbot anything it doesn’t already know.":"Add data sources to teach your chatbot anything it doesn’t already know.","Deleting...":"Deleting...","Delete data source":"Delete data source","Are you sure? You’ll no longer be able to use this data source.":"Are you sure? You’ll no longer be able to use this data source.","Replace data source":"Replace data source","You’ve reached the maximum number of sources.":"You’ve reached the maximum number of sources.","Add source":"Add source","Preview data source chunks":"Preview data source chunks","Show all chunks ({{count}})":"Show all chunks ({{count}})","Max response length (tokens)":"Max response length (tokens)","The default setting is {{contextLimit}} max tokens used per response for this model.":"The default setting is {{contextLimit}} max tokens used per response for this model.","Set the max length for individual chatbot responses. The max setting available for this model is {{contextLimit}} tokens.":"Set the max length for individual chatbot responses. The max setting available for this model is {{contextLimit}} tokens.","this model":"this model","Only the project owner can manage the Chatbot’s authentication.":"Only the project owner can manage the Chatbot’s authentication.","Save changes":"Save changes","Cannot be lower than {{count}}.":"Cannot be lower than {{count}}.","Cannot be higher than {{count}}.":"Cannot be higher than {{count}}.",Creativity:"Creativity",Predictable:"Predictable",Random:"Random","Reset to default":"Reset to default","Connect a custom data source":"Connect a custom data source","Upload a file with your own knowledge to tailor the AI Chatbot responses for your business or project.":"Upload a file with your own knowledge to tailor the AI Chatbot responses for your business or project.","Current functionality includes the ability to upload one 1MB static text file (.txt, .csv, .json, .pdf, .doc, .docx).":"Current functionality includes the ability to upload one 1MB static text file (.txt, .csv, .json, .pdf, .doc, .docx).",Upgrade:"Upgrade","Trigger actions from chatbot responses":"Trigger actions from chatbot responses","gets a response":"gets a response","Setup automations that trigger available actions directly in chat.":"Setup automations that trigger available actions directly in chat.","Add action":"Add action","Use Case":"Use Case","The user’s full name":"The user’s full name","The user’s primary contact email address. Must resemble a valid email address.":"The user’s primary contact email address. Must resemble a valid email address.","The name of the company represented by the user’s inquiry":"The name of the company represented by the user’s inquiry","Unable to parse OpenAI response with Zod schema":"Unable to parse OpenAI response with Zod schema"};(0,rU.T)(es.z);let rG=es.z.enum(["gpt-3.5-turbo","gpt-3.5-turbo-16k","gpt-4","gpt-4-32k"]),rV=(es.z.object({label:es.z.string(),value:rG,contextLimit:es.z.number().int(),requiresUpgrade:es.z.boolean().default(!0),supportedVersion:es.z.string()}),{GPT3:{label:"OpenAI GPT-3.5",value:"gpt-3.5-turbo",contextLimit:16384,requiresUpgrade:!1,supportedVersion:"0125"},GPT3_16k:{label:"OpenAI GPT-3.5 (16k) (Legacy)",value:"gpt-3.5-turbo-16k",contextLimit:16384,requiresUpgrade:!0,supportedVersion:"0613"},GPT4:{label:"OpenAI GPT-4",value:"gpt-4",contextLimit:8192,requiresUpgrade:!0,supportedVersion:"0613"},GPT4_32k:{label:"OpenAI GPT-4 (32k)",value:"gpt-4-32k",contextLimit:32768,requiresUpgrade:!0,supportedVersion:"0613"}}),rW=(Object.values(rV).filter(e=>!e.requiresUpgrade),Object.values(rV).filter(e=>e.requiresUpgrade),es.z.discriminatedUnion("role",[es.z.object({content:es.z.string(),role:es.z.literal("system"),name:es.z.string().optional()}),es.z.object({content:es.z.string(),role:es.z.literal("assistant"),name:es.z.string().optional()}),es.z.object({content:es.z.string(),role:es.z.literal("user"),name:es.z.string().optional()}),es.z.object({content:es.z.string(),role:es.z.literal("function"),name:es.z.string()})])),rq=(es.z.object({name:es.z.string(),description:es.z.string(),parameters:es.z.object({type:es.z.literal("object"),properties:es.z.record(es.z.object({type:es.z.string(),description:es.z.string(),enum:es.z.string().array().optional()})),required:es.z.string().array()}).optional()}),es.z.object({id:es.z.string().cuid().or(es.z.string().regex(/^_ACTION_(\d+)$/)).optional(),userEvent:es.z.literal("response"),action:es.z.literal("button"),buttonText:es.z.string().min(1,rJ["This field is required"]).max(30,rJ["This field must be no more than {{count}} characters"].replace("{{count}}","30")),onClick:es.z.union([es.z.literal("copy"),es.z.literal("zap")]),notificationText:es.z.string().min(1,rJ["This field is required"]).max(50,rJ["This field must be no more than {{count}} characters"].replace("{{count}}","50")).optional().default(rJ["Action triggered!"])})),rQ=rq.required(),rY=es.z.object({type:es.z.literal("chatbot-button"),config:rq}),rK=es.z.discriminatedUnion("type",[rY]),rX=es.z.object({response:es.z.string(),chatbotName:es.z.string().optional(),prompt:es.z.string().optional()}),r0=es.z.object({message:es.z.string(),rating:es.z.number().min(-1).max(1),comment:es.z.string().optional(),conversation:es.z.array(rW)}),r1=es.z.object({type:es.z.literal("ChatbotButtonClick"),blockActionId:es.z.string().cuid(),values:rX}),r2=es.z.object({type:es.z.literal("ChatbotFeedback"),blockId:es.z.string().cuid(),chatbotSessionId:es.z.string().cuid(),values:r0}),r5=(es.z.discriminatedUnion("type",[r1,r2]),es.z.object({accountId:es.z.string(),projectId:es.z.string().optional(),pageId:es.z.string().optional(),blockId:es.z.string(),name:es.z.string(),reference:es.z.string(),text:es.z.string()})),r3=es.z.object({id:es.z.string().cuid(),name:es.z.string().min(1),description:es.z.string().optional().default(""),splitStrategy:es.z.enum(["auto","delimiter","ai","manual"]).optional().default("auto"),splitValue:es.z.string().optional().default(""),chunks:es.z.array(es.z.object({id:es.z.string(),metadata:r5})).optional().default([]),dataType:es.z.enum(["file","table"]),reference:es.z.string().min(1)}),r4=es.z.object({functionName:es.z.string(),description:es.z.string().optional(),zapId:es.z.number(),zapInput:es.z.record(es.z.string(),es.z.object({description:es.z.string().optional(),shouldGuess:es.z.boolean().default(!0),staticValue:es.z.string().optional(),required:es.z.boolean().default(!0)})).optional().default({})}),r6=es.z.object({width:es.z.union([es.z.literal("full"),es.z.literal("wide"),es.z.literal("medium"),es.z.literal("narrow")]).optional(),alignment:es.z.union([es.z.literal("left"),es.z.literal("center"),es.z.literal("right")]).optional(),height:es.z.union([es.z.literal("default"),es.z.literal("custom")]).optional(),heightValue:es.z.number().optional()}),r9=es.z.object({name:es.z.enum(["name","email","company"]),fieldKey:es.z.string().nullable().default(null)}),r7=es.z.object({chatbotName:es.z.string().optional().default(rJ.Chatbot),defaultMessageMode:es.z.enum(["static","generated"]).optional().default("static"),defaultPrompt:es.z.string().optional().default(rJ["Say hello and tell me what you can do."]),defaultMessage:es.z.string().optional().default(rJ["How can I help you today?"]),placeholder:es.z.string().optional().default(rJ["Ask me anything"]),directive:es.z.string().optional().default(rJ.CHATBOT_BLOCK_FIELD_DIRECTIVE_VALUE),useDirectiveToAlterDefaultMessage:es.z.boolean().optional().default(!0),authenticationId:es.z.string().optional().default(""),model:rG.optional().default("gpt-3.5-turbo"),maxTokens:es.z.coerce.number().int().optional().default(2048),temperature:es.z.number().min(0).max(1).optional().default(.7),collectUserData:es.z.boolean().default(!1),collectUserDataTemplate:es.z.enum(["lead_generation","support","feedback"]).optional().default("lead_generation"),collectUserDataTableId:es.z.string().optional(),collectUserDataFields:es.z.array(r9).optional().default([{name:"name"},{name:"email"},{name:"company"}]),triggers:es.z.array(rK).default([]),displayDisclosure:es.z.boolean().default(!0),disclosureText:es.z.string().optional().default(rJ["This is an automated chatbot response. [Learn more](https://zapier.com/legal/terms-of-service)"]),dataSources:es.z.array(r3).optional().default([]),dataSourcesMaxResults:es.z.number().int().min(1).max(5).optional().default(5),dataSourcesResultsQuality:es.z.number().min(.6).max(.95).optional().default(.6),dataSourcesMode:es.z.enum(["source","chatgpt"]).optional().default("chatgpt"),dataSourcesNoResultsMode:es.z.enum(["custom","chatgpt"]).optional().default("chatgpt"),dataSourcesNoResultsMessage:es.z.string().optional().default(rJ["Sorry, I don’t know."]),zapFunctions:es.z.array(r4).default([]).optional(),embedHosts:es.z.string().array().default([]),restrictEmbedDomains:es.z.boolean().default(!1)});r7.omit({triggers:!0}).extend({chatbotSessionId:es.z.string().cuid(),isStaticMode:es.z.boolean(),triggers:es.z.array(rQ).default([]),user:es.z.string().optional()});let r8=es.z.object({id:es.z.string().cuid().or(es.z.string().regex(/^_BLOCK_(\d+)$/)).optional(),chatbotId:es.z.string().cuid().or(es.z.string().regex(/\$\{\{ *([A-Za-z0-9_.]+) *\}\}/g)).optional(),isConnectedChatbot:es.z.boolean().optional().default(!1),style:r6.default({width:"medium",alignment:"center",height:"default"})});es.z.object({type:es.z.literal("chatbot-block"),config:r8,errors:es.z.array(es.z.object({code:es.z.enum(["chatbot:authentication-does-not-exist","chatbot:authentication-test-failed","chatbot:model-not-available","chatbot:max-tokens-too-high","chatbot:chatbot-does-not-exist"]),blockId:es.z.string().nullable(),path:es.z.array(es.z.union([es.z.string(),es.z.number()]))})).optional()});let oe=(0,z.createContext)(null);function ot(e){let{children:t,...n}=e,o=(0,z.useMemo)(()=>{var e;let t=r7.parse(n.config);return{...n,...t,isStaticMode:"static"===t.defaultMessageMode,triggers:(t.triggers??[]).map(e=>e.config),user:null==(e=n.accountId)?void 0:e.toString()}},[n]);return(0,r.jsx)(oe.Provider,{value:o,children:t})}function on(){let e=(0,z.useContext)(oe);if(null===e)throw Error("useChatbotContext must be used within a ChatbotContextProvider");return e}function or(e){let{message:t,children:n,...o}=e,{onEvent:i,projectId:a,pageId:s,isEmbedded:l,botActionSlot:c}=on();return(0,r.jsx)(c,{...o,type:"button",onClick:e=>{navigator.clipboard.writeText(t.content?t.content:"").catch(e=>{console.warn("Failed to copy text: ",e)}).finally(()=>{var t;i({interaction_goal:"copy bot response",event_action:"click",interfaces_project_id:a,interfaces_page_id:s,interfaces_component_type:"chatbot",embedded_flag:l}),null==(t=o.onClick)||t.call(o,e)})},children:n})}function oo(e){let{children:t,message:n,...o}=e,{onEvent:i,projectId:a,pageId:s,isEmbedded:l,botActionSlot:c}=on();return(0,r.jsx)(c,{...o,type:"button",onClick:e=>{var t;null==(t=o.onClick)||t.call(o,e),i({interaction_raw_text:n.content,interaction_goal:"run zap with bot response",event_action:"click",interfaces_project_id:a,interfaces_page_id:s,interfaces_component_type:"chatbot",embedded_flag:l})},children:t})}var oi=n(49698);let oa=es.z.object({id:es.z.string(),object:es.z.string(),created:es.z.number(),model:es.z.string(),choices:es.z.array(es.z.object({index:es.z.number().int(),message:es.z.object({role:es.z.string(),content:es.z.string()}),finish_reason:es.z.string().nullable()})),usage:es.z.object({prompt_tokens:es.z.number().int(),completion_tokens:es.z.number().int(),total_tokens:es.z.number().int()})}),os=es.z.object({code:es.z.string(),error:es.z.string(),message:es.z.string().optional(),meta:es.z.object({code:es.z.string(),message:es.z.string(),param:es.z.string(),type:es.z.string()}).partial().passthrough().optional()}).passthrough(),ol=Symbol("interfaces-chat-error-code"),oc=Symbol("interfaces-chat-error-message"),od=function(e,t){let n=Error(e);return Object.defineProperty(n,ol,{get:()=>t}),Object.defineProperty(n,oc,{get:()=>e}),Error.captureStackTrace&&Error.captureStackTrace(n,od),n},ou=e=>e[ol],op=e=>e[oc];function oh(e){let{apiEndpoint:t="/api/chat/v2",idField:n="blockId",chatbotSessionId:r,config:{model:o},onUsage:i,fetcher:a,isPreview:s}=on(),l=(0,z.useRef)(""),[c,d]=(0,z.useState)("");return[async function(c){var u,p;try{if(!(n in c))throw Error("Missing blockId/chatbotId");d(()=>""),null==e||e(""),l.current="";let h=new AbortController,{signal:x}=h,g=setTimeout(()=>h.abort(),15e3),m={...c,chatbotSessionId:r};s&&(m.mode="preview");let f=await a(t,{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",body:JSON.stringify(m),signal:x});if(clearTimeout(g),!f.ok){let e=await f.json(),t=os.safeParse(e);throw t.success?od((null==(u=t.data.meta)?void 0:u.message)??t.data.error,(null==(p=t.data.meta)?void 0:p.code)??t.data.code):od(f.statusText,f.statusText.toLowerCase().replace(/\s/g,"_"))}let b=f.headers.get("x-interfaces-prediction-id")??(0,oi.Z)();if("application/json"===f.headers.get("content-type")){let t=oa.safeParse(await f.json());if(!t.success)throw od(t.error.issues[0].message??rJ["Unable to parse OpenAI response with Zod schema"],t.error.issues[0].code??"");let{choices:[{message:{content:n}}],usage:r}=t.data,a=n.replace(/^[\n\r]+/g,"");a&&(l.current=l.current+a,d(t=>{let n=t+a;return n.startsWith("[ERROR]")||null==e||e(n),n})),await i(o,c.messages,l.current,r)}else{let t=f.body;if(!t)throw od(rJ["No response was generated."],"no_data");let n=t.getReader(),r=new TextDecoder,a=!1;for(;!a;){let{value:t,done:o}=await n.read();a=o;let i=r.decode(t);i&&(l.current=l.current+i,d(t=>{let n=t+i;return n.startsWith("[ERROR]")||null==e||e(n),n}))}await i(o,c.messages,l.current)}if(l.current.startsWith("[ERROR]")){let{error:e,code:t}=os.parse(JSON.parse(l.current.replace("[ERROR]","").trim()));throw l.current="",od(e??rJ["Unknown error occurred"],t)}if(l.current.endsWith("[max_completion_limit]"))throw l.current="",od(rJ["You've reached the chat completion limit for this session."],"max_completion_limit");return{status:"complete",code:"success",predictionId:b}}catch(o){console.error(o);let e=o instanceof DOMException&&"AbortError"===o.name,t=op(o),n=(e?"timeout":ou(o))??"unknown",r=rJ["Something went wrong."];return e?r=rJ["Hmm, things are taking a bit too long. You can try again, or try a different question."]:t&&(r=t),l.current=r,{status:"error",code:n,predictionId:(0,oi.Z)()}}},l,c]}function ox(){}let og={role:"user",content:""};function om(e){var t;let{isDisabled:n=!1,onChatComplete:o=ox,onError:i=ox,messages:a=[],onSubmitPrompt:s=ox,onLiveBotResponseUpdated:l=ox}=e,c=(0,z.useRef)(null),d=null==(t=c.current)?void 0:t.querySelector("textarea"),{idField:u="blockId",blockId:p,placeholder:h,onEvent:x,hideZapierButton:g,isEmbedded:m,isPopup:f,pageId:b,projectId:j,renderPoweredByZapier:w,userPromptSlot:y,onChatError:v}=on(),[S,C]=oh(l),{register:k,handleSubmit:$,reset:_,resetField:I,setFocus:T,setValue:L,formState:{isSubmitting:A,isSubmitSuccessful:E}}=(0,ex.cI)({defaultValues:og}),[P,D]=(0,z.useState)(""),F=(0,z.useCallback)(async e=>{if(""===e.content)return;I("content"),D(""),x({interaction_goal:"send message in chatbot",interaction_raw_text:null,interfaces_component_type:"chatbot",event_action:"prompt",interfaces_project_id:j,interfaces_page_id:b,embedded_flag:m}),s(e);let{status:t,code:n,predictionId:r}=await S({messages:a.concat(e),[u]:p});if("error"===t){L("content",e.content),D(n);let t={id:r,role:"assistant",content:C.current,message:C.current,error:!0,errorCode:n};i(e,t),v(e,t)}else o(e,{id:r,role:"assistant",content:C.current}),l("")},[I,x,j,b,m,s,S,a,u,p,L,C,i,v,o,l]),M=(0,z.useCallback)(function(){d&&(d.focus(),d.select())},[d]);return(0,z.useEffect)(()=>{E&&(P||_(),M())},[P,E,_,T,M]),(0,r.jsx)(y,{hideZapierButton:g,isDisabled:n,isPopup:f,isSubmitting:A,onEnter:e=>{var t,n;"Enter"!==e.key||e.shiftKey||(e.preventDefault(),null==(n=null==(t=c.current)?void 0:t.querySelector("button"))||n.click())},onSubmit:$(F),placeholder:h,placeholderWhenSubmitting:rJ["Chatbot is responding..."],ref:c,register:k,renderPoweredByZapier:w,sendButtonText:rJ.Send})}function of(){let{defaultMessage:e,isStaticMode:t,triggers:n,badgeSlot:o,botActionsSlot:i,botMessageSlot:a,botResponseSlot:s,containerSlot:l,messagesSlot:c,userMessageSlot:d,copyIconSlot:u,runIconSlot:p}=on();return(0,r.jsxs)(l,{children:[(0,r.jsxs)(c,{children:[(0,r.jsx)(a,{children:(0,r.jsx)(s,{children:t?e:(0,r.jsx)(o,{children:rJ["Greeting generated from prompt"]})})}),n.length>0?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(d,{children:(0,r.jsx)(o,{children:rJ["Prompt input provided to the response above"]})}),(0,r.jsxs)(a,{children:[(0,r.jsx)(s,{children:(0,r.jsx)(o,{children:rJ["Response generated to the prompt input above"]})}),n.length>0&&(0,r.jsx)(i,{children:n.map(e=>"copy"===e.onClick?(0,r.jsxs)(or,{message:{content:rJ["This is a demo response"]},disabled:!0,children:[(0,r.jsx)(u,{}),e.buttonText]},e.id):(0,r.jsxs)(oo,{message:{content:rJ["This is a demo response"]},disabled:!0,children:[(0,r.jsx)(p,{}),e.buttonText]},e.id))})]})]}):null]}),(0,r.jsx)(om,{isDisabled:!0})]})}function ob(e){return"user"!==e.role}let oj=e=>`If a query does not return sufficient results to answer a user's question, DO NOT APOLOGIZE, DO NOT ATTEMPT TO HELP FURTHER, AND DO NOT EXPLAIN. Respond with exactly the following message: '${e}'`,ow=(0,z.memo)(function(){let{idField:e="blockId",blockId:t,chatbotName:n,chatbotSessionId:o,collectUserData:i,dataSources:a,dataSourcesNoResultsMessage:s,dataSourcesNoResultsMode:l,defaultMessage:c,defaultPrompt:d,directive:u,onEvent:p,isDisabled:h=!1,isStaticMode:x,triggerChatbotBlockAction:g,triggers:m,user:f,containerSlot:b,messagesSlot:j,botActionsSlot:w,botFeedbackSlot:y,botMarkdownSlot:v,botMessageSlot:S,botResponseSlot:C,userMessageSlot:k,copyIconSlot:$,runIconSlot:_}=on(),[I,T]=(0,z.useState)(""),[L,A]=(0,z.useState)(!1),[E,P]=(0,z.useState)([]),D=(0,z.useMemo)(()=>({isDisabled:h,messages:E,onChatComplete(e,t){A(!1),P(e=>[...e,t,{id:Date.now().toString(),role:"user",content:""}])},onError(e,t){A(!1),P(e=>[...e.slice(0,-1),t])},onLiveBotResponseUpdated(e){T(e)},onSubmitPrompt(e){A(!0),P(t=>[...t.slice(0,-1),{...e,id:Date.now().toString()}])}}),[h,E]),[F,M]=(0,z.useState)(!1),[N,O,R]=oh();return(0,z.useEffect)(()=>{let e=[{id:Date.now().toString(),role:"system",content:u,message:x?c:void 0,hidden:!x||void 0}];if(a.length>0){let t="Before attempting to respond, you have datasources you can query. When querying, you are ONLY allowed to respond from information provided by the query. You are NOT ALLOWED to introduce information that is not provided in the results. NEVER try and answer from information outside of the results. ";"custom"===l&&(t+=oj(s)),"chatgpt"===l&&(t+="If you do not get relevant results from a query, YOU ARE NOT ALLOWED TO TRY TO ANSWER FROM GENERAL KNOWLEDGE. Instead, simply respond with a message letting the user know that you do not have that information."),e.push({id:`${Date.now().toString()}-datasource`,role:"system",content:t,hidden:!0})}i&&e.push({id:`${Date.now().toString()}-datacollection`,role:"system",content:"WITHOUT EXCEPTION you MUST end your starting message with a prompt for the user to provide you with the information you need to run 'collectUserData'. YOU MUST end your opening message with a variation of 'before we continue, can I ask for your...', to get the information to run this function. Submit the function ONLY AFTER you have collected the info from the user.",hidden:!0}),P(x?[...e,{id:`${Date.now().toString()}-static`,role:"user",content:""}]:[...e,{id:`${Date.now().toString()}-defaultPrompt`,role:"user",content:d,hidden:!0},{id:`${Date.now().toString()}-generated`,role:"assistant",content:""}])},[i,a.length,s,l,c,d,u,x]),(0,z.useEffect)(()=>{async function n(){if(!t)throw Error("expected blockId");try{M(!0);let{status:r,predictionId:o}=await N({messages:E.map(e=>"function"===e.role?{role:e.role,name:e.name,content:e.content}:"user"!==e.role?{id:e.id,role:e.role,content:e.content?e.content:""}:{role:e.role,content:e.content?e.content:""}),[e]:t});"complete"===r?P(e=>[...e.slice(0,-1),{id:o,role:"assistant",content:O.current},{id:Date.now().toString(),role:"user",content:""}]):n()}catch(e){console.error(e),n()}finally{M(!1)}function n(){P([{id:`${Date.now().toString()}-fallback`,role:"system",content:u,message:c},{id:Date.now().toString(),role:"user",content:""}])}}x||2!==E.filter(e=>"system"!==e.role).length||F||n()},[c,u,F,x,t,O,N,f,E,P,e]),(0,r.jsxs)(b,{children:[(0,r.jsxs)(j,{children:[E.map((e,i,a)=>{if(e.hidden)return null;if(ob(e)){let s=i>(x?1:3)&&"assistant"===e.role;if(i===a.length-1&&!e.error)return(0,r.jsx)(S,{isLoading:!0,children:(0,r.jsx)(C,{children:R})},e.id);let l=s?a[i-1].content:void 0;return(0,r.jsxs)(S,{isError:e.error,errorCode:e.errorCode,renderFeedback:s?()=>(0,r.jsx)(y,{isSubmitting:L,onFeedback:n=>{let{rating:r,comment:a}=n;if(!t)throw Error("expected blockId");return p({prediction_id:e.id,correlation_id:o,user_rating:r>0?"EXPLICIT_GOOD":"EXPLICIT_BAD",user_feedback:a??null,corrected_prediction_json_output:null,release_id:null,zap_id:null}),g({type:"ChatbotFeedback",blockId:t,chatbotSessionId:o,values:{rating:r,comment:a,message:e.content,conversation:E.slice(0,i).map(e=>"function"===e.role?{role:e.role,content:e.content,name:e.name}:{role:e.role,content:e.content})}},rJ["Thanks for the feedback!"])}}):void 0,children:[(0,r.jsx)(C,{"data-testid":"final-bot-response",children:e.content&&!e.message?(0,r.jsx)(v,{children:e.content}):e.message??e.content}),!e.error&&s&&m.length>0&&(0,r.jsx)(w,{children:m.map(t=>"copy"===t.onClick?(0,r.jsxs)(or,{message:e,onClick:()=>{g({type:"ChatbotButtonClick",blockActionId:t.id,values:{response:e.content?e.content:"",chatbotName:n,prompt:l}},t.notificationText)},disabled:L,children:[(0,r.jsx)($,{}),t.buttonText]},t.id):(0,r.jsxs)(oo,{message:e,onClick:()=>{g({type:"ChatbotButtonClick",blockActionId:t.id,values:{response:e.content?e.content:"",chatbotName:n,prompt:l}},t.notificationText)},disabled:L,children:[(0,r.jsx)(_,{}),t.buttonText]},t.id))})]},e.id)}return(0,r.jsx)(k,{children:e.content},e.id)}),L&&(0,r.jsx)(S,{isLoading:!0,children:(0,r.jsx)(C,{children:(0,r.jsx)(v,{children:I})})})]}),(0,r.jsx)(om,{...D})]})});function oy(e){let{messages:t}=e,{containerSlot:n,messagesSlot:o,botMarkdownSlot:i,botMessageSlot:a,botResponseSlot:s,userMessageSlot:l}=on();return(0,r.jsx)(n,{children:(0,r.jsx)(o,{children:t.map(e=>ob(e)?(0,r.jsx)(a,{"data-role":e.role,feedback:e.feedback,children:(0,r.jsx)(s,{children:(0,r.jsx)(i,{children:e.content})})},e.id):(0,r.jsx)(l,{"data-role":"user",children:e.content},e.id))})})}let ov=(0,z.memo)(function(e){let{messages:t,isReadOnly:n,...o}=e,i=(0,z.useRef)(!1),[a,s]=(0,z.useState)(!0),{fetcher:l,apiEndpointMaintenance:c}=(0,z.useMemo)(()=>({fetcher:o.fetcher,apiEndpointMaintenance:o.apiEndpointMaintenance??"/api/chatbots/maintenance"}),[o.apiEndpointMaintenance,o.fetcher]),[d,u]=(0,z.useState)(!1);(0,z.useEffect)(()=>{i.current||(i.current=!0,l(c).then(e=>e.json()).then(e=>{"object"==typeof e&&null!==e&&"maintenanceMode"in e&&"boolean"==typeof e.maintenanceMode&&u(e.maintenanceMode)}).catch(e=>{console.warn("Unable to fetch Chatbots maintenance mode",e)}).finally(()=>{s(!1)}))},[c,l]);let p=o.isEditing?of:ow;return a?(0,r.jsx)(o.spinnerSlot,{}):d?(0,r.jsx)(o.maintenanceSlot,{...o.theme}):n?(0,r.jsx)(ot,{...o,children:(0,r.jsx)(oy,{messages:t})}):(0,r.jsx)(ot,{...o,children:(0,r.jsx)(p,{})})}),oz=()=>(0,r.jsx)("svg",{width:"26",height:"26",viewBox:"0 0 26 26",fill:"none",style:{minWidth:26},xmlns:"http://www.w3.org/2000/svg",children:(0,r.jsx)("path",{d:"M13 25.5C15.4723 25.5 17.889 24.7669 19.9446 23.3934C22.0002 22.0199 23.6024 20.0676 24.5485 17.7836C25.4946 15.4995 25.7421 12.9861 25.2598 10.5614C24.7775 8.13661 23.587 5.90933 21.8388 4.16117C20.0907 2.41301 17.8634 1.2225 15.4386 0.74019C13.0139 0.257874 10.5005 0.505416 8.21646 1.45151C5.93238 2.39761 3.98015 3.99976 2.60663 6.05538C1.23311 8.11099 0.5 10.5277 0.5 13C0.5 16.3152 1.81696 19.4946 4.16117 21.8388C6.50537 24.183 9.68479 25.5 13 25.5ZM8.2625 11.4875L11.75 14.9875L18.3625 8.36251L20.1375 10.1375L11.75 18.5125L6.4875 13.2625L8.2625 11.4875Z",fill:"#00A589"})}),oS=e=>{let{onClick:t}=e;return(0,r.jsx)("svg",{onClick:()=>t(),width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",style:{minWidth:24,cursor:"pointer"},xmlns:"http://www.w3.org/2000/svg",children:(0,r.jsx)("path",{d:"M16.29 6.29001L12 10.59L7.71004 6.29001L6.29004 7.71001L10.59 12L6.29004 16.29L7.71004 17.71L12 13.41L16.29 17.71L17.71 16.29L13.41 12L17.71 7.71001L16.29 6.29001Z",fill:"#3E547C",fillOpacity:"0.5"})})};function Notification(e){let{toast:t,message:n,handleClose:o}=e;return(0,r.jsxs)("div",{"data-hidden":!t.visible,className:"relative flex h-auto min-h-[70px] w-full items-center rounded-xl border border-[#00a589] bg-zi-white px-5 py-1 shadow-lg data-[hidden=true]:opacity-0 md:w-[600px]",children:[(0,r.jsx)("div",{className:"absolute left-0 h-[50px] w-[3px] rounded-br-[3px] rounded-tr-[3px] bg-[#00a589]"}),(0,r.jsxs)("div",{className:"flex grow items-center",children:[(0,r.jsx)(oz,{}),(0,r.jsx)("p",{className:"ml-2.5 break-words text-base font-semibold text-zi-text",children:n})]}),(0,r.jsx)(oS,{onClick:()=>o&&o(t.id)})]})}var oC=n(90292),ok=n.n(oC),o$=n(18140);let o_=["currentUser.email","currentUser.name","currentUser.avatar","currentUser.id"];var oI=n(65434);let oT=["params","currentUser"];function oL(){let e=[...oT,"c[a-z0-9]{8,}"].join("|"),t=`{{ *(${e}).([a-zA-Z0-9__@./#&+-]+)(?:\\|default:"([^
+"]+?)")? *}}`;return RegExp(t,"g")}var oA=n(45346),oE=n.n(oA),oP=n(17953),oD=n.n(oP);let oF=oL();S.cl.pick({height:!0,heightValue:!0});let oM=e=>{let t={maxHeight:"calc(100vh - 104px)",height:"initial"};return e.isInPopup?{maxHeight:"100%",height:"initial"}:"custom"===e.height&&e.heightValue?{maxHeight:`${e.heightValue}px`,height:`${e.heightValue}px`}:t};var oN=n(97357);let oO=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],{emitChatbotAITokenUsageReceivedEvent:r}=(0,oN.E)(),o=t.currentAccount.entitlements.limits.add_ons,i=(0,eR.gc)(o)||(0,eR.YQ)(o)?"paid":"free";return(0,z.useCallback)(o=>{let{prompt_token_quantity:a,completion_token_quantity:s}=o;r({completion_token_quantity:s,chatbot_id:e.id,current_chatbot_owner_creator_id:t.id,current_chatbot_owner_customuser_id:t.zapierId,current_chatbot_owner_plan_type:i,consumer_customuser_id:null,embedded_flag:n,model_name:e.config.model,authentication_id:e.config.authenticationId?parseInt(e.config.authenticationId):null,prompt_token_quantity:a,total_token_quantity:a+s})},[e,r,n,i,t])},oR=z.createContext(void 0);var oZ=n(60651),oB=n(63730),oU=n(34620);let oH=u.zo.div`
+  position: ${e=>{let{$position:t}=e;return t}};
+  display: flex;
+  justify-content: ${e=>{let{$alignment:t}=e;return t??"left"}};
+  ${e=>{let{$position:t}=e;return"relative"!==t&&`
+  right: 20px;
+  bottom: 20px;
+  `}}
+`,oJ=u.zo.a`
+  height: 26px;
+  padding: 0 8px;
+
+  font-family: ${k.ZT.base.fontFamily};
+  font-weight: 500;
+  font-size: 13px;
+  border-radius: 4px;
+  text-decoration: none;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  transition: all 0.14159s;
+
+  ${e=>{let{$isLight:t,theme:n}=e;return t?`
+  color: ${n.app.colors.text};
+  filter: grayscale(1);
+  `:`
+  color: ${a.w.neutral400};
+  background: ${a.w.earth};
+  `}};
+
+  &:hover {
+    transform: scale(1.05);
+
+    ${e=>{let{$isLight:t}=e;return t?`
+    filter: grayscale(0);
+    `:`
+    color: ${a.w.white};
+    box-shadow: ${t$.f.elevation6};`}}
+  }
+
+  span {
+    margin-left: 5px;
+  }
+`;function oG(e){let t="fixed"===e.position||"fixed-portal"===e.position?"fixed":e.position,n=()=>{let n=e.hasChatbot?"https://zapier.com/ai/chatbot?utm_source=zapier&utm_medium=referral&utm_campaign=zapier-gbl-pnua-link-interface_built_on_zapier_button":"https://zapier.com/interfaces?utm_source=zapier&utm_medium=referral&utm_campaign=zapier-gbl-pnua-link-interface_built_on_zapier_button";return(0,r.jsx)(oH,{$position:t,$alignment:e.alignment??"left",children:(0,r.jsxs)(oJ,{href:n,target:"_blank",$isLight:"light"===e.variant,children:["Built on"," ",(0,r.jsx)("span",{children:(0,r.jsx)(oZ.m,{height:14,width:52,variant:"light"===e.variant?"wordmark-horizontal":"wordmark-horizontal-inverse"})})]})})};return"fixed-portal"===e.position&&"undefined"!=typeof document?oB.createPortal(n(),document.body):n()}function oV(e){let{withinContainer:t,...n}=e,o=t?oW:z.Fragment;return(0,r.jsx)(z.Suspense,{children:(0,r.jsx)(o,{children:(0,r.jsx)(oG,{...n})})})}let oW=e=>(0,r.jsx)("div",{...e,className:(0,oU.cn)("border-t-solid border-t border-t-zi-pageBackground bg-zi-pageBackground py-1 [&_a]:font-sans [&_a]:text-xs [&_a]:font-semibold [&_svg]:h-3",e.className)});var oq=n(68752);let oQ=u.zo.div`
+  ${e=>{let{$cssProperties:t}=e;return t}}
+
+  background-color: ${e=>{let{$pageBackground:t}=e;return t}};
+`;function oY(e){let{children:t,isEditing:n,isPopup:o,style:i,...a}=e,s=(0,z.useMemo)(()=>(0,oq.oj)((0,oq.B_)(a.appearance)),[a.appearance]);return(0,r.jsx)(oQ,{$cssProperties:s,$pageBackground:a.appearance.pageBackground,className:(0,oU.cn)("relative flex h-full min-h-0 w-full flex-col items-stretch font-sans text-zi-text",a.className),children:(0,r.jsx)(n?oK:oX,{style:i,isPopup:o,children:t})})}function oK(e){let{isPopup:t,...n}=e;return(0,r.jsx)("div",{...n,className:(0,oU.cn)("flex flex-col justify-end gap-5",n.className)})}function oX(e){let{isPopup:t,style:n,children:o,...i}=e;return(0,r.jsx)("div",{...i,style:t?void 0:n,className:(0,oU.cn)("flex h-full w-full flex-col justify-end",{"absolute gap-0":t,"relative gap-1":!t},i.className),children:o})}var o0=n(61216),o1=n(3224),o2=n.n(o1);(0,o0.j)("relative w-full cursor-pointer rounded-lg border border-2 border-solid px-[15px] py-0 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-zi-white active:brightness-100 disabled:cursor-not-allowed disabled:opacity-80 [&:not(:disabled):hover]:brightness-110",{variants:{color:{primary:"border-zi-primary bg-zi-primary font-semibold text-zi-white focus-visible:ring-zi-primary",secondary:"border-zi-primary bg-zi-white font-medium text-zi-primary focus-visible:ring-zi-primary",danger:"border-zi-danger bg-zi-danger font-semibold text-zi-white focus-visible:ring-zi-danger"},size:{small:"h-10 text-[15px]",medium:"h-[50px] text-[17px]"}},defaultVariants:{color:"primary",size:"medium"}});let o5=e=>(0,r.jsx)("span",{...e,className:(0,oU.cn)("inline-flex h-6 items-center justify-center rounded-full bg-zi-primary-700 px-3 py-2 font-mono text-sm text-zi-primary-50",e.className)}),o3=e=>(0,r.jsx)("div",{...e,className:(0,oU.cn)("mb-0.5 mt-2.5 flex flex-wrap items-center gap-5",e.className)}),o4=e=>(0,r.jsx)("button",{...e,className:(0,oU.cn)("inline-flex cursor-pointer items-center gap-1.5 rounded-sm border-0 bg-zi-primary-100 p-1 font-sans text-[15px] font-semibold text-zi-primary transition-all duration-150 focus-within:outline-none focus-within:ring-1 focus-within:ring-zi-primary focus-within:ring-offset-2 focus-within:ring-offset-zi-primary-100 hover:bg-zi-primary-200 hover:text-zi-primary hover:focus-within:ring-offset-zi-primary disabled:cursor-not-allowed disabled:opacity-80",e.className)});var o6=n(30231),o9=n(41353),o7=n(54387);function o8(e){let{children:t,...n}=e,o=(0,z.useMemo)(()=>({...n,remarkPlugins:[o7.Z],rehypePlugins:[[o9.Z,{ignoreMissing:!0}]],components:{...n?.components,a:ie,table:it}}),[n]);return(0,r.jsx)(o6.D,{...o,children:t})}let ie=e=>{let{children:t,...n}=e;return(0,r.jsx)("a",{...n,target:"_blank",rel:"noreferrer noopener",className:(0,oU.cn)("rounded-sm text-inherit underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zi-primary focus-visible:ring-offset-2 focus-visible:ring-offset-zi-primary-100",n.className),children:t})},it=e=>(0,r.jsx)("table",{...e,className:(0,oU.cn)("w-full border-separate border-spacing-0 [&_thead]:border-b [&_thead]:border-zi-primary-300 [&_tr]:border-b [&_tr]:border-zi-primary-300","[&_th:first-of-type]:rounded-tl-md [&_th:last-of-type]:rounded-tr-md [&_th]:border-0 [&_th]:border-b [&_th]:border-l [&_th]:border-t [&_th]:border-solid [&_th]:border-zi-primary [&_th]:bg-zi-primary [&_th]:px-3 [&_th]:py-1 [&_th]:text-left [&_th]:font-semibold [&_th]:text-zi-primary-50 [&_th]:last-of-type:border-r","[&_td]:border-0 [&_td]:border-b [&_td]:border-l [&_td]:border-solid [&_td]:border-zi-primary [&_td]:px-3 [&_td]:py-1 [&_td]:text-left [&_td]:last-of-type:border-r","[&_tbody>tr:last-of-type>td:first-of-type]:rounded-bl-md [&_tbody>tr:last-of-type>td:last-of-type]:rounded-br-md",e.className)});function ir(e){let{children:t,className:n}=e;return(0,r.jsx)("div",{className:(0,oU.cn)("flex flex-col-reverse overflow-y-auto",n),children:(0,r.jsx)("div",{className:"flex flex-col gap-5 px-5 pt-5",children:t})})}var io=n(50152);function ii(e){let{checkInterval:t=20,children:n,disableAutoScroll:o,isPopup:i,noBackground:a,...s}=e,l=(0,oU.cn)("custom-scrollbar relative flex min-h-0 flex-col [&>button]:hidden [&>div]:flex [&>div]:w-full [&>div]:flex-col [&>div]:gap-5",{"h-screen [&>div:first-of-type]:px-4":i,"m-[30px_10px_0_30px] h-auto":!i},s.className);return o?(0,r.jsxs)("div",{className:l,children:[(0,r.jsx)("div",{className:"h-full overflow-y-auto",children:n}),(0,r.jsx)(ia,{disableAutoScroll:o,isPopup:i,noBackground:a})]}):(0,r.jsxs)(io.ZP,{...s,followButtonClassName:"hidden",checkInterval:t,className:l,children:[n,(0,r.jsx)(ia,{isPopup:i,noBackground:a})]})}function ia(e){let{disableAutoScroll:t,isPopup:n,noBackground:o}=e,[i]=(0,io.e7)(),[a]=(0,io.C5)(),[s]=(0,io.Ax)(),l=(0,io.qJ)();return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)("div",{className:(0,oU.cn)("before:content-[' '] after:content-[' '] pointer-events-none absolute inset-0 before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-6 before:bg-gradient-to-t before:from-transparent before:transition-opacity after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-6 after:bg-gradient-to-b after:from-transparent after:transition-opacity",{"before:opacity-0":a,"before:opacity-100":!a,"before:to-zi-pageBackground after:to-zi-pageBackground":!o,"before:to-transparent after:to-transparent":o??!n})}),(0,r.jsx)("div",{className:(0,oU.cn)("pointer-events-none sticky inset-0 flex justify-center"),children:(0,r.jsxs)("button",{disabled:i,className:(0,oU.cn)("absolute bottom-0 mb-5 inline-flex cursor-pointer rounded-full border border-solid border-zi-gray bg-zi-superLightGray px-5 py-2.5 font-sans text-base font-medium shadow-sm transition-opacity focus-within:border-zi-primary focus-within:outline-none focus-within:ring-1 focus-within:ring-zi-primary",{"pointer-events-none opacity-0":s,"pointer-events-auto opacity-100":!s}),type:"button",onClick:()=>!t&&l(),children:[(0,r.jsx)(c.J,{name:"arrowBigDown",size:22,color:"currentColor"}),rJ["Jump to latest"]]})})]})}function is(e){let{chatbotName:t,children:n,displayDisclosure:o,disclosureText:i,errorCode:a,feedback:s,isError:l=!1,isHidden:c=!1,isLoading:d=!1,isPopup:u=!1,renderFeedback:p,...h}=e;return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)("div",{"data-role":h["data-role"],className:(0,oU.cn)("mr-5 animate-fadeIn flex-col items-stretch gap-3 rounded-xl border px-5 py-4 font-sans text-base",{"border-zi-danger-300 bg-zi-danger-100 text-zi-danger-900":l,"border-zi-primary-300 bg-zi-primary-100 text-zi-primary-900":!l,hidden:c,flex:!c,"first-of-type:mt-4":u,"rounded-b-none":!!s}),children:[(0,r.jsxs)("div",{className:"relative flex items-center justify-between font-sans",children:[(0,r.jsx)("p",{className:"text-sm font-semibold leading-[17px]",children:t}),d&&(0,r.jsx)("svg",{className:"h-[18px] w-[18px] animate-spin",viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:(0,r.jsx)("path",{d:"M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 10.8115 2.96359 12.4563 4.125 13.6687",stroke:"currentColor",strokeOpacity:"0.6",strokeWidth:"4"})}),!l&&!d&&"function"==typeof p&&(0,r.jsx)("div",{className:"absolute bottom-full right-0 h-6 translate-y-3/4 empty:hidden",children:p()})]}),"string"==typeof n?n.split("\\n").map(e=>({id:tw()(),line:e})).map(e=>{let{id:t,line:n}=e;return(0,r.jsx)("p",{className:"whitespace-pre empty:hidden",children:n.replace(/\\"/g,'"')},t)}):n,(0,r.jsx)("p",{className:"font-mono text-xs font-semibold leading-[15px] before:content-['['] after:content-[']'] empty:hidden",children:a}),!l&&!c&&o&&(0,r.jsx)(o6.D,{linkTarget:"_blank",allowedElements:["p","b","i","em","strong","a"],remarkPlugins:[o7.Z],rehypePlugins:[[o9.Z,{ignoreMissing:!0}]],className:" text-[13px] font-normal leading-6 text-zi-secondaryText transition-shadow [&_a:focus:hover]:ring-zi-primary [&_a:focus]:outline-none [&_a:focus]:ring-1 [&_a:focus]:ring-zi-primary [&_a:focus]:ring-offset-2 [&_a:focus]:ring-offset-zi-primary-100 [&_a:hover]:bg-zi-primary-200 [&_a:hover]:text-zi-primary-900 [&_a:hover]:ring-1 [&_a:hover]:ring-transparent [&_a:hover]:ring-offset-2 [&_a]:rounded-sm [&_a]:bg-zi-primary-100 [&_a]:underline [&_a]:underline-offset-1 [&_a]:ring-offset-zi-primary-100",children:i})]}),s?(0,r.jsxs)("div",{className:"-mt-5 mr-5 flex flex-col items-start rounded-xl rounded-t-none border border-t-0 border-zi-primary-300 bg-zi-white px-5 py-4 [&>*:empty]:hidden",children:[(0,r.jsx)("p",{className:"text-sm font-semibold",children:"User feedback"}),(0,r.jsx)("span",{className:(0,oU.cn)("mt-[18px] inline-flex items-center rounded-full px-2 py-[3px] text-sm font-bold",{"bg-[#def3e9]":1===s.rating,"bg-[#fadfd9]":1!==s.rating}),children:1===s.rating?"Helpful":"Not Helpful"}),(0,r.jsx)("p",{className:"mt-3.5 text-base empty:hidden",children:s.comment})]}):null]})}let il=e=>(0,r.jsx)("div",{...e,className:(0,oU.cn)("whitespace-pre-line break-words pr-5","[&>span:last-of-type]:animate-fadeIn [&>span:last-of-type]:duration-500","empty:after:block empty:after:opacity-50 empty:after:content-['Awaiting_response...']","[&_ol]:block [&_ol]:list-decimal [&_ol]:whitespace-normal [&_ol]:ps-10","[&_ul]:block [&_ul]:list-disc [&_ul]:whitespace-normal [&_ul]:ps-10","[&_li:last-of-type]:mb-0 [&_li]:mb-4","[&_pre]:m-0 [&_pre]:overflow-x-auto [&_pre]:rounded-lg [&_pre]:p-2","[&_code]:rounded","[&_pre_code.hljs]:block [&_pre_code.hljs]:overflow-x-auto [&_pre_code.hljs]:p-4","[&_code.hljs]:px-[5px] [&_code.hljs]:py-[3px] [&_code]:px-[5px] [&_code]:py-[3px]","[&_.hljs]:bg-[#2b2b2b] [&_code]:bg-[#2b2b2b] [&_pre]:bg-[#2b2b2b]","[&_.hljs]:text-[#f8f8f2] [&_code]:text-[#f8f8f2] [&_pre]:text-[#f8f8f2]","[&_.hljs-comment]:text-[#d4d0ab] [&_.hljs-quote]:text-[#d4d0ab]","[&_.hljs-deletion]:text-[#ffa07a] [&_.hljs-name]:text-[#ffa07a] [&_.hljs-regexp]:text-[#ffa07a] [&_.hljs-selector-class]:text-[#ffa07a] [&_.hljs-selector-id]:text-[#ffa07a] [&_.hljs-tag]:text-[#ffa07a] [&_.hljs-template-variable]:text-[#ffa07a] [&_.hljs-variable]:text-[#ffa07a]","[&_.hljs-built_in]:text-[#f5ab35] [&_.hljs-link]:text-[#f5ab35] [&_.hljs-literal]:text-[#f5ab35] [&_.hljs-meta]:text-[#f5ab35] [&_.hljs-number]:text-[#f5ab35] [&_.hljs-params]:text-[#f5ab35] [&_.hljs-type]:text-[#f5ab35]","[&_.hljs-attribute]:text-[gold]","[&_.hljs-addition]:text-[#abe338] [&_.hljs-bullet]:text-[#abe338] [&_.hljs-string]:text-[#abe338] [&_.hljs-symbol]:text-[#abe338]","[&_.hljs-section]:text-[#00e0e0] [&_.hljs-title]:text-[#00e0e0]","[&_.hljs-keyword]:text-[#dcc6e0] [&_.hljs-selector-tag]:text-[#dcc6e0]","[&_.hljs-emphasis]:italic","[&_.hljs-strong]:font-bold","contrast-more:[&_.hljs-addition]:text-[highlight] contrast-more:[&_.hljs-attribute]:text-[highlight] contrast-more:[&_.hljs-build_in]:text-[highlight] contrast-more:[&_.hljs-bullet]:text-[highlight] contrast-more:[&_.hljs-comment]:text-[highlight] contrast-more:[&_.hljs-keyword]:font-bold contrast-more:[&_.hljs-link]:text-[highlight] contrast-more:[&_.hljs-literal]:text-[highlight] contrast-more:[&_.hljs-meta]:text-[highlight] contrast-more:[&_.hljs-number]:text-[highlight] contrast-more:[&_.hljs-params]:text-[highlight] contrast-more:[&_.hljs-quote]:text-[highlight] contrast-more:[&_.hljs-selector-tag]:font-bold contrast-more:[&_.hljs-string]:text-[highlight] contrast-more:[&_.hljs-symbol]:text-[highlight] contrast-more:[&_.hljs-type]:text-[highlight]",e.className)});function ic(e){return(0,r.jsx)("p",{...e,className:(0,oU.cn)("ml-5 flex animate-fadeIn whitespace-pre-line rounded-xl border border-zi-lightGray bg-zi-white p-5 font-sans text-base text-zi-text empty:hidden",e.className)})}let id=(0,z.forwardRef)(function(e,t){let{hideZapierButton:n,isDisabled:o=!1,isPopup:i=!1,isSubmitting:a=!1,onEnter:s,onSubmit:l,placeholder:d,placeholderWhenSubmitting:u=d,register:p,renderPoweredByZapier:h,sendButtonText:x}=e;return(0,r.jsxs)("form",{action:"#",onSubmit:l,ref:t,className:(0,oU.cn)({"-mt-1 mb-8 ml-12 mr-2.5":!i}),children:[(0,r.jsxs)("fieldset",{className:(0,oU.cn)("flex animate-fadeIn scroll-mb-[100px] items-start gap-2.5 border border-zi-lightGray bg-zi-white p-5 font-sans text-base text-zi-text transition focus-within:border-zi-primary focus-within:outline-none focus-within:ring-1 focus-within:ring-zi-primary",{"rounded-xl":!i,"border-x-transparent focus-within:border-x-zi-primary focus-within:ring-inset":i,"rounded-bl-xl rounded-br-xl":i&&n,"rounded-none":i&&!n}),disabled:o||a,children:[(0,r.jsx)(nb.Z,{className:"grow resize-none border-0 bg-transparent p-0 text-base focus-within:outline-none",...p("content",{shouldUnregister:!1}),"aria-label":"chatbot-user-prompt",onKeyDown:s,placeholder:a?u:d}),(0,r.jsxs)("button",{className:"flex h-6 w-6 items-center justify-center rounded bg-zi-white text-zi-primary transition-shadow focus-within:outline-none focus-within:ring-2 focus-within:ring-zi-primary focus-within:ring-offset-2 focus-within:ring-offset-zi-white disabled:text-zi-lightGray",type:"submit",children:[(0,r.jsx)(c.J,{name:"actionSendFill",size:20}),(0,r.jsx)("span",{className:"sr-only","data-testid":"visually-hidden",children:x})]})]}),i&&h()]})});var iu=n(54155),ip=n(6454),ih=n(20378);let ix=[400,401,402,403,404,405,406,407,408,409],ig=e=>{if(e.message.startsWith("Cancel")||e.message.startsWith("TimeoutError")||"TimeoutError"===e.name||e.message.startsWith("AbortError")||"AbortError"===e.name||e?.code==="ECONNABORTED")throw e;let t=e?.response?.status??e?.status;if(t&&ix.includes(+t))throw e;if(e?.error?.code==="insufficient_quota"){let t=Error(e?.message);throw t.name="InsufficientQuotaError",t}};class im{constructor(e){this.maxConcurrency=e.maxConcurrency??1/0,this.maxRetries=e.maxRetries??6,this.onFailedAttempt=e.onFailedAttempt??ig,this.queue=new ih.Z({concurrency:this.maxConcurrency})}call(e){for(var t=arguments.length,n=Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];return this.queue.add(()=>(0,ip.Z)(()=>e(...n).catch(e=>{if(e instanceof Error)throw e;throw Error(e)}),{onFailedAttempt:this.onFailedAttempt,retries:this.maxRetries,randomize:!0}),{throwOnTimeout:!0})}callWithOptions(e,t){for(var n=arguments.length,r=Array(n>2?n-2:0),o=2;o<n;o++)r[o-2]=arguments[o];return e.signal?Promise.race([this.call(t,...r),new Promise((t,n)=>{e.signal?.addEventListener("abort",()=>{n(Error("AbortError"))})})]):this.call(t,...r)}fetch(){for(var e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];return this.call(()=>fetch(...t).then(e=>e.ok?e:Promise.reject(e)))}}let ib={},ij=new im({});async function iw(e){return e in ib||(ib[e]=ij.fetch(`https://tiktoken.pages.dev/js/${e}.json`).then(e=>e.json()).then(e=>new iu.O(e)).catch(t=>{throw delete ib[e],t})),await ib[e]}async function iy(e){return iw((0,iu.i)(e))}async function iv(e,t,n){let r=await iy(e),o=r.encode(JSON.stringify(t).slice(2,-2).replace(/},{/g,"")).length,i=r.encode(n).length;return{prompt_token_quantity:o,completion_token_quantity:i}}var iz=n(61939);let iS=(0,z.createContext)({}),iC=(0,z.createContext)(ey());function ik(e){let{children:t}=e,[n,o]=(0,z.useState)({}),i=(0,z.useCallback)((e,t,n)=>{o(r=>{let o=ef()(r[e]),i=ej()(o,t);return n?(delete r[e],r):{...r,[e]:i}})},[]);return(0,r.jsx)(iC.Provider,{value:i,children:(0,r.jsx)(iS.Provider,{value:n,children:t})})}function i$(e){let t=(0,z.useContext)(iS);return e?t[e]:void 0}function i_(){return(0,z.useContext)(iC)}var iI=n(75311),iT=n(35592),iL=n(59752);let iA=["directive","defaultPrompt","defaultMessage","placeholder"];function iE(){return(0,r.jsx)(c.J,{name:"actionCopy",size:17})}function iP(){return(0,r.jsx)(c.J,{name:"miscBoltAltFill",size:17})}var iD=n(97253),iF=n(39566),iM=n(27252);let iN=u.zo.div`
+  box-shadow: 0 0 0 1px ${a.w.neutral500};
+  height: 24px;
+  border-radius: 3px;
+`,iO=e=>{let{color:t,width:n,height:o}=e;return(0,r.jsx)(iN,{children:(0,r.jsx)("svg",{viewBox:`0 0 ${n??21} ${o??21}`,width:n??21,height:o??21,xmlns:"http://www.w3.org/2000/svg",children:(0,r.jsx)("rect",{fill:t,x:"0",y:"0",width:n??21,height:o??21,rx:"3",ry:"3"})})})};function iR(e){let{id:t,colors:n,value:o,onChange:i}=e,[a,s]=(0,z.useState)(!1);return(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)(P.o,{id:t,value:o,isReadonly:!0,readOnlyText:"",renderIconBefore:e=>{let{iconSize:t}=e;return(0,r.jsx)(iO,{width:t,height:t,color:o.toUpperCase()})},onClick:()=>s(!a)}),(()=>{if(a){let e=n?(0,r.jsx)(iM.e8,{colors:n,color:o,onChange:(e,t)=>{t.stopPropagation(),i(e.hex)}}):(0,r.jsx)(iM.AI,{color:o,onChange:(e,t)=>{t.stopPropagation(),i(e.hex)},disableAlpha:!0});return(0,r.jsx)(iF.f,{onClickOutside:()=>s(!1),children:e})}})()]})}function iZ(e){return(0,r.jsx)(Text.x,{type:"smallPrint1",color:"error400",children:e.children})}var iB=n(63436);function iU(){let e=(0,Q.G)();return(0,r.jsxs)(th.P,{style:{margin:"30px auto"},children:[(0,r.jsx)(th.P.Icon,{name:"navChatbots"}),(0,r.jsx)(s.L,{height:20}),(0,r.jsx)(th.P.Title,{children:"Upgrade to customize the appearance"}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(th.P.Content,{children:"Apply your own colors to match your business."}),(0,r.jsx)(s.L,{height:22}),(0,r.jsx)(th.P.Button,{href:e,children:"View plans"}),(0,r.jsx)(s.L,{height:6})]})}function iH(e){let t=eZ("branding"),n=(0,ex.cI)({defaultValues:e.interfacesProject,resolver:(0,eU.F)(e8),mode:"onTouched",criteriaMode:"all"});return((0,z.useEffect)(()=>{n.reset(e.interfacesProject)},[n,e.interfacesProject]),t)?(0,r.jsx)(ex.RV,{...n,children:(0,r.jsx)(iW,{...e})}):(0,r.jsx)(iU,{})}let iJ={pageBackground:"Page background",primary:"Buttons & chatbot message background",secondaryText:"Disclosure message text",white:"User message background"},iG=e=>{for(let t of iD.yT)if(e[t].toLowerCase()!==iD.TW[t].toLowerCase())return!1;return!0},iV=u.zo.div`
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+`;function iW(e){let{onSaveInterfacesProject:t,interfacesProjectError:n,interfacesProject:o,onContentUpdated:i}=e,{control:a,formState:{errors:s,isDirty:l,isSubmitting:c,isSubmitSuccessful:d},handleSubmit:u,reset:p}=(0,ex.Gc)(),h=i$(o?.projectId),x=i_(),g=function(e){if(iB.Z.isAxiosError(e))return e.response?.data.error??e.message}(n),[m,f]=(0,z.useState)(!1),b=iD.yT.map(e=>(0,r.jsx)(A.NI,{children:(0,r.jsx)(ex.Qr,{name:`appearance.${e}`,control:a,render:t=>{let{field:n}=t;return(0,r.jsx)(E.g,{label:iJ[e]??"",renderInput:t=>(0,r.jsx)(iR,{...t,colors:void 0,value:n.value??"",onChange:t=>{n.onChange(t),h&&(x(h.projectId,{...h,appearance:{...h.appearance,[e]:t}}),n.value!==iD.TW[e]&&f(!1))}}),error:s.appearance?.[e]?.message})}})},e));return(0,z.useEffect)(()=>{d&&C.ZP.success("Changes successfully saved.")},[d]),(0,z.useEffect)(()=>{h?.appearance?f(iG(h.appearance)):o?.appearance&&f(iG(o.appearance))},[h?.appearance,o?.appearance]),(0,z.useMemo)(()=>{i({isDirty:l})},[i,l]),(0,r.jsx)("form",{onSubmit:u(t),children:(0,r.jsxs)("fieldset",{children:[(0,r.jsx)(L,{children:b}),(0,r.jsxs)(e0,{children:[(0,r.jsx)(eg.z,{disabled:!l,isLoading:c,type:"submit",children:"Save changes"}),(0,r.jsx)(iV,{children:(0,r.jsx)(eg.z,{color:"secondary",disabled:m,onClick:()=>{if(h){let e={...h.appearance,...iD.TW};p({...o,appearance:e},{keepDefaultValues:!0}),x(h.projectId,{...h,appearance:e})}},type:"button",children:"Revert to default"})}),g&&(0,r.jsx)("div",{children:(0,r.jsx)(iZ,{children:g})})]})]})})}let iq=u.zo.span`
+  color: ${a.w.neutral600};
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 20px;
+  vertical-align: middle;
+
+  & > a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 20ch;
+  }
+`,iQ=u.zo.section`
+  --builder-nav-height: auto;
+
+  font-family: "Inter", sans-serif;
+
+  width: 100%;
+  height: 100%;
+  min-height: calc(
+    100vh - ${e=>{let{$builderNavHeight:t=0}=e;return t}}px
+  );
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  grid-template-rows: var(--builder-nav-height) 60px 1fr;
+  grid-template-areas: "nav nav" "tabs toolbar" "drawer preview";
+  gap: 1px;
+  background-color: ${a.w.neutral300};
+`,iY=u.zo.div`
+  background-color: ${a.w.neutral100};
+  grid-area: drawer;
+
+  height: 100%;
+
+  overflow-y: auto;
+`,iK=u.zo.div`
+  background-color: ${e=>{let{$backgroundColor:t}=e;return t??"#f3f6fc"}};
+  grid-area: preview;
+  height: 100%;
+`,iX=u.zo.div`
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: calc(100% - ${e=>{let{$reduceHeightBy:t=0}=e;return t}}px);
+  position: relative;
+  z-index: 0;
+`,i0=u.zo.div`
+  height: 100%;
+`,i1=u.zo.div`
+  display: flex;
+  flex-direction: ${e=>{let{direction:t="row"}=e;return t}};
+  justify-content: ${e=>{let{justify:t="flex-start"}=e;return t}};
+  align-items: ${e=>{let{align:t="flex-start"}=e;return t}};
+  gap: ${e=>{let{gap:t=0}=e;return o2()(t)?`${t}px`:t}};
+`,i2="You have unsaved changes. Are you sure you want to leave?",i5=e=>{let{shouldConfirm:t}=e,n=(0,o$.useRouter)();(0,z.useEffect)(()=>{let e=()=>{if(!confirm(i2))throw n.events.emit("routeChangeError","Route change aborted by user",null,{shallow:!1}),"Route change aborted by user"};if(t)return n.events.on("routeChangeStart",e),window.onbeforeunload=()=>i2,()=>{n.events.off("routeChangeStart",e),window.onbeforeunload=null}},[t,n.events])};function i3(e){return(0,tP.Z)(new Date(e),"EEE MMM d, yyyy h:mmaaaaa'm")}function i4(){let e=(0,Q.G)(),{user:t}=(0,ei.aF)(),n=(0,eR.M8)("conversationsDaysCount",t,t?.currentAccount),o=tf()("day",n,!0);return(0,r.jsxs)(th.P,{children:[(0,r.jsx)(th.P.Icon,{name:"navChatbots"}),(0,r.jsx)(s.L,{height:20}),(0,r.jsx)(th.P.Title,{children:"No recent conversations"}),(0,r.jsx)(s.L,{height:10}),(0,r.jsxs)(th.P.Content,{children:["Share your Chatbot with others to see how it answers questions from users. Your current plan captures"," ",isFinite(n)?(0,r.jsxs)(r.Fragment,{children:["the past ",(0,r.jsx)("strong",{children:o})," of"]}):(0,r.jsx)(r.Fragment,{children:"all"})," ","history."]}),isFinite(n)?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(s.L,{height:22}),(0,r.jsx)(th.P.Button,{href:e,children:"View plans"})]}):null]})}function i6(e){let{hasMore:t,isSessionsLoading:n,isSessionsLoadingMore:o,newSessionsCount:i,onLoadMore:a,onLoadNew:l,onSessionClick:c,selectedSession:d,sessions:u,enableConversationStats:p,refetchStats:h,...x}=e,g=(0,z.useRef)(null),{user:m}=(0,ei.aF)(),f=(0,eR.zi)(m),b=(0,eR.M8)("conversationsDaysCount",m,m?.currentAccount),j=tf()("day",b,!0),y=(0,Q.G)(),v=(0,z.useCallback)(()=>{let e=g.current;l(),requestAnimationFrame(()=>{e&&e.scroll({behavior:"smooth",top:0})}),p&&h()},[p,l,h]);return n||0!==u.length?(0,r.jsxs)(i9,{...x,children:[(0,r.jsxs)(i7,{children:[(0,r.jsx)(Text.x,{tag:"h2",type:"paragraph3Semibold",children:n?(0,r.jsx)(w.Z,{height:24,width:"13ch"}):"Conversations"}),(0,r.jsx)(s.L,{height:11}),(0,r.jsx)(Text.x,{tag:"p",type:"smallPrint1",color:"neutral700",children:n?(0,r.jsx)(w.Z,{height:20,width:"100%"}):(0,r.jsxs)(r.Fragment,{children:["Your plan gives you access to"," ",isFinite(b)?(0,r.jsxs)(r.Fragment,{children:["the past ",j," of"]}):(0,r.jsx)(r.Fragment,{children:"all"})," chat history.",isFinite(b)&&"advanced"!==f?(0,r.jsxs)(r.Fragment,{children:[" ",(0,r.jsx)(K(),{href:y,children:(0,r.jsx)(F.r,{color:"inherit",children:"Upgrade"})})," ","for more."]}):null,isFinite(b)&&"advanced"===f?(0,r.jsxs)(r.Fragment,{children:[" ",(0,r.jsx)(K(),{href:"https://ai-chatbot-help.zapier.app/contact-us",children:(0,r.jsx)(F.r,{color:"inherit",children:"Let us know"})})," ","if you are looking for more."]}):null]})}),(0,r.jsx)(s.L,{height:5}),i>0?(0,r.jsxs)(as,{children:[(0,r.jsx)(s.L,{height:10}),(0,r.jsxs)(eg.z,{color:"secondary",size:"medium",type:"button",onClick:v,children:[i," new"," ",tf()("conversation",i)]})]}):null]}),n?(0,r.jsxs)(i7,{children:[(0,r.jsx)(s.L,{height:16}),(0,r.jsx)(w.Z,{height:60,width:"100%"}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(w.Z,{height:60,width:"100%"}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(w.Z,{height:60,width:"100%"}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(w.Z,{height:60,width:"100%"}),(0,r.jsx)(s.L,{height:16})]}):(0,r.jsx)(i8,{$height:16,children:(0,r.jsx)(ae,{ref:g,role:"tablist","aria-label":"Conversation Tabs",children:u.length>0?(0,r.jsxs)(r.Fragment,{children:[u.map(e=>{let{id:t,createdAt:n,initialMessage:{content:o},count:i,hasFeedback:a}=e;return(0,r.jsxs)(at,{type:"button",onClick:()=>c(t),role:"tab","aria-selected":t===d?.id,children:[(0,r.jsx)(an,{children:i}),(0,r.jsx)(ar,{children:o}),(0,r.jsx)(ao,{dateTime:n,children:i3(n)}),a&&(0,r.jsx)(ai,{children:(0,r.jsx)(nJ.S,{children:"Feedback provided"})})]},t)}),t?(0,r.jsx)(eg.z,{isLoading:o,color:"secondary",size:"medium",type:"button",onClick:a,children:"Load more"}):null]}):(0,r.jsx)(Text.x,{type:"paragraph3",color:"neutral800",children:"No conversations yet."})})}),isFinite(b)&&"advanced"!==f?(0,r.jsxs)(i7,{children:[(0,r.jsx)(s.L,{height:30}),(0,r.jsx)(eg.z,{type:"button",color:"primary-alt",size:"medium",href:y,children:"Upgrade to access older conversations"})]}):null]}):(0,r.jsx)(i9,{...x,children:(0,r.jsx)(i7,{children:(0,r.jsx)(i4,{})})})}let i9=u.zo.div`
+  background-color: ${a.w.neutral100};
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  flex-grow: 1;
+  overflow: hidden;
+`,i7=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 30px;
+`,i8=u.zo.div`
+  --shadow-color: ${a.w.neutral100};
+  --shadow-height: ${e=>{let{$height:t}=e;return t}}px;
+
+  margin-top: 1px;
+
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--shadow-height);
+    background: linear-gradient(
+      180deg,
+      var(--shadow-color) 40%,
+      transparent 100%
+    );
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--shadow-height);
+    background: linear-gradient(0deg, var(--shadow-color) 0%, transparent 100%);
+  }
+`,ae=u.zo.div`
+  list-style: none;
+  padding: var(--shadow-height, ${16}px) 30px;
+  margin: 1px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
+  gap: 10px;
+  overflow-y: auto;
+  height: 100%;
+`,at=u.zo.button`
+  border: 1px solid ${a.w.neutral600};
+  border-radius: 3px;
+  padding: 11px 30px 11px 12px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "count prompt timestamp" ". feedback feedback";
+  align-items: center;
+  grid-column-gap: 15px;
+  box-shadow: inset 0 0 0 1px ${a.w.neutral100};
+  transition: all 0.3s ease-out;
+
+  &[aria-selected="true"],
+  &:hover,
+  &:focus {
+    border-color: ${a.w.blue600};
+    background-color: ${a.w.blue100};
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px ${a.w.blue100};
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 1px ${a.w.blue600};
+  }
+`,an=u.zo.span`
+  grid-area: count;
+  background-color: ${a.w.neutral800};
+  color: ${a.w.neutral100};
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border: 2px solid ${a.w.neutral100};
+`,ar=u.zo.q`
+  grid-area: prompt;
+  color: ${a.w.neutral800};
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  justify-self: start;
+  max-width: 80%;
+`,ao=u.zo.time`
+  grid-area: timestamp;
+  color: ${a.w.neutral600};
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+`,ai=u.zo.div`
+  grid-area: feedback;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`,aa=u.F4`
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`,as=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  animation: ${aa} 300ms ease-out;
+  animation-fill-mode: both;
+  transform-origin: center center;
+`;var al=n(15902);function ac(e){let{icon:t,children:n,...o}=e;return(0,r.jsx)(i.z,{...o,children:(0,r.jsxs)("span",{style:{display:"flex",gap:6,alignItems:"center"},children:[t,n]})})}function ad(){let e=(0,Q.G)();return(0,r.jsxs)(th.P,{children:[(0,r.jsx)(th.P.Icon,{name:"navChatbots"}),(0,r.jsx)(s.L,{height:20}),(0,r.jsx)(th.P.Title,{children:"Upgrade to embed on your site"}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(th.P.Content,{children:"Embed your chatbot within a webpage or add it as a pop-up chat window over a webpage."}),(0,r.jsx)(s.L,{height:22}),(0,r.jsx)(th.P.Button,{href:e,children:"View plans"}),(0,r.jsx)(s.L,{height:6})]})}function au(e){let t=eZ("embedding"),n=(0,ex.cI)({defaultValues:e.chatbot.config,resolver:(0,eU.F)(S.Tc.shape.config),mode:"onTouched",criteriaMode:"all"}),o=n.watch("restrictEmbedDomains"),a=(0,ex.cI)({defaultValues:{appearance:"standard",mode:"script"},mode:"onTouched",criteriaMode:"all"}),l=a.watch("appearance"),c=a.watch("mode");(0,z.useEffect)(()=>{"popup"===l&&a.setValue("mode","script")},[l,a]);let d=(0,z.useMemo)(()=>{let t=(0,eB.EH)(),n=e.interfacesProject?.blockId;if("script"!==c)return`<iframe src='${t}/embed/chatbot/${n}' height='600px' width='400px' allow='clipboard-write *'></iframe>`;{let e="popup"===l;return`<script type='module' src='${t}/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='${e}' chatbot-id='${n}' height='600px' width='400px'></zapier-interfaces-chatbot-embed>`}},[e.interfacesProject,l,c]),[u,p]=(0,z.useState)(!1),h=(0,z.useCallback)(()=>{navigator.clipboard.writeText(d).then(()=>{p(!0)}).catch(e=>{console.warn("Failed to copy snippet: ",e)})},[d]);return((0,z.useEffect)(()=>{if(u){let e=setTimeout(()=>{p(!1)},2e3);return()=>clearTimeout(e)}},[u]),(0,z.useEffect)(()=>{n.reset(e.chatbot.config)},[n,e.chatbot.config]),t)?(0,r.jsxs)(ap,{children:[(0,r.jsxs)("form",{onSubmit:n.handleSubmit(e.onSave),children:[(0,r.jsx)(ex.Qr,{name:"appearance",control:a.control,render:e=>{let{field:t}=e;return(0,r.jsx)(eG,{...t,label:"Appearance options",options:ab})}}),(0,r.jsx)(s.L,{height:20}),(0,r.jsx)(E.g,{label:"Code snippet",renderInput:e=>(0,r.jsxs)(am,{children:[(0,r.jsx)(ah,{...e,readOnly:!0,value:d,onChange:ey()}),(0,r.jsx)(ex.Qr,{name:"mode",control:a.control,render:e=>{let{field:t}=e;return(0,r.jsxs)(eJ.E,{as:ax,value:t.value,onChange:t.onChange,children:[(0,r.jsx)(eJ.E.Label,{as:eH.T,children:"Select a mode"}),(0,r.jsx)(eJ.E.Option,{as:ag,value:"script",children:"Script"}),"standard"===l&&(0,r.jsx)(eJ.E.Option,{as:ag,value:"iframe",children:"iframe"})]})}})]})})]}),(0,r.jsx)(s.L,{height:20}),(0,r.jsxs)("form",{onSubmit:n.handleSubmit(e.onSave),children:[(0,r.jsx)(ex.Qr,{name:"restrictEmbedDomains",control:n.control,render:t=>{let{field:{value:o,...i}}=t;return(0,r.jsx)(E.g,{inputId:"restrictEmbedDomains",label:"Restrict domains",renderInput:t=>(0,r.jsx)(M.Z,{...t,...i,checked:o,onChange:t=>{i.onChange(t),n.handleSubmit(e.onSave)()}})})}}),o&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(s.L,{height:20}),(0,r.jsx)(ex.Qr,{name:"embedHosts",control:n.control,render:t=>{let{field:{ref:o,...i}}=t;return(0,r.jsx)(E.g,{label:"Allowed domains",renderInput:t=>(0,r.jsx)(P.o,{...t,...i,value:i.value.join(","),onChange:e=>{i.onChange(e.target.value.split(","))},onBlur:t=>{i.onBlur(),n.handleSubmit(e.onSave)(t)},placeholder:"Allow all domains"}),renderHelpText:()=>"Only domains listed here will render embeds for this chatbot. Separate domains with a comma to allow more than one.",helpTextLineClamp:2})}})]})]}),(0,r.jsx)(s.L,{height:30}),(0,r.jsxs)(af,{children:[(0,r.jsx)(ac,{color:"primary",size:"medium",type:"button",icon:(0,r.jsx)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:(0,r.jsx)("path",{d:"M19.1102 7H16.5002L20.7002 12L16.5002 17H19.1102L23.3002 12L19.1102 7ZM4.8902 7L0.700195 12L4.8902 17H7.5002L3.3002 12L7.5002 7H4.8902ZM8.0002 20H10.1302L16.0002 4H13.8502L8.0002 20Z",fill:"currentColor"})}),onClick:h,disabled:u,children:u?"Copied!":"Copy embed"}),(0,r.jsx)(s.L,{width:10}),(0,r.jsx)(i.z,{color:"secondary",onClick:()=>e.toggleEmbedModal(!1),size:"medium",children:"Cancel"})]})]}):(0,r.jsx)(ad,{})}let ap=u.zo.div`
+  width: 100%;
+  padding: 5px 5px 0px 5px;
+`,ah=u.zo.textarea`
+  padding: 55px 20px 17px;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid ${a.w.neutral600};
+  transition: all 150ms ease-out;
+  font-family: monospace;
+  height: 114px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: ${a.w.neutral800};
+  background-color: ${a.w.neutral100};
+
+  &:hover {
+    border-color: ${a.w.blueJeans};
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1px ${a.w.blueJeans};
+    border-color: ${a.w.blueJeans};
+  }
+`,ax=u.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`,ag=u.zo.div`
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 0 8px;
+  border-radius: 10px;
+  background-color: ${a.w.neutral300};
+  color: ${a.w.neutral800};
+  cursor: pointer;
+  transition: all 150ms ease-out;
+
+  &[data-headlessui-state*="active"] {
+    outline: none;
+    box-shadow: 0 0 0 2px ${a.w.neutral100}, 0 0 0 4px ${a.w.blueJeans};
+  }
+
+  &[data-headlessui-state*="checked"] {
+    background-color: ${a.w.neutral700};
+    color: ${a.w.white};
+  }
+`,am=u.zo.div`
+  position: relative;
+  display: grid;
+
+  & > ${ah} {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 0;
+  }
+
+  & > ${ax} {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+  }
+`,af=u.zo.div`
+  display: flex;
+  flex-direction: row;
+`,ab=[{icon:(0,r.jsx)("svg",{width:"26",height:"26",viewBox:"0 0 26 26",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:(0,r.jsx)("path",{d:"M18.4168 2.16675H1.0835V16.2501H7.5835V14.0834H3.25016V4.33341H16.2502V14.0834H11.4077L7.5835 18.6442V21.6667H13.5743L15.3943 23.8334H18.2218L14.5927 19.5001H9.75016L12.426 16.2501H18.4168V9.75008H22.7502V19.5001H18.4168V21.6667H24.9168V7.58342H18.4168V2.16675Z",fill:"currentColor"})}),title:"Standard",description:"Embed directly on a web page.",value:"standard"},{icon:(0,r.jsx)("svg",{width:"38",height:"38",viewBox:"0 0 38 38",fill:"none",xmlns:"http://www.w3.org/2000/svg",style:{transform:"translate(-7px, -7px)"},children:(0,r.jsx)("g",{id:"arrowCodeDots",children:(0,r.jsx)("path",{id:"Vector",d:"M18.0424 18.0426C17.7884 18.2965 17.6457 18.641 17.6457 19.0001C17.6457 19.3593 17.7884 19.7037 18.0424 19.9576C18.2963 20.2116 18.6408 20.3543 18.9999 20.3543C19.359 20.3543 19.7035 20.2116 19.9574 19.9576C20.2114 19.7037 20.3541 19.3593 20.3541 19.0001C20.3541 18.641 20.2114 18.2965 19.9574 18.0426C19.7035 17.7886 19.359 17.6459 18.9999 17.6459C18.6408 17.6459 18.2963 17.7886 18.0424 18.0426ZM23.0216 14.9784C22.7676 14.7245 22.4232 14.5818 22.064 14.5818C21.7049 14.5818 21.3604 14.7245 21.1065 14.9784C20.8525 15.2324 20.7098 15.5768 20.7098 15.936C20.7098 16.2951 20.8525 16.6396 21.1065 16.8935C21.3604 17.1475 21.7049 17.2902 22.064 17.2902C22.4232 17.2902 22.7676 17.1475 23.0216 16.8935C23.2755 16.6396 23.4182 16.2951 23.4182 15.936C23.4182 15.5768 23.2755 15.2324 23.0216 14.9784ZM14.9782 21.1067C14.7243 21.3606 14.5816 21.7051 14.5816 22.0642C14.5816 22.4234 14.7243 22.7678 14.9782 23.0218C15.2322 23.2757 15.5766 23.4184 15.9358 23.4184C16.2949 23.4184 16.6394 23.2757 16.8933 23.0218C17.1473 22.7678 17.29 22.4234 17.29 22.0642C17.29 21.7051 17.1473 21.3606 16.8933 21.1067C16.6394 20.8527 16.2949 20.71 15.9358 20.71C15.5766 20.71 15.2322 20.8527 14.9782 21.1067ZM19.2067 9.60087L17.2074 11.6003L25.6337 12.3663L26.3998 20.7926L28.3991 18.7933L27.6331 10.3669L19.2067 9.60087ZM11.6 17.2076L9.60067 19.2069L10.3667 27.6333L18.7931 28.3993L20.7924 26.4L12.3661 25.6339L11.6 17.2076Z",fill:"currentColor"})})}),title:"Pop up",description:"Overlay and fix to the bottom right of a web page.",value:"popup"}];function aj(e){let{isSkeleton:t,chatbot:n,interfacesProject:o,onSave:a}=e,[l,d]=(0,z.useState)(!1),u=e=>d(e),[p,h]=(0,z.useState)(!1),x=e=>h(e);return(0,r.jsxs)(aw,{children:[t?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(w.Z,{width:77,height:30}),(0,r.jsx)(w.Z,{width:85,height:30})]}):(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(i.z,{onClick:()=>u(!0),color:"primary",size:"xsmall",children:"Share"}),(0,r.jsx)(i.z,{onClick:()=>x(!0),color:"secondary",size:"xsmall",children:"Embed"})]}),!t&&(l?(0,r.jsx)(nd.u,{onClosed:()=>u(!1),ariaLabel:`Sharing options for ${n.name}`,children:(0,r.jsxs)(tW.hz,{maxWidth:"60ch",children:[(0,r.jsx)(tW.dE,{children:(0,r.jsxs)(Text.x,{type:"pageHeader9",children:['Share "',n.name,'"']})}),(0,r.jsxs)(tW.nS,{children:[(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(Text.x,{type:"smallPrint1Semibold",children:"Public URL"}),(0,r.jsx)(s.L,{height:5}),o?.pageUrl!==void 0&&(0,r.jsx)(al.V,{value:o.pageUrl,readOnlyText:""}),(0,r.jsx)(s.L,{height:10}),(0,r.jsx)(Text.x,{color:"neutral700",fontWeight:400,textAlign:"left",type:"smallPrint1",children:"Share this URL with those you want to use your chatbot. To use to a custom domain or restrict access with a password, add this chatbot to an Interface (requires an Interfaces premium plan)."})]}),(0,r.jsx)(s.L,{height:25}),(0,r.jsx)(tW.bT,{children:(0,r.jsxs)(ay,{children:[(0,r.jsxs)(av,{onClick:()=>{u(!1),x(!0)},children:[(0,r.jsx)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",style:{color:"#3d4592"},children:(0,r.jsx)("path",{d:"M19.1102 7H16.5002L20.7002 12L16.5002 17H19.1102L23.3002 12L19.1102 7ZM4.8902 7L0.700195 12L4.8902 17H7.5002L3.3002 12L7.5002 7H4.8902ZM8.0002 20H10.1302L16.0002 4H13.8502L8.0002 20Z",fill:"currentColor"})}),(0,r.jsx)(s.L,{width:10}),(0,r.jsx)(Text.x,{type:"paragraph3Medium",color:"blue600",children:"Embed"})]}),(0,r.jsx)(s.L,{width:30}),(0,r.jsxs)(av,{onClick:()=>{window.open(`${(0,eB.EH)()}/interfaces`),u(!1)},children:[(0,r.jsx)(c.J,{color:"blue600",name:"arrowOffsite",size:24}),(0,r.jsx)(s.L,{width:10}),(0,r.jsx)(Text.x,{type:"paragraph3Medium",color:"blue600",children:"Add to Interfaces"})]})]})})]})]})}):p?(0,r.jsx)(nd.u,{onClosed:()=>x(!1),ariaLabel:`Embed options for ${n.name}`,children:(0,r.jsxs)(tW.hz,{maxWidth:"60ch",children:[(0,r.jsx)(tW.dE,{children:(0,r.jsxs)(Text.x,{type:"pageHeader9",children:['Embed "',n.name,'"']})}),(0,r.jsx)(tW.nS,{scrollable:!0,children:(0,r.jsx)(au,{chatbot:n,interfacesProject:o,onSave:a,toggleEmbedModal:x})})]})}):null)]})}let aw=u.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`,ay=u.zo.div`
+  display: flex;
+  justify-content: flex-start;
+`,av=u.zo.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+`;function az(e){let{isStatsLoading:t,stats:n,...o}=e,{user:i}=(0,ei.aF)(),a=(0,eR.M8)("conversationsDaysCount",i,i?.currentAccount);isFinite(a)||(a=30);let s=tf()("day",a,!0);return(0,r.jsxs)(a$,{...o,children:[(0,r.jsx)(aS,{children:t?(0,r.jsx)(w.Z,{width:"12ch"}):`Past ${s}`}),(0,r.jsxs)(a_,{children:[(0,r.jsxs)(aI,{children:[(0,r.jsx)(aC,{children:t?(0,r.jsx)(w.Z,{width:95}):"Conversations"}),(0,r.jsx)(ak,{isStatsLoading:t,stat:n.conversations})]}),(0,r.jsxs)(aI,{children:[(0,r.jsx)(aC,{children:t?(0,r.jsx)(w.Z,{width:67}):"Messages"}),(0,r.jsx)(ak,{isStatsLoading:t,stat:n.messages})]}),(0,r.jsxs)(aI,{children:[(0,r.jsx)(aC,{children:t?(0,r.jsx)(w.Z,{width:50}):"Actions"}),(0,r.jsx)(ak,{isStatsLoading:t,stat:n.actions})]})]})]})}function aS(e){let{children:t}=e;return(0,r.jsx)(Text.x,{tag:"h2",type:"paragraph3Semibold",children:t})}function aC(e){let{children:t}=e;return(0,r.jsx)(Text.x,{tag:"dt",type:"smallPrint1Medium",children:t})}function ak(e){let{isStatsLoading:t,stat:n}=e;return(0,r.jsxs)(aT,{children:[(0,r.jsx)(Text.x,{type:"paragraph3Semibold",children:t?(0,r.jsx)(w.Z,{width:40}):n.count.toLocaleString("en-US")}),t||0===n.change?null:(0,r.jsxs)(aL,{children:[(0,r.jsx)(c.J,{name:n.change>0?"arrowBigUp":"arrowBigDown",color:n.change>0?"success400":"error400",size:16}),(0,r.jsx)(Text.x,{type:"smallPrint1Medium",color:n.change>0?"success400":"error400",children:n.change.toLocaleString("en-US",{style:"percent",minimumFractionDigits:1,maximumFractionDigits:1}).replace(/^-/,"")})]})]})}let a$=u.zo.div`
+  background-color: ${a.w.neutral100};
+  border-bottom: 1px solid ${a.w.neutral300};
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+`,a_=u.zo.dl`
+  display: flex;
+  gap: 12px;
+`,aI=u.zo.div`
+  flex-basis: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid ${a.w.neutral400};
+`,aT=u.zo.dd`
+  display: flex;
+  align-items: center;
+`,aL=u.zo.span`
+  margin: 1px 0 0 5px;
+  display: flex;
+  align-items: center;
+`;function aA(e){let{children:t}=e;return(0,r.jsx)(aE,{children:t})}let aE=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: calc(100vh - 110px);
+  overflow: hidden;
+`;var aP=n(76296);n(31847);var aD=e=>{let{chatbot:t}=e,{emitBuilderInteractionEvent:n}=(0,oN.E)(),o=(0,z.useCallback)(()=>{n({interaction_goal:"Help",interaction_raw_text:"Help",chatbot_id:t.id,event_action:"click"})},[t.id,n]),i=[{title:"User Guide",action:()=>{window.open("https://zapier.com/blog/create-custom-ai-chatbots-with-interfaces/","_blank")},id:"user-guide"},{title:"Templates",action:()=>{window.open("https://zapier.com/templates/chatbot","_blank")},id:"templates"},{title:"Help Center",action:()=>{window.open("https://help.zapier.com/hc/en-us/categories/21955824514829-Chatbots","_blank")},id:"help-center"},{title:"Office Hours",action:()=>{window.open("https://app.livestorm.co/zapier/unlock-the-power-of-chatbots-weekly-office-hours","_blank")},id:"office-hours"},{title:"Contact Us",action:()=>{window.open("https://ai-chatbot-help.zapier.app/contact-us","_blank")},id:"contact-us"}],a={...i.reduce((e,t)=>({...e,[t.id]:t.action}),{})};return(0,r.jsx)(aP.h_,{iconBefore:"navHelp",iconAfter:"arrowSmallDown",label:"Help",onAction:e=>{let t=a[e];t&&"function"==typeof t&&t()},placement:"bottom right",onClose:o,children:i.map(e=>(0,r.jsx)(aP.h_.Item,{id:e.id,children:e.title},e.title))})},aF=function(e){let{chatbot:t,onDelete:n,onDuplicate:o,onRename:i,permissions:a="edit"}=e,s=(0,z.useCallback)(async e=>{try{await i({name:e.trim()}),C.ZP.success("The name of this Chatbot has been updated")}catch(e){C.ZP.error("There was an issue saving your changes. Please try again.")}},[i]),l=(0,z.useMemo)(()=>[{id:"duplicate",label:"Duplicate",action:()=>o(t)},{id:"delete",label:"Delete",action:()=>n(t)}],[t,n,o]);return(0,r.jsx)(aP.b4,{label:t.name,maxLength:150,onRename:s,menuItems:l,owner:{name:`${t.creator.firstName} ${t.creator.lastName}`.trim(),avatarUrl:t.creator.avatarUrl??void 0},permissions:a})};function aM(e){let{children:t,chatbot:n,onDelete:o,onDuplicate:i,onRename:a,permissions:l}=e,{user:c}=(0,ei.aF)(),d=(0,eR.zi)(c),u=(0,Q.G)();return(0,r.jsx)(aN,{children:(0,r.jsxs)(aP.rj,{columns:"1fr",rows:"44px 1fr",height:"inherit",children:[(0,r.jsx)(aP.P4,{overrideStyles:{gridColumn:"1 / -1"},children:(0,r.jsx)(aP.h4,{children:(0,r.jsxs)(aP.rj,{alignItems:"center",columns:"1fr auto 1fr",rows:"44px",children:[(0,r.jsxs)(aP.P4,{justifySelf:"start",overrideStyles:{display:"flex",alignItems:"center"},children:[(0,r.jsx)(aP.am,{icon:"arrowBigLeft",label:"Exit",href:"/app/chatbots"}),(0,r.jsx)(s.L,{width:10}),(0,r.jsx)(aP.Xi,{productName:"Chatbots"}),(0,r.jsx)(s.L,{width:10}),"free"===d?(0,r.jsx)(aP.RX,{planName:"Free",productName:"Chatbots",upgradeHref:u}):null]}),(0,r.jsx)(aP.P4,{center:!0,middle:!0,overrideStyles:{flexFlow:"unset",maxWidth:400},children:(0,r.jsx)(aF,{chatbot:n,onDelete:o,onDuplicate:i,onRename:a,permissions:l})}),(0,r.jsx)(aP.P4,{center:!0,middle:!0,overrideStyles:{flexFlow:"unset",display:"flex",alignItems:"center",justifySelf:"end"},children:(0,r.jsx)(aD,{chatbot:n})})]})})}),(0,r.jsx)(aP.P4,{colWidth:2,rowHeight:2,overrideStyles:{height:"100%",maxHeight:"calc(100vh - 44px)"},children:t})]})})}let aN=u.zo.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  z-index: 0;
+`;function aO(e){let{user:t}=(0,ei.aF)(),[n,l]=(0,z.useState)(e.tab),c=tb(n),d=(0,o$.useRouter)();(0,z.useEffect)(()=>{n!==c&&void 0!==c&&d.push({pathname:d.pathname,query:{...d.query,t:n}},void 0,{shallow:!0})},[c,d,n]);let[u,p]=(0,z.useState)(!1),x=i_();i5({shouldConfirm:u});let[g,m]=function(){let[e,t]=(0,z.useState)(!1);return(0,z.useEffect)(()=>{if(e){let e=setTimeout(()=>{t(!1)},500);return()=>clearTimeout(e)}},[e]),[e,()=>t(!0)]}(),f=i$(e.interfacesProject?.projectId),b=(0,z.useCallback)(t=>{if(u){let n=window.confirm("You have unsaved changes. Are you sure you want to leave?");n&&(p(!1),e.interfacesProject&&x(e.interfacesProject.projectId,e.interfacesProject),l(t))}else l(t)},[u,e.interfacesProject,x]),[j]=function(e){let{data:t,isLoading:n}=o.S.openai.isDataSourcesEnabled.useQuery(e,{cacheTime:0,suspense:!1});return[!!t,n]}(t),v=4===n,[S,k]=function(e){let{chatbot:t,interfacesProject:n,isEditing:i=!1,isEmbedded:a=!1,isPreview:s=!1,isReadOnly:l=!1}=e,c=(0,z.useMemo)(()=>({...t.config}),[t]),d=(0,z.useMemo)(()=>{var e;return e=t.config,iA.reduce((t,n)=>{let r=eC()(e,n);if("string"!=typeof r)return t;let o=r.match(oL());if(!o)return t;let i=o.map(e=>e.replace(/^{{\s*/,"").split(".")[0]);return ok()([...t,...i])},[]).filter(e=>!oT.includes(e))},[t.config]),{data:u,externalDatasourcesLoaded:p}=function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],[t,n]=(0,z.useState)({}),[r,o]=(0,z.useState)(0===e.length),i=function(){let e=(0,z.useMemo)(()=>({}),[]);return(0,z.useMemo)(()=>e?o_.reduce((t,n)=>eD()(t,n,eC()({currentUser:e},n)),{}):{},[e])}(),a=(0,o$.useRouter)(),s=(0,z.useMemo)(()=>Object.keys(a.query).reduce((e,t)=>eD()(e,`params.${t}`,a.query[t]),{}),[a.query]),{getDatasource:l}=(0,oI.FU)(),c=(0,z.useMemo)(()=>({...i,...s}),[i,s]);return(0,z.useEffect)(()=>{Promise.all(e.map(e=>l(e,c).then(t=>{n(n=>({...n,[e]:t}))}))).then(()=>o(!0))},[l,e,c]),(0,z.useMemo)(()=>({data:{...i,...s,...t},externalDatasourcesLoaded:r}),[i,s,t,r])}(d),h=(0,z.useRef)(tw()()),x=(0,z.useMemo)(()=>Object.entries(c).reduce((e,t)=>{let[n,r]=t;return"string"==typeof r&&(!iA||iA.includes(n))?{...e,[n]:r.replace(oF,function(){let e;for(var t=arguments.length,n=Array(t),r=0;r<t;r++)n[r]=arguments[r];let o=n[1]+"."+n[2],i=n[3];if(oE()(u,o)){let t=eC()(u,o);e=Array.isArray(t)?t.join(", "):t}return e??i??""})}:e},oD()(c)),[c,u,iA]),{mutateAsync:g}=o.S.actions.createEvent.useMutation(),m=(0,z.useCallback)(async(e,n)=>{t.id&&!i&&(await g(e),n&&C.ZP.custom(e=>(0,r.jsx)(Notification,{toast:e,message:n,handleClose:C.ZP.dismiss}),{position:"top-center"}))},[t.id,i,g]),f=(0,z.useCallback)((e,t)=>m("ChatbotButtonClick"===e.type?{...e,actionId:e.blockActionId}:{...e,chatbotId:e.blockId},t),[m]),b=(0,z.useMemo)(()=>oM(x.style),[x.style]),{isPopup:j,noBackground:w}=function(){let e=z.useContext(oR);return e??{isEmbed:void 0,isPopup:void 0,noBackground:void 0}}(),y=(0,z.useCallback)(()=>(0,r.jsx)(oV,{alignment:"center",position:"relative",variant:"light",withinContainer:!0}),[]),{emitAiTrackingPredictionUserFeedbackEvent:v,emitConsumerInteractionEvent:S}=(0,oN.E)(),k=(0,z.useCallback)(e=>"object"!=typeof e||null===e?void 0:"prediction_id"in e?v(e):s?void 0:S(e),[v,S,s]),{user:$}=(0,ei.aF)();if(!$)throw Error("expected user");let _=oO(t,$),I=(0,z.useCallback)(function(e){let{children:t}=e,o=i$(n?.projectId),a=i_();return((0,z.useEffect)(()=>{!o&&n?.projectId&&a(n.projectId,n)},[o,a]),n&&o)?(0,r.jsx)(oY,{isEditing:i,isPopup:j,style:b,appearance:o.appearance,children:t}):(0,r.jsx)(t4.$,{})},[n,i,j,b]),T=(0,z.useCallback)(function(e){let{children:t}=e;return i?(0,r.jsx)(ir,{children:t}):(0,r.jsx)(ii,{checkInterval:20,disableAutoScroll:l,isPopup:j,noBackground:w,children:t})},[i,j,l,w]),L=(0,z.useCallback)(function(e){return(0,r.jsx)(is,{...e,...x,isPopup:j})},[x,j]),A=(0,z.useCallback)((e,t)=>{iz.vT?.addError(`Chat response error: ${t}`)},[]),E=(0,z.useCallback)(async(e,t,n,r)=>_(r?{prompt_token_quantity:r.prompt_tokens,completion_token_quantity:r.completion_tokens}:await iv(e,t,n)),[_]),P=(0,z.useMemo)(()=>(0,iT.Z)(iL.C.LIGHT).app.colors,[]),D=(0,z.useMemo)(()=>({apiEndpoint:"/api/chatbots/chat/v2",idField:"chatbotId",accountId:t.accountId,blockId:t.id,blockStyle:b,chatbotSessionId:h.current,config:x,fetcher:fetch,hideZapierButton:!1,isEditing:i,isEmbedded:a,isPopup:j,isPreview:s,noBackground:w,onChatError:A,onEvent:k,onUsage:E,pageId:void 0,projectId:void 0,renderPoweredByZapier:y,triggerChatbotBlockAction:f,containerSlot:I,messagesSlot:T,badgeSlot:o5,botActionsSlot:o3,botActionSlot:o4,botFeedbackSlot:()=>null,botMarkdownSlot:o8,botMessageSlot:L,botResponseSlot:il,userMessageSlot:ic,userPromptSlot:id,copyIconSlot:iE,runIconSlot:iP,theme:P,maintenanceSlot:iI.Z,spinnerSlot:t4.$}),[b,L,t,x,I,i,a,j,s,T,w,A,k,E,y,f,P]);return[D,!p]}({...e,isEditing:!1,isPreview:!0,isReadOnly:e.enableConversations&&v}),$=e=>t=>{n===e&&p(t.isDirty)};return(0,r.jsx)(aM,{chatbot:e.chatbot,onDelete:e.onDelete,onDuplicate:e.onDuplicate,onRename:e.onRename,children:(0,r.jsxs)(h.O.Group,{as:iQ,$builderNavHeight:44,selectedIndex:n,onChange:b,manual:!0,children:[(0,r.jsx)(y,{...e}),(0,r.jsxs)(h.O.Panels,{as:iY,children:[(0,r.jsx)(h.O.Panel,{as:i0,children:(0,r.jsx)(ti,{onContentUpdated:$(0),...e})}),(0,r.jsx)(h.O.Panel,{as:i0,children:(0,r.jsx)(nF,{chatbot:e.chatbot,createKnowledgeSource:e.createKnowledgeSource,knowledgeSourceStatus:e.knowledgeSourceStatus,onSave:e.onSave,dataSourcesLimit:e.dataSourcesLimit,enabled:j,tables:e.tables})}),(0,r.jsx)(h.O.Panel,{as:i0,children:(0,r.jsx)(rR,{chatbot:e.chatbot,onSave:e.onSave,zaps:e.zaps})}),(0,r.jsx)(h.O.Panel,{as:i0,children:(0,r.jsx)(iH,{onContentUpdated:$(3),...e})}),e.enableConversations&&(0,r.jsx)(h.O.Panel,{as:i0,children:(0,r.jsxs)(aA,{children:[e.enableConversationStats?(0,r.jsx)(az,{...e}):null,(0,r.jsx)(i6,{...e})]})})]}),(0,r.jsxs)(rZ,{children:[(0,r.jsx)(i.z,{type:"button",color:"tertiary",iconBefore:"arrowRefresh",size:"xsmall",onClick:m,disabled:e.enableConversations&&v,children:"Restart"}),(0,r.jsxs)(i1,{gap:15,align:"center",children:["string"==typeof e.interfacesProject?.pageUrl&&(0,r.jsx)(aB,{pageUrl:e.interfacesProject.pageUrl}),(0,r.jsx)(aj,{...e})]})]}),(0,r.jsx)(iK,{$backgroundColor:f?.appearance?.pageBackground,children:(0,r.jsx)(iX,{$reduceHeightBy:e.selectedSession?40:0,children:e.isSaving||g||k?(0,r.jsx)(tg.$,{height:300}):v&&e.isSessionMessagesLoading?(0,r.jsx)(w.Z,{width:"80%",height:100,style:{margin:30},baseColor:a.w.blue100,highlightColor:a.w.blue200}):(0,r.jsxs)(r.Fragment,{children:[v&&e.selectedSession?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(aZ,{dateTime:e.selectedSession.createdAt,children:i3(e.selectedSession.createdAt)}),(0,r.jsx)(s.L,{height:40})]}):null,(0,r.jsx)(ov,{...S,isReadOnly:e.enableConversations&&v,messages:e.enableConversations?e.sessionMessages:[]})]})})})]})})}let aR=u.F4`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`,aZ=u.zo.time`
+  color: ${a.w.neutral600};
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  position: absolute;
+  z-index: 10;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ${aR} 0.3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
+`;function aB(e){let{pageUrl:t}=e;return(0,r.jsx)(l.p,{allowMultilineTooltip:!0,content:t,children:()=>(0,r.jsxs)(iq,{children:[(0,r.jsx)(c.J,{name:"actionLink",size:18,color:"currentColor"}),(0,r.jsx)("a",{href:t,target:"_blank","aria-label":"Open chatbot in a new tab",children:t.replace(/^https?:\/\//,"")})]})})}var aU=n(73214),aH=n(51077),aJ=n(82367),aG=n(3010),aV=n.n(aG);let aW={conversations:{count:0,change:0},messages:{count:0,change:0},actions:{count:0,change:0}};var aq=n(42302),aQ=n(83417);function aY(e){let{chatbotId:t,createKnowledgeSource:n,knowledgeSourceStatus:i,initialData:a,isEmbedded:s,onTitleChange:l,tab:c}=e,d=(0,o$.useRouter)(),u=o.S.useContext(),{status:p,onOpen:h,onSuccess:x,onError:g,render:m}=(0,aq.b)(),{status:f,onOpen:b,onSuccess:j,onError:w,render:y}=(0,aQ.L)(),v=(0,aH.ou)(),{emitBuilderInteractionEvent:S}=(0,oN.E)(),{zaps:C,isZapsLoading:k}=function(e){let{chatbotId:t}=e,{data:n,isLoading:r}=o.S.zaps.search.useQuery({chatbotId:t});return{zaps:n,isZapsLoading:r}}({chatbotId:t}),{tables:$,isTablesLoading:_}=function(){let{data:e,isLoading:t}=o.S.tableTables.list.useQuery();return{tables:e?.data.map(e=>({id:e.id,name:e.name,description:e.description}))??[],isTablesLoading:t}}(),{data:I,isLoading:T}=o.S.chatbots.get.useQuery({id:t},{initialData:a,keepPreviousData:!0,refetchOnMount:!1,refetchOnReconnect:!1,refetchOnWindowFocus:!1}),{data:L,isLoading:A}=o.S.interfaces.getProject.useQuery({chatbotId:t}),{mutateAsync:E,isLoading:P}=o.S.chatbots.update.useMutation({onSuccess(e){u.chatbots.get.setData({id:t},e),l(e.name),v("Updated Chatbot",{chatbotId:e.id,chatbotName:e.name}),S({interaction_goal:"updated chatbot",chatbot_id:e.id,event_action:"click"})}}),{mutateAsync:D}=o.S.chatbots.delete.useMutation({async onSuccess(e){await u.chatbots.list.invalidate(),v("Deleted Chatbot",{chatbotId:e.id,chatbotName:e.name}),S({interaction_goal:"deleted chatbot",chatbot_id:e.id,event_action:"click"}),x(),await d.push("/app/chatbots")},onError:g}),{mutateAsync:F}=o.S.chatbots.duplicate.useMutation({async onSuccess(e){await u.chatbots.list.invalidate(),v("Duplicated Chatbot",{chatbotId:e.id,chatbotName:e.name}),S({interaction_goal:"duplicated chatbot",chatbot_id:e.id,event_action:"click"}),j(),await d.push(`/app/chatbots/${e.id}`)},onError:w}),{mutateAsync:M,error:N,isLoading:O}=o.S.interfaces.updateProject.useMutation({onSuccess(e){u.interfaces.getProject.setData({chatbotId:t},e)}}),R=(0,z.useCallback)(e=>{let{name:t}=e;return E({...I,name:t,config:{...I.config,chatbotName:t}})},[I,E]),Z=(0,z.useCallback)(async e=>{if(I)return E({...I,config:e})},[I,E]),B=(0,z.useCallback)(async e=>{try{return await M({...e,chatbotId:t})}catch(e){console.log({error:e})}},[t,M]),[U]=(0,aJ.i)(),{chatbotsEnableConversations:H}=(0,eY.gj)(),J=function(e){let{chatbotsEnableConversations:t}=(0,eY.gj)(),[n,r]=(0,z.useState)(),[i,a]=(0,z.useState)([]),[s,l]=(0,z.useState)(!1),[c,d]=(0,z.useState)("idle"),[u,p]=(0,z.useState)(),[h,x]=(0,z.useState)(),{data:g}=o.S.chatbots.getSessions.useQuery({chatbotId:e,cursor:h,reverse:!0},{enabled:!!h,suspense:!1,refetchOnMount:!0,refetchOnReconnect:!0,refetchOnWindowFocus:!0}),{data:m}=o.S.chatbots.getSessions.useQuery({chatbotId:e,cursor:u},{suspense:!1,refetchOnMount:!1,refetchOnReconnect:!1,refetchOnWindowFocus:!1}),{data:f=[],isLoading:b}=o.S.chatbots.getSessionMessages.useQuery({chatbotId:e,sessionId:n?.id??""},{enabled:t&&!!n?.id,suspense:!1}),{mutate:j}=o.S.chatbots.hideSession.useMutation({onSuccess(e){let{id:t}=e;n?.id===t&&r(void 0),a(e=>e.filter(e=>e.id!==t))}}),[w,y]=(0,z.useState)(b);(0,z.useEffect)(()=>{i.length||y(!1)},[i.length]),(0,z.useEffect)(()=>{if(g?.sessions.length&&!i.length){let e=g.sessions.slice(0,10);a(e),x(e[0].id),p(e[e.length-1].id)}},[g,i.length]);let v=(0,z.useCallback)(e=>{r(i.find(t=>t.id===e))},[i]),S=(0,z.useCallback)(e=>{j({id:e})},[j]),C=(0,z.useCallback)(()=>{g?.sessions.length&&(a(e=>[...g.sessions,...e.filter(e=>!g.sessions.some(t=>t.id===e.id))]),x(g.sessions[0].id))},[g]),k=(0,z.useCallback)(()=>{s&&(d("loading"),p(i[i.length-1].id))},[s,i]);return(0,z.useEffect)(()=>{m&&(a(e=>aV()([...e,...m.sessions],"id")),l(m.hasMore),d("loaded"),m.sessions.length&&!n&&(r(m.sessions[0]),x(m.sessions[0].id)))},[m,n]),(0,z.useMemo)(()=>({hasMore:s,isSessionsLoading:"idle"===c,isSessionsLoadingMore:"loading"===c,isSessionMessagesLoading:w,newSessionsCount:g?.sessions.length??0,sessions:i,sessionMessages:f,selectedSession:n,onLoadNew:C,onLoadMore:k,onSessionClick:v,onSessionHide:S}),[s,w,g,k,C,v,S,n,f,i,c])}(t),G=function(e,t){let{chatbotsEnableConversationsStats:n}=(0,eY.gj)(),{user:r}=(0,ei.aF)(),i=(0,eR.M8)("conversationsDaysCount",r,r?.currentAccount);isFinite(i)||(i=30);let{data:a=aW,isLoading:s,refetch:l}=o.S.chatbots.getStats.useQuery({chatbotId:e,numberOfDays:i},{enabled:t&&n,suspense:!1,refetchOnMount:!1,refetchOnReconnect:!1,refetchOnWindowFocus:!1});return{enableConversationStats:n,isStatsLoading:s,stats:a,refetchStats:l}}(t,4===c),V=function(){let{user:e}=(0,ei.aF)();return(0,eR.M8)("dataSourcesCount",e,e?.currentAccount)}();return I&&C?(0,r.jsxs)(ik,{children:[(0,r.jsx)(aO,{...U,...J,...G,chatbot:I,createKnowledgeSource:n,knowledgeSourceStatus:i,dataSourcesLimit:V,enableConversations:H,helpHref:"https://ai-chatbot-help.zapier.app/home",interfacesProject:L,interfacesProjectError:N,isDeleting:"deleting"===p,isDuplicating:"duplicating"===f,isEmbedded:s,isLoading:T||k||_,isSaving:P,isInterfacesProjectLoading:A,isInterfacesProjectSaving:O,onDelete:h,onDuplicate:b,onRename:R,onSave:Z,onSaveInterfacesProject:B,tab:c,tables:$,zaps:C}),m(D),y(F)]}):(0,r.jsx)(aU.Z,{})}var aK=n(66391),aX=n(94526),a0=n(13743),a1=n.n(a0),a2=n(17757),a5=n(31971);function a3(e){let{enableConversations:t}=e;return(0,r.jsxs)(h.O.Group,{as:iQ,manual:!0,children:[(0,r.jsx)(a4,{children:(0,r.jsxs)(w.y,{baseColor:a.w.neutral700,highlightColor:a.w.neutral800,children:[(0,r.jsx)(w.Z,{height:26,width:26,style:{transform:"translateY(-2px)"}}),(0,r.jsx)(w.Z,{height:26,width:170,style:{transform:"translateY(-2px)"}})]})}),(0,r.jsx)(y,{isSkeleton:!0,enableConversations:t}),(0,r.jsx)(h.O.Panels,{as:iY,children:(0,r.jsxs)(h.O.Panel,{as:i0,children:[(0,r.jsx)(w.Z,{height:18,width:100,style:{margin:"30px 30px 10px"}}),(0,r.jsx)(w.Z,{height:50,width:"90%",style:{margin:"0 30px 20px"}}),(0,r.jsx)(w.Z,{height:18,width:180,style:{margin:"30px 30px 10px"}}),(0,r.jsx)(w.Z,{height:50,width:"90%",style:{margin:"0 30px 20px"}}),(0,r.jsx)(w.Z,{height:18,width:125,style:{margin:"30px 30px 10px"}}),(0,r.jsx)(w.Z,{height:50,width:"90%",style:{margin:"0 30px 20px"}})]})}),(0,r.jsxs)(rZ,{children:[(0,r.jsx)(w.Z,{width:100,height:30}),(0,r.jsxs)(i1,{gap:15,align:"center",children:[(0,r.jsx)(Text.x,{type:"smallPrint1",color:"neutral600",children:(0,r.jsx)(w.Z,{count:1,width:200})}),(0,r.jsx)(aj,{isSkeleton:!0})]})]}),(0,r.jsx)(iK,{children:(0,r.jsx)(iX,{children:(0,r.jsx)(w.Z,{width:"80%",height:100,style:{margin:30},baseColor:a.w.blue100,highlightColor:a.w.blue200})})})]})}let a4=u.zo.div`
+  background-color: ${a.w.neutral800};
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  padding: 0 9px;
+  height: 44px;
+  gap: 30px;
+`;var a6=n(60630),a9=n(32963),a7=n(95434),a8=n.n(a7);function se(e){let{size:t="16"}=e;return(0,r.jsxs)("svg",{xmlns:"http://www.w3.org/2000/svg",width:t,height:t,viewBox:"0 0 16 16",fill:"none",children:[(0,r.jsx)("path",{d:"M15.9994 7.99997H0V12H15.9994V7.99997Z",fill:"#FF4F00"}),(0,r.jsx)("path",{d:"M3.99999 0H0V3.99999H3.99999V0Z",fill:"#FF4F00"}),(0,r.jsx)("path",{d:"M15.9999 3.99997H3.99994V7.99996H15.9999V3.99997Z",fill:"#FF4F00"}),(0,r.jsx)("path",{d:"M3.99933 16V12H7.99932L3.99933 16Z",fill:"#FF4F00"}),(0,r.jsx)("path",{d:"M15.9995 0H7.99951V7.99998H15.9995V0Z",fill:"#FF4F00"})]})}let st=u.zo.div`
+  details {
+    display: flex;
+    justify-content: space-between;
+    width: 560px;
+    box-shadow: ${t$.f.elevation30};
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+  }
+
+  summary {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    background: ${a.w.neutral700};
+    padding: 20px;
+    box-shadow: ${t$.f.elevation20};
+  }
+
+  #uploadDetailsArrow {
+    justify-content: flex-end;
+  }
+
+  #loadingDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+  }
+
+  #chatBotsLogoWrapper {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #loadingProgress {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0px;
+    flex-basis: 60%;
+  }
+
+  #cancelButtonWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    background: none;
+    color: ${a.w.neutral700};
+  }
+`;function sn(e){let{handleAbort:t,status:n,sourceName:o}=e,[i,a]=(0,z.useState)(!0),s=(0,z.useMemo)(()=>n&&"string"!=typeof n?!0===n?1:a8()(n.total?n.count/n.total:0,.01,1):0,[n]),l=(0,z.useCallback)(e=>{e.preventDefault(),a(e=>!e)},[]);return tz.safeParse(n).success?(0,r.jsx)(st,{children:(0,r.jsxs)("details",{open:i,children:[(0,r.jsxs)("summary",{onClick:l,tabIndex:0,role:"button","aria-expanded":i,children:[(0,r.jsx)("span",{id:"uploadItem",children:(0,r.jsx)(Text.x,{type:"paragraph3Semibold",color:"white",children:"Processing knowledge source..."})}),(0,r.jsxs)("span",{id:"uploadDetailsArrow",children:[(0,r.jsx)(c.J,{color:"white",canAcceptPointerEvents:!1,name:i?"arrowSmallUp":"arrowSmallDown",size:24}),(0,r.jsx)(eH.T,{children:i?"Collapse":"Expand"})]})]}),(0,r.jsxs)("div",{id:"loadingDetails",children:[(0,r.jsx)("div",{id:"chatBotsLogoWrapper",children:(0,r.jsx)(se,{size:"26"})}),(0,r.jsxs)("div",{id:"loadingProgress",children:[(0,r.jsx)(Text.x,{tag:"div",children:o}),(0,r.jsx)(a9.k,{value:s})]}),(0,r.jsxs)("button",{id:"cancelButtonWrapper",onClick:async()=>await t(),children:[(0,r.jsx)(c.J,{size:24,name:"formX",color:"currentColor"}),(0,r.jsx)(eH.T,{children:"Cancel"})]})]})]})}):null}let sr=(0,aK.Z)(function(e){let{chatbotId:t,tab:n,...i}=e,a=a5.ZP.deserialize(i.chatbot),{createKnowledgeSource:s,knowledgeSourceStatus:l,source:c,handleAbort:d}=function(e){let[t,n]=(0,z.useState)(!1),[r,i]=(0,z.useState)(),a=(0,z.useRef)(new AbortController),{mutateAsync:s,isLoading:l}=o.S.openai.generateDataSourceDescription.useMutation({meta:{noToast:!0}}),{mutateAsync:c}=o.S.openai.deleteDataSource.useMutation({meta:{noToast:!0}}),d=(0,z.useCallback)(async()=>{try{a.current.abort(),n(!1)}catch(e){console.error("Failed to abort knowledge source processing.",e)}},[a]),u=(0,z.useCallback)(async t=>{if(a.current.abort(),a.current=new AbortController,i(t),!e)return!1;n({count:0,total:0}),t.id||(t.id=tw()()),t.description||(t.description=await s({chatbotId:e,dataSource:t}));try{let r=await fetch("/api/chatbots/createDataSource",{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include",body:JSON.stringify({chatbotId:e,dataSource:t}),signal:a.current.signal});if(!r.ok)throw Error(`HTTP error! status: ${r.status}`);if(!r.body)throw Error("HTTP error! missing response body");let o="",i=new TextDecoder,s=!1,l=r.body.getReader(),d=r=>{if("AbortError"===r.name){e&&t&&c({chatbotId:e,dataSourceId:t.id}).then(()=>{C.ZP.success("Knowledge source upload successfully aborted.")}).catch(e=>{console.error("Failed to delete knowledge source:",e)});return}console.error("Stream processing failed:",r),C.ZP.error("Failed to process data stream."),n((0,ty.p)(r))},u=async e=>{try{await e.read().then(p)}catch(e){e.type="error",d(tC.parse(e))}},p=async e=>{let t,{done:r,value:a}=e;if(!r){for(o+=i.decode(a,{stream:!0});(t=o.indexOf("\n\n"))>=0;){let e=o.slice(0,t);if(o=o.slice(t+2),e.startsWith("data:")){e=e.replace("data: ","");let t=tk.safeParse(JSON.parse(e));if(t.success){if("heartbeat"===t.data.type)n({count:t.data.count,total:t.data.total});else if("success"===t.data.type)n(!0),s=!0;else{let e=(0,ty.p)(t.data.error);console.error("Failed to create data source:",e),C.ZP.error(e),n(e)}}else console.error("Failed to process event stream response"),n((0,ty.p)(t.error))}}await u(l)}};return await u(l),s}catch(e){return console.error("Failed to create data source:",e),C.ZP.error("Failed to create data source."),n((0,ty.p)(e)),!1}},[e,s,a,c]);return{source:r,handleAbort:d,createKnowledgeSource:u,knowledgeSourceStatus:t,setKnowledgeSourceStatus:n,isGeneratingDataSourceDescription:l}}(t);!function(e,t){let n=(0,o$.useRouter)();(0,z.useEffect)(()=>{let r=e=>((e||window.event).returnValue=t,t),o=(e,r)=>{let{shallow:o}=r;if(n.pathname!==e&&!confirm(t))throw n.events.emit("routeChangeError","routeChange was aborted",e,{shallow:o}),`Route change to "${e}" was aborted (this error can be safely ignored). See https://github.com/zeit/next.js/issues/2476.`};return e&&(window.addEventListener("beforeunload",r),n.events.on("routeChangeStart",o)),()=>{window.removeEventListener("beforeunload",r),n.events.off("routeChangeStart",o)}},[t,e,n.events,n.pathname])}(tz.safeParse(l).success,"Are you sure you want to navigate away? We will still upload your knowledge source, but you won't be able to monitor progress.");let[u,p]=(0,z.useState)(a.name);return(0,r.jsxs)(aX.Z,{as:"main",children:[(0,r.jsx)(a1(),{children:(0,r.jsxs)("title",{children:["Chatbots - ",u]})}),(0,r.jsx)(sn,{handleAbort:d,status:l,sourceName:c?.name}),(0,r.jsx)(aY,{chatbotId:t,createKnowledgeSource:s,knowledgeSourceStatus:l,initialData:a,isEmbedded:!1,onTitleChange:p,tab:n}),(0,r.jsx)(a6.x,{})]})}),so=e=>{let{flags:{chatbotsEnableConversations:t}}=e;return(0,r.jsxs)(aX.Z,{children:[(0,r.jsx)(a1(),{children:(0,r.jsx)("title",{children:"Chatbots"})}),(0,r.jsx)(a3,{enableConversations:t})]})};var si=!0;function sa(e){return(0,r.jsx)(a2.Z,{fallback:(0,r.jsx)(so,{flags:e.flags}),flags:e.flags,user:e.user,hideToaster:!0,maintenanceMode:e.maintenanceMode,children:(0,r.jsx)(sr,{...e})})}},44067:function(e,t,n){"use strict";function r(e,t){return t?.toLowerCase().endsWith(e)??!1}function o(e){return r(".json",e)}function i(e){return r(".csv",e)}n.d(t,{dC:function(){return i},sO:function(){return o}})}},function(e){e.O(0,[431,506,422,274,4,239,577,941,115,576,757,225,548,774,888,179],function(){return e(e.s=80403)}),_N_E=e.O()}]);
+//# sourceMappingURL=[chatbotId]-fb389995f3b48163.js.map
