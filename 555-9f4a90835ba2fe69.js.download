@@ -1,0 +1,314 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[555],{43773:function(e,t,r){r.d(t,{X:function(){return p}});var i=r(50773),a=r(56283),n=r(10355),s=r(37532),o=r(5147);let l=(0,a.B)("Heading",{root:i.iv`
+    display: block;
+  `}),p=e=>{let{level:t}=(0,s.T)(),r=(0,o.u)(t,1,6),i=`h${r}`;return(0,n.U)(i,{css:l.root,className:e.className},e.children)}},64487:function(e,t,r){r.d(t,{y:function(){return s}});var i=r(52983),a=r(5147),n=r(37532);let s=({children:e})=>{let{level:t}=(0,n.T)(),r=(0,a.u)(t+1,1,6);return i.createElement(n.A,{level:r},e)}},37532:function(e,t,r){r.d(t,{A:function(){return s},T:function(){return n}});var i=r(52983);let a=i.createContext({level:1}),n=()=>i.useContext(a),s=({level:e=1,children:t})=>i.createElement(a.Provider,{value:{level:e}},t)},13836:function(e,t,r){r.d(t,{Y:function(){return N}});var i=r(52983),a=r(50773),n=r(29927),s=r(10355),o=r(73584),l=r(65535),p=r(80608);let c={root:a.iv`
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+    justify-items: center;
+    ${o.ZT.smallPrint3};
+    text-align: center;
+
+    @media screen and (min-width: 650px) {
+      gap: 20px;
+    }
+  `,title:a.iv`
+    color: ${n.w.neutral800};
+    ${o.ZT.paragraph3Bold};
+  `,links:a.iv`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  `,link:a.iv`
+    ${o.ZT.paragraph3}
+    // Increase hit size.
+    display: block;
+    padding: 0px;
+    margin: 0px 10px;
+    white-space: nowrap;
+    flex: none;
+    color: ${n.w.neutral700};
+    cursor: pointer;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: ${n.w.blue};
+      outline: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0px 6px;
+    }
+  `},d=["0–9",..."ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")],u=({baseUrl:e="/find-apps/",title:t="Apps by Title"})=>{let{getFullyQualifiedURL:r}=(0,p.Ir)(),i=d.map(t=>{let i=`${e}/${t.toLowerCase()}`.replace("//","/").replace("–","-");return(0,s.U)("li",{key:t},(0,s.U)(l.r,{ariaLabel:`${t} — Apps beginning with ${t}`,color:null,css:c.link,href:r(i)},t))});return(0,s.U)("section",{css:c.root},(0,s.U)("h2",{css:c.title},t),(0,s.U)("ul",{css:c.links},i))};var g=r(32421),h=r(60651);let f={root:a.iv`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 5px;
+    cursor: default;
+    user-select: none;
+  `,cell:a.iv`
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  `},m=()=>(0,s.U)("div",{css:f.root,"data-testid":"branding"},(0,s.U)(g.T,null,"Zapier"),(0,s.U)("div",{"aria-hidden":!0,css:f.cell},(0,s.U)(h.m,{width:81,height:22}))),x={flexDirection:"--UniversalFooter__HelpfulLinks-flex-direction",justifyContent:"--UniversalFooter__HelpfulLinks-justify-content"},v={root:a.iv`
+    display: flex;
+    flex-direction: var(${x.flexDirection}, column);
+    justify-content: var(${x.justifyContent}, center);
+    text-align: center;
+    flex-wrap: wrap;
+    column-gap: 12.5px;
+    row-gap: 10px;
+  `,link:a.iv`
+    ${o.ZT.paragraph3Semibold};
+    color: ${n.w.neutral700} !important;
+    // For browsers that don't yet support Flexbox gap
+    padding: 0 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: ${n.w.blue} !important;
+      outline: none;
+    }
+  `},b=e=>{let{getFullyQualifiedURL:t}=(0,p.Ir)(),{links:r=[{text:"Pricing",href:"/pricing"},{text:"Help",href:"https://help.zapier.com/hc/en-us"},{text:"Developer Platform",href:"/platform"},{text:"Press",href:"/press"},{text:"Jobs",href:"/jobs"},{text:"Zapier for Companies",href:"/teams-companies"},{text:"Templates",href:"/templates"}]}=e,i=r.map(e=>(0,s.U)("li",{key:e.text},(0,s.U)(l.r,{color:null,css:v.link,href:t(e.href)},e.text)));return(0,s.U)("ul",{css:v.root},i)},w={root:a.iv`
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  `,cell:a.iv`
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+  `,title:a.iv`
+    ${o.ZT.smallPrint1Semibold};
+    color: ${n.w.neutral700};
+    white-space: nowrap;
+  `,icons:a.iv`
+    display: flex;
+    width: min-content;
+    margin: 0 auto;
+  `,iconItem:a.iv`
+    margin-right: 10px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  `,icon:e=>a.iv`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: ${n.w.neutral500};
+
+    &:hover,
+    &:focus {
+      background-color: ${e.color};
+      outline: none;
+    }
+  `,iconSvg:a.iv`
+    width: 16px;
+    height: 16px;
+    fill: ${n.w.neutral100};
+
+    > svg {
+      width: inherit;
+      height: inherit;
+    }
+  `},k=e=>{let{getFullyQualifiedURL:t}=(0,p.Ir)();return(0,s.U)(l.r,{ariaLabel:e.title,title:e.title,color:null,css:w.icon(e),"data-testid":e.title,href:t(e.href)},(0,s.U)("span",{css:w.iconSvg,dangerouslySetInnerHTML:{__html:e.svg}}))},y=({icons:e,title:t="Follow us"})=>{let r=e.map(e=>(0,s.U)("li",{key:e.title,css:w.iconItem},(0,s.U)(k,Object.assign({},e))));return(0,s.U)("div",{css:w.root},(0,s.U)("div",{css:w.cell},(0,s.U)("h2",{css:w.title},t)),(0,s.U)("div",{css:w.cell},(0,s.U)("ul",{css:w.icons},r)))},S={justifyContent:"--UniversalFooter__HelpfulLinks-justify-content"},L={root:a.iv`
+    ${o.ZT.smallPrint1Semibold};
+    color: ${n.w.neutral700};
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: var(${S.justifyContent}, center);
+    row-gap: 10px;
+  `,copyright:a.iv`
+    margin-right: 10px;
+  `,links:a.iv`
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    white-space: nowrap;
+  `,linkItem:a.iv`
+    border-left: 1px solid ${n.w.neutral400};
+    &:first-of-type {
+      border-left: none;
+    }
+  `,link:(e=!1)=>a.iv`
+    // Increase hit area and separate.
+    padding: ${e?"0":"5px"} 10px;
+    color: ${n.w.neutral700} !important;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: ${n.w.blue} !important;
+      outline: none;
+    }
+  `},C=({links:e=[{text:"Manage cookies",className:"ot-sdk-show-settings",style:{display:"none"}},{text:"Legal",href:"/legal"},{text:"Privacy",href:"/privacy"}]})=>{let{getFullyQualifiedURL:t}=(0,p.Ir)(),r=e.map(e=>{let r=e.href?(0,s.U)(l.r,{css:L.link(!1),color:null,href:t(e.href)},e.text):(0,s.U)("button",{className:e.className,css:L.link(!0),style:e.style,type:"button"},e.text);return(0,s.U)("li",{key:e.text,css:L.linkItem},r)});return(0,s.U)("div",{css:L.root},(0,s.U)("p",{css:L.copyright},"\xa9 ",new Date().getFullYear()," Zapier Inc."),(0,s.U)("ul",{css:L.links},r))},I=a.iv`
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: ${"1px"};
+`,T=a.iv`
+  display: block;
+  // Increase hit state
+  padding: 3px 0;
+  cursor: pointer;
+  color: ${n.w.neutral700};
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: ${n.w.blue};
+    outline: none;
+  }
+`,A=a.iv`
+  display: block;
+  width: 100%;
+  margin-bottom: ${"1px"};
+  ${T};
+  text-decoration: underline;
+
+  // Dynamically change content when the details
+  // element is opened and closed.
+  details:not([open]) &::before {
+    content: 'Show more';
+  }
+  details[open] &::before {
+    content: 'Show less';
+  }
+`,U={root:a.iv``,title:a.iv`
+    ${o.ZT.paragraph3};
+    font-weight: 700;
+    color: ${n.w.neutral700};
+    margin-bottom: 10px;
+  `,links:a.iv`
+    ${o.ZT.paragraph3};
+    ${I};
+    // Prevent users from accidentally selecting
+    // text when interacting with details. I don't
+    // see a need for them to be able to copy the
+    // link text to their clipboards.
+    user-select: none;
+  `,linksList:a.iv`
+    ${I};
+  `,link:a.iv`
+    ${T};
+  `,moreLinks:a.iv`
+    position: relative;
+  `,moreLinksInner:a.iv`
+    ${I};
+  `,moreLinksToggle:a.iv`
+    // Hides default icon on details element
+    &::-webkit-details-marker {
+      display: none;
+    }
+    ${A};
+
+    // When details is open, the faux toggle will render
+    // (so that it renders at the bottom of the list),
+    // and the summary will be hidden but render over top
+    // of it so it's still clickable.
+    details[open] > & {
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+    }
+  `,moreLinksFauxToggle:a.iv`
+    ${A};
+  `},B=e=>{let{getFullyQualifiedURL:t}=(0,p.Ir)(),r=e.links.map(e=>(0,s.U)("li",{key:e.text},(0,s.U)(l.r,{css:U.link,color:null,href:t(e.href)},e.text)));return(0,s.U)("ul",{css:U.linksList},r)},$=e=>(0,s.U)("details",{css:U.moreLinks,open:e.isExpanded},(0,s.U)("summary",{"aria-label":"Toggle more links",css:U.moreLinksToggle,onClick:e.onToggleExpanded}),(0,s.U)("div",{css:U.moreLinksInner},(0,s.U)(B,{links:e.links}),(0,s.U)("span",{"aria-hidden":!0,css:U.moreLinksFauxToggle}))),E=({links:e,onToggleExpanded:t,title:r,initiallyShownCount:i=5,isExpanded:a})=>{let n=e.length>i&&(0,s.U)($,{links:e.slice(i),isExpanded:a,onToggleExpanded:t});return(0,s.U)("section",{css:U.root},(0,s.U)("h2",{css:U.title},r),(0,s.U)("div",{css:U.links},(0,s.U)(B,{links:e.slice(0,i)}),n))};var M=r(32938),z=r(85381);let _=[{color:"#3b5998",svg:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg>',href:"http://www.facebook.com/ZapierApp?utm_source=zapier.com&amp;utm_medium=referral&amp;utm_campaign=zapier",title:"Follow us on Facebook"},{color:"#0976b4",svg:'<svg viewBox="0 0 44 40" xmlns="http://www.w3.org/2000/svg"><path d="M44 40h-9.725V25.938c0-3.68-1.52-6.193-4.866-6.193-2.558 0-3.981 1.696-4.643 3.33-.249.586-.21 1.403-.21 2.22V40h-9.634s.124-24.909 0-27.173h9.634v4.265c.57-1.865 3.648-4.526 8.56-4.526C39.211 12.566 44 16.474 44 24.89V40zM5.18 9.428h-.063C2.013 9.428 0 7.351 0 4.718 0 2.034 2.072 0 5.239 0c3.164 0 5.11 2.029 5.171 4.71 0 2.633-2.007 4.718-5.23 4.718zm-4.07 3.399h8.576V40H1.11V12.827z" fill-rule="evenodd"/></svg>',href:"https://www.linkedin.com/company/zapier/?utm_source=zapier.com&amp;utm_medium=referral&amp;utm_campaign=zapier",title:"Follow us on LinkedIn"},{color:"#00aced",svg:'<svg viewBox="0 0 48 40" xmlns="http://www.w3.org/2000/svg"><path d="M48 4.735a19.235 19.235 0 0 1-5.655 1.59A10.076 10.076 0 0 0 46.675.74a19.395 19.395 0 0 1-6.257 2.447C38.627 1.225 36.066 0 33.231 0c-5.435 0-9.844 4.521-9.844 10.098 0 .791.085 1.56.254 2.3C15.456 11.974 8.2 7.96 3.34 1.842a10.281 10.281 0 0 0-1.33 5.083c0 3.502 1.738 6.593 4.38 8.405a9.668 9.668 0 0 1-4.462-1.26v.124c0 4.894 3.395 8.977 7.903 9.901a9.39 9.39 0 0 1-2.595.356 9.523 9.523 0 0 1-1.854-.18c1.254 4.01 4.888 6.932 9.199 7.01-3.37 2.71-7.618 4.325-12.23 4.325-.795 0-1.58-.047-2.35-.139C4.359 38.327 9.537 40 15.096 40c18.115 0 28.019-15.385 28.019-28.73 0-.439-.009-.878-.026-1.308A20.211 20.211 0 0 0 48 4.735" fill-rule="evenodd"/></svg>',href:"https://twitter.com/?utm_source=zapier.com&amp;utm_medium=referral&amp;utm_campaign=zapier#!/zapier",title:"Follow @zapier on Twitter"},{color:"#e52d27",svg:'<svg viewBox="0 0 48 34" xmlns="http://www.w3.org/2000/svg"><path d="M19.044 23.27l-.002-13.582 12.97 6.814-12.968 6.768zM47.52 7.334s-.47-3.33-1.908-4.798C43.786.61 41.74.601 40.803.49 34.086 0 24.011 0 24.011 0h-.022S13.914 0 7.197.49c-.939.11-2.983.12-4.81 2.045C.948 4.003.48 7.334.48 7.334S0 11.247 0 15.158v3.668c0 3.912.48 7.823.48 7.823s.468 3.331 1.907 4.798c1.827 1.926 4.225 1.866 5.293 2.067C11.52 33.885 24 34 24 34s10.086-.015 16.803-.505c.938-.113 2.983-.122 4.809-2.048 1.438-1.467 1.908-4.798 1.908-4.798s.48-3.91.48-7.823v-3.668c0-3.911-.48-7.824-.48-7.824z" fill-rule="evenodd"/></svg>',href:"https://www.youtube.com/user/ZapierApp/videos?utm_source=zapier.com&amp;utm_medium=referral&amp;utm_campaign=zapier",title:"See helpful Zapier videos on Youtube"},{color:n.w.zapier,svg:'<svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M576 1344q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm512 123q2 28-17 48-18 21-47 21H889q-25 0-43-16.5t-20-41.5q-22-229-184.5-391.5T250 902q-25-2-41.5-20T192 839V704q0-29 21-47 17-17 43-17h5q160 13 306 80.5T826 902q114 113 181.5 259t80.5 306zm512 2q2 27-18 47-18 20-46 20h-143q-26 0-44.5-17.5T1329 1476q-12-215-101-408.5t-231.5-336-336-231.5T252 398q-25-1-42.5-19.5T192 335V192q0-28 20-46 18-18 44-18h3q262 13 501.5 120T1186 542q187 186 294 425.5t120 501.5z"/></svg>',href:"/blog/feeds/latest/",title:"Subscribe to our blog"}],j={socialIcons:_,metaLinks:[{text:"Legal",href:"/legal"},{text:"Privacy",href:"/privacy"}],helpfulLinks:[{text:"Pricing",href:"/pricing"},{text:"Help",href:"https://help.zapier.com/hc/en-us"},{text:"Developer Platform",href:"/platform"},{text:"Press",href:"/press"},{text:"Jobs",href:"/jobs"},{text:"Zapier for Companies",href:"/teams-companies"},{text:"Templates",href:"/templates"}],seoLinks:{topSearches:{title:"Top Searches",links:[{text:"Slack Integrations",href:"/apps/slack/integrations"},{text:"Salesforce Integrations",href:"/apps/salesforce/integrations"},{text:"HubSpot CRM Integrations",href:"/apps/hubspot/integrations"},{text:"PayPal Integrations",href:"/apps/paypal/integrations"},{text:"Asana Integrations",href:"/apps/asana/integrations"},{text:"Stripe Integrations",href:"/apps/stripe/integrations"},{text:"GitHub Integrations",href:"/apps/github/integrations"},{text:"Trello Integrations",href:"/apps/trello/integrations"},{text:"Todoist Integrations",href:"/apps/todoist/integrations"},{text:"Xero Integrations",href:"/apps/xero/integrations"},{text:"Facebook Groups Integrations",href:"/apps/facebook-groups/integrations"},{text:"JIRA Integrations",href:"/apps/jira-software-server/integrations"},{text:"Pipedrive Integrations",href:"/apps/pipedrive/integrations"},{text:"Zendesk Integrations",href:"/apps/zendesk/integrations"},{text:"Google Analytics Integrations",href:"/apps/google-analytics/integrations"},{text:"Notion Integrations",href:"/apps/notion/integrations"},{text:"MailChimp Integrations",href:"/apps/mailchimp/integrations"},{text:"Shopify Integrations",href:"/apps/shopify/integrations"},{text:"Intercom Integrations",href:"/apps/intercom/integrations"},{text:"GitLab Integrations",href:"/apps/gitlab/integrations"},{text:"Magento 2.X Integrations",href:"/apps/magento-v2/integrations"},{text:"Google Drive Integrations",href:"/apps/google-drive/integrations"},{text:"WooCommerce Integrations",href:"/apps/woocommerce/integrations"},{text:"Basecamp 3 Integrations",href:"/apps/basecamp3/integrations"}]},popularApps:{title:"Popular Apps",links:[{text:"Dropbox",href:"/apps/dropbox/integrations"},{text:"Google Sheets",href:"/apps/google-sheets/integrations"},{text:"DocuSign",href:"/apps/docusign/integrations"},{text:"WordPress",href:"/apps/wordpress/integrations"},{text:"Office 365",href:"/apps/office-365/integrations"},{text:"QuickBooks Online",href:"/apps/quickbooks/integrations"},{text:"Mixpanel",href:"/apps/mixpanel/integrations"},{text:"RingCentral",href:"/apps/ringcentral/integrations"},{text:"Zoho CRM",href:"/apps/zoho-crm/integrations"},{text:"HubSpot",href:"/apps/hubspot/integrations"},{text:"Microsoft Teams",href:"/apps/microsoft-teams/integrations"},{text:"Eventbrite",href:"/apps/eventbrite/integrations"},{text:"Box",href:"/apps/box/integrations"},{text:"Evernote Business",href:"/apps/evernote-business/integrations"},{text:"LinkedIn",href:"/apps/linkedin/integrations"},{text:"Marketo",href:"/apps/marketo/integrations"},{text:"ChatGPT",href:"/apps/chatgpt/integrations"},{text:"Twilio",href:"/apps/twilio/integrations"},{text:"Keap",href:"/apps/keap-max-classic/integrations"},{text:"Google Forms",href:"/apps/google-forms/integrations"},{text:"SurveyMonkey",href:"/apps/surveymonkey/integrations"},{text:"Campaign Monitor",href:"/apps/campaign-monitor/integrations"},{text:"Pardot",href:"/apps/pardot/integrations"},{text:"Microsoft Dynamics CRM",href:"/apps/microsoft-dynamics-crm/integrations"}]},trendingApps:{title:"Trending Apps",links:[{text:"Twitch",href:"/apps/twitch/integrations"},{text:"Calendly",href:"/apps/calendly/integrations"},{text:"Microsoft To-Do",href:"/apps/microsoft-todo/integrations"},{text:"Microsoft Outlook",href:"/apps/microsoft-outlook/integrations"},{text:"Medium",href:"/apps/medium/integrations"},{text:"Unbounce",href:"/apps/unbounce/integrations"},{text:"Freshdesk",href:"/apps/freshdesk/integrations"},{text:"Airtable",href:"/apps/airtable/integrations"},{text:"Expensify",href:"/apps/expensify/integrations"},{text:"Insightly",href:"/apps/insightly/integrations"},{text:"PagerDuty",href:"/apps/pagerduty/integrations"},{text:"Podio",href:"/apps/podio/integrations"},{text:"OpenAI",href:"/apps/openai/integrations"},{text:"Square",href:"/apps/square/integrations"},{text:"Datadog",href:"/apps/datadog/integrations"},{text:"Toggl",href:"/apps/toggl/integrations"},{text:"Facebook Lead Ads",href:"/apps/facebook-lead-ads/integrations"},{text:"Rocket.Chat",href:"/apps/rocketchat/integrations"},{text:"Firebase",href:"/apps/firebase/integrations"},{text:"AWS Lambda",href:"/apps/aws-lambda/integrations"},{text:"MINDBODY",href:"/apps/mindbody/integrations"},{text:"Harvest",href:"/apps/harvest/integrations"},{text:"Smartsheet",href:"/apps/smartsheet/integrations"},{text:"Teamwork Desk",href:"/apps/teamwork-desk/integrations"},{text:"Yammer",href:"/apps/yammer/integrations"},{text:"Typeform",href:"/apps/typeform/integrations"},{text:"Autotask",href:"/apps/autotask/integrations"},{text:"Wrike",href:"/apps/wrike/integrations"},{text:"Help Scout",href:"/apps/help-scout/integrations"},{text:"Braintree",href:"/apps/braintree/integrations"}]},topAppsByCategory:{title:"Top Apps by Category",links:[{text:"Project Management",href:"/apps/categories/project-management"},{text:"Calendar",href:"/apps/categories/calendar"},{text:"Email",href:"/apps/categories/email"},{text:"CRM (Customer Relationship Management)",href:"/apps/categories/crm"},{text:"Marketing Automation",href:"/apps/categories/marketing"},{text:"Notes",href:"/apps/categories/notes"},{text:"Accounting",href:"/apps/categories/accounting"},{text:"Social Media Marketing",href:"/apps/categories/social-marketing"},{text:"Online Courses",href:"/apps/categories/it-operations-education"},{text:"Contact Management",href:"/apps/categories/contacts"},{text:"Forms & Surveys",href:"/apps/categories/forms"},{text:"Scheduling & Booking",href:"/apps/categories/scheduling"},{text:"Task Management",href:"/apps/categories/todo-lists"},{text:"Databases",href:"/apps/categories/databases"},{text:"Call Tracking",href:"/apps/categories/call-tracking"},{text:"Documents",href:"/apps/categories/documents"},{text:"Fax",href:"/apps/categories/fax"},{text:"Files",href:"/apps/categories/files"},{text:"Customer Support",href:"/apps/categories/customer-support"},{text:"Team Collaboration",href:"/apps/categories/team-collaboration"},{text:"Spreadsheets",href:"/apps/categories/spreadsheets"},{text:"Website Builders",href:"/apps/categories/cms"},{text:"Ecommerce",href:"/apps/categories/ecommerce"},{text:"Event Management",href:"/apps/categories/event-management"}]},ourBestContent:{title:"Our Best Content",links:[{text:"Best Video Conferencing Apps",href:"/blog/best-video-conferencing-apps/"},{text:"Best Email Apps",href:"/blog/best-email-app/"},{text:"Best CRM Apps",href:"/blog/best-crm-app/"},{text:"Best Note Taking Apps",href:"/blog/best-note-taking-apps/"},{text:"Best Calendar Apps",href:"/blog/best-calendar-apps/"},{text:"Best Meeting Scheduler Apps",href:"/blog/best-meeting-scheduler-apps/"},{text:"Best Todo List Apps",href:"/blog/best-todo-list-apps/"},{text:"Best Powerpoint Alternatives",href:"/blog/best-powerpoint-alternatives/"},{text:"Best Spreadsheet & Excel Alternatives",href:"/blog/best-spreadsheet-excel-alternative/"},{text:"Best Time Tracking Apps",href:"/blog/best-time-tracking-apps/"},{text:"Best eCommerce Shopping Cart Software",href:"/blog/best-ecommerce-shopping-cart-software/"},{text:"Best Survey Apps",href:"/blog/best-survey-apps/"},{text:"Best Online Form Builder Software",href:"/blog/best-online-form-builder-software/"},{text:"Best Digital Signature Apps",href:"/blog/best-digital-signature-apps/"},{text:"Best Team Chat App",href:"/blog/best-team-chat-app/"},{text:"Workato vs. Zapier",href:"/l/workato-vs-zapier/"}]}}},O=()=>{let{sessionData:e,currentAccountId:t}=(0,p.Ir)(),r=(0,M.a)({queryKey:["getFooter"],queryFn:async()=>{var r;let i=(0,z.R)(),a=`${i}/api/v3/navigation-data/footer`,n=await fetch(a,{credentials:"include",headers:{"x-current-account-id":(null==t?void 0:t.toString())||"","x-customuser-id":(null===(r=null==e?void 0:e.customUserId)||void 0===r?void 0:r.toString())||""}});if(!n.ok)throw Error("Network response was not ok");let s=await n.json();return s.data},placeholderData:j}),i=r.isLoading||r.isError?j:r.data;return Object.assign(Object.assign({},r),{data:i})},F="(min-width: 650px)",P="(min-width: 980px)",R={root:a.iv`
+    background-color: ${n.w.neutral100};
+    padding: 30px;
+    @media ${"(max-width: 980px)"} {
+      padding: 20px;
+    }
+  `,simplifiedNav:a.iv`
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  `,grid:e=>a.iv`
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      ${e.shouldRenderAlphabetNav?'"alphabetNav"':""}
+      ${e.shouldRenderSeoLinks?'"seoLinks"':""}
+      "helpfulLinks"
+      "socialIcons"
+      "branding"
+      "zapierMeta";
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media ${F} {
+      grid-template-columns: max-content 1fr;
+      grid-template-areas:
+        ${e.shouldRenderAlphabetNav?'"alphabetNav alphabetNav"':""}
+        ${e.shouldRenderSeoLinks?'"seoLinks seoLinks"':""}
+        "helpfulLinks helpfulLinks"
+        "socialIcons socialIcons"
+        "branding zapierMeta";
+    }
+
+    @media ${P} {
+      grid-template-columns: max-content 1fr;
+      grid-template-areas:
+        ${e.shouldRenderAlphabetNav?'"alphabetNav alphabetNav"':""}
+        ${e.shouldRenderSeoLinks?'"seoLinks seoLinks"':""}
+        "socialIcons helpfulLinks"
+        "branding zapierMeta";
+    }
+  `,branding:a.iv`
+    grid-area: branding;
+    @media ${F} {
+      justify-self: start;
+    }
+  `,helpfulLinks:a.iv`
+    grid-area: helpfulLinks;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media ${F} {
+      ${x.flexDirection}: row;
+    }
+    @media ${P} {
+      justify-content: flex-end;
+      ${x.justifyContent}: flex-end;
+    }
+  `,alphabetNav:a.iv`
+    grid-area: alphabetNav;
+
+    @media ${F} {
+      max-width: none;
+    }
+  `,seoLinks:a.iv`
+    grid-area: seoLinks;
+    width: 100%;
+  `,socialIcons:a.iv`
+    grid-area: socialIcons;
+    @media ${P} {
+      justify-self: start;
+    }
+  `,zapierMeta:a.iv`
+    grid-area: zapierMeta;
+    @media ${F} {
+      justify-self: end;
+      ${S.justifyContent}: flex-end;
+    }
+  `,linksSections:a.iv`
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    column-gap: 10px;
+    row-gap: 20px;
+    @media (min-width: 420px) {
+      text-align: left;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+  `},Z=e=>{let[t,r]=(0,i.useState)(!1),a=()=>{r(!t)};return(0,s.U)("div",{css:R.linksSections},e.sections.map(e=>(0,s.U)(E,{key:e.title+t,title:e.title,links:e.links,isExpanded:t,onToggleExpanded:a})))},N=e=>{let t=e.shouldRenderAlphabetNav&&(0,s.U)("div",{css:R.alphabetNav},(0,s.U)(u,null)),{data:r}=O(),i=e.shouldRenderSeoLinks&&(0,s.U)("div",{css:R.seoLinks},(0,s.U)(Z,{sections:[r.seoLinks.topSearches,r.seoLinks.popularApps,r.seoLinks.trendingApps,r.seoLinks.topAppsByCategory,r.seoLinks.ourBestContent]}));return(0,s.U)("footer",{css:R.root,role:"contentinfo","data-testid":"universalFooter"},e.showSimplifiedFooter?(0,s.U)("div",{css:R.simplifiedNav},(0,s.U)(C,{links:[...r.metaLinks,{text:"Manage cookies",className:"ot-sdk-show-settings",style:{display:"none"}}]})):(0,s.U)("div",{css:R.grid(e)},(0,s.U)("div",{css:R.helpfulLinks},(0,s.U)(b,{links:r.helpfulLinks})),t,i,(0,s.U)("div",{css:R.socialIcons},(0,s.U)(y,{icons:r.socialIcons})),(0,s.U)("div",{css:R.branding},(0,s.U)(m,null)),(0,s.U)("div",{css:R.zapierMeta},(0,s.U)(C,null))))}},24877:function(e,t,r){r.d(t,{Cq:function(){return c},Eg:function(){return l},Qv:function(){return a},Z:function(){return p},au:function(){return i},fe:function(){return n},ii:function(){return s},w5:function(){return o}});let i="/sign-up/",a="/app/login",n="#mainContent",s=950,o=70,l=60,p=300,c=70},64793:function(e,t,r){r.d(t,{IX:function(){return a},XD:function(){return i},sn:function(){return n}});let i={href:"/app/move-zaps/",icon:{selected:"arrowBigRight",unselected:"arrowBigRight"},text:"Move Zaps"},a=[{href:"/app/settings/profile",icon:{selected:"navCog",unselected:"navCog"},text:"Settings"},{href:"/logout",icon:"arrowExit",text:"Log Out"}],n={topBarMenu:[{variant:"product-2",heroArea:{heading:"Zapier Automation Platform",subheading:"Bring your entire business under one roof",submenu:[{href:null,text:"PRODUCTS",submenu:[{text:"Zaps",description:"Powerful, do-it-yourself automation",href:"/workflows",icon:"miscBoltAltFill"},{text:"Tables",description:"Databases designed for workflows",href:"/tables",icon:"navTables"},{text:"Interfaces",description:"Custom pages to power your workflows",href:"/tables",icon:"navInterfacesV2"}]},{href:null,text:"CAPABILITIES",submenu:[{text:"App integrations",description:"Explore 6,000 app integrations",href:"/apps"},{text:"AI features",description:"Access our latest AI-powered features",href:"/ai"},{text:"Security",description:"Enterprise-grade security",href:"/security-compliance"}]}]},promoArea:{header:{heading:"What's new",href:void 0,subheading:""},submenu:[{text:"Canvas",href:"/ai/chatbot",icon:"navCanvasV2",description:"Plan and map your workflows with AI",tag:"Alpha"},{text:"AI Chatbot",href:"/ai/chatbot",icon:"navChatbots",description:"Custom no-code chatbots trained on your data",tag:"Beta"}]},text:"Product",bottomLinks:[{text:"Explore templates",icon:{selected:"actionExplore",unselected:"actionExplore"},href:"/templates"},{text:"Join Zapier Early Access",icon:"miscBoltAlt",href:"/early-access"}]},{text:"Solutions",variant:"variant-c",submenu:[{text:"By use case",href:null,icon:{selected:"navBriefcase",unselected:"navBriefcase"},submenu:[{text:"Lead management",href:"/lead-management"},{text:"Sales pipeline",href:"/sales-pipeline-management"},{text:"Marketing campaigns",href:"/marketing-campaigns"},{text:"Customer support",href:"/customer-support-management"},{text:"Data management",href:"/data-management"},{text:"Project management",href:"/project-management"},{text:"Tickets and incidents",href:"/ticket-incident-management"}]},{text:"By app",href:null,icon:{selected:"miscList",unselected:"miscList"},submenu:[{text:"Salesforce",href:"/apps/salesforce/integrations "},{text:"Microsoft Dynamics CRM",href:"/apps/microsoft-dynamics-crm/integrations"},{text:"HubSpot",href:"/apps/hubspot/integrations"},{text:"Marketo",href:"/apps/marketo/integrations"},{text:"Slack",href:"/apps/slack/integrations"},{text:"Microsoft Teams",href:"/apps/microsoft-teams/integrations"},{text:"Zendesk",href:"/apps/zendesk/integrations"},{text:"Jira Software Cloud",href:"/apps/jira-software-cloud/integrations"},{text:"Jira Service Management",href:"/apps/jira-service-management/integrations"}]},{text:"By team",href:null,icon:{selected:"personGroup",unselected:"personGroup"},submenu:[{text:"Marketing",href:"/solutions/marketing"},{text:"IT",href:"/solutions/it"},{text:"Sales",href:"/solutions/sales"},{text:"RevOps",href:"/solutions/revops"},{text:"Customer Support",href:"/solutions/customer-support"},{text:"Leaders",href:"/solutions/leaders"}]},{text:"By company size",href:null,icon:{selected:"navExplore",unselected:"navExplore"},submenu:[{text:"Startups",href:"/solutions/startups"},{text:"Small and medium businesses",href:"/solutions/smb"},{text:"Enterprise",href:"/solutions/enterprise"}]}],bottomLinks:[{text:"Explore app integrations",icon:{selected:"actionExplore",unselected:"actionExplore"},href:"/apps"},{text:"Join Zapier Early Access",icon:"miscBoltAlt",href:"/early-access"}],promoArea:[{type:"article-stub",text:"How Zapier Zaps",href:"/l/lead-management-automation-canvas",imageUrl:"https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1695750563/Navigation/Logged%20Out/Frame_12120_ef7x6o.png",description:"How Zapier’s RevOps team automates lead management",altText:"Person icon with workflow graphic"},{type:"article-stub",text:"How Zapier Uses AI",href:"/resources/webinar/leaders-using-ai",imageUrl:"https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1695750563/Navigation/Logged%20Out/Mask_group_aprx5j.png",description:"Using AI & Zapier in Marketing, Sales, & RevOps",altText:"Graphic that shows webhooks, ChatGPT, and Slack apps connected"}]},{text:"Resources & Support",variant:"variant-b",submenu:[{text:"By team",href:null,icon:{selected:"personGroup",unselected:"personGroup"},submenu:[{text:"Marketing",href:"/resources/marketing"},{text:"Leaders",href:"/resources/leaders"},{text:"IT",href:"/resources/it"},{text:"Sales operations",href:"/resources/sales"}]},{text:"Learn more",href:null,icon:{selected:"miscLearn",unselected:"miscLearn"},submenu:[{text:"Blog",href:"/blog/"},{text:"Zapier Learn",href:"https://learn.zapier.com"},{text:"Events and webinars",href:"/resources/events"},{text:"Customer stories",href:"/customer-stories"},{text:"Zapier guides",href:"/resources/guides"}]},{text:"Get help",href:null,icon:{selected:"navHelp",unselected:"navHelp"},submenu:[{text:"Help Center",href:"https://help.zapier.com/hc/en-us"},{text:"Community",href:"https://community.zapier.com/"},{text:"Hire an Expert",href:"/experts"},{text:"Support Services",href:"/l/support-services"},{text:"Contact Support",href:"/get-help"}]}],bottomLinks:[{text:"Explore app integrations",icon:{selected:"actionExplore",unselected:"actionExplore"},href:"/apps"},{text:"Join Zapier Early Access",icon:"miscBoltAlt",href:"/early-access"}],promoArea:[{type:"article-stub",text:"Zapier quick-start guide",href:"/learn/zapier-quick-start-guide",imageUrl:"https://cdn.zapier.com/storage/photos/8d754b5e8481fdd190dd7b1cf7738a8d.png",description:"Create your first Zap with ease",altText:"A simplified user interface design representing a portion of Zapier's platform. There's a vertical menu of platform options. At the top is a dominant orange button with text inside that reads \"Create Zap.\" Beneath the button is a stack of menu icons to represent Zapier's dashboard and zaps."},{type:"link-list",text:"Developer resources",href:null,links:[{text:"Developer Platform",href:"/developer-platform"},{text:"Build an integration",href:"/developer-platform/integrations"},{text:"Embed an integration",href:"/developer-platform/embed-tools"},{text:"Integration Partner Program",href:"/developer-platform/partner-program"},{text:"Documentation",href:"https://platform.zapier.com"}]}]},{variant:"link",text:"Pricing",href:"/pricing"}],callToAction:{href:"https://zapier.com/l/contact-sales",text:"Contact Sales"},linksInApp:[{text:"Help",icon:"navHelp",href:"https://help.zapier.com/hc/en-us"},{text:"Explore Zapier",icon:"navExplore",href:"/explore"}]}},43569:function(e,t,r){r.d(t,{gB:function(){return l}});var i=r(32938),a=r(80608);let n=e=>{var t,r,i;let a=null===(r=null===(t=e.roles)||void 0===t?void 0:t.find(t=>t.account_id===e.current_account_id))||void 0===r?void 0:r.role,n={customUserId:e.id,bannerMessage:e.banner_message,currentAccountId:e.current_account_id,isLoggedIn:e.is_logged_in,isStaff:e.is_staff,email:e.email,currentUserRole:a,hasSeenNotifications:{jobsCta:null===(i=e.has_seen_notifications)||void 0===i?void 0:i.jobs_cta}};return n};async function s(e){let t=await fetch(`${e}/api/v4/session`,{credentials:"include"});if(!t.ok)throw Error("Network response was not ok");let r=await t.json();return n(r)}let o=["session"],l=()=>{let{sessionData:e,apiHostname:t}=(0,a.Ir)(),r=(0,i.a)({queryKey:o,queryFn:()=>s(t),enabled:!e,initialData:e,staleTime:1e4});return Object.assign(Object.assign({},r),{isLoading:r.isInitialLoading})}},80608:function(e,t,r){r.d(t,{A5:function(){return _},WP:function(){return W},sk:function(){return Z},Ir:function(){return j}});var i=r(52983);let a=i.createContext(void 0),n=()=>i.useContext(a);var s=r(48643);let o=e=>null==e||"object"==typeof e&&0===Object.keys(e).length;var l=r(39378);let p=()=>"undefined"!=typeof window,c=e=>{try{return JSON.parse(e)}catch(e){console.warn("Could not parse value read from localStorage.")}return e},d=e=>{if(p())try{return window.localStorage.getItem(e)}catch(t){console.warn(`Could not read "${e}" from localStorage.`)}},u=e=>{try{return e&&(0,l.isObject)(e)?JSON.stringify(e):e}catch(e){console.warn("Could not stringify value before writing it to localStorage.")}return e},g=(e,t)=>{if(p())try{window.localStorage.setItem(e,t)}catch(t){console.warn(`Could not write "${e}" to localStorage.`)}},h=e=>{let[t,r]=(0,i.useState)(()=>{let t=d(e);return t?c(t):t});return(0,i.useEffect)(()=>{let t=d(e);r(t?c(t):t)},[e]),(0,i.useEffect)(()=>{let r=u(t);g(e,r)},[e,t]),[t,r]},f="undefined"!=typeof window?navigator.userAgent:"",m=i.createContext(f),x=e=>{let t=e.split("and").map(e=>e.trim()).map(e=>e.replace(/[()]/g,""));return t.reduce((e,t)=>{let[r="",i=""]=t.split(":");return e[r.trim()]=parseInt(i,10),e},{})},v=(e,t)=>[e.width>=(t["min-width"]||0),e.width<=(t["max-width"]||1/0)].every(Boolean);var b=(e,t)=>(0,l.reduce)(t,(t,r)=>{let i=x(r);return t[r]=v(e,i),t},{});let w={phone:"phone",phablet:"phablet",tablet:"tablet",desktop:"desktop"},k=e=>t=>{if("string"!=typeof t)return!1;let r=t.toLowerCase();return e.map(e=>e.toLowerCase()).some(e=>r.includes(e))},y=k(["ipad","kfapwi"]),S=k(["nexus"]),L=k(["iphone","mobile"]);var C=e=>y(e)?{deviceType:w.tablet,width:660}:S(e)?{deviceType:w.phablet,width:420}:L(e)?{deviceType:w.phone,width:320}:{deviceType:w.desktop,width:1024};let I=e=>(0,l.defaultsDeep)({},...e.reverse()),T=(e,t)=>{let r=C(e),i=Object.keys(t),a=b(r,i),n=i.filter(e=>a[e]).map(e=>t[e]);return I(n)},A=e=>{let t=e.filter(e=>{var t;return null===(t=null==e?void 0:e.mediaQueryList)||void 0===t?void 0:t.matches}).map(e=>e.props);return I(t)};var U=e=>{let t=(0,i.useContext)(m),r=T(t,e),[a,n]=(0,i.useState)(r);return(0,i.useEffect)(()=>{let t=Object.keys(e),r=t.map(t=>({query:t,mediaQueryList:null==window?void 0:window.matchMedia(t),props:e[t]})),i=()=>{let e=A(r);(0,l.isEqual)(e,a)||n(e)};return r.forEach(e=>{var t;(null===(t=null==e?void 0:e.mediaQueryList)||void 0===t?void 0:t.addListener)&&e.mediaQueryList.addListener(i)}),i(),()=>{r.forEach(e=>{var t;(null===(t=null==e?void 0:e.mediaQueryList)||void 0===t?void 0:t.removeListener)&&e.mediaQueryList.removeListener(i)})}},[e,a]),a},B=r(64793),$=r(85381);let E=({currentAccountId:e,customUserId:t})=>{let[r,a]=(0,i.useState)(!0),[n,s]=(0,i.useState)(B.sn);return(0,i.useEffect)(()=>{let r=!0;return async function(){let i=(0,$.R)(),n=`${i}/api/v3/navigation-data/topbar`;try{a(!0);let i=await fetch(n,{credentials:"include",headers:{"x-current-account-id":(null==e?void 0:e.toString())||"","x-customuser-id":(null==t?void 0:t.toString())||""}});if(!i.ok)throw Error("Response was not OK");if(r){let e=await i.json(),{data:t}=e;o(t)||s(t),a(!1)}}catch(e){r&&s(B.sn)}finally{r&&a(!1)}}(),()=>{r=!1}},[e,t]),{isLoading:r,topNav:n}};var M=r(24877),z=r(43569);let _=(0,i.createContext)({apiHostname:"",canForceSidebarOpen:!1,canTopbarFitBackToAppButton:!1,canTopbarFitLinks:!1,currentAccountId:void 0,currentUrl:"",isCreateMenuOpen:!1,isLoadingLoggedIn:!0,isLoadingTopNav:!0,isLoggedIn:!1,isOnAppPage:!1,isInAppExperience:!1,isSearchFullWidth:!0,isSidebarControlledByTopbar:!1,isSidebarForcedOpen:!1,isSidebarOpenedByTopbar:!1,isSidebarRendered:!1,onToggleSidebarVisibility:()=>{},setIsCreateMenuOpen:()=>{},setIsSidebarForcedOpen:()=>{},setIsSidebarOpenedByTopbar:()=>{},setIsSidebarRendered:()=>{},shouldRenderCallToAction:!1,shouldRenderSearch:!0,shouldRenderSidebar:!1,shouldRenderAccessibleSidebar:!1,shouldRenderTopbarLinks:!1,shouldRenderTOS:!1,shouldRenderUniversalNav:!0,sidebarWidth:0,topbarSize:"medium",topNavData:{},getFullyQualifiedURL:e=>e||void 0}),j=()=>(0,i.useContext)(_),O=e=>e.includes("/login")||e.includes("/sign-up")||e.includes("/oauth/authorize"),F=(e,t)=>t?"in-app"===t:e.includes("/app/"),P=e=>e.includes("/app/onboarding"),R=({currentUrl:e,mode:t})=>F(e,t)&&!O(e)&&!P(e),Z=({currentUrl:e,mode:t})=>!F(e,t)&&!O(e),N=({isLoggedIn:e,canTopbarFitLinks:t,currentUrl:r,isSidebarControlledByTopbar:i,isSidebarOpenedByTopbar:a,isCreateMenuOpen:n,mode:s})=>!!n||(i?a:s&&"navigation"===s?!1===t:!!(s&&"in-app"===s&&e||e&&R({currentUrl:r,mode:s})||!t&&Z({currentUrl:r,mode:s}))),D=({isLoggedIn:e,canTopbarFitLinks:t,currentUrl:r,isSidebarControlledByTopbar:i,isSidebarOpenedByTopbar:a,mode:n})=>i?!a:n&&"navigation"===n?!1===t:(!n||"in-app"!==n||!e||!t)&&!!(e&&R({currentUrl:r,mode:n})&&!t||!t&&Z({currentUrl:r,mode:n})),H=({currentUrl:e})=>!(O(e)||P(e)),q=({isSidebarControlledByTopbar:e,isLoggedIn:t,currentUrl:r,mode:i})=>!!e&&(!!t||Z({currentUrl:r,mode:i})),V=({canForceSidebarOpen:e,isSidebarForcedOpen:t,isSidebarRendered:r,isSidebarControlledByTopbar:i})=>!r||i?0:e&&t?M.Z:M.Cq,W=e=>{let{data:t}=(0,z.gB)(),r=n()||(null==t?void 0:t.currentAccountId),{isLoading:a,topNav:l}=E({currentAccountId:r,customUserId:null==t?void 0:t.customUserId}),{accountData:p,accountsListData:c,currentUrl:d,mode:u,sessionData:g,shouldRenderTOS:f,urlPathPrefix:m}=e,x=F(d,u),v=F(d,u)&&!1===P(d)&&!1===O(d),{isSearchFullWidth:b,isSidebarControlledByTopbar:w,canForceSidebarOpen:k,canTopbarFitBackToAppButton:y,canTopbarFitLinks:S,topbarSize:L}=U({"(min-width: 0px)":{isSidebarControlledByTopbar:!0,isSearchFullWidth:!0,canForceSidebarOpen:!1,canTopbarFitBackToAppButton:!1,canTopbarFitLinks:!1,topbarSize:"small"},"(min-width: 450px)":{canTopbarFitBackToAppButton:o(l.callToAction),topbarSize:"small"},"(min-width: 800px)":{canTopbarFitBackToAppButton:!0,topbarSize:"medium"},"(min-width: 1040px)":{isSidebarControlledByTopbar:!1,isSearchFullWidth:!1,canTopbarFitLinks:!0},"(min-width: 1280px)":{canForceSidebarOpen:R({currentUrl:d,mode:u})}}),C=S&&Z({currentUrl:d,mode:u}),[I,T]=(0,i.useState)(!1),A=!!t&&t.isLoggedIn,[B,$]=(0,i.useState)(!1),[M,j]=h("UniversalNav:isSidebarForcedOpen");(0,i.useEffect)(()=>{null==M&&j(!0)},[M,j]);let[W,G]=(0,i.useState)(!1),J=N({isLoggedIn:A,canTopbarFitLinks:S,currentUrl:d,isSidebarControlledByTopbar:w,isSidebarOpenedByTopbar:B,isCreateMenuOpen:I,mode:u}),Q=D({isLoggedIn:A,canTopbarFitLinks:S,currentUrl:d,isSidebarControlledByTopbar:w,isSidebarOpenedByTopbar:B,mode:u}),X=H({currentUrl:d}),Y=q({isSidebarControlledByTopbar:w,isLoggedIn:A,currentUrl:d}),K=Y?()=>{(0,s.V)({event_action:"click",option_selected:"UniversalTopbar SidebarVisibilityToggle"}),$(!B)}:void 0,ee=V({canForceSidebarOpen:k,isSidebarForcedOpen:M,isSidebarRendered:W,isSidebarControlledByTopbar:w}),et=(0,i.useCallback)(e=>e&&m&&e.startsWith("/")?m+e:e||void 0,[m]),er={accountUsageData:p,accountsListData:c,currentAccountId:r,isLoadingTopNav:a,canTopbarFitBackToAppButton:y,canTopbarFitLinks:S,canForceSidebarOpen:k,currentUrl:d,isCreateMenuOpen:I,isLoadingLoggedIn:!t,isLoggedIn:A,isOnAppPage:x,isInAppExperience:v,isSearchFullWidth:b,isSidebarControlledByTopbar:w,isSidebarOpenedByTopbar:B,isSidebarForcedOpen:!!k&&!!W&&M,isSidebarRendered:W,mode:u,onToggleSidebarVisibility:K,sessionData:g,setIsCreateMenuOpen:T,setIsSidebarOpenedByTopbar:$,setIsSidebarForcedOpen:j,setIsSidebarRendered:G,shouldRenderCallToAction:!P(d),shouldRenderSearch:X,shouldRenderSidebar:J,shouldRenderAccessibleSidebar:Q,shouldRenderTopbarLinks:C,shouldRenderTOS:f,shouldRenderUniversalNav:!0,sidebarWidth:ee,topbarSize:L,topNavData:l,urlPathPrefix:m,getFullyQualifiedURL:et,apiHostname:e.apiHostname||""};return i.createElement(_.Provider,{value:er},e.children)}},48643:function(e,t,r){r.d(t,{V:function(){return n}});var i=r(7862),a=function(e,t){var r={};for(var i in e)Object.prototype.hasOwnProperty.call(e,i)&&0>t.indexOf(i)&&(r[i]=e[i]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols)for(var a=0,i=Object.getOwnPropertySymbols(e);a<i.length;a++)0>t.indexOf(i[a])&&Object.prototype.propertyIsEnumerable.call(e,i[a])&&(r[i[a]]=e[i[a]]);return r};let n=async e=>{var{interaction_name:t="call_to_action"}=e,r=a(e,["interaction_name"]);return await (0,i.emit)(Object.assign(Object.assign({},r),{absolute_url:window.location.pathname,interaction_name:t,referrer:document.referrer,system_name:"design_system"}),"web_analytics.tracking.user_interaction.UserInteractionEvent")}},85381:function(e,t,r){r.d(t,{R:function(){return n}});let i=e=>{var t;let r=e?e.hostname:null===(t=null==window?void 0:window.location)||void 0===t?void 0:t.hostname;return r||""},a={production:"https://design-system-bff.zapier.com",staging:"https://design-system-bff.zapier-staging.com",localhost:"http://localhost:8000"},n=()=>{let e=i();if(e.endsWith("zapier.com"))return a.production;if(e.endsWith("zapier-staging.com"));else if("localhost"===e)return a.localhost;return a.staging}}}]);
+//# sourceMappingURL=555-9f4a90835ba2fe69.js.map
