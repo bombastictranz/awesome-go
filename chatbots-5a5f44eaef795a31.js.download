@@ -1,0 +1,354 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[635],{64095:function(e,t,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/app/chatbots",function(){return i(89411)}])},89411:function(e,t,i){"use strict";i.r(t),i.d(t,{__N_SSP:function(){return tk},default:function(){return t_}});var r=i(97458),n=i(74976),a=i(32421),Text=i(91579),l=i(462),o=i(80036),s=i(67291),d=i(241),c=i(870),u=i(79301),h=i(81237),x=i(33568),p=i(29927),m=i(41500),g=i(43364),j=i(46565),b=i(39566),f=i(32165),Animation=i(64186),w=i(77030),v=i(52983),y=i(25124),C=i(24187);function $(e){let{ariaLabel:t,chatbot:i,isDisabled:n,onDelete:a,onDuplicate:l,onEdit:o,onClick:s,...d}=e;return(0,r.jsxs)(g.v,{as:z,children:[(0,r.jsx)(g.v.Button,{as:j.h,ariaLabel:t,icon:"navMoreVert",size:"xsmall",type:"button",disabled:n,onClick:e=>{e.stopPropagation(),s?.(e)}}),(0,r.jsx)(g.v.Items,{children:(0,r.jsx)(b.f,{...d,children:(0,r.jsxs)(k,{children:[(0,r.jsx)(g.v.Item,{children:e=>{let{active:t}=e;return(0,r.jsxs)(_,{"data-active":t,type:"button",onClick:()=>o(i),children:[(0,r.jsx)(f.J,{name:"actionEdit",size:24,color:"neutral600"}),"Edit"]})}}),(0,r.jsx)(g.v.Item,{children:e=>{let{active:t}=e;return(0,r.jsxs)(_,{"data-active":t,type:"button",onClick:()=>l(i),children:[(0,r.jsx)(f.J,{name:"arrowBranch",size:24,color:"neutral600"}),"Duplicate"]})}}),(0,r.jsx)(g.v.Item,{children:e=>{let{active:t}=e;return(0,r.jsxs)(_,{"data-active":t,type:"button",onClick:e=>{if(e.stopPropagation(),!i.interfaceUrl){console.error("Chatbot interface URL not available.");return}navigator.clipboard.writeText(i.interfaceUrl).then(()=>{y.ZP.success("Copied public chatbot URL to clipboard!")}).catch(e=>{console.warn("Failed to copy snippet: ",e)})},children:[(0,r.jsx)(f.J,{name:"actionCopy",size:24,color:"neutral600"}),"Copy Public URL"]})}}),(0,r.jsx)(g.v.Item,{children:e=>{let{active:t}=e;return(0,r.jsxs)(_,{"data-active":t,"data-variant":"danger",type:"button",onClick:()=>a(i),children:[(0,r.jsx)(f.J,{name:"actionTrash",size:24,color:"neutral600"}),"Delete"]})}})]})})})]})}let z=w.zo.div`
+  position: relative;
+`,k=w.zo.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  padding: 10px;
+`,_=w.zo.button`
+  all: unset;
+  text-align: left;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 10px;
+  cursor: pointer;
+
+  border-radius: 3px;
+  height: 40px;
+
+  background-color: ${p.w.neutral100};
+  color: ${p.w.neutral700};
+
+  transition: all ${Animation.f.transitionDuration}
+    ${Animation.f.transitionTimingFunction};
+
+  & > span:first-of-type${C.G} {
+    transition: all ${Animation.f.transitionDuration}
+      ${Animation.f.transitionTimingFunction};
+  }
+
+  &:disabled {
+    color: ${p.w.neutral500};
+    cursor: not-allowed;
+
+    & > span:first-of-type${C.G} {
+      fill: ${p.w.neutral400};
+    }
+  }
+
+  &[data-active="true"] {
+    background-color: ${p.w.blue100};
+    color: ${p.w.blueJeans};
+
+    & > span:first-of-type${C.G} {
+      fill: ${p.w.blueJeans};
+    }
+  }
+
+  &[data-active="true"][data-variant="danger"] {
+    background-color: ${p.w.error100};
+    color: ${p.w.error500};
+
+    & > span:first-of-type${C.G} {
+      fill: ${p.w.error500};
+    }
+  }
+`;var S=i(9749),T=i(31602),P=i(58506),E=i(18140),I=i(76488),L=i.n(I);let A=w.zo.span`
+  height: ${e=>{let{$mini:t}=e;return t?"20px":"26px"}};
+  padding: 0 8px;
+  border-radius: ${e=>{let{$mini:t}=e;return t?"10px":"13px"}};
+  background-color: var(--zds-colors-lavender);
+  line-height: ${e=>{let{$mini:t}=e;return t?"20px":"1.5"}};
+  margin: ${e=>{let{$margin:t="2px 0 0 0"}=e;return t}};
+`,N=w.zo.hr`
+  border: none;
+  border-top: 1px solid ${p.w.neutral400};
+  margin: 0;
+  width: 100%;
+`;var U=i(65535);let B=w.zo.div`
+  height: 190px;
+  overflow: hidden;
+`,D=w.zo.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+`,F=w.zo.div`
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+  border-top: 1px solid ${p.w.neutral400};
+  position: relative;
+`,R=w.zo.div`
+  padding-top: 3px;
+`,Z=w.zo.img`
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+`,M=w.zo.div`
+  color: ${p.w.neutral800};
+`,q=w.zo.div``,O=w.zo.button`
+  all: unset;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid ${p.w.neutral400};
+
+  ${e=>{let{onClick:t}=e;return t?w.iv`
+          cursor: pointer;
+
+          transition: border-color 150ms;
+          ${F} {
+            transition: background-color 150ms;
+          }
+          ${q}, ${q} * {
+            transition: color 150ms;
+          }
+
+          &:hover {
+            border-color: ${p.w.blueJeans};
+
+            ${F} {
+              background-color: ${p.w.blue10};
+            }
+
+            ${q} {
+              color: ${p.w.blueJeans};
+            }
+          }
+        `:w.iv`
+          cursor: not-allowed;
+        `}}
+`,H=w.zo.div`
+  position: absolute;
+  bottom: calc(100% + 1px);
+  width: 100%;
+
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 12px;
+  line-height: 16px;
+
+  padding: 10px;
+
+  background-color: ${p.w.warning10};
+  color: ${p.w.neutral800};
+  border-top: 1px solid ${p.w.neutral400};
+
+  & > a {
+    color: ${p.w.neutral800};
+    font-weight: 600;
+  }
+`,G=w.zo.div`
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;function J(e){let t=1===e.tablesCount?"Table":"Tables";return(0,r.jsxs)(O,{onClick:e.onClick,disabled:!e.onClick,children:[(0,r.jsx)(B,{children:e.previewImage&&(0,r.jsx)(D,{src:e.previewImage,alt:""})}),(0,r.jsxs)(F,{children:[e.exceedsTablesLimit&&(0,r.jsx)(H,{children:e.isPaidAccount?(0,r.jsxs)(r.Fragment,{children:["Requires ",e.tablesCount," additional ",t," which exceeds your limit."]}):(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(U.r,{href:e.zapierUpgradeUrl,target:"_blank",color:"inherit",onClick:()=>e.onUpgrade?.(e.id),children:"Upgrade your Tables limits"})," ","to use this template."]})}),e.icon&&(0,r.jsx)(R,{children:(0,r.jsx)(Z,{src:e.icon,alt:""})}),(0,r.jsxs)(M,{children:[(0,r.jsx)(q,{children:(0,r.jsx)(Text.x,{tag:"div",type:"paragraph3Semibold",color:"currentColor",children:e.title})}),e.description&&(0,r.jsxs)(v.Fragment,{children:[(0,r.jsx)(l.L,{height:5}),(0,r.jsx)(Text.x,{tag:"div",type:"smallPrint1",color:"currentColor",children:e.description})]})]})]}),(0,r.jsx)(G,{children:(0,r.jsx)(o.z,{type:"button",color:"secondary",children:"Try it Out"})})]})}var V=i(52074),Q=i(23483),X=i(97357),W=i(66208),Y=i(45884);function K(e){let{chatbotsEnableTemplatesZeroState:t}=(0,Y.gj)();return t?(0,r.jsx)(ee,{...e}):(0,r.jsx)(er,{children:(0,r.jsxs)(en,{children:[(0,r.jsx)(f.J,{name:"navChatbots",size:50,color:"zapier"}),(0,r.jsx)(l.L,{height:20}),(0,r.jsxs)(ea,{children:[(0,r.jsx)(Text.x,{tag:"h1",type:"pageHeader5",color:"neutral800",textAlign:"center",children:"Chatbots"}),(0,r.jsx)(A,{children:(0,r.jsx)(Text.x,{type:"smallPrint1Bold",children:"Beta"})})]}),(0,r.jsx)(l.L,{height:20}),(0,r.jsx)(el,{children:(0,r.jsx)(Text.x,{tag:"p",type:"paragraph1",color:"neutral800",textAlign:"center",children:"Create custom AI chatbots and take action with built-in automation—no coding required."})}),(0,r.jsx)(l.L,{height:28}),(0,r.jsx)(o.z,{type:"button",onClick:e.onCreate,children:"Create your first Chatbot"})]})})}function ee(e){let{emitBuilderInteractionEvent:t}=(0,X.E)(),[i,a]=(0,v.useState)(null),{data:{templates:d=[]}={},isLoading:c}=n.S.templates.list.useQuery(void 0,{suspense:!1}),{data:u}=n.S.tableTables.list.useQuery(),{data:h}=n.S.tableTables.limits.useQuery(),{user:x}=(0,V.aF)(),p=(0,v.useCallback)(()=>{if(!x||c)return!1;let e=x.currentAccount.entitlements.limits.add_ons;return(0,Q.gc)(e)||(0,Q.YQ)(e)},[x,c]),m=(0,v.useCallback)(()=>!!u&&!!h&&u.data.length>=h.data.max_table_count,[u,h]),g=e=>(0,r.jsx)(J,{...e,previewImage:e.previewImage?.url,id:e.key,tablesCount:u?.data.length??0,title:e.name,onClick:async()=>{t({interaction_goal:"Create a template",event_action:"click",option_selected:e.key,interaction_raw_text:e.name}),a({templateSlug:e.key});let i=await fetch("/templates/execute",{method:"POST",body:JSON.stringify({templateSlug:e.key,url:window.location.href,systemName:"chatbots"})});if(a(null),!i.ok){console.error("Failed to execute template",i);return}let r=await i.json();window.location.href=r.redirectTo},onUpgrade:()=>{t({interaction_raw_text:`Upgrade Tables limits to create a ${e.key} project`,interaction_goal:"Upgrade Tables limits",event_action:"click"})},exceedsTablesLimit:m()&&e.meta.products.includes("tables"),isPaidAccount:p(),zapierUpgradeUrl:`${(0,W.G$)()}/app/settings/billing?upgradeFamily=tables`});return(0,r.jsx)(er,{children:(0,r.jsxs)(en,{children:[(0,r.jsxs)(ea,{children:[(0,r.jsx)(f.J,{name:"navChatbots",size:50,color:"zapier"}),(0,r.jsx)(l.L,{height:20}),(0,r.jsx)(Text.x,{tag:"h1",type:"pageHeader5",color:"neutral800",textAlign:"center",children:"Chatbots"}),(0,r.jsx)(A,{children:(0,r.jsx)(Text.x,{type:"smallPrint1Bold",children:"Beta"})})]}),(0,r.jsx)(l.L,{height:20}),(0,r.jsx)(el,{children:(0,r.jsx)(Text.x,{tag:"p",type:"paragraph1",color:"neutral800",textAlign:"center",children:"Create a free, AI-powered chatbot that answers questions, resolves issues, and nurtures leads with the power of Zapier automation."})}),(0,r.jsx)(l.L,{height:28}),(0,r.jsx)(o.z,{type:"button",onClick:e.onCreate,children:"Create Blank Chatbot"}),(0,r.jsx)(l.L,{height:48}),(0,r.jsx)(N,{}),(0,r.jsx)(l.L,{height:48}),(0,r.jsx)(Text.x,{tag:"h2",type:"pageHeader7",color:"neutral800",textAlign:"center",children:"Explore Templates"}),(0,r.jsx)(l.L,{height:48}),(0,r.jsx)(eo,{children:d.map(e=>i&&i.templateSlug===e.key?(0,r.jsxs)(ei,{children:[(0,r.jsx)(et,{children:(0,r.jsx)(s.$,{size:"small"})}),g(e)]},`${e.key}-loading`):(0,r.jsx)("div",{children:g(e)},e.key))})]})})}let et=w.zo.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+`,ei=w.zo.div`
+  position: relative;
+`,er=w.zo.div`
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1070px;
+`,en=w.zo.div`
+  display: grid;
+  grid-template-columns: minmax(auto, 540px);
+  place-items: center;
+`,ea=w.zo.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`,el=w.zo.div`
+  width: min(1000px, 70vw);
+`,eo=w.zo.div`
+  display: grid;
+  max-width: 1200px;
+  @media (min-width: 1000px) {
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr) minmax(
+        300px,
+        1fr
+      );
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: minmax(450px, 1fr);
+  }
+  gap: 30px;
+  margin-bottom: 60px;
+`;var es=i(13546),ed=i.n(es),ec=i(99556),eu=i(51722);let eh=w.zo.section`
+  font-family: "Inter", sans-serif;
+
+  background-color: ${p.w.neutral100};
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 50px;
+  width: 100%;
+  max-width: 1110px;
+  padding: 50px 20px;
+  margin: 0 auto;
+
+  // disable the hover state for the table when the section has a "no-hover" class
+  &.no-hover
+    > div[class$="-Table"]${C.G}
+    tbody
+    tr:hover
+    td {
+    background-color: ${p.w.neutral100};
+  }
+`,ex=w.zo.span`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`,ep=w.zo.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`,em=w.zo.div`
+  display: flex;
+  justify-content: flex-end;
+`,eg=w.zo.div`
+  width: ${e=>{let{$width:t}=e;return t}}px;
+`,ej=w.zo.th`
+  display: table-cell;
+  vertical-align: middle;
+  text-align: initial;
+  width: ${e=>{let{$width:t}=e;return t?`${t}px`:"auto"}};
+`;function eb(){return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)(u.S,{children:[(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:200})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:150})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:175})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:30,height:30})})]}),(0,r.jsxs)(u.S,{children:[(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:250})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:100})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:150})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:30,height:30})})]}),(0,r.jsxs)(u.S,{children:[(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:175})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:175})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:150})}),(0,r.jsx)(ec.g,{children:(0,r.jsx)(eu.Z,{width:30,height:30})})]})]})}var ef=i(41824),ew=i(60630),ev=i(59659),ey=i.n(ev);let eC=(e,t,i,r)=>{let n=(0,P.O4)(e.getValue(t),i);return r({itemRank:n}),n.passed},e$=(0,S.Cl)(),ez={Name:["name"],Model:["model"],Updated:["updatedAt"]};function ek(e){return Object.entries(ez).find(t=>{let[,i]=t;return i.includes(e)})?.[0]}function e_(e){let{children:t}=e;return(0,r.jsx)(a.T,{children:t})}function eS(e){let{chatbots:t=[],isCreating:i,isDeleting:n,isDuplicating:a,isLoading:p,onClick:g,onCreate:j,onDelete:b,onDuplicate:f,...w}=e,y=(0,E.useRouter)(),C=(0,v.useCallback)(e=>(0,r.jsx)(em,{children:(0,r.jsx)($,{align:"right",ariaLabel:`More options for ${e.row.original.name} chatbot`,maxWidth:"275px",minWidth:"275px",chatbot:e.row.original,isDisabled:i||n||a,onEdit:g,onDelete:b,onDuplicate:f,onClick:e=>{e.stopPropagation()}})}),[i,n,a,g,b,f]),z=(0,v.useCallback)(e=>{let t=e.getValue();return(0,r.jsx)("time",{dateTime:t,children:(0,m.Z)(new Date(t),{addSuffix:!0})})},[]),k=(0,v.useCallback)(function(e){let t=e.currentTarget.dataset.id;t&&y.push(`/app/chatbots/${t}`)},[y]),_=(0,T.b7)({data:t,columns:[e$.accessor("name",{header:ek("name"),cell:e=>e.getValue()}),e$.accessor("conversations",{header:()=>(0,r.jsxs)(Text.x,{type:"smallPrint1",color:"neutral600",children:[(0,r.jsx)(Text.x,{type:"smallPrint1Bold",color:"neutral800",children:"Conversations"})," ","(Past 7 days)"]}),cell:e=>(0,r.jsx)(L(),{href:`/app/chatbots/${e.row.original.id}?t=4`,children:Number(e.getValue()??0).toLocaleString()}),meta:{width:250,noClick:!0}}),e$.accessor("model",{header:ek("model"),cell:e=>e.getValue(),meta:{width:250}}),e$.accessor("updatedAt",{header:ek("updatedAt"),cell:z,meta:{width:250}}),e$.display({id:"menu",enableHiding:!1,header:()=>(0,r.jsx)(e_,{children:"More options for chatbot"}),cell:C,meta:{width:50,noClick:!0}})],filterFns:{fuzzy:eC},globalFilterFn:eC,getCoreRowModel:(0,S.sC)()}),P=(0,ef.G)();return p||t.length?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)(eh,{children:[(0,r.jsxs)(ep,{children:[(0,r.jsxs)(ex,{children:[(0,r.jsx)(Text.x,{type:"pageHeader7",tag:"h1",children:"Chatbots"}),(0,r.jsx)(A,{children:(0,r.jsx)(Text.x,{type:"smallPrint1Bold",children:"Beta"})})]}),!p&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(l.L,{width:20}),(0,r.jsx)(eE,{children:(0,r.jsxs)(Text.x,{type:"smallPrint1Medium",color:"neutral600",children:["My plan: ",ey()(w.plan)," (",w.count,"/",w.limit," ","Chatbots used)"]})}),(0,r.jsx)(l.L,{width:"5px"}),(0,r.jsx)(Text.x,{type:"smallPrint1Medium",color:"neutral600",children:"•"}),(0,r.jsx)(l.L,{width:"5px"}),(0,r.jsx)(L(),{href:P,children:(0,r.jsx)(eT,{children:"advanced"!==w.plan?"Upgrade":"Manage"})}),(0,r.jsx)(l.L,{width:20})]}),(0,r.jsx)(eg,{$width:105,children:(0,r.jsx)(o.z,{disabled:n,color:"primary",type:"button",iconBefore:i?void 0:"formAdd",size:"small",onClick:i?void 0:()=>j(),isFullWidth:!0,children:i?(0,r.jsx)(s.$,{color:"white",size:"small"}):"Create"})})]}),(0,r.jsxs)(d.i,{kind:"standard",children:[(0,r.jsx)(c.s,{children:_.getHeaderGroups().map(e=>(0,r.jsx)(u.S,{children:e.headers.map(e=>(0,r.jsx)(ej,{$width:ed()(e.column.columnDef,"meta.width"),children:(0,r.jsx)(h.v,{children:e.isPlaceholder?null:(0,T.ie)(e.column.columnDef.header,e.getContext())})},e.id))},e.id))}),(0,r.jsxs)(x.R,{children:[p&&(0,r.jsx)(eb,{}),!p&&_.getRowModel().rows.length>0&&_.getRowModel().rows.map(e=>(0,r.jsx)("tr",{children:e.getVisibleCells().map(t=>{let i=!!ed()(t.column.columnDef,"meta.noClick");return(0,r.jsx)(eP,{role:i?void 0:"button","data-id":e.original.id,onClick:i?void 0:k,"aria-label":i?void 0:`View ${t.row.original.name} chatbot`,children:(0,T.ie)(t.column.columnDef.cell,t.getContext())},t.id)})},e.id))]})]})]}),(0,r.jsx)(ew.x,{})]}):(0,r.jsx)(K,{onCreate:j})}let eT=w.zo.a`
+  color: ${p.w.neutral800};
+  text-decoration: underline !important;
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+`,eP=w.zo.td`
+  display: table-cell;
+  vertical-align: middle;
+  text-align: initial;
+  padding: 15px 10px;
+  background-color: ${p.w.neutral100};
+  border-bottom: 1px solid ${p.w.neutral200};
+`,eE=w.zo.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+`;var eI=i(51077),eL=i(91334),eA=i(21072),eN=i(738),eU=i(95672),eB=i(70475);let eD=w.zo.button`
+  all: unset;
+  padding: 10px 15px;
+  border-radius: 3px;
+  ${e=>{let{$active:t}=e;return t&&`background-color: ${p.w.cream};`}}
+  ${e=>{let{onClick:t}=e;return t&&"cursor: pointer;"}}
+`;function eF(e){return(0,r.jsx)(eD,{type:"button",$active:e.active,onClick:e.handleClick,children:(0,r.jsx)(Text.x,{tag:"div",type:"smallPrint1Semibold",color:"neutral800",children:e.title})},e.title)}function eR(e){let t=e.meta?.icon??{url:"/favicon.ico"},i=t.url.includes("ucarecdn.com")?`${t.url}-/preview/70`:t.url;return{id:e.key,title:e.name,description:e.description,previewImage:e.previewImage?.url,icon:i,tablesCount:e.tables.length}}let eZ=w.zo.div`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 50px;
+  ${e=>{let{$height:t}=e;return t&&w.iv`
+      height: ${t};
+    `}}
+`,eM=w.zo.div`
+  min-width: 240px;
+  max-width: 300px;
+`,eq=w.zo.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+`,eO=w.zo.div`
+  max-height: 100%;
+  overflow: auto;
+`,eH=w.zo.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+`,eG=w.zo.div`
+  border-radius: 12px;
+  overflow: hidden;
+  color: ${p.w.neutral600};
+  border: 1px dashed ${p.w.neutral400};
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 6px;
+`;function eJ(e){let[t,i]=(0,v.useState)("all"),n=[{title:"All",category:"all"},...e.categories.map(e=>({title:e.name,category:e.slug}))],a=e.templates?e.templates.filter(e=>e.meta.products.includes("chatbot")):[];"tables"!==t&&"all"!==t&&(a=a.filter(e=>e?.meta?.categories.includes(t)));let o=a.map(eR);return(0,r.jsxs)(eZ,{$height:e.height,children:[(0,r.jsxs)(eM,{children:[(0,r.jsx)(Text.x,{type:"paragraph3",color:"neutral700",children:"Browse templates"}),(0,r.jsx)(l.L,{height:10}),(0,r.jsx)(eq,{children:n.map(e=>{let{title:n,category:a}=e,l=t===a;return(0,r.jsx)(eF,{title:n,active:l,handleClick:l?void 0:()=>{i(a)}},n)})})]}),(0,r.jsx)(eO,{children:(0,r.jsxs)(eH,{children:[o.map(t=>{let i=t.tablesCount>0,n=e.tablesCount+t.tablesCount>e.tablesLimit,a=i&&n;return(0,r.jsx)(J,{...t,onClick:a?void 0:()=>e.onSelect(t.id),onUpgrade:e.onUpgrade,exceedsTablesLimit:a,isPaidAccount:e.isPaidAccount,zapierUpgradeUrl:e.zapierUpgradeUrl},t.id)}),e.onClickBlank?(0,r.jsx)(eG,{children:(0,r.jsx)(eB.z,{size:"small",onClick:()=>{e.onClickBlank?.()},iconBefore:"formAdd",children:"Start from scratch"})}):null]})})]})}var eV=i(66073),eQ=i(26923);function eX(e){let t=(0,ef.G)(),[i]=(0,v.useState)(!1),{emitBuilderInteractionEvent:a}=(0,X.E)(),{data:{templates:l=[],categories:s=[]}={},isLoading:d}=n.S.templates.list.useQuery(void 0,{suspense:!1});return(0,r.jsx)(eN.u,{onClosed:e.onClosed,canClose:"creating"!==e.creationStatus,ariaLabel:"Create a new Chatbot",children:e.creationStatus?(0,r.jsx)(eV.T,{children:(0,r.jsx)(eU.v,{error:e.error,isError:"error"===e.creationStatus})}):i?(0,r.jsx)(eU.v,{}):(0,r.jsxs)(eV.T,{width:"1080px",children:[(0,r.jsx)(eA.dE,{children:(0,r.jsxs)(eW,{children:[(0,r.jsx)(Text.x,{type:"subHeader3Bold",children:"Create a new Chatbot"}),(0,r.jsx)(o.z,{size:"xsmall",onClick:()=>e.onCreate("New Chatbot"),iconBefore:"formAdd",disabled:d,children:"Start from scratch"})]})}),(0,r.jsx)(eA.nS,{children:d?(0,r.jsx)(eQ.$,{height:560}):(0,r.jsx)(eJ,{templates:l,categories:s,onClickBlank:()=>e.onCreate("New Chatbot"),onSelect:()=>alert("Implement me"),onUpgrade:e=>{a({interaction_raw_text:`Upgrade Tables limits to create a ${e} project`,interaction_goal:"Upgrade Tables limits",event_action:"click"})},height:"560px",isPaidAccount:!0,tablesCount:0,tablesLimit:100,zapierUpgradeUrl:t})})]})})}w.zo.div`
+  margin: 0 auto;
+  width: fit-content;
+`;let eW=w.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px -20px 30px 0;
+`;var eY=i(61483),eK=i(57203);let e0={},e1=e=>(e0[e]=(e0[e]||0)+1,`${e}${e0[e]}`),e5={children:"required"},e2=e=>{let t={...e5,...e};return(0,r.jsx)("span",{className:"ml-0.5 font-normal text-zi-secondaryText before:content-['('] after:content-[')']","aria-hidden":"true",children:t.children})},e3={alignItems:"center",justifyContent:"start",size:"medium"},e4=e=>{let t={...e3,...e};return(0,r.jsxs)("label",{className:"grid auto-cols-auto grid-flow-col items-start justify-start gap-[5px] text-base font-semibold text-zi-text [&[data-state~='errored']]:text-zi-formError","data-align-items":t.alignItems,"data-justify-content":t.justifyContent,"data-size":t.size,"data-state":[t.isSelected&&"selected",t.isErrored&&"errored",t.isDisabled&&"disabled"].filter(Boolean).join(" ")||void 0,htmlFor:t.htmlFor,children:[t.children,t.isRequired?t.requiredText?(0,r.jsx)(e2,{children:t.requiredText}):(0,r.jsx)(e2,{}):null]})};var e7=i(34620);let e6=e=>(0,r.jsx)("div",{...e,className:(0,e7.cn)("text-sm text-zi-secondaryText [&_a:visited]:text-inherit [&_a]:underline",e.className)});function e8(e){return(0,r.jsx)("div",{...e,className:(0,e7.cn)("font-sans text-sm text-zi-formError",e.className)})}let e9={helpTextLineClamp:1};function te(e){let t={...e9,...e},[i]=(0,v.useState)(t.inputId||e1("Field-")),n=`${i}-description`,a=t.renderHelpText&&t.renderHelpText();return(0,r.jsxs)("div",{className:"flex flex-col gap-y-2.5",children:[!t.hideLabel&&(0,r.jsx)("div",{children:t.renderLabel?t.renderLabel({htmlFor:i,isDisabled:t.isDisabled,isErrored:!!t.error,isRequired:t.isRequired,label:t.label,requiredText:t.requiredText}):(0,r.jsxs)(e4,{alignItems:"start",htmlFor:i,isDisabled:t.isDisabled,isErrored:!!t.error,isRequired:t.isRequired,requiredText:t.requiredText,size:"small",children:[t.error&&(0,r.jsx)(f.J,{isBlock:!0,name:"alertTriangle",size:18}),(0,r.jsx)("span",{children:t.label})]})}),t.renderInput({ariaDescribedBy:a||t.error?n:void 0,id:i,isDisabled:!!t.isDisabled,isErrored:!!t.error,isRequired:!!t.isRequired}),t.error&&(0,r.jsx)(e8,{children:t.error}),a&&(0,r.jsx)(e6,{children:a})]})}var tt=i(20297),ti=i(25239);let tr=w.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -20px 30px 0;
+`,tn=w.zo.form`
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-column-gap: 2em;
+  grid-template-areas: "input button" "error error";
+  grid-row-gap: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: end;
+`,ta=w.zo.p`
+  color: ${p.w.error};
+  grid-area: error;
+  font-size: 14px;
+  line-height: 20px;
+  height: 20px;
+`;function tl(e){let{onCreate:t,...i}=e,n=(0,eK.cI)({mode:"onTouched",criteriaMode:"all",resolver:(0,tt.F)(ti.oR)}),a=(0,v.useCallback)(e=>t(e.chatbotName),[t]);return(0,r.jsx)(eN.u,{onClosed:i.onClosed,canClose:"creating"!==i.creationStatus,ariaLabel:"Create a new Chatbot",children:i.creationStatus?(0,r.jsx)(eV.T,{children:(0,r.jsx)(eU.v,{error:i.error,isError:"error"===i.creationStatus})}):(0,r.jsxs)(eV.T,{width:"500px",children:[(0,r.jsx)(eA.dE,{children:(0,r.jsx)(tr,{children:(0,r.jsx)(Text.x,{type:"subHeader3Bold",children:"Create a new Chatbot"})})}),(0,r.jsx)(eA.nS,{children:(0,r.jsxs)(tn,{onSubmit:n.handleSubmit(a),children:[(0,r.jsx)(eK.Qr,{name:"chatbotName",control:n.control,render:e=>{let{field:t}=e;return(0,r.jsx)(te,{label:"Name",renderInput:e=>(0,r.jsx)(eY.o,{...e,...t,autoComplete:"off"})})}}),(0,r.jsx)(o.z,{type:"submit",size:"small",iconBefore:"formAdd",children:"Create"}),(0,r.jsx)(ta,{children:n.formState.errors.chatbotName?.message})]})})]})})}var to=i(46127),ts=i(82367),td=i(42302),tc=i(99632),tu=e=>{let{chatbotCount:t=0}=e,{user:i}=(0,V.aF)(),n=(0,Q.zi)(i),a=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent),[l,o]=(0,v.useState)(!1),s=Intl.DateTimeFormat().resolvedOptions().timeZone,d=Intl.DateTimeFormat().resolvedOptions().locale;return((0,v.useEffect)(()=>{if(!l&&!a){let e=async()=>{let e=fetch(`${(0,tc.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL}/api/v4/accounts/${i?.currentAccount?.id}/entitlements/`,{mode:"cors",credentials:"include"}).then(e=>e.json()),t=fetch(`${(0,tc.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL}/api/v4/session/`,{mode:"cors",credentials:"include"}).then(e=>e.json()),[r,n]=await Promise.all([e,t]);return r.signup=n.signup,r};if("undefined"!=typeof document&&null===document.getElementById("wootric-settings")){if(e().then(e=>{let r=document.createElement("script");r.type="text/javascript",r.id="wootric-settings",r.async=!0,r.innerHTML=`
+        window.wootricSettings = {
+        account_token: "NPS-edfb676e",
+        aria: true,
+        created_at: ${Math.floor(new Date(e?.signup).getTime()/1e3)},
+        email: "${i?.email}",
+        modal_footprint: "compact",
+        properties: {
+          date_user_created: "${e?.signup?Math.floor(new Date(e?.signup).getTime()/1e3):null}",
+          account_id: "${i?.currentAccount?.id}",
+          customuser_id: "${i?.zapierId}",
+          email: "${i?.email}",
+          language: "${d}",
+          plan_tier: "${e?.plan_status?.plan_type}${e?.limits?.action_limit?` (${e?.limits?.action_limit?.toLocaleString()} Tasks)`:""}",
+          chatbots_plan_tier: "${n}",
+          timezone: "${s}",
+          chatbots_amount: ${t}
+        },
+      };
+    `,document.body.appendChild(r)}),document&&null===document.getElementById("wootric-beacon")){let e=document.createElement("script");e.type="text/javascript",e.id="wootric-beacon",e.async=!0,e.src="https://cdn.wootric.com/wootric-sdk.js",e.onload=function(){window.wootric("run")},document.body.appendChild(e)}o(!0)}}},[n,a,d,t,s,i?.currentAccount,i?.email,i?.zapierId,l]),a)?null:(0,r.jsx)("div",{})},th=i(83417);function tx(e){let{initialData:t}=e,i=(0,E.useRouter)(),[a,l]=(0,ts.i)(),{status:o,onOpen:s,onSuccess:d,onError:c,render:u}=function(){let{user:e}=(0,V.aF)(),{data:t=0}=n.S.chatbots.count.useQuery(void 0,{suspense:!1,enabled:!!e}),i=(0,to.v)(),{chatbotsEnableTemplatesModal:a}=(0,Y.gj)(),[l,o]=(0,v.useState)(null),[s,d]=(0,v.useState)(),[c,u]=(0,v.useState)(null);return(0,v.useMemo)(()=>({error:s,status:l,onOpen(){u(!0)},onSuccess(){o(null)},onError(e){d(e),o("error")},render(n){if(!e||!c)return;let d=t===i&&"creating"!==l||t>i?eL.E:a?eX:tl;return(0,r.jsx)(d,{accountId:0,error:s,creationStatus:l,onClosed:()=>{u(null),o(null)},user:e,onCreate:async e=>{o("creating"),await n({name:e}),u(null),o(null)}})}}),[i,a,t,s,c,l,e])}(),{status:h,onOpen:x,onSuccess:p,onError:m,render:g}=(0,td.b)(),{status:j,onOpen:b,onSuccess:f,onError:w,render:y}=(0,th.L)();(0,v.useEffect)(()=>{let e=new URLSearchParams(window.location.search);"create"===e.get("modalOpen")&&(s(),i.replace({pathname:i.pathname,query:{}},void 0,{shallow:!0}))},[s,i]);let{data:C,isLoading:$,refetch:z}=n.S.chatbots.listSparse.useQuery(void 0,{initialData:t,keepPreviousData:!0,refetchOnMount:!1,refetchOnReconnect:!1,refetchOnWindowFocus:!1}),k=(0,eI.ou)(),{emitBuilderInteractionEvent:_}=(0,X.E)(),{mutateAsync:S}=n.S.chatbots.create.useMutation({async onSuccess(e){await Promise.all([z(),l()]),k("Created Chatbot",{chatbotId:e.id,chatbotName:e.name}),_({interaction_goal:"created chatbot",chatbot_id:e.id,event_action:"click"}),await i.push(`/app/chatbots/${e.id}`),d()},onError:c}),{mutateAsync:T}=n.S.chatbots.delete.useMutation({async onSuccess(e){await Promise.all([z(),l()]),k("Deleted Chatbot",{chatbotId:e.id,chatbotName:e.name}),_({interaction_goal:"deleted chatbot",chatbot_id:e.id,event_action:"click"}),p()},onError:m}),{mutateAsync:P}=n.S.chatbots.duplicate.useMutation({async onSuccess(e){await Promise.all([z(),l()]),k("Duplicated Chatbot",{chatbotId:e.id,chatbotName:e.name}),_({interaction_goal:"duplicated chatbot",chatbot_id:e.id,event_action:"click"}),f()},onError:w}),I=(0,v.useCallback)(e=>{i.push(`/app/chatbots/${e.id}`)},[i]);return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(eS,{...a,chatbots:C,isCreating:"creating"===o,isDeleting:"deleting"===h,isDuplicating:"duplicating"===j,isLoading:$,onClick:I,onCreate:s,onDelete:x,onDuplicate:b}),u(S),g(T),y(P),"production"===(0,tc.v)().NEXT_PUBLIC_APP_ENV&&(0,r.jsx)(tu,{chatbotCount:C?.length})]})}var tp=i(66391),tm=i(94526),tg=i(13743),tj=i.n(tg),tb=i(17757),tf=i(85146),tw=i(31971),tv=i(70342),ty=i(79439);function tC(){return(0,r.jsxs)(eh,{className:"no-hover",children:[(0,r.jsxs)(ep,{children:[(0,r.jsxs)(ex,{children:[(0,r.jsx)(Text.x,{type:"pageHeader7",tag:"h1",children:"Chatbots"}),(0,r.jsx)(A,{children:(0,r.jsx)(Text.x,{type:"smallPrint1Bold",children:"Beta"})})]}),(0,r.jsx)(eg,{$width:105,children:(0,r.jsx)(tv.q,{height:44,width:107})})]}),(0,r.jsxs)(d.i,{kind:"standard",children:[(0,r.jsx)(c.s,{children:(0,r.jsxs)(u.S,{children:[(0,r.jsx)(ej,{children:(0,r.jsx)(ty.N,{width:200,lines:1})}),(0,r.jsx)(ej,{children:(0,r.jsx)(ty.N,{width:150,lines:1})}),(0,r.jsx)(ej,{children:(0,r.jsx)(ty.N,{width:175,lines:1})}),(0,r.jsx)(ej,{children:(0,r.jsx)(tv.q,{width:30,height:30})})]})}),(0,r.jsx)(x.R,{children:(0,r.jsx)(eb,{})})]})]})}let t$=(0,tp.Z)(function(e){let t=tw.ZP.deserialize(e.chatbots),{user:i}=(0,V.aF)(),n={customUserId:i?.zapierId??0,isLoggedIn:!0,email:i?.email??"",currentAccountId:i?.currentAccount.id,hasSeenNotifications:{}};return(0,r.jsxs)(tm.Z,{children:[(0,r.jsx)(tj(),{children:(0,r.jsx)("title",{children:"Chatbots"})}),(0,r.jsx)(tf.p,{accountsListData:i?.accounts?.map(e=>({...e,normalizedImageUrl:e.logo_url,normalizedName:e.name})),apiHostname:(0,W.G$)(),currentUrl:"/app/chatbots",mainContentId:"chatbots-main",mode:"in-app",renderAlertBanner:()=>null,renderFooter:()=>null,sessionData:n,trackEvent:()=>null,urlPathPrefix:(0,W.G$)(),children:(0,r.jsx)(tx,{initialData:t})})]})}),tz=()=>(0,r.jsxs)(tm.Z,{children:[(0,r.jsx)(tj(),{children:(0,r.jsx)("title",{children:"Chatbots"})}),(0,r.jsx)(tf.p,{apiHostname:(0,W.G$)(),currentUrl:"/app/chatbots",mainContentId:"chatbots-main",mode:"in-app",renderAlertBanner:()=>null,renderFooter:()=>null,trackEvent:()=>null,urlPathPrefix:(0,W.G$)(),children:(0,r.jsx)(tC,{})})]});var tk=!0;function t_(e){return(0,r.jsx)(tb.Z,{fallback:(0,r.jsx)(tz,{}),flags:e.flags,user:e.user,hideToaster:!0,maintenanceMode:e.maintenanceMode,children:(0,r.jsx)(t$,{...e})})}}},function(e){e.O(0,[431,508,422,274,4,753,239,577,941,115,555,927,757,225,548,774,888,179],function(){return e(e.s=64095)}),_N_E=e.O()}]);
+//# sourceMappingURL=chatbots-5a5f44eaef795a31.js.map
