@@ -1,0 +1,91 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[548],{70475:function(e,t,n){n.d(t,{z:function(){return u}});var r=n(97458),a=n(67291),o=n(80036),i=n(77030),l=n(18140),s=n(52983);let c=i.zo.span`
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;function u(e){let{isLoading:t,iconBefore:n,children:i,...l}=e,u=e.href?d:o.z;return(0,r.jsx)(u,{...l,iconBefore:t?void 0:n,disabled:l.disabled??t,children:(0,r.jsxs)(s.Fragment,{children:[(0,r.jsx)("span",{style:{opacity:t?0:1},children:i}),t&&(0,r.jsx)(c,{children:(0,r.jsx)(a.$,{color:function(e){switch(e){case"danger":case"primary":case"primary-alt":case void 0:return"light";case"secondary":case"tertiary":case"primary-dark":case"secondary-dark":return"dark";default:return e}}(e.color)})})]})})}function d(e){let t=(0,l.useRouter)(),{isLoading:n,onClick:a,iconBefore:i,children:c,...u}=e,d=(0,s.useMemo)(()=>{if(e.href||a)return n=>{e.href&&"_blank"!==e.target&&(n.preventDefault(),t.push(e.href)),a&&a(n)}},[a,e.href,e.target,t]);return(0,r.jsx)(o.z,{...u,onClick:d,iconBefore:n?void 0:i,disabled:u.disabled??n,children:c})}},49089:function(e,t,n){var r=n(77030);n(52983);let a=r.zo.div`
+  display: flex;
+  flex-direction: ${e=>{let{$direction:t}=e;return t??"row"}};
+  justify-content: ${e=>{let{$justify:t}=e;return t??"flex-start"}};
+  align-items: ${e=>{let{$align:t}=e;return t??"flex-start"}};
+  gap: ${e=>{let{$gap:t}=e;return t??"0px"}};
+`;t.Z=a},94526:function(e,t,n){n.d(t,{Z:function(){return l}});var r=n(97458),a=n(77030),o=n(29927);let i=a.zo.div`
+  background-color: ${o.w.neutral100};
+  min-height: 100vh;
+`;function l(e){let{as:t="div",...n}=e;return(0,r.jsx)(i,{...n,as:t})}},66073:function(e,t,n){n.d(t,{T:function(){return u}});var r=n(97458),a=n(77030),o=n(29927),i=n(56961);let l={spacing:"--spacing",footerMarginBottom:"--footer-margin-bottom"},s=a.zo.div`
+  ${l.spacing}: 20px;
+  ${l.footerMarginBottom}: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 70px);
+  background-color: ${o.w.neutral100};
+  padding: var(${l.spacing});
+  // 40px handles bottom toolbar in iOS Safari
+  margin: 10px 10px calc(10px + 40px);
+  border-radius: 5px;
+  border: 1px solid ${o.w.neutral300};
+  box-shadow: ${i.f.elevation5};
+  overflow: auto;
+  padding-bottom: 0;
+
+  @media screen and (min-width: 650px) {
+    // Effectively tighten the bottom padding of ModalContent
+    // by pulling it up via margin.
+    ${l.footerMarginBottom}: -10px;
+    min-width: 550px;
+    max-width: 100%;
+    ${e=>{let{$width:t}=e;return t&&a.iv`
+        width: ${t};
+      `}}
+    ${e=>{let{$height:t}=e;return t&&a.iv`
+        height: ${t};
+      `}}
+    padding: calc(var(${l.spacing}) * 2);
+    margin: 30px;
+  }
+`,c=a.zo.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+`;function u(e){return(0,r.jsxs)(s,{className:e.className,$width:e.width,$height:e.height,children:[e.children,(0,r.jsx)(c,{children:e.closeButton})]})}},95672:function(e,t,n){n.d(t,{v:function(){return d}});var r=n(97458),a=n(21072),o=n(91579),i=n(462),l=n(67291),s=n(69666);n(52983);var c=n(37569);let u=s.default.div.withConfig({componentId:"sc-657b4b93-0"})`
+  margin: 0 auto;
+  width: fit-content;
+`;function d(e){let{error:t,errorTitle:n="Error building Chatbot",errorText:s="So sorry! Your Chatbot could not be created.",isError:d=!1,loadingTitle:h="Building your Chatbot...",loadingText:p="Hold tight! Your shiny new Chatbot will be ready soon."}=e;return(0,r.jsx)(a.nS,{align:"center",children:d?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)("div",{children:(0,r.jsx)(o.x,{type:"paragraph1Bold",children:n})}),(0,r.jsx)(i.L,{height:15}),(0,r.jsxs)("div",{children:[(0,r.jsx)(o.x,{type:"paragraph3",tag:"p",children:s}),!!t&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(i.L,{height:15}),(0,r.jsx)(o.x,{type:"paragraph3",tag:"p",children:(0,c.p)(t)})]})]})]}):(0,r.jsxs)("div",{children:[(0,r.jsx)("div",{children:(0,r.jsx)(o.x,{type:"paragraph1Bold",children:h})}),(0,r.jsx)(i.L,{height:15}),(0,r.jsx)("div",{children:(0,r.jsx)(o.x,{type:"paragraph3",children:p})}),(0,r.jsx)(i.L,{height:30}),(0,r.jsx)(u,{children:(0,r.jsx)(l.$,{size:"medium"})})]})})}},12472:function(e,t,n){n.d(t,{u:function(){return i}});var r=n(97458),a=n(63730),o=n(738);function i(e){return(0,a.createPortal)((0,r.jsx)(o.u,{...e}),document.body)}},91334:function(e,t,n){n.d(t,{E:function(){return f}});var r=n(97458),a=n(738),o=n(21072),i=n(91579),l=n(462),s=n(77030),c=n(66073),u=n(65485),d=n(23483),h=n(46127),p=n(41824);let x=s.zo.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 -20px 30px 0;
+`;function f(e){let{title:t="Create a new Chatbot",...n}=e,s=(0,d.zi)(n.user),f=(0,h.v)(),g=(0,p.G)();return(0,r.jsx)(a.u,{onClosed:n.onClosed,ariaLabel:t,children:(0,r.jsxs)(c.T,{width:"500px",children:[(0,r.jsx)(o.dE,{children:(0,r.jsx)(x,{children:(0,r.jsx)(i.x,{type:"subHeader3Bold",children:t})})}),(0,r.jsx)(o.nS,{children:(0,r.jsxs)(u.P,{children:[(0,r.jsxs)(u.P.Content,{children:["You've reached the limit (",f,") of chatbots created on your current plan."]}),"advanced"!==s&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(l.L,{height:10}),(0,r.jsx)(u.P.Content,{children:"Upgrade to unlock more chatbots."}),(0,r.jsx)(l.L,{height:22}),(0,r.jsx)(u.P.Button,{href:g,children:"View plans"})]})]})})]})})}},65485:function(e,t,n){n.d(t,{P:function(){return d}});var r=n(97458),a=n(32165),o=n(91579),i=n(80036),l=n(29927),s=n(77030),c=n(52983);let u=c.createContext(null);function d(e){let{backgroundColor:t="neutral200",...n}=e;return(0,r.jsx)(u.Provider,{value:!0,children:(0,r.jsx)(x,{...n,$backgroundColor:t})})}function h(){let e=c.useContext(u);if(null===e)throw Error("useUpgradeCallToActionContext must be used within an UpgradeCallToAction");return e}d.Icon=function(e){let{containerColor:t="neutral800",size:n=30,...o}=e;return h(),(0,r.jsx)(f,{$size:n,$backgroundColor:t,children:(0,r.jsx)(a.J,{size:n,color:"neutral100",...o})})},d.Title=function(e){return h(),(0,r.jsx)(o.x,{type:"pageHeader9",color:"neutral800",textAlign:"center",...e})},d.Content=function(e){return h(),(0,r.jsx)(p,{...e})},d.Button=function(e){let{children:t,...n}=e;return h(),(0,r.jsx)(i.z,{...n,color:"secondary",children:t})};let p=s.zo.p`
+  color: ${l.w.neutral800};
+  font-family: ${e=>{let{theme:t}=e;return t.app.fontFamily}};
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-wrap: balance;
+`,x=s.zo.div`
+  border-radius: 6px;
+  background-color: ${e=>{let{$backgroundColor:t}=e;return l.w[t]}};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 50px 36px;
+  width: 100%;
+  max-width: 540px;
+  text-align: center;
+`,f=s.zo.div`
+  height: ${e=>{let{$size:t}=e;return 2*t}}px;
+  width: ${e=>{let{$size:t}=e;return 2*t}}px;
+  border-radius: 50%;
+  background-color: ${e=>{let{$backgroundColor:t}=e;return l.w[t]}};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`},72136:function(e,t,n){n.d(t,{h:function(){return u}});var r=n(97458),a=n(462),o=n(91579),i=n(29522),l=n(55918),s=n.n(l),c=n(51722);function u(e){let{hideKeepZapsOption:t=!1,isSkeleton:n,prompt:l,value:u,onChange:d,zapsCount:h}=e;return n?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(c.Z,{width:"100%"}),(0,r.jsx)(a.L,{height:10}),t?null:(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(c.Z,{height:24,width:"40%"}),(0,r.jsx)(a.L,{height:20})]}),(0,r.jsx)(c.Z,{height:24,width:"60%"}),(0,r.jsx)(a.L,{height:20}),(0,r.jsx)(c.Z,{height:24,width:"50%"}),(0,r.jsx)(a.L,{height:10})]}):(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(o.x,{tag:"p",type:"paragraph3Medium",color:"neutral700",children:l}),t?null:(0,r.jsxs)(i.F,{name:"radio",value:"keep-zap",tabIndex:0,checked:"keep-zap"===u,onChange:()=>d("keep-zap"),children:["Keep ",s()("Zap",h)]}),(0,r.jsxs)(i.F,{name:"radio",value:"disable-zap",tabIndex:0,checked:"disable-zap"===u,onChange:()=>d?.("disable-zap"),children:["Keep ",s()("Zap",h)," but turn off"]}),(0,r.jsxs)(i.F,{name:"radio",value:"delete-zaps",tabIndex:0,checked:"delete-zap"===u,onChange:()=>d?.("delete-zap"),children:["Delete ",s()("Zap",h)]})]})}},46127:function(e,t,n){n.d(t,{v:function(){return i}});var r=n(52074),a=n(23483),o=n(52983);function i(){let{user:e}=(0,r.aF)();return(0,o.useMemo)(()=>{let t=(0,a.M8)("chatbotCount",e,e?.currentAccount);return t},[e])}},82367:function(e,t,n){n.d(t,{i:function(){return l}});var r=n(52074),a=n(23483),o=n(52983),i=n(74976);function l(){let{user:e}=(0,r.aF)(),t=(0,a.zi)(e),n=(0,a.M8)("chatbotCount",e,e?.currentAccount),{data:l=0,refetch:s}=i.S.chatbots.count.useQuery(void 0,{suspense:!1,enabled:!!e}),c=(0,o.useMemo)(()=>({plan:t,count:l,limit:n}),[l,n,t]);return[c,s]}},42302:function(e,t,n){n.d(t,{b:function(){return $}});var r=n(97458),a=n(52983),o=n(74976),i=n(738),l=n(21072),Text=n(91579),s=n(462),c=n(49089),u=n(72136),d=n(51722);function h(){return(0,r.jsxs)(l.hz,{maxWidth:"60ch",children:[(0,r.jsx)(l.dE,{children:(0,r.jsx)(Text.x,{type:"subHeader3Bold",children:(0,r.jsx)(d.Z,{width:"14ch"})})}),(0,r.jsx)(l.nS,{children:(0,r.jsxs)("form",{children:[(0,r.jsx)(Text.x,{tag:"p",type:"paragraph3",color:"neutral700",children:(0,r.jsx)(d.Z,{count:2})}),(0,r.jsx)(s.L,{height:15}),(0,r.jsx)(u.h,{isSkeleton:!0,hideKeepZapsOption:!0}),(0,r.jsx)(s.L,{height:20})]})}),(0,r.jsx)(l.bT,{children:(0,r.jsxs)(c.Z,{$gap:"10px",children:[(0,r.jsx)(d.Z,{width:160,height:50}),(0,r.jsx)(d.Z,{width:96,height:50})]})})]})}var p=n(66073),x=n(95672);function f(e){let{error:t,status:n}=e;return(0,r.jsx)(p.T,{children:(0,r.jsx)(x.v,{error:t,errorTitle:"Error deleting chatbot",errorText:"Something went wrong while deleting your chatbot. Please try again.",isError:"error"===n,loadingTitle:"Deleting your chatbot...",loadingText:"Hold tight! Your chatbot will be deleted soon."})})}var g=n(30431),b=n(70475),j=n(55918),m=n.n(j);function v(e){let{chatbot:t,close:n,deleteChatbot:a,relatedZapsDeleteOption:o,setRelatedZapsDeleteOption:i,zaps:d}=e;return(0,r.jsxs)(l.hz,{maxWidth:"60ch",children:[(0,r.jsx)(l.dE,{children:(0,r.jsx)(Text.x,{type:"subHeader3Bold",children:"Delete Chatbot"})}),(0,r.jsx)(l.nS,{scrollable:!0,children:(0,r.jsxs)("form",{children:[(0,r.jsxs)(Text.x,{tag:"p",type:"paragraph3",color:"neutral700",children:["Are you sure you want to delete your ",(0,r.jsx)("b",{children:t.name})," Chatbot? This action cannot be undone."]}),d&&d.length>0?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(s.L,{height:15}),(0,r.jsx)(u.h,{hideKeepZapsOption:!0,prompt:`What should happen to the ${m()("Zap",d.length)} connected to this Chatbot?`,value:o,onChange:i,zapsCount:d.length}),(0,r.jsx)(s.L,{height:20}),"delete-zap"===o?(0,r.jsxs)(g.b,{type:"error",children:[m()("Zap",d.length,!0)," will be deleted"]}):null]}):null]})}),(0,r.jsx)(l.bT,{children:(0,r.jsxs)(c.Z,{$gap:"10px",children:[(0,r.jsxs)(b.z,{type:"button",color:"danger",onClick:e=>{e.stopPropagation(),a(t)},children:["Delete Chatbot"," ","delete-zap"===o&&`& ${m()("Zap",d?.length)}`]}),(0,r.jsx)(b.z,{type:"button",color:"secondary",onClick:n,children:"Cancel"})]})})]})}function y(e){let{isZapsLoading:t,error:n,status:a,...o}=e;if(!o.chatbot)return null;let l=null;return l=t?(0,r.jsx)(h,{}):a?(0,r.jsx)(f,{error:n,status:a}):(0,r.jsx)(v,{...o,chatbot:o.chatbot}),(0,r.jsx)(i.u,{onClosed:o.close,canClose:"deleting"!==a,ariaLabel:"Delete Chatbot",children:l})}var C=n(25124);function w(e,t){switch(t.type){case"CHANGE":return{...e,relatedZapsDeleteOption:t.payload};case"CONFIRM":return{...e,status:null,error:void 0,chatbot:t.payload};case"CLOSE":return{...e,status:null,error:void 0,chatbot:void 0};case"ERROR":return{...e,status:"error",error:t.payload};case"BUSY":return{...e,status:"deleting"};default:return e}}function $(){let[{status:e,error:t,chatbot:n,relatedZapsDeleteOption:i},l]=(0,a.useReducer)(w,{status:null,error:void 0,chatbot:void 0,relatedZapsDeleteOption:"disable-zap"}),{data:s,isLoading:c}=o.S.zaps.search.useQuery({chatbotId:n?.id??""},{enabled:!!n?.id,suspense:!1});return(0,a.useMemo)(()=>({error:t,status:e,onOpen(e){l({type:"CONFIRM",payload:e})},onSuccess(){l({type:"CLOSE"}),C.ZP.success("Chatbot successfully deleted.")},onError(e){l({type:"ERROR",payload:e})},render:a=>(0,r.jsx)(y,{chatbot:n,error:t,isZapsLoading:c,status:e,zaps:s,close:()=>{l({type:"CLOSE"})},deleteChatbot:e=>{let{id:t}=e;l({type:"BUSY"}),a({id:t,relatedZapsDeleteOption:i})},relatedZapsDeleteOption:i,setRelatedZapsDeleteOption:e=>{l({type:"CHANGE",payload:e})}})}),[n,t,c,i,e,s])}},83417:function(e,t,n){n.d(t,{L:function(){return f}});var r=n(97458),a=n(52983),o=n(74976),i=n(25124),l=n(12472),s=n(66073),c=n(95672);function u(e){let{chatbot:t,duplicateChatbot:n,duplicationStatus:o,error:i,close:u}=e,d=(0,a.useRef)(!1);return(0,a.useEffect)(()=>{t&&"duplicating"===o&&!d.current&&(d.current=!0,n(t))},[t,n,o]),(0,r.jsx)(l.u,{onClosed:u,canClose:"duplicating"!==o,ariaLabel:"Duplicating Chatbot",children:(0,r.jsx)(s.T,{children:(0,r.jsx)(c.v,{error:i,errorText:"Something went wrong while duplicating your chatbot. Please try again.",isError:"error"===o,loadingTitle:"Duplicating your chatbot...",loadingText:"Hold tight! Your chatbot will be duplicated soon."})})})}var d=n(52074),h=n(46127),p=n(91334);function x(e,t){switch(t.type){case"CLOSE":return{...e,status:null,error:void 0,chatbot:void 0};case"ERROR":return{...e,status:"error",error:t.payload};case"BUSY":return{...e,status:"duplicating",chatbot:t.payload};default:return e}}function f(){let[{status:e,error:t,chatbot:n},l]=(0,a.useReducer)(x,{status:null,error:void 0,chatbot:void 0}),{user:s}=(0,d.aF)(),{data:c=0}=o.S.chatbots.count.useQuery(void 0,{suspense:!1,enabled:!!s}),f=(0,h.v)();return(0,a.useMemo)(()=>({error:t,status:e,onOpen(e){l({type:"BUSY",payload:e})},onSuccess(){l({type:"CLOSE"}),i.ZP.success("Chatbot successfully duplicated.")},onError(e){l({type:"ERROR",payload:e})},render(a){if(!e)return null;let o=()=>l({type:"CLOSE"});return"error"===e?(0,r.jsx)(u,{chatbot:n,error:t,duplicateChatbot:a,duplicationStatus:"error",close:o}):s&&c>=f?(0,r.jsx)(p.E,{onClosed:o,title:"Duplicate your Chatbot",user:s}):(0,r.jsx)(u,{chatbot:n,error:t,duplicateChatbot:a,duplicationStatus:"duplicating",close:o})}}),[f,n,c,t,e,s])}},41824:function(e,t,n){n.d(t,{G:function(){return c}});var r=n(45884),a=n(52074),o=n(66208),i=n(23483),l=n(18140),s=n(52983);function c(){let{asPath:e}=(0,l.useRouter)(),{user:t}=(0,a.aF)(),{chatbotsEnablePlanbuilder:n}=(0,r.gj)(),c="free"===(0,i.zi)(t)?"premium":"advanced";return(0,s.useMemo)(()=>n?`${(0,o.G$)()}/app/planbuilder/add-ons?chatbots=chatbots-${c}&redirectUrl=${(0,o.G$)()}${e}`:`${(0,o.G$)()}/app/settings/billing?upgradeFamily=chatbots&redirectUrl=${(0,o.G$)()}${e}`,[e,n,c])}},66391:function(e,t,n){var r=n(97458),a=n(52983),o=n(52074),i=n(21929),l=n(68225),s=n(10734);let c=()=>(0,r.jsx)(r.Fragment,{}),u=()=>(0,r.jsx)(r.Fragment,{});t.Z=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return function(n){let{next:d,onRedirecting:h=c,onError:p=u}=t,{user:x,error:f,isLoading:g}=(0,o.aF)(),b=(0,i.K)();return((0,a.useEffect)(()=>{"off"===b&&!g&&(x&&(!f||(0,s.$)(f))||(0,l.t2)(d))},[x,f,g,d,b]),f)?p(f):x?(0,r.jsx)(e,{user:x,...n}):h()}}},66208:function(e,t,n){n.d(t,{EH:function(){return s},G$:function(){return l},I0:function(){return a},Z9:function(){return o},pt:function(){return i}});var r=n(99632);function a(){return(0,r.v)().NEXT_PUBLIC_CHATBOTS_BASE_URL}function o(e){return`${(0,r.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL}/editor/${e.rootNodeId}?context=${e.accountId}`}function i(e){return`${(0,r.v)().NEXT_PUBLIC_ZAPIER_TABLES_UI_BASE_URL}/app/tables/t/${e.tableId}`}let l=()=>{let e=(0,r.v)().NEXT_PUBLIC_ZAPIER_API_BASE_URL;return"https://zapier.com"===e||"https://zapier-staging.com"===e?e:""};function s(){return(0,r.v)().NEXT_PUBLIC_ZAPIER_INTERFACES_UI_BASE_URL}},23483:function(e,t,n){n.d(t,{M8:function(){return h},R2:function(){return d},YQ:function(){return o},gc:function(){return a},y9:function(){return c},zi:function(){return i}});var r=n(1850);let a=e=>e?.includes("chatbots-premium")??!1,o=e=>e?.includes("chatbots-advanced")??!1,i=e=>a(e?.currentAccount.entitlements.limits.add_ons)?"premium":o(e?.currentAccount.entitlements.limits.add_ons)?"advanced":"free";r.z.enum(["branding","whitelabel","embedding","dataSources","bringYourOwnKey","collectFeedback","zapFunctions"]);let l=["branding","embedding","dataSources","bringYourOwnKey"],s=["whitelabel","collectFeedback","zapFunctions"],c=(e,t,n)=>!!e?.isStaff||!!t&&(!n||(l.includes(n)?a(t)||o(t):!!s.includes(n)&&o(t)));r.z.enum(["chatbotCount","conversationsDaysCount","dataSourcesCount"]);let u={chatbotCount:{staff:1/0,free:2,premium:5,advanced:20},conversationsDaysCount:{staff:1/0,free:7,premium:14,advanced:30},dataSourcesCount:{staff:5,free:0,premium:1,advanced:3}},d=e=>({free:u[e].free,premium:u[e].premium,advanced:u[e].advanced}),h=(e,t,n)=>{let r=n?.entitlements.limits.add_ons;return t?.isStaff?u[e].staff:"chatbotCount"===e&&n?.entitlements.limits.chatbotLimitOverride?n?.entitlements.limits.chatbotLimitOverride:a(r)?u[e].premium:o(r)?u[e].advanced:u[e].free}},34620:function(e,t,n){n.d(t,{cn:function(){return o}});var r=n(28934),a=n(44361);function o(){for(var e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];return(0,a.m)((0,r.W)(t))}},24187:function(e,t,n){n.d(t,{G:function(){return r}});let r="[class][class][class][class][class][class]"}}]);
+//# sourceMappingURL=548-f988da790760c10e.js.map
